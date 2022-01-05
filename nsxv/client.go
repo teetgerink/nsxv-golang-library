@@ -44,19 +44,11 @@ type APIClient struct {
 
 	// API Services
 
-	ApplianceManagementApi *ApplianceManagementApiService
-
-	CliApi *CliApiService
-
-	DirectoryApi *DirectoryApiService
-
-	EventcontrolApi *EventcontrolApiService
-
-	IdentityApi *IdentityApiService
-
-	SyslogApi *SyslogApiService
+	AiApi *AiApiService
 
 	AlarmsApi *AlarmsApiService
+
+	ApplianceManagementApi *ApplianceManagementApiService
 
 	ApplicationApi *ApplicationApiService
 
@@ -66,15 +58,33 @@ type APIClient struct {
 
 	CapacityApi *CapacityApiService
 
+	CliApi *CliApiService
+
 	ConfigApi *ConfigApiService
 
 	ControllerApi *ControllerApiService
 
 	DeployApi *DeployApiService
 
+	DirectoryApi *DirectoryApiService
+
+	EdgePublishApi *EdgePublishApiService
+
+	EdgesApi *EdgesApiService
+
 	EndpointsecurityApi *EndpointsecurityApiService
 
+	EventcontrolApi *EventcontrolApiService
+
+	ExcludelistApi *ExcludelistApiService
+
+	FirewallApi *FirewallApiService
+
+	FlowApi *FlowApiService
+
 	HardwaregatewaysApi *HardwaregatewaysApiService
+
+	IdentityApi *IdentityApiService
 
 	InventoryApi *InventoryApiService
 
@@ -102,9 +112,13 @@ type APIClient struct {
 
 	SnmpApi *SnmpApiService
 
+	SpoofguardApi *SpoofguardApiService
+
 	SsoconfigApi *SsoconfigApiService
 
 	SwitchesApi *SwitchesApiService
+
+	SyslogApi *SyslogApiService
 
 	SystemalarmsApi *SystemalarmsApiService
 
@@ -121,20 +135,6 @@ type APIClient struct {
 	VcconfigApi *VcconfigApiService
 
 	VirtualwiresApi *VirtualwiresApiService
-
-	ExcludelistApi *ExcludelistApiService
-
-	FlowApi *FlowApiService
-
-	AiApi *AiApiService
-
-	Class40EdgePublishApi *Class40EdgePublishApiService
-
-	Class40EdgesApi *Class40EdgesApiService
-
-	Class40FirewallApi *Class40FirewallApiService
-
-	Class40SpoofguardApi *Class40SpoofguardApiService
 }
 
 type service struct {
@@ -153,22 +153,27 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.ApplianceManagementApi = (*ApplianceManagementApiService)(&c.common)
-	c.CliApi = (*CliApiService)(&c.common)
-	c.DirectoryApi = (*DirectoryApiService)(&c.common)
-	c.EventcontrolApi = (*EventcontrolApiService)(&c.common)
-	c.IdentityApi = (*IdentityApiService)(&c.common)
-	c.SyslogApi = (*SyslogApiService)(&c.common)
+	c.AiApi = (*AiApiService)(&c.common)
 	c.AlarmsApi = (*AlarmsApiService)(&c.common)
+	c.ApplianceManagementApi = (*ApplianceManagementApiService)(&c.common)
 	c.ApplicationApi = (*ApplicationApiService)(&c.common)
 	c.ApplicationgroupApi = (*ApplicationgroupApiService)(&c.common)
 	c.AuditlogApi = (*AuditlogApiService)(&c.common)
 	c.CapacityApi = (*CapacityApiService)(&c.common)
+	c.CliApi = (*CliApiService)(&c.common)
 	c.ConfigApi = (*ConfigApiService)(&c.common)
 	c.ControllerApi = (*ControllerApiService)(&c.common)
 	c.DeployApi = (*DeployApiService)(&c.common)
+	c.DirectoryApi = (*DirectoryApiService)(&c.common)
+	c.EdgePublishApi = (*EdgePublishApiService)(&c.common)
+	c.EdgesApi = (*EdgesApiService)(&c.common)
 	c.EndpointsecurityApi = (*EndpointsecurityApiService)(&c.common)
+	c.EventcontrolApi = (*EventcontrolApiService)(&c.common)
+	c.ExcludelistApi = (*ExcludelistApiService)(&c.common)
+	c.FirewallApi = (*FirewallApiService)(&c.common)
+	c.FlowApi = (*FlowApiService)(&c.common)
 	c.HardwaregatewaysApi = (*HardwaregatewaysApiService)(&c.common)
+	c.IdentityApi = (*IdentityApiService)(&c.common)
 	c.InventoryApi = (*InventoryApiService)(&c.common)
 	c.IpsetApi = (*IpsetApiService)(&c.common)
 	c.JobApi = (*JobApiService)(&c.common)
@@ -182,8 +187,10 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.SecuritytagsApi = (*SecuritytagsApiService)(&c.common)
 	c.SiApi = (*SiApiService)(&c.common)
 	c.SnmpApi = (*SnmpApiService)(&c.common)
+	c.SpoofguardApi = (*SpoofguardApiService)(&c.common)
 	c.SsoconfigApi = (*SsoconfigApiService)(&c.common)
 	c.SwitchesApi = (*SwitchesApiService)(&c.common)
+	c.SyslogApi = (*SyslogApiService)(&c.common)
 	c.SystemalarmsApi = (*SystemalarmsApiService)(&c.common)
 	c.SystemeventApi = (*SystemeventApiService)(&c.common)
 	c.TraceflowApi = (*TraceflowApiService)(&c.common)
@@ -192,13 +199,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.UsermgmtApi = (*UsermgmtApiService)(&c.common)
 	c.VcconfigApi = (*VcconfigApiService)(&c.common)
 	c.VirtualwiresApi = (*VirtualwiresApiService)(&c.common)
-	c.ExcludelistApi = (*ExcludelistApiService)(&c.common)
-	c.FlowApi = (*FlowApiService)(&c.common)
-	c.AiApi = (*AiApiService)(&c.common)
-	c.Class40EdgePublishApi = (*Class40EdgePublishApiService)(&c.common)
-	c.Class40EdgesApi = (*Class40EdgesApiService)(&c.common)
-	c.Class40FirewallApi = (*Class40FirewallApiService)(&c.common)
-	c.Class40SpoofguardApi = (*Class40SpoofguardApiService)(&c.common)
 
 	return c
 }
@@ -296,7 +296,7 @@ func (c *APIClient) prepareRequest(
 	queryParams url.Values,
 	formParams url.Values,
 	fileName string,
-	fileBytes []byte) (localVarRequest *http.Request, err error) {
+	fileBytes []byte) (lRequest *http.Request, err error) {
 
 	var body *bytes.Buffer
 
@@ -383,9 +383,9 @@ func (c *APIClient) prepareRequest(
 
 	// Generate a new request
 	if body != nil {
-		localVarRequest, err = http.NewRequest(method, url.String(), body)
+		lRequest, err = http.NewRequest(method, url.String(), body)
 	} else {
-		localVarRequest, err = http.NewRequest(method, url.String(), nil)
+		lRequest, err = http.NewRequest(method, url.String(), nil)
 	}
 	if err != nil {
 		return nil, err
@@ -397,20 +397,20 @@ func (c *APIClient) prepareRequest(
 		for h, v := range headerParams {
 			headers.Set(h, v)
 		}
-		localVarRequest.Header = headers
+		lRequest.Header = headers
 	}
 
 	// Override request host, if applicable
 	if c.cfg.Host != "" {
-		localVarRequest.Host = c.cfg.Host
+		lRequest.Host = c.cfg.Host
 	}
 
 	// Add the user agent to the request.
-	localVarRequest.Header.Add("User-Agent", c.cfg.UserAgent)
+	lRequest.Header.Add("User-Agent", c.cfg.UserAgent)
 
 	if ctx != nil {
 		// add context to the request
-		localVarRequest = localVarRequest.WithContext(ctx)
+		lRequest = lRequest.WithContext(ctx)
 
 		// Walk through any authentication.
 
@@ -422,25 +422,25 @@ func (c *APIClient) prepareRequest(
 				return nil, err
 			}
 
-			latestToken.SetAuthHeader(localVarRequest)
+			latestToken.SetAuthHeader(lRequest)
 		}
 
 		// Basic HTTP Authentication
 		if auth, ok := ctx.Value(ContextBasicAuth).(BasicAuth); ok {
-			localVarRequest.SetBasicAuth(auth.UserName, auth.Password)
+			lRequest.SetBasicAuth(auth.UserName, auth.Password)
 		}
 
 		// AccessToken Authentication
 		if auth, ok := ctx.Value(ContextAccessToken).(string); ok {
-			localVarRequest.Header.Add("Authorization", "Bearer "+auth)
+			lRequest.Header.Add("Authorization", "Bearer "+auth)
 		}
 	}
 
 	for header, value := range c.cfg.DefaultHeader {
-		localVarRequest.Header.Add(header, value)
+		lRequest.Header.Add(header, value)
 	}
 
-	return localVarRequest, nil
+	return lRequest, nil
 }
 
 func (c *APIClient) decode(v interface{}, b []byte, contentType string) (err error) {

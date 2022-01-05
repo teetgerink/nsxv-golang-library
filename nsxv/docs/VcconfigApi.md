@@ -4,12 +4,12 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20ServicesVcconfigGet**](VcconfigApi.md#Api20ServicesVcconfigGet) | **Get** /api/2.0/services/vcconfig | vCenterConfigRead
-[**Api20ServicesVcconfigPut**](VcconfigApi.md#Api20ServicesVcconfigPut) | **Put** /api/2.0/services/vcconfig | vCenterConfigUpdate
-[**Api20ServicesVcconfigStatusGet**](VcconfigApi.md#Api20ServicesVcconfigStatusGet) | **Get** /api/2.0/services/vcconfig/status | vCenterStatusRead
+[**ServicesVcconfigGet**](VcconfigApi.md#ServicesVcconfigGet) | **Get** /api/2.0/services/vcconfig | vCenterConfigRead
+[**ServicesVcconfigPut**](VcconfigApi.md#ServicesVcconfigPut) | **Put** /api/2.0/services/vcconfig | vCenterConfigUpdate
+[**ServicesVcconfigStatusGet**](VcconfigApi.md#ServicesVcconfigStatusGet) | **Get** /api/2.0/services/vcconfig/status | vCenterStatusRead
 
-# **Api20ServicesVcconfigGet**
-> Api20ServicesVcconfigGet(ctx, )
+# **ServicesVcconfigGet**
+> ServicesVcconfigGet(ctx, )
 vCenterConfigRead
 
 Get vCenter Server configuration details on NSX Manager.  Parameters:  
@@ -32,8 +32,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesVcconfigPut**
-> Api20ServicesVcconfigPut(ctx, optional)
+# **ServicesVcconfigPut**
+> ServicesVcconfigPut(ctx, optional)
 vCenterConfigUpdate
 
 Synchronize NSX Manager with vCenter server.  Parameters:  
@@ -43,10 +43,10 @@ Synchronize NSX Manager with vCenter server.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***VcconfigApiApi20ServicesVcconfigPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***VcconfigApiServicesVcconfigPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a VcconfigApiApi20ServicesVcconfigPutOpts struct
+Optional parameters are passed through a pointer to a VcconfigApiServicesVcconfigPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -67,8 +67,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesVcconfigStatusGet**
-> Api20ServicesVcconfigStatusGet(ctx, )
+# **ServicesVcconfigStatusGet**
+> ServicesVcconfigStatusGet(ctx, )
 vCenterStatusRead
 
 Get default vCenter Server connection status.  Parameters:  

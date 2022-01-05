@@ -31,16 +31,16 @@ ApplicationgroupApiService serviceGroupDelete
 Delete the specified service group from a scope.  Parameters:  applicationgroupId: Application group ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param applicationgroupId
- * @param optional nil or *ApplicationgroupApiApi20ServicesApplicationgroupApplicationgroupIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *ApplicationgroupApiServicesApplicationgroupApplicationgroupIdDeleteOpts - Optional Parameters:
      * @param "Force" (optional.String) -
 
 */
 
-type ApplicationgroupApiApi20ServicesApplicationgroupApplicationgroupIdDeleteOpts struct {
+type ApplicationgroupApiServicesApplicationgroupApplicationgroupIdDeleteOpts struct {
 	Force optional.String
 }
 
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupApplicationgroupIdDelete(ctx context.Context, applicationgroupId string, localVarOptionals *ApplicationgroupApiApi20ServicesApplicationgroupApplicationgroupIdDeleteOpts) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupApplicationgroupIdDelete(ctx context.Context, applicationgroupId string, localVarOptionals *ApplicationgroupApiServicesApplicationgroupApplicationgroupIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -110,7 +110,7 @@ Retrieve details about the specified service group.  Parameters:  applicationgro
  * @param applicationgroupId
 
 */
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupApplicationgroupIdGet(ctx context.Context, applicationgroupId string) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupApplicationgroupIdGet(ctx context.Context, applicationgroupId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -178,7 +178,7 @@ Delete a member from the service group.  Parameters:  moref: Managed object refe
  * @param moref
 
 */
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupApplicationgroupIdMembersMorefDelete(ctx context.Context, applicationgroupId string, moref string) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupApplicationgroupIdMembersMorefDelete(ctx context.Context, applicationgroupId string, moref string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -247,7 +247,7 @@ Add a member to the service group.  Parameters:  moref: Managed object reference
  * @param moref
 
 */
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupApplicationgroupIdMembersMorefPut(ctx context.Context, applicationgroupId string, moref string) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupApplicationgroupIdMembersMorefPut(ctx context.Context, applicationgroupId string, moref string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -313,18 +313,18 @@ ApplicationgroupApiService serviceGroupUpdate
 Modify the name, description, applicationProtocol, or port value of the specified service group.   Parameters:  applicationgroupId: Application group ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param applicationgroupId
- * @param optional nil or *ApplicationgroupApiApi20ServicesApplicationgroupApplicationgroupIdPutOpts - Optional Parameters:
+ * @param optional nil or *ApplicationgroupApiServicesApplicationgroupApplicationgroupIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplicationgroupApiApi20ServicesApplicationgroupApplicationgroupIdPutOpts struct {
+type ApplicationgroupApiServicesApplicationgroupApplicationgroupIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupApplicationgroupIdPut(ctx context.Context, applicationgroupId string, localVarOptionals *ApplicationgroupApiApi20ServicesApplicationgroupApplicationgroupIdPutOpts) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupApplicationgroupIdPut(ctx context.Context, applicationgroupId string, localVarOptionals *ApplicationgroupApiServicesApplicationgroupApplicationgroupIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -400,7 +400,7 @@ Retrieve a list of service groups that have been created on the scope.   Paramet
  * @param scopeId
 
 */
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -467,7 +467,7 @@ Get a list of member elements that can be added to the service groups created on
  * @param scopeId
 
 */
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupScopeScopeIdMembersGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupScopeScopeIdMembersGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -532,18 +532,18 @@ ApplicationgroupApiService serviceGroupsCreate
 Create a new service group on the specified scope.  Parameters:  scopeId: The scopeId can be \&quot;globalroot-0\&quot;, \&quot;universalroot-0\&quot; or datacenterId in upgrade use cases
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *ApplicationgroupApiApi20ServicesApplicationgroupScopeScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *ApplicationgroupApiServicesApplicationgroupScopeScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplicationgroupApiApi20ServicesApplicationgroupScopeScopeIdPostOpts struct {
+type ApplicationgroupApiServicesApplicationgroupScopeScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplicationgroupApiService) Api20ServicesApplicationgroupScopeScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *ApplicationgroupApiApi20ServicesApplicationgroupScopeScopeIdPostOpts) (*http.Response, error) {
+func (a *ApplicationgroupApiService) ServicesApplicationgroupScopeScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *ApplicationgroupApiServicesApplicationgroupScopeScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

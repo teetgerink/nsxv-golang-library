@@ -4,10 +4,10 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20ServicesLicensingCapacityusageGet**](CapacityApi.md#Api20ServicesLicensingCapacityusageGet) | **Get** /api/2.0/services/licensing/capacityusage | capacityUsageRead
+[**ServicesLicensingCapacityusageGet**](CapacityApi.md#ServicesLicensingCapacityusageGet) | **Get** /api/2.0/services/licensing/capacityusage | capacityUsageRead
 
-# **Api20ServicesLicensingCapacityusageGet**
-> Api20ServicesLicensingCapacityusageGet(ctx, )
+# **ServicesLicensingCapacityusageGet**
+> ServicesLicensingCapacityusageGet(ctx, )
 capacityUsageRead
 
 Retrieve capacity usage information on the usage of CPUs, VMs and concurrent users for the distributed firewall and VXLAN.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  

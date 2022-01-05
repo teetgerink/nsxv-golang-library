@@ -4,11 +4,11 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20ServicesTaskserviceJobGet**](JobApi.md#Api20ServicesTaskserviceJobGet) | **Get** /api/2.0/services/taskservice/job | taskFrameworkCriteria
-[**Api20ServicesTaskserviceJobJobIdGet**](JobApi.md#Api20ServicesTaskserviceJobJobIdGet) | **Get** /api/2.0/services/taskservice/job/{jobId} | taskFrameworkJobsRead
+[**ServicesTaskserviceJobGet**](JobApi.md#ServicesTaskserviceJobGet) | **Get** /api/2.0/services/taskservice/job | taskFrameworkCriteria
+[**ServicesTaskserviceJobJobIdGet**](JobApi.md#ServicesTaskserviceJobJobIdGet) | **Get** /api/2.0/services/taskservice/job/{jobId} | taskFrameworkJobsRead
 
-# **Api20ServicesTaskserviceJobGet**
-> Api20ServicesTaskserviceJobGet(ctx, optional)
+# **ServicesTaskserviceJobGet**
+> ServicesTaskserviceJobGet(ctx, optional)
 taskFrameworkCriteria
 
 Query job instances by criterion.  Parameters:  
@@ -18,10 +18,10 @@ Query job instances by criterion.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***JobApiApi20ServicesTaskserviceJobGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***JobApiServicesTaskserviceJobGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a JobApiApi20ServicesTaskserviceJobGetOpts struct
+Optional parameters are passed through a pointer to a JobApiServicesTaskserviceJobGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startIndex** | **optional.String**|  | 
@@ -44,8 +44,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesTaskserviceJobJobIdGet**
-> Api20ServicesTaskserviceJobJobIdGet(ctx, jobId)
+# **ServicesTaskserviceJobJobIdGet**
+> ServicesTaskserviceJobJobIdGet(ctx, jobId)
 taskFrameworkJobsRead
 
 Retrieve all job instances for the specified job ID.  Parameters:  jobId: Specified job ID.  

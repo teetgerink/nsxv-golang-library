@@ -24,23 +24,23 @@ var (
 	_ context.Context
 )
 
-type Class40EdgesApiService service
+type EdgesApiService service
 
 /*
-Class40EdgesApiService aesniCreate
+EdgesApiService aesniCreate
 Modify AESNI setting.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdAesniPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdAesniPostOpts - Optional Parameters:
      * @param "Enable" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdAesniPostOpts struct {
+type EdgesApiEdgesEdgeIdAesniPostOpts struct {
 	Enable optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAesniPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdAesniPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAesniPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdAesniPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -104,13 +104,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAesniPost(ctx context.Context, 
 }
 
 /*
-Class40EdgesApiService appliancesRead
+EdgesApiService appliancesRead
 Retrieve appliance configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **haAdminState**, **configuredResourcePool**, **configuredDataStore**, **configuredHost**, **configuredVmFolder** parameters added.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -171,14 +171,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesGet(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService applianceDelete
+EdgesApiService applianceDelete
 Delete the appliance  Parameters:  haIndex: Specified appliance HA index
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param haIndex
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexDelete(ctx context.Context, edgeId string, haIndex string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesHaIndexDelete(ctx context.Context, edgeId string, haIndex string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -240,14 +240,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexDelete(ctx con
 }
 
 /*
-Class40EdgesApiService applianceRead
+EdgesApiService applianceRead
 Retrieve the configuration of the specified appliance.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **haAdminState**, **configuredResourcePool**, **configuredDataStore**, **configuredHost**, **configuredVmFolder** parameters added.    Parameters:  haIndex: Specified appliance HA index
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param haIndex
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexGet(ctx context.Context, edgeId string, haIndex string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesHaIndexGet(ctx context.Context, edgeId string, haIndex string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -309,12 +309,12 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexGet(ctx contex
 }
 
 /*
-Class40EdgesApiService applianceExecute
+EdgesApiService applianceExecute
 Used to send CLI Commands to the Edge Gw. To use CLI commands you also need to add an additional Accept Header with type text\\plain, as well as the query parameter action&#x3D;execute   Parameters:  haIndex: Specified appliance HA index
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param haIndex
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdAppliancesHaIndexPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdAppliancesHaIndexPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "Accept" (optional.String) -
      * @param "ContentType" (optional.String) -
@@ -322,14 +322,14 @@ Used to send CLI Commands to the Edge Gw. To use CLI commands you also need to a
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdAppliancesHaIndexPostOpts struct {
+type EdgesApiEdgesEdgeIdAppliancesHaIndexPostOpts struct {
 	Body        optional.Interface
 	Accept      optional.String
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexPost(ctx context.Context, edgeId string, haIndex string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdAppliancesHaIndexPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesHaIndexPost(ctx context.Context, edgeId string, haIndex string, localVarOptionals *EdgesApiEdgesEdgeIdAppliancesHaIndexPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -406,23 +406,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexPost(ctx conte
 }
 
 /*
-Class40EdgesApiService applianceUpdate
+EdgesApiService applianceUpdate
 Update the configuration of the specified appliance.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **haAdminState** parameter added.   Parameters:  haIndex: Specified appliance HA index
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param haIndex
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdAppliancesHaIndexPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdAppliancesHaIndexPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdAppliancesHaIndexPutOpts struct {
+type EdgesApiEdgesEdgeIdAppliancesHaIndexPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexPut(ctx context.Context, edgeId string, haIndex string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdAppliancesHaIndexPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesHaIndexPut(ctx context.Context, edgeId string, haIndex string, localVarOptionals *EdgesApiEdgesEdgeIdAppliancesHaIndexPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -493,20 +493,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesHaIndexPut(ctx contex
 }
 
 /*
-Class40EdgesApiService appliancesCreate
+EdgesApiService appliancesCreate
 Change the size of both appliances.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdAppliancesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdAppliancesPostOpts - Optional Parameters:
      * @param "Size" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdAppliancesPostOpts struct {
+type EdgesApiEdgesEdgeIdAppliancesPostOpts struct {
 	Size optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdAppliancesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdAppliancesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -570,13 +570,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesPost(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService appliancesUpdate
+EdgesApiService appliancesUpdate
 You can retrieve the configuration of both appliances by using the GET call and replace the size, resource pool, datastore, and custom parameters of the appliances by using a PUT call. If there were two appliances earlier and you PUT only one appliance, the other appliance is deleted.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **haAdminState** parameter added.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesPut(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAppliancesPut(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -637,13 +637,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAppliancesPut(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService autoConfigRead
+EdgesApiService autoConfigRead
 Retrieve the auto configuration settings for the NSX Edge.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAutoconfigurationGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAutoconfigurationGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -704,22 +704,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAutoconfigurationGet(ctx contex
 }
 
 /*
-Class40EdgesApiService autoConfigUpdate
+EdgesApiService autoConfigUpdate
 Update the auto configuration settings for the NSX Edge.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdAutoconfigurationPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdAutoconfigurationPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdAutoconfigurationPutOpts struct {
+type EdgesApiEdgesEdgeIdAutoconfigurationPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdAutoconfigurationPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdAutoconfigurationPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdAutoconfigurationPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdAutoconfigurationPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -789,13 +789,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdAutoconfigurationPut(ctx contex
 }
 
 /*
-Class40EdgesApiService bridgingDelete
+EdgesApiService bridgingDelete
 Delete bridges.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdBridgingConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdBridgingConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -856,13 +856,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdBridgingConfigDelete(ctx contex
 }
 
 /*
-Class40EdgesApiService bridgingRead
+EdgesApiService bridgingRead
 Retrieve bridge configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdBridgingConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdBridgingConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -923,22 +923,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdBridgingConfigGet(ctx context.C
 }
 
 /*
-Class40EdgesApiService bridingUpdate
+EdgesApiService bridingUpdate
 Configure a bridge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdBridgingConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdBridgingConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdBridgingConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdBridgingConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdBridgingConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdBridgingConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdBridgingConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdBridgingConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1008,20 +1008,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdBridgingConfigPut(ctx context.C
 }
 
 /*
-Class40EdgesApiService cliRemoteCreate
+EdgesApiService cliRemoteCreate
 Change CLI remote access  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdCliremoteaccessPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdCliremoteaccessPostOpts - Optional Parameters:
      * @param "Enable" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdCliremoteaccessPostOpts struct {
+type EdgesApiEdgesEdgeIdCliremoteaccessPostOpts struct {
 	Enable optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdCliremoteaccessPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdCliremoteaccessPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdCliremoteaccessPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdCliremoteaccessPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1085,22 +1085,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdCliremoteaccessPost(ctx context
 }
 
 /*
-Class40EdgesApiService cliSettingsUpdate
+EdgesApiService cliSettingsUpdate
 Modify CLI credentials and enable/disable SSH for Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdClisettingsPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdClisettingsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdClisettingsPutOpts struct {
+type EdgesApiEdgesEdgeIdClisettingsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdClisettingsPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdClisettingsPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdClisettingsPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdClisettingsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1170,13 +1170,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdClisettingsPut(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService coreDumpCreate
+EdgesApiService coreDumpCreate
 Modify core dump setting.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdCoredumpPost(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdCoredumpPost(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1237,13 +1237,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdCoredumpPost(ctx context.Contex
 }
 
 /*
-Class40EdgesApiService nsxEdgeDelete
+EdgesApiService nsxEdgeDelete
 Delete specified NSX Edge configuration. Associated appliances are also deleted.   Parameters:  edgeId: Specify the ID of the edge in *edgeId*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1304,14 +1304,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDelete(ctx context.Context, edg
 }
 
 /*
-Class40EdgesApiService dhcpStaticBindingIDDelete
+EdgesApiService dhcpStaticBindingIDDelete
 Delete the static-binding by ID  Parameters:  bindingID: Specified static-binding ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param bindingID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigBindingsBindingIDDelete(ctx context.Context, edgeId string, bindingID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigBindingsBindingIDDelete(ctx context.Context, edgeId string, bindingID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1373,22 +1373,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigBindingsBindingIDDele
 }
 
 /*
-Class40EdgesApiService dhcpStaticBindingCreate
+EdgesApiService dhcpStaticBindingCreate
 Append a static-binding to DHCP config. A static-binding ID is returned within a Location HTTP header.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. DHCP options added.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigBindingsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdDhcpConfigBindingsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdDhcpConfigBindingsPostOpts struct {
+type EdgesApiEdgesEdgeIdDhcpConfigBindingsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigBindingsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigBindingsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigBindingsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdDhcpConfigBindingsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1458,13 +1458,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigBindingsPost(ctx cont
 }
 
 /*
-Class40EdgesApiService dhcpDelete
+EdgesApiService dhcpDelete
 Delete the DHCP configuration, restoring it to factory default.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1525,13 +1525,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigDelete(ctx context.Co
 }
 
 /*
-Class40EdgesApiService dhcpRead
+EdgesApiService dhcpRead
 Get DHCP configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1592,14 +1592,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigGet(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService dhcpPoolIDDelete
+EdgesApiService dhcpPoolIDDelete
 Delete a pool specified by pool ID  Parameters:  poolID: Specified DHCP IP pool
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param poolID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigIppoolsPoolIDDelete(ctx context.Context, edgeId string, poolID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigIppoolsPoolIDDelete(ctx context.Context, edgeId string, poolID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1661,22 +1661,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigIppoolsPoolIDDelete(c
 }
 
 /*
-Class40EdgesApiService dhcpPoolCreate
+EdgesApiService dhcpPoolCreate
 Add an IP pool to the DHCP configuration. Returns a pool ID within a Location HTTP header.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. DHCP options added.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigIppoolsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdDhcpConfigIppoolsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdDhcpConfigIppoolsPostOpts struct {
+type EdgesApiEdgesEdgeIdDhcpConfigIppoolsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigIppoolsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigIppoolsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigIppoolsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdDhcpConfigIppoolsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1746,22 +1746,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigIppoolsPost(ctx conte
 }
 
 /*
-Class40EdgesApiService dhcpUpdate
+EdgesApiService dhcpUpdate
 Configure DHCP service.  Release | Modification --------|------------- 6.2.3 | Method updated. DHCP options added.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdDhcpConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdDhcpConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdDhcpConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdDhcpConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1831,13 +1831,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigPut(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService dhcpRelayDelete
+EdgesApiService dhcpRelayDelete
 Delete DHCP relay configuration  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigRelayDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigRelayDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1898,13 +1898,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigRelayDelete(ctx conte
 }
 
 /*
-Class40EdgesApiService dhcpRelayRead
+EdgesApiService dhcpRelayRead
 Query DHCP relay  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigRelayGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigRelayGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1965,22 +1965,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigRelayGet(ctx context.
 }
 
 /*
-Class40EdgesApiService dhcpRelayUpdate
+EdgesApiService dhcpRelayUpdate
 Configure DHCP relay  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigRelayPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdDhcpConfigRelayPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdDhcpConfigRelayPutOpts struct {
+type EdgesApiEdgesEdgeIdDhcpConfigRelayPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigRelayPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdDhcpConfigRelayPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpConfigRelayPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdDhcpConfigRelayPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2050,13 +2050,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpConfigRelayPut(ctx context.
 }
 
 /*
-Class40EdgesApiService dhcpLeaseRead
+EdgesApiService dhcpLeaseRead
 Get DHCP lease information.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpLeaseInfoGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDhcpLeaseInfoGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2117,13 +2117,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDhcpLeaseInfoGet(ctx context.Co
 }
 
 /*
-Class40EdgesApiService edgeDnsDelete
+EdgesApiService edgeDnsDelete
 Delete DNS configuration  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDnsConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2184,13 +2184,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsConfigDelete(ctx context.Con
 }
 
 /*
-Class40EdgesApiService edgeDnsRead
+EdgesApiService edgeDnsRead
 Retrieve DNS configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDnsConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2251,22 +2251,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsConfigGet(ctx context.Contex
 }
 
 /*
-Class40EdgesApiService edgeDnsUpdate
+EdgesApiService edgeDnsUpdate
 Configure DNS servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdDnsConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdDnsConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdDnsConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdDnsConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdDnsConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDnsConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdDnsConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2336,13 +2336,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsConfigPut(ctx context.Contex
 }
 
 /*
-Class40EdgesApiService edgeDnsStatsRead
+EdgesApiService edgeDnsStatsRead
 Get DNS server statistics  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDnsStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2403,22 +2403,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsStatisticsGet(ctx context.Co
 }
 
 /*
-Class40EdgesApiService edgeDnsClientUpdate
+EdgesApiService edgeDnsClientUpdate
 Update Edge DNS settings.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdDnsclientPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdDnsclientPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdDnsclientPutOpts struct {
+type EdgesApiEdgesEdgeIdDnsclientPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsclientPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdDnsclientPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdDnsclientPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdDnsclientPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2488,20 +2488,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdDnsclientPut(ctx context.Contex
 }
 
 /*
-Class40EdgesApiService fipsCreate
+EdgesApiService fipsCreate
 Modify FIPS setting.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFipsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFipsPostOpts - Optional Parameters:
      * @param "Enable" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFipsPostOpts struct {
+type EdgesApiEdgesEdgeIdFipsPostOpts struct {
 	Enable optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFipsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFipsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFipsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdFipsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2565,13 +2565,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFipsPost(ctx context.Context, e
 }
 
 /*
-Class40EdgesApiService defaultFirewallPolicyRead
+EdgesApiService defaultFirewallPolicyRead
 Retrieve default firewall policy  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigDefaultpolicyGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigDefaultpolicyGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2632,22 +2632,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigDefaultpolicyGet(
 }
 
 /*
-Class40EdgesApiService defaultFirewallPolicyUpdate
+EdgesApiService defaultFirewallPolicyUpdate
 Configure default firewall policy  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigDefaultpolicyPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFirewallConfigDefaultpolicyPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFirewallConfigDefaultpolicyPutOpts struct {
+type EdgesApiEdgesEdgeIdFirewallConfigDefaultpolicyPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigDefaultpolicyPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigDefaultpolicyPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigDefaultpolicyPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdFirewallConfigDefaultpolicyPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2717,13 +2717,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigDefaultpolicyPut(
 }
 
 /*
-Class40EdgesApiService nsxEdgeFirewallConfigDelete
+EdgesApiService nsxEdgeFirewallConfigDelete
 Delete NSX Edge firewall configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2784,13 +2784,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigDelete(ctx contex
 }
 
 /*
-Class40EdgesApiService nsxEdgeFirewallConfigRead
+EdgesApiService nsxEdgeFirewallConfigRead
 Retrieve the NSX Edge firewall configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **enableSynFloodProtection** parameter added.  6.3.0 | Method updated. **logIcmpErrors** and **dropIcmpReplays** parameters added.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2851,13 +2851,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigGet(ctx context.C
 }
 
 /*
-Class40EdgesApiService globalFirewallConfigRead
+EdgesApiService globalFirewallConfigRead
 Retrieve the firewall default policy for an Edge.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **enableSynFloodProtection** parameter added.  6.3.0 | Method updated. **logIcmpErrors** and **dropIcmpReplays** parameters added.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigGlobalGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigGlobalGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2918,22 +2918,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigGlobalGet(ctx con
 }
 
 /*
-Class40EdgesApiService globalFirewallConfigUpdate
+EdgesApiService globalFirewallConfigUpdate
 Configure firewall global config for an Edge.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **enableSynFloodProtection** parameter added. Default value of **tcpTimeoutEstablished** increased from 3600 to 21600 seconds (6 hours). 6.3.0 | Method updated. **logIcmpErrors** and **dropIcmpReplays** parameters added.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigGlobalPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFirewallConfigGlobalPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFirewallConfigGlobalPutOpts struct {
+type EdgesApiEdgesEdgeIdFirewallConfigGlobalPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigGlobalPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigGlobalPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigGlobalPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdFirewallConfigGlobalPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3003,22 +3003,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigGlobalPut(ctx con
 }
 
 /*
-Class40EdgesApiService nsxEdgeFirewallConfigUpdate
+EdgesApiService nsxEdgeFirewallConfigUpdate
 Configure NSX Edge firewall.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **enableSynFloodProtection** parameter added. Default value of **tcpTimeoutEstablished** increased from 3600 to 21600 seconds (6 hours). 6.3.0 | Method updated. **logIcmpErrors** and **dropIcmpReplays** parameters added.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFirewallConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFirewallConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdFirewallConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdFirewallConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3088,24 +3088,24 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigPut(ctx context.C
 }
 
 /*
-Class40EdgesApiService firewallRulesCreate
+EdgesApiService firewallRulesCreate
 Add one or more rules. You can add a rule above a specific rule using the query parameter, indicating the desired ruleID.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigRulesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFirewallConfigRulesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "AboveRuleId" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFirewallConfigRulesPostOpts struct {
+type EdgesApiEdgesEdgeIdFirewallConfigRulesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	AboveRuleId optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigRulesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigRulesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdFirewallConfigRulesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3178,14 +3178,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesPost(ctx con
 }
 
 /*
-Class40EdgesApiService firewallRuleDelete
+EdgesApiService firewallRuleDelete
 Delete firewall rule  Parameters:  ruleId: Rule ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ruleId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesRuleIdDelete(ctx context.Context, edgeId string, ruleId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigRulesRuleIdDelete(ctx context.Context, edgeId string, ruleId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -3247,14 +3247,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesRuleIdDelete
 }
 
 /*
-Class40EdgesApiService firewallRuleRead
+EdgesApiService firewallRuleRead
 Retrieve specific rule.  Parameters:  ruleId: Rule ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ruleId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesRuleIdGet(ctx context.Context, edgeId string, ruleId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigRulesRuleIdGet(ctx context.Context, edgeId string, ruleId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3316,23 +3316,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesRuleIdGet(ct
 }
 
 /*
-Class40EdgesApiService firewallRuleUpdate
+EdgesApiService firewallRuleUpdate
 Modify a specific firewall rule.  Parameters:  ruleId: Rule ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ruleId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigRulesRuleIdPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFirewallConfigRulesRuleIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFirewallConfigRulesRuleIdPutOpts struct {
+type EdgesApiEdgesEdgeIdFirewallConfigRulesRuleIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesRuleIdPut(ctx context.Context, edgeId string, ruleId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFirewallConfigRulesRuleIdPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallConfigRulesRuleIdPut(ctx context.Context, edgeId string, ruleId string, localVarOptionals *EdgesApiEdgesEdgeIdFirewallConfigRulesRuleIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3403,20 +3403,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallConfigRulesRuleIdPut(ct
 }
 
 /*
-Class40EdgesApiService firewallStatisticsRead
+EdgesApiService firewallStatisticsRead
 Retrieve number of ongoing connections for the firewall configuration.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdFirewallStatisticsFirewallGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdFirewallStatisticsFirewallGetOpts - Optional Parameters:
      * @param "Interval" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdFirewallStatisticsFirewallGetOpts struct {
+type EdgesApiEdgesEdgeIdFirewallStatisticsFirewallGetOpts struct {
 	Interval optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallStatisticsFirewallGet(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdFirewallStatisticsFirewallGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallStatisticsFirewallGet(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdFirewallStatisticsFirewallGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3480,14 +3480,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallStatisticsFirewallGet(c
 }
 
 /*
-Class40EdgesApiService firewallRuleStatisticsRead
+EdgesApiService firewallRuleStatisticsRead
 Retrieve stats for firewall rule.  Parameters:  ruleId: Specified rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ruleId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallStatisticsRuleIdGet(ctx context.Context, edgeId string, ruleId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdFirewallStatisticsRuleIdGet(ctx context.Context, edgeId string, ruleId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3549,20 +3549,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdFirewallStatisticsRuleIdGet(ctx
 }
 
 /*
-Class40EdgesApiService nsxEdgeRead
+EdgesApiService nsxEdgeRead
 Retrieve information about the specified NSX Edge.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **haAdminState**, **configuredResourcePool**, **configuredDataStore**, **configuredHost**, **configuredVmFolder** parameters added.    Parameters:  edgeId: Specify the ID of the edge in *edgeId*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdGetOpts - Optional Parameters:
      * @param "IsUniversal" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdGetOpts struct {
+type EdgesApiEdgesEdgeIdGetOpts struct {
 	IsUniversal optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdGet(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdGet(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3626,13 +3626,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdGet(ctx context.Context, edgeId
 }
 
 /*
-Class40EdgesApiService highAvailabilityDelete
+EdgesApiService highAvailabilityDelete
 Delete high availability configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdHighavailabilityConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdHighavailabilityConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -3693,13 +3693,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdHighavailabilityConfigDelete(ct
 }
 
 /*
-Class40EdgesApiService highAvailabilityRead
+EdgesApiService highAvailabilityRead
 Get high availability configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdHighavailabilityConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdHighavailabilityConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3760,22 +3760,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdHighavailabilityConfigGet(ctx c
 }
 
 /*
-Class40EdgesApiService highAvailabilityCreate
+EdgesApiService highAvailabilityCreate
 Configure high availability.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdHighavailabilityConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdHighavailabilityConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdHighavailabilityConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdHighavailabilityConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdHighavailabilityConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdHighavailabilityConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdHighavailabilityConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdHighavailabilityConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3845,20 +3845,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdHighavailabilityConfigPut(ctx c
 }
 
 /*
-Class40EdgesApiService interfacesDelete
+EdgesApiService interfacesDelete
 Delete all interfaces on the logical router.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdInterfacesDeleteOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdInterfacesDeleteOpts - Optional Parameters:
      * @param "Index" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdInterfacesDeleteOpts struct {
+type EdgesApiEdgesEdgeIdInterfacesDeleteOpts struct {
 	Index optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesDelete(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdInterfacesDeleteOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdInterfacesDelete(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdInterfacesDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -3922,13 +3922,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesDelete(ctx context.Co
 }
 
 /*
-Class40EdgesApiService interfacesRead
+EdgesApiService interfacesRead
 Retrieve all interfaces on the logical router.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdInterfacesGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3989,14 +3989,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesGet(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService interfaceDelete
+EdgesApiService interfaceDelete
 Delete interface configuration and reset to factory default.   Parameters:  index: Specified router interface.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param index
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesIndexDelete(ctx context.Context, edgeId string, index string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdInterfacesIndexDelete(ctx context.Context, edgeId string, index string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -4058,14 +4058,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesIndexDelete(ctx conte
 }
 
 /*
-Class40EdgesApiService interfaceRead
+EdgesApiService interfaceRead
 Retrieve information about the specified logical router interface.   Parameters:  index: Specified router interface.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param index
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesIndexGet(ctx context.Context, edgeId string, index string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdInterfacesIndexGet(ctx context.Context, edgeId string, index string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4127,14 +4127,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesIndexGet(ctx context.
 }
 
 /*
-Class40EdgesApiService interfaceUpdate
+EdgesApiService interfaceUpdate
 Update interface configuration for the specified logical router interface.   Parameters:  index: Specified router interface.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param index
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesIndexPut(ctx context.Context, edgeId string, index string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdInterfacesIndexPut(ctx context.Context, edgeId string, index string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -4196,24 +4196,24 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesIndexPut(ctx context.
 }
 
 /*
-Class40EdgesApiService interfacesCreate
+EdgesApiService interfacesCreate
 Add interfaces for a logical router.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdInterfacesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdInterfacesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdInterfacesPostOpts struct {
+type EdgesApiEdgesEdgeIdInterfacesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdInterfacesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdInterfacesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdInterfacesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4286,13 +4286,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdInterfacesPost(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService ipsecConfigDelete
+EdgesApiService ipsecConfigDelete
 Delete the IPsec configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdIpsecConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -4353,13 +4353,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecConfigDelete(ctx context.C
 }
 
 /*
-Class40EdgesApiService ipsecConfigRead
+EdgesApiService ipsecConfigRead
 Retrieve IPsec configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdIpsecConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4420,22 +4420,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecConfigGet(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService ipsecConfigUpdate
+EdgesApiService ipsecConfigUpdate
 Update IPsec VPN configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdIpsecConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdIpsecConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdIpsecConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdIpsecConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdIpsecConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdIpsecConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdIpsecConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -4505,13 +4505,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecConfigPut(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService ipsecStatsRead
+EdgesApiService ipsecStatsRead
 Retrieve IPsec statistics.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdIpsecStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4572,13 +4572,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdIpsecStatisticsGet(ctx context.
 }
 
 /*
-Class40EdgesApiService l2VPNDelete
+EdgesApiService l2VPNDelete
 Delete the L2 VPN configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdL2vpnConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -4639,13 +4639,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigDelete(ctx context.C
 }
 
 /*
-Class40EdgesApiService l2VPNRead
+EdgesApiService l2VPNRead
 Retrieve the current L2VPN configuration for NSX Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdL2vpnConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4706,20 +4706,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigGet(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService l2VPNCreate
+EdgesApiService l2VPNCreate
 Enable or disable L2 VPN service.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdL2vpnConfigPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdL2vpnConfigPostOpts - Optional Parameters:
      * @param "EnableService" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdL2vpnConfigPostOpts struct {
+type EdgesApiEdgesEdgeIdL2vpnConfigPostOpts struct {
 	EnableService optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdL2vpnConfigPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdL2vpnConfigPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdL2vpnConfigPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4783,22 +4783,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigPost(ctx context.Con
 }
 
 /*
-Class40EdgesApiService l2VPNUpdate
+EdgesApiService l2VPNUpdate
 Configure L2VPN for server or client.  You first enable the L2 VPN service on the NSX Edge instance and then configure a server and a client.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdL2vpnConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdL2vpnConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdL2vpnConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdL2vpnConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdL2vpnConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdL2vpnConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdL2vpnConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -4868,13 +4868,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigPut(ctx context.Cont
 }
 
 /*
-Class40EdgesApiService statisticsRead
+EdgesApiService statisticsRead
 Retrieve L2 VPN statistics, which has information such as tunnel status, sent bytes, received bytes for the specified Edge.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdL2vpnConfigStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4935,20 +4935,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdL2vpnConfigStatisticsGet(ctx co
 }
 
 /*
-Class40EdgesApiService undefined
+EdgesApiService undefined
   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerAccelerationPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerAccelerationPostOpts - Optional Parameters:
      * @param "Enable" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerAccelerationPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerAccelerationPostOpts struct {
 	Enable optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerAccelerationPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerAccelerationPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerAccelerationPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerAccelerationPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -5012,14 +5012,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerAccelerationPost(ct
 }
 
 /*
-Class40EdgesApiService applicationProfileDelete
+EdgesApiService applicationProfileDelete
 Delete an application profile.  Parameters:  appProfileID: Specified application profile.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param appProfileID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDDelete(ctx context.Context, edgeId string, appProfileID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDDelete(ctx context.Context, edgeId string, appProfileID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -5081,14 +5081,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationpr
 }
 
 /*
-Class40EdgesApiService applicationProfileRead
+EdgesApiService applicationProfileRead
 Retrieve an application profile.  Parameters:  appProfileID: Specified application profile.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param appProfileID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDGet(ctx context.Context, edgeId string, appProfileID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDGet(ctx context.Context, edgeId string, appProfileID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -5150,23 +5150,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationpr
 }
 
 /*
-Class40EdgesApiService applicationProfileUpdate
+EdgesApiService applicationProfileUpdate
 Modify an application profile.  Parameters:  appProfileID: Specified application profile.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param appProfileID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPutOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPut(ctx context.Context, edgeId string, appProfileID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPut(ctx context.Context, edgeId string, appProfileID string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationprofilesAppProfileIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -5237,13 +5237,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationpr
 }
 
 /*
-Class40EdgesApiService applicationProfilesDelete
+EdgesApiService applicationProfilesDelete
 Delete all application profiles on the specified Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationprofilesDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationprofilesDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -5304,13 +5304,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationpr
 }
 
 /*
-Class40EdgesApiService applicationProfilesRead
+EdgesApiService applicationProfilesRead
 Retrieve all application profiles on the specified Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationprofilesGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationprofilesGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -5371,22 +5371,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationpr
 }
 
 /*
-Class40EdgesApiService applicationProfilesCreate
+EdgesApiService applicationProfilesCreate
 Add an application profile.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationprofilesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationprofilesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationprofilesPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationprofilesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationprofilesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationprofilesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationprofilesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationprofilesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -5456,14 +5456,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationpr
 }
 
 /*
-Class40EdgesApiService appRuleDelete
+EdgesApiService appRuleDelete
 Delete an application rule.  Parameters:  appruleID: Specified application rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param appruleID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDDelete(ctx context.Context, edgeId string, appruleID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDDelete(ctx context.Context, edgeId string, appruleID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -5525,14 +5525,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationru
 }
 
 /*
-Class40EdgesApiService appRuleRead
+EdgesApiService appRuleRead
 Retrieve an application rule.  Parameters:  appruleID: Specified application rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param appruleID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDGet(ctx context.Context, edgeId string, appruleID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDGet(ctx context.Context, edgeId string, appruleID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -5594,23 +5594,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationru
 }
 
 /*
-Class40EdgesApiService appRuleUpdate
+EdgesApiService appRuleUpdate
 Modify an application rule.  Parameters:  appruleID: Specified application rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param appruleID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPutOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPut(ctx context.Context, edgeId string, appruleID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPut(ctx context.Context, edgeId string, appruleID string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationrulesAppruleIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -5681,13 +5681,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationru
 }
 
 /*
-Class40EdgesApiService appRulesDelete
+EdgesApiService appRulesDelete
 Delete all application rules.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationrulesDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationrulesDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -5748,13 +5748,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationru
 }
 
 /*
-Class40EdgesApiService appRulesRead
+EdgesApiService appRulesRead
 Retrieve all application rules.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationrulesGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationrulesGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -5815,22 +5815,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationru
 }
 
 /*
-Class40EdgesApiService appRulesCreate
+EdgesApiService appRulesCreate
 Add an application rule.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationrulesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationrulesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationrulesPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationrulesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationrulesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigApplicationrulesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigApplicationrulesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigApplicationrulesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -5900,13 +5900,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigApplicationru
 }
 
 /*
-Class40EdgesApiService loadBalancerDelete
+EdgesApiService loadBalancerDelete
 Delete load balancer configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -5967,13 +5967,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigDelete(ctx co
 }
 
 /*
-Class40EdgesApiService loadBalancerRead
+EdgesApiService loadBalancerRead
 Get load balancer configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -6034,21 +6034,21 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigGet(ctx conte
 }
 
 /*
-Class40EdgesApiService lbMemberCondToggle
+EdgesApiService lbMemberCondToggle
 Update enabled status of the specified member.  Parameters:  memberID: Member ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param memberID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMembersMemberIDPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigMembersMemberIDPostOpts - Optional Parameters:
      * @param "Enable" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMembersMemberIDPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigMembersMemberIDPostOpts struct {
 	Enable optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMembersMemberIDPost(ctx context.Context, edgeId string, memberID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMembersMemberIDPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMembersMemberIDPost(ctx context.Context, edgeId string, memberID string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigMembersMemberIDPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -6113,13 +6113,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMembersMember
 }
 
 /*
-Class40EdgesApiService lbMonitorsDelete
+EdgesApiService lbMonitorsDelete
 Delete all load balancer monitors.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMonitorsDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -6180,13 +6180,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsDelet
 }
 
 /*
-Class40EdgesApiService lbMonitorsRead
+EdgesApiService lbMonitorsRead
 Retrieve all load balancer monitors.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMonitorsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -6247,14 +6247,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsGet(c
 }
 
 /*
-Class40EdgesApiService lbMonitorDelete
+EdgesApiService lbMonitorDelete
 Delete a load balancer monitor.  Parameters:  monitorID: Specified monitor.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param monitorID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDDelete(ctx context.Context, edgeId string, monitorID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDDelete(ctx context.Context, edgeId string, monitorID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -6316,14 +6316,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsMonit
 }
 
 /*
-Class40EdgesApiService lbMonitorRead
+EdgesApiService lbMonitorRead
 Retrieve a load balancer monitor.  Parameters:  monitorID: Specified monitor.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param monitorID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDGet(ctx context.Context, edgeId string, monitorID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDGet(ctx context.Context, edgeId string, monitorID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -6385,23 +6385,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsMonit
 }
 
 /*
-Class40EdgesApiService lbMonitorUpdate
+EdgesApiService lbMonitorUpdate
 Modify a load balancer monitor.  Parameters:  monitorID: Specified monitor.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param monitorID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPutOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPut(ctx context.Context, edgeId string, monitorID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPut(ctx context.Context, edgeId string, monitorID string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigMonitorsMonitorIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -6472,22 +6472,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsMonit
 }
 
 /*
-Class40EdgesApiService lbMonitorsCreate
+EdgesApiService lbMonitorsCreate
 Add a load balancer monitor.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMonitorsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigMonitorsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMonitorsPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigMonitorsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigMonitorsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigMonitorsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigMonitorsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -6557,13 +6557,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigMonitorsPost(
 }
 
 /*
-Class40EdgesApiService poolsDelete
+EdgesApiService poolsDelete
 Delete all server pools configured on the specified NSX Edge.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPoolsDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -6624,13 +6624,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsDelete(c
 }
 
 /*
-Class40EdgesApiService poolsRead
+EdgesApiService poolsRead
 Get all server pools on the specified NSX Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPoolsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -6691,14 +6691,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsGet(ctx 
 }
 
 /*
-Class40EdgesApiService poolDelete
+EdgesApiService poolDelete
 Delete the specified server pool.  Parameters:  poolID: Specified pool ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param poolID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDDelete(ctx context.Context, edgeId string, poolID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPoolsPoolIDDelete(ctx context.Context, edgeId string, poolID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -6760,14 +6760,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDDe
 }
 
 /*
-Class40EdgesApiService poolRead
+EdgesApiService poolRead
 Retrieve information about the specified server pool.  Parameters:  poolID: Specified pool ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param poolID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDGet(ctx context.Context, edgeId string, poolID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPoolsPoolIDGet(ctx context.Context, edgeId string, poolID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -6829,23 +6829,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDGe
 }
 
 /*
-Class40EdgesApiService poolUpdate
+EdgesApiService poolUpdate
 Update the specified server pool.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. Member **condition** can be set to *drain*.   Parameters:  poolID: Specified pool ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param poolID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigPoolsPoolIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDPutOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigPoolsPoolIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDPut(ctx context.Context, edgeId string, poolID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPoolsPoolIDPut(ctx context.Context, edgeId string, poolID string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigPoolsPoolIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -6916,22 +6916,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPoolIDPu
 }
 
 /*
-Class40EdgesApiService poolsCreate
+EdgesApiService poolsCreate
 Add a load balancer server pool to the Edge.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. Member **condition** can be set to *drain*.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPoolsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigPoolsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPoolsPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigPoolsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPoolsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPoolsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigPoolsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -7001,22 +7001,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPoolsPost(ctx
 }
 
 /*
-Class40EdgesApiService loadBalancerConfig
+EdgesApiService loadBalancerConfig
 Configure load balancer.  The input contains five parts: application profile, virtual server, pool, monitor and application rule.  For the data path to work, you need to add firewall rules to allow required traffic as per the load balancer configuration.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -7086,13 +7086,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigPut(ctx conte
 }
 
 /*
-Class40EdgesApiService virtualServersDelete
+EdgesApiService virtualServersDelete
 Delete all virtual servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserversDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigVirtualserversDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -7153,13 +7153,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserver
 }
 
 /*
-Class40EdgesApiService virtualServersRead
+EdgesApiService virtualServersRead
 Retrieve all virtual servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserversGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigVirtualserversGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -7220,22 +7220,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserver
 }
 
 /*
-Class40EdgesApiService virtualServersCreate
+EdgesApiService virtualServersCreate
 Add a virtual server.  You can add an NSX Edge internal or uplink interface as a virtual server.  Parameter |  Description | Comments ---|---|---  **name**      |Name of virtual server.|Required.  **description**     |Description of virtual server.|Optional.  **enabled**    |Whether the virtual server is enabled.|Optional. Boolean. Options are *true* or *false*. Default is *true*.  **ipAddress**      |IP address that the load balancer is listening on. |Required. A valid NSX Edge vNic IP address (IPv4 or IPv6).  **protocol**      |Virtual server protocol.|Required. Options are: *HTTP*, *HTTPS*, *TCP*, *UDP*.  **port**      |Port number or port range.|Required. Port number such as *80*, port range such as *80,443* or *1234-1238*, or a combination such as *443,6000-7000*.  **connectionLimit**      |Maximum concurrent connections.|Optional. Long.  **connectionRateLimit**      |Maximum incoming new connection requests per second.|Optional. Long.  **defaultPoolId**      |Default backend server pool identifier.|Optional.  **applicationProfileId**      |Application profile identifier.|Optional.  **accelerationEnabled**      |Use the faster L4 load balancer  engine rather than L7 load  balancer engine.|Optional. Boolean. Options are *true* or *false*. If a virtual server configuration such as application rules, HTTP type, or cookie persistence, is using the L7 load balancer engine, then the L7 load balancer engine is used, even if **accelerationEnabled** is not set to true.  **applicationRuleId**      |Application rule identifier list.|Optional. Each item should be a valid **applicationRuleId**.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigVirtualserversPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoadbalancerConfigVirtualserversPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigVirtualserversPostOpts struct {
+type EdgesApiEdgesEdgeIdLoadbalancerConfigVirtualserversPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserversPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoadbalancerConfigVirtualserversPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigVirtualserversPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoadbalancerConfigVirtualserversPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -7305,14 +7305,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserver
 }
 
 /*
-Class40EdgesApiService virtualServerDelete
+EdgesApiService virtualServerDelete
 Delete the specified virtual server.  Parameters:  virtualserverID: Specified virtual server ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param virtualserverID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserversVirtualserverIDDelete(ctx context.Context, edgeId string, virtualserverID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigVirtualserversVirtualserverIDDelete(ctx context.Context, edgeId string, virtualserverID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -7374,14 +7374,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserver
 }
 
 /*
-Class40EdgesApiService virtualServerRead
+EdgesApiService virtualServerRead
 Retrieve details for the specified virtual server.  Parameters:  virtualserverID: Specified virtual server ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param virtualserverID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserversVirtualserverIDGet(ctx context.Context, edgeId string, virtualserverID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerConfigVirtualserversVirtualserverIDGet(ctx context.Context, edgeId string, virtualserverID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -7443,13 +7443,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerConfigVirtualserver
 }
 
 /*
-Class40EdgesApiService lbStatisticsRead
+EdgesApiService lbStatisticsRead
 Retrieve load balancer statistics.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoadbalancerStatisticsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -7510,20 +7510,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoadbalancerStatisticsGet(ctx c
 }
 
 /*
-Class40EdgesApiService loggingCreate
+EdgesApiService loggingCreate
 Modify log setting.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdLoggingPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdLoggingPostOpts - Optional Parameters:
      * @param "Level" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdLoggingPostOpts struct {
+type EdgesApiEdgesEdgeIdLoggingPostOpts struct {
 	Level optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoggingPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdLoggingPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdLoggingPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdLoggingPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -7587,13 +7587,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdLoggingPost(ctx context.Context
 }
 
 /*
-Class40EdgesApiService mgmtInterfaceRead
+EdgesApiService mgmtInterfaceRead
 Retrieve the management interface configuration for the logical router.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdMgmtinterfaceGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdMgmtinterfaceGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -7654,22 +7654,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdMgmtinterfaceGet(ctx context.Co
 }
 
 /*
-Class40EdgesApiService mgmtInterfaceUpdate
+EdgesApiService mgmtInterfaceUpdate
 Configure high availability (management) interface for logical (distributed) router.  See *Working with NSX Edge* for descriptions of parameters used to configure the logical router HA interface.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdMgmtinterfacePutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdMgmtinterfacePutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdMgmtinterfacePutOpts struct {
+type EdgesApiEdgesEdgeIdMgmtinterfacePutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdMgmtinterfacePut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdMgmtinterfacePutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdMgmtinterfacePut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdMgmtinterfacePutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -7739,13 +7739,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdMgmtinterfacePut(ctx context.Co
 }
 
 /*
-Class40EdgesApiService edgeNatDelete
+EdgesApiService edgeNatDelete
 Delete all NAT rules for the specified NSX Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdNatConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -7806,13 +7806,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigDelete(ctx context.Con
 }
 
 /*
-Class40EdgesApiService edgeNatRead
+EdgesApiService edgeNatRead
 Retrieve SNAT and DNAT rules for the specified NSX Edge.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **dnatMatchSourceAddress**, **snatMatchDestinationAddress**, **dnatMatchSourcePort**, **snatMatchDestinationPort** parameters added. &lt;br&gt;**protocol**, **originalPort**, and **translatedPort** now supported in SNAT rules.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdNatConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -7873,22 +7873,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigGet(ctx context.Contex
 }
 
 /*
-Class40EdgesApiService edgeNatConfig
+EdgesApiService edgeNatConfig
 Configure SNAT and DNAT rules for an Edge.  If you use this method to add new NAT rules, you must include all existing rules in the request body. Any rules that are omitted will be deleted.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **dnatMatchSourceAddress**, **snatMatchDestinationAddress**, **dnatMatchSourcePort**, **snatMatchDestinationPort** parameters added. &lt;br&gt;**protocol**, **originalPort**, and **translatedPort** now supported in SNAT rules.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdNatConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdNatConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdNatConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdNatConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdNatConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdNatConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdNatConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -7958,24 +7958,24 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigPut(ctx context.Contex
 }
 
 /*
-Class40EdgesApiService edgeNatRulesCreate
+EdgesApiService edgeNatRulesCreate
 Add a NAT rule above a specific rule in the NAT rules table (using **aboveRuleId** query parameter) or append NAT rules to the bottom.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **dnatMatchSourceAddress**, **snatMatchDestinationAddress**, **dnatMatchSourcePort**, **snatMatchDestinationPort** parameters added. &lt;br&gt;**protocol**, **originalPort**, and **translatedPort** now supported in SNAT rules.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdNatConfigRulesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdNatConfigRulesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "AboveRuleId" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdNatConfigRulesPostOpts struct {
+type EdgesApiEdgesEdgeIdNatConfigRulesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	AboveRuleId optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigRulesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdNatConfigRulesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdNatConfigRulesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdNatConfigRulesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -8048,14 +8048,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigRulesPost(ctx context.
 }
 
 /*
-Class40EdgesApiService edgeNatRuleDelete
+EdgesApiService edgeNatRuleDelete
 Delete the specified NAT rule.  Parameters:  ruleID: Specified rule ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ruleID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigRulesRuleIDDelete(ctx context.Context, edgeId string, ruleID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdNatConfigRulesRuleIDDelete(ctx context.Context, edgeId string, ruleID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -8117,23 +8117,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigRulesRuleIDDelete(ctx 
 }
 
 /*
-Class40EdgesApiService edgeNatRuleUpdate
+EdgesApiService edgeNatRuleUpdate
 Update the specified NAT rule.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **dnatMatchSourceAddress**, **snatMatchDestinationAddress**, **dnatMatchSourcePort**, **snatMatchDestinationPort** parameters added. &lt;br&gt;**protocol**, **originalPort**, and **translatedPort** now supported in SNAT rules.   Parameters:  ruleID: Specified rule ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ruleID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdNatConfigRulesRuleIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdNatConfigRulesRuleIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdNatConfigRulesRuleIDPutOpts struct {
+type EdgesApiEdgesEdgeIdNatConfigRulesRuleIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigRulesRuleIDPut(ctx context.Context, edgeId string, ruleID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdNatConfigRulesRuleIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdNatConfigRulesRuleIDPut(ctx context.Context, edgeId string, ruleID string, localVarOptionals *EdgesApiEdgesEdgeIdNatConfigRulesRuleIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -8204,20 +8204,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdNatConfigRulesRuleIDPut(ctx con
 }
 
 /*
-Class40EdgesApiService nsxEdgeCreate
+EdgesApiService nsxEdgeCreate
 Manage NSX Edge.  Parameters:  edgeId: Specify the ID of the edge in *edgeId*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdPostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdPostOpts struct {
+type EdgesApiEdgesEdgeIdPostOpts struct {
 	Action optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -8281,22 +8281,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdPost(ctx context.Context, edgeI
 }
 
 /*
-Class40EdgesApiService nsxEdgeUpdate
+EdgesApiService nsxEdgeUpdate
 Update the NSX Edge configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **haAdminState** parameter added. 6.3.0 | Method updated. **dnatMatchSourceAddress**, **snatMatchDestinationAddress**, **dnatMatchSourcePort**, **snatMatchDestinationPort** parameters added. &lt;br&gt;**protocol**, **originalPort**, and **translatedPort** now supported in SNAT rules.   Parameters:  edgeId: Specify the ID of the edge in *edgeId*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdPutOpts struct {
+type EdgesApiEdgesEdgeIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -8366,13 +8366,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdPut(ctx context.Context, edgeId
 }
 
 /*
-Class40EdgesApiService routingBGPDelete
+EdgesApiService routingBGPDelete
 Delete BGP Routing  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigBgpDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigBgpDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -8433,13 +8433,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigBgpDelete(ctx cont
 }
 
 /*
-Class40EdgesApiService routingBGPRead
+EdgesApiService routingBGPRead
 Retrieve BGP configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **isis** configuration section removed.  6.3.0 | Method updated. Parameter **defaultOriginate** removed for logical router NSX Edges.  &lt;br&gt;Parameters **localASNumber** and **remoteASNumber** added to BGP section.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigBgpGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigBgpGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -8500,22 +8500,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigBgpGet(ctx context
 }
 
 /*
-Class40EdgesApiService routingBGPUpdate
+EdgesApiService routingBGPUpdate
 Configure BGP.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **isis** configuration section removed.  6.3.0 | Method updated. Parameter **defaultOriginate** removed for logical router NSX Edges. &lt;br&gt;Parameters **localASNumber** and **remoteASNumber** added to BGP section.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigBgpPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdRoutingConfigBgpPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdRoutingConfigBgpPutOpts struct {
+type EdgesApiEdgesEdgeIdRoutingConfigBgpPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigBgpPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigBgpPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigBgpPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdRoutingConfigBgpPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -8585,13 +8585,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigBgpPut(ctx context
 }
 
 /*
-Class40EdgesApiService routingConfigDelete
+EdgesApiService routingConfigDelete
 Delete the routing config stored in the NSX Manager database and the default routes from the specified NSX Edge appliance.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -8652,13 +8652,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigDelete(ctx context
 }
 
 /*
-Class40EdgesApiService routingConfigRead
+EdgesApiService routingConfigRead
 Retrieve routes.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **isis** configuration section removed.  6.3.0 | Method updated. Parameter **defaultOriginate** removed for logical router NSX Edges.  &lt;br&gt;Parameter **translateType7ToType5** added to OSPF section. &lt;br&gt;Parameters **localASNumber** and **remoteASNumber** added to BGP section.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -8719,13 +8719,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigGet(ctx context.Co
 }
 
 /*
-Class40EdgesApiService routingGlobalConfigRead
+EdgesApiService routingGlobalConfigRead
 Retrieve routing info from NSX Manager database (default route settings, static route configurations).   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigGlobalGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigGlobalGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -8786,22 +8786,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigGlobalGet(ctx cont
 }
 
 /*
-Class40EdgesApiService routingGlobalConfigUpdate
+EdgesApiService routingGlobalConfigUpdate
 Configure global route.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigGlobalPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdRoutingConfigGlobalPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdRoutingConfigGlobalPutOpts struct {
+type EdgesApiEdgesEdgeIdRoutingConfigGlobalPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigGlobalPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigGlobalPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigGlobalPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdRoutingConfigGlobalPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -8871,13 +8871,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigGlobalPut(ctx cont
 }
 
 /*
-Class40EdgesApiService routingOSPFDelete
+EdgesApiService routingOSPFDelete
 Delete OSPF routing.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigOspfDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigOspfDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -8938,13 +8938,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigOspfDelete(ctx con
 }
 
 /*
-Class40EdgesApiService routingOSPFRead
+EdgesApiService routingOSPFRead
 Retrieve OSPF configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **isis** configuration section removed.  6.3.0 | Method updated. Parameter **defaultOriginate** removed for logical router NSX Edges.  &lt;br&gt;Parameter **translateType7ToType5** added to OSPF section.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigOspfGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigOspfGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -9005,22 +9005,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigOspfGet(ctx contex
 }
 
 /*
-Class40EdgesApiService routingOSPFUpdate
+EdgesApiService routingOSPFUpdate
 Configure OSPF.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **isis** configuration section removed.  6.3.0 | Method updated. Parameter **defaultOriginate** removed for logical router NSX Edges.  &lt;br&gt;Parameter **translateType7ToType5** added to OSPF section.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigOspfPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdRoutingConfigOspfPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdRoutingConfigOspfPutOpts struct {
+type EdgesApiEdgesEdgeIdRoutingConfigOspfPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigOspfPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigOspfPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigOspfPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdRoutingConfigOspfPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -9090,22 +9090,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigOspfPut(ctx contex
 }
 
 /*
-Class40EdgesApiService routingConfigUpdate
+EdgesApiService routingConfigUpdate
 Configure NSX Edge global routing configuration, static routing, and dynamic routing (OSPF and BGP).  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **isis** configuration section removed.  6.3.0 | Method updated. Parameter **defaultOriginate** removed for logical router NSX Edges.  &lt;br&gt;Parameter **translateType7ToType5** added to OSPF section. &lt;br&gt;Parameters **localASNumber** and **remoteASNumber** added to BGP section.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdRoutingConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdRoutingConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdRoutingConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdRoutingConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -9175,13 +9175,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigPut(ctx context.Co
 }
 
 /*
-Class40EdgesApiService routingConfigStaticDelete
+EdgesApiService routingConfigStaticDelete
 Delete both static and default routing config stored in the NSX Manager database.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigStaticDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigStaticDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -9242,13 +9242,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigStaticDelete(ctx c
 }
 
 /*
-Class40EdgesApiService routingConfigStaticRead
+EdgesApiService routingConfigStaticRead
 Read static and default routes.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigStaticGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigStaticGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -9309,22 +9309,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigStaticGet(ctx cont
 }
 
 /*
-Class40EdgesApiService routingConfigStaticUpdate
+EdgesApiService routingConfigStaticUpdate
 Configure static and default routes.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigStaticPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdRoutingConfigStaticPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdRoutingConfigStaticPutOpts struct {
+type EdgesApiEdgesEdgeIdRoutingConfigStaticPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigStaticPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdRoutingConfigStaticPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdRoutingConfigStaticPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdRoutingConfigStaticPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -9394,13 +9394,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdRoutingConfigStaticPut(ctx cont
 }
 
 /*
-Class40EdgesApiService sslVPNActiveClientsRead
+EdgesApiService sslVPNActiveClientsRead
 Retrieve a list of active clients for the SSL VPN session.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnActivesessionsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnActivesessionsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -9461,14 +9461,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnActivesessionsGet(ctx con
 }
 
 /*
-Class40EdgesApiService sessionDelete
+EdgesApiService sessionDelete
 Disconnect an active client.  Parameters:  sessionID: Specified client session.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param sessionID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnActivesessionsSessionIDDelete(ctx context.Context, edgeId string, sessionID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnActivesessionsSessionIDDelete(ctx context.Context, edgeId string, sessionID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -9530,22 +9530,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnActivesessionsSessionIDDe
 }
 
 /*
-Class40EdgesApiService allUsersUpdate
+EdgesApiService allUsersUpdate
 Update all users with the given list of users. If the user is present, it is updated. Otherwise, and new user is created. Existing users not included in the body are deleted.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnAuthLocalusersUsersPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnAuthLocalusersUsersPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnAuthLocalusersUsersPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnAuthLocalusersUsersPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnAuthLocalusersUsersPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnAuthLocalusersUsersPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnAuthLocalusersUsersPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnAuthLocalusersUsersPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -9615,13 +9615,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnAuthLocalusersUsersPut(ct
 }
 
 /*
-Class40EdgesApiService advancedConfigRead
+EdgesApiService advancedConfigRead
 Retrieve SSL VPN advanced configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAdvancedconfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAdvancedconfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -9682,22 +9682,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAdvancedconfigGet(c
 }
 
 /*
-Class40EdgesApiService advancedConfigUpdate
+EdgesApiService advancedConfigUpdate
 Update SSL VPN advanced configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAdvancedconfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigAdvancedconfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAdvancedconfigPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigAdvancedconfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAdvancedconfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAdvancedconfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAdvancedconfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigAdvancedconfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -9767,13 +9767,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAdvancedconfigPut(c
 }
 
 /*
-Class40EdgesApiService usersDelete
+EdgesApiService usersDelete
 Delete all users on the specifed SSL VPN instance  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthLocalserverUsersDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -9834,22 +9834,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUser
 }
 
 /*
-Class40EdgesApiService usersCreate
+EdgesApiService usersCreate
 Add a new portal user.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigAuthLocalserverUsersPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPostOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigAuthLocalserverUsersPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigAuthLocalserverUsersPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -9919,22 +9919,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUser
 }
 
 /*
-Class40EdgesApiService usersUpdate
+EdgesApiService usersUpdate
 Modify the portal user specified in the request body.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigAuthLocalserverUsersPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigAuthLocalserverUsersPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthLocalserverUsersPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigAuthLocalserverUsersPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -10004,14 +10004,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUser
 }
 
 /*
-Class40EdgesApiService userDelete
+EdgesApiService userDelete
 Delete the specified user.  Parameters:  userID: User ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param userID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersUserIDDelete(ctx context.Context, edgeId string, userID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthLocalserverUsersUserIDDelete(ctx context.Context, edgeId string, userID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -10073,14 +10073,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUser
 }
 
 /*
-Class40EdgesApiService userRead
+EdgesApiService userRead
 Get information about the specified user.  Parameters:  userID: User ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param userID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUsersUserIDGet(ctx context.Context, edgeId string, userID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthLocalserverUsersUserIDGet(ctx context.Context, edgeId string, userID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -10142,13 +10142,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthLocalserverUser
 }
 
 /*
-Class40EdgesApiService authSettingsRead
+EdgesApiService authSettingsRead
 Retrieve information about authentication settings.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthSettingsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthSettingsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -10209,22 +10209,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthSettingsGet(ctx
 }
 
 /*
-Class40EdgesApiService authSettingsUpdate
+EdgesApiService authSettingsUpdate
 Update authentication settings for remote users. Specify username/password authentication, active directory, ldap, radius, client certificate based authentication.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthSettingsPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigAuthSettingsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthSettingsPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigAuthSettingsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthSettingsPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigAuthSettingsPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthSettingsPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigAuthSettingsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -10294,13 +10294,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthSettingsPut(ctx
 }
 
 /*
-Class40EdgesApiService rsaConfigCreate
+EdgesApiService rsaConfigCreate
 Upload RSA config file (See \&quot;Generate the Authentication Manager Configuration File\&quot; section of the RSA Authentication Manager Administrator&#x27;s guide for instructions on how to configure and download the RSA config file from RSA Authentication Manager).   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthSettingsRsaconfigfilePost(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigAuthSettingsRsaconfigfilePost(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -10361,13 +10361,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigAuthSettingsRsaconf
 }
 
 /*
-Class40EdgesApiService clientConfigRead
+EdgesApiService clientConfigRead
 Retrieve client configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -10428,22 +10428,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService clientConfigUpdate
+EdgesApiService clientConfigUpdate
 Set advanced parameters for full access client configurations, such as whether client should auto-reconnect in case of network failures or network unavailability, or whether the client should be uninstalled after logout.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionClientconfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -10513,13 +10513,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackagesDelete
+EdgesApiService installPackagesDelete
 Delete all client installation packages.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -10580,13 +10580,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackagesRead
+EdgesApiService installPackagesRead
 Retrieve information about all installation packages.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -10647,14 +10647,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackageDelete
+EdgesApiService installPackageDelete
 Delete the specified installation package.  Parameters:  packageID: Specified installation package ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param packageID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDDelete(ctx context.Context, edgeId string, packageID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDDelete(ctx context.Context, edgeId string, packageID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -10716,14 +10716,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackageRead
+EdgesApiService installPackageRead
 Get information about the specified installation package.   Parameters:  packageID: Specified installation package ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param packageID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDGet(ctx context.Context, edgeId string, packageID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDGet(ctx context.Context, edgeId string, packageID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -10785,23 +10785,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackageUpdate
+EdgesApiService installPackageUpdate
 Modify the specified installation package.  Parameters:  packageID: Specified installation package ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param packageID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPut(ctx context.Context, edgeId string, packageID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPut(ctx context.Context, edgeId string, packageID string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPackageIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -10872,22 +10872,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackagesCreate
+EdgesApiService installPackagesCreate
 Creates setup executables (installers) for full access network clients. These setup binaries are later downloaded by remote clients and installed on their systems. The primary parameters needed to configure this setup are hostname of the gateway, and its port and a profile name which is shown to the user to identify this connection. Administrator can also set few other parameters such as whether to automatically start the application on windows login, hide the system tray icon etc.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPostOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -10957,13 +10957,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService installPackagesUpdate
+EdgesApiService installPackagesUpdate
 Update all installation packages with the given list. If the package is present, it is updated; otherwise a new installation package is created. Existing packages not included in the body are deleted.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPut(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionInstallpackagesPut(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -11024,13 +11024,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolsDelete
+EdgesApiService netExtipPoolsDelete
 Delete all IP pools configured on SSL VPN  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -11091,13 +11091,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolsRead
+EdgesApiService netExtipPoolsRead
 Retrieve all IP pools configured on SSL VPN.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -11158,14 +11158,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolDelete
+EdgesApiService netExtipPoolDelete
 Delete the specified IP pool.  Parameters:  ippoolID: Specified IP pool ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ippoolID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDDelete(ctx context.Context, edgeId string, ippoolID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDDelete(ctx context.Context, edgeId string, ippoolID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -11227,14 +11227,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolRead
+EdgesApiService netExtipPoolRead
 Retrieve details of specified IP pool.  Parameters:  ippoolID: Specified IP pool ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ippoolID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDGet(ctx context.Context, edgeId string, ippoolID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDGet(ctx context.Context, edgeId string, ippoolID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -11296,23 +11296,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolUpdate
+EdgesApiService netExtipPoolUpdate
 Update specified IP pool.  Parameters:  ippoolID: Specified IP pool ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param ippoolID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPut(ctx context.Context, edgeId string, ippoolID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPut(ctx context.Context, edgeId string, ippoolID string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsIppoolIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -11383,22 +11383,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolsCreate
+EdgesApiService netExtipPoolsCreate
 Create an IP pool.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPostOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -11468,22 +11468,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService netExtipPoolsUpdate
+EdgesApiService netExtipPoolsUpdate
 Update all IP pools with the given list of pools. If the pool is present, it is updated; otherwise, a new pool is created. Existing pools not in the body are deleted.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionIppoolsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -11553,13 +11553,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworksDelete
+EdgesApiService privateNetworksDelete
 Delete all private networks from the SSL VPN instance.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -11620,13 +11620,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworksRead
+EdgesApiService privateNetworksRead
 Retrieve all private network profiles in the SSL VPN instance.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -11687,14 +11687,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworkDelete
+EdgesApiService privateNetworkDelete
 Delete private network  Parameters:  networkID: Specified private network
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param networkID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDDelete(ctx context.Context, edgeId string, networkID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDDelete(ctx context.Context, edgeId string, networkID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -11756,14 +11756,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworkRead
+EdgesApiService privateNetworkRead
 Retrieve the specified private network in the SSL VPN service.   Parameters:  networkID: Specified private network
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param networkID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDGet(ctx context.Context, edgeId string, networkID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDGet(ctx context.Context, edgeId string, networkID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -11825,23 +11825,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworkUpdate
+EdgesApiService privateNetworkUpdate
 Update the specified private network in the SSL VPN service.   Parameters:  networkID: Specified private network
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param networkID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPut(ctx context.Context, edgeId string, networkID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPut(ctx context.Context, edgeId string, networkID string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksNetworkIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -11912,22 +11912,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworksCreate
+EdgesApiService privateNetworksCreate
 Configure a private network.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPostOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -11997,13 +11997,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService privateNetworksUpdate
+EdgesApiService privateNetworksUpdate
 Update all private network configs of NSX Edge with the given list of private network configs. If the config is present, it is updated; otherwise, a new private network config is created. Existing configs not included in the call body are deleted.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPut(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigClientNetworkextensionPrivatenetworksPut(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -12064,13 +12064,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigClientNetworkextens
 }
 
 /*
-Class40EdgesApiService sslVPNDelete
+EdgesApiService sslVPNDelete
 Delete the SSL VPN configurations on the Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -12131,13 +12131,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigDelete(ctx context.
 }
 
 /*
-Class40EdgesApiService sslVPNRead
+EdgesApiService sslVPNRead
 Retrieve SSL VPN details.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -12198,13 +12198,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigGet(ctx context.Con
 }
 
 /*
-Class40EdgesApiService layoutRead
+EdgesApiService layoutRead
 Retrieve layout configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigLayoutGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigLayoutGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -12265,14 +12265,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigLayoutGet(ctx conte
 }
 
 /*
-Class40EdgesApiService layoutIconsUpload
+EdgesApiService layoutIconsUpload
 Upload images for use with SSL VPN portal and client.  You can upload a logo to use in the SSL VPN portal, and a banner and icons to use in the SSL VPN client.  You must upload the image files using the form-data content-type. Consult the documentation for your REST client for instructions.   Do not set other Content-type headers in your request, for example, *Content-type: application/xml*.  When you upload a file as form-data, you must provide a **key** and a **value** for the file. See the table below for the form-data **key** to use for each image type. The **value** is the path to the image file.  Image Type | form-data key | Image format requirements ----|------|---- portallogo | layoutFile | n/a phatbanner | banner | bmp connecticon | icon | ico disconnecticon | icon | ico erroricon | icon | ico desktopicon | icon | ico  **Example using curl**  &#x60;&#x60;&#x60; /usr/bin/curl -v -k -i -F layoutFile&#x3D;@/tmp/portalLogo.jpg -H &#x27;Authorization: Basic YWRtaW46ZGXXXXXXXX&#x3D;&#x3D;&#x27;  https://192.168.110.42/api/4.0/edges/edge-3/sslvpn/config/layout/images/portallogo &#x60;&#x60;&#x60;   Parameters:  imageType: Type of image to upload. Choice of *portallogo*, *phatbanner*, *connecticon*, *disconnecticon*, *desktopicon*, or *erroricon*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param imageType
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigLayoutImagesImageTypePost(ctx context.Context, edgeId string, imageType string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigLayoutImagesImageTypePost(ctx context.Context, edgeId string, imageType string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -12334,22 +12334,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigLayoutImagesImageTy
 }
 
 /*
-Class40EdgesApiService layoutUpdate
+EdgesApiService layoutUpdate
 Update the portal layout.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigLayoutPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigLayoutPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigLayoutPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigLayoutPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigLayoutPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigLayoutPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigLayoutPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigLayoutPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -12419,20 +12419,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigLayoutPut(ctx conte
 }
 
 /*
-Class40EdgesApiService sslVPNCreate
+EdgesApiService sslVPNCreate
 Enable or disable SSL VPN on the NSX Edge appliance.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigPostOpts - Optional Parameters:
      * @param "EnableService" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigPostOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigPostOpts struct {
 	EnableService optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -12496,13 +12496,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigPost(ctx context.Co
 }
 
 /*
-Class40EdgesApiService sslVPNUpdate
+EdgesApiService sslVPNUpdate
 Update the entire SSL VPN configuration to the specified NSX Edge in a single call.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigPut(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigPut(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -12563,13 +12563,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigPut(ctx context.Con
 }
 
 /*
-Class40EdgesApiService scriptDelete
+EdgesApiService scriptDelete
 Delete all script configurations  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -12630,14 +12630,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptDelete(ctx co
 }
 
 /*
-Class40EdgesApiService scriptFileIDDelete
+EdgesApiService scriptFileIDDelete
 Delete script parameters.  Parameters:  fileID: Specified script file.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param fileID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFileIDDelete(ctx context.Context, edgeId string, fileID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptFileIDDelete(ctx context.Context, edgeId string, fileID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -12699,14 +12699,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFileIDDelete(
 }
 
 /*
-Class40EdgesApiService scriptFileIDRead
+EdgesApiService scriptFileIDRead
 Retrieve parameters associated with the specified script file.   Parameters:  fileID: Specified script file.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param fileID
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFileIDGet(ctx context.Context, edgeId string, fileID string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptFileIDGet(ctx context.Context, edgeId string, fileID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -12768,23 +12768,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFileIDGet(ctx
 }
 
 /*
-Class40EdgesApiService scriptFileIDUpdate
+EdgesApiService scriptFileIDUpdate
 Update parameters associated with the specified script file.   Parameters:  fileID: Specified script file.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param fileID
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptFileIDPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigScriptFileIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptFileIDPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigScriptFileIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFileIDPut(ctx context.Context, edgeId string, fileID string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptFileIDPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptFileIDPut(ctx context.Context, edgeId string, fileID string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigScriptFileIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -12855,13 +12855,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFileIDPut(ctx
 }
 
 /*
-Class40EdgesApiService scriptFileCreate
+EdgesApiService scriptFileCreate
 You can add multiple login or logoff scripts. For example, you can bind a login script for starting Internet Explorer with gmail.com. When the remote user logs in to the SSL client, Internet Explorer opens up gmail.com. This method returns a *scriptFileId* which can be used to update parameters associated with the script file.  You must upload the script files using the form-data content-type. Consult the documentation for your REST client for instructions.  Do not set other Content-type headers in your request, for example, *Content-type: application/xml*.  When you upload a file as form-data, you must provide a **key** and a **value** for the file. The **key** is *file*, and the **value** is the location of the script file.  **Example using curl** &#x60;&#x60;&#x60; /usr/bin/curl -v -k -i -F file&#x3D;@/tmp/script.sh -H &#x27;Authorization: Basic YWRtaW46ZGXXXXXXXX&#x3D;&#x3D;&#x27; https://192.168.110.42/api/4.0/edges/edge-3/sslvpn/config/script/file/ &#x60;&#x60;&#x60;   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFilePost(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptFilePost(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -12922,13 +12922,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptFilePost(ctx 
 }
 
 /*
-Class40EdgesApiService scriptRead
+EdgesApiService scriptRead
 Retrieve all script configurations.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -12989,22 +12989,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptGet(ctx conte
 }
 
 /*
-Class40EdgesApiService scriptCreate
+EdgesApiService scriptCreate
 Configure parameters associated with the uploaded script file.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigScriptPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptPostOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigScriptPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigScriptPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -13074,22 +13074,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptPost(ctx cont
 }
 
 /*
-Class40EdgesApiService scriptUpdate
+EdgesApiService scriptUpdate
 Update all script configurations with the given list of configurations. If the config is present, its is updated; otherwise, a new config is created. Existing configs not included in the body are deleted.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigScriptPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigScriptPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigScriptPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigScriptPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigScriptPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -13159,13 +13159,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigScriptPut(ctx conte
 }
 
 /*
-Class40EdgesApiService serverSettingsRead
+EdgesApiService serverSettingsRead
 Retrieve server settings.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigServerGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigServerGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13226,22 +13226,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigServerGet(ctx conte
 }
 
 /*
-Class40EdgesApiService serverSettingsUpdate
+EdgesApiService serverSettingsUpdate
 Update server settings.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigServerPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSslvpnConfigServerPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigServerPutOpts struct {
+type EdgesApiEdgesEdgeIdSslvpnConfigServerPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigServerPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSslvpnConfigServerPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSslvpnConfigServerPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSslvpnConfigServerPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -13311,20 +13311,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSslvpnConfigServerPut(ctx conte
 }
 
 /*
-Class40EdgesApiService vnicDashStatsRead
+EdgesApiService vnicDashStatsRead
 Retrieves dashboard statistics between the specified start and end times. When start and end time are not specified, all statistics since the Edge deployed are displayed. When no end time is specified, the current Edge Manager time is set as endTime. Each record has the stats of 5 minutes granularity.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardInterfaceGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdStatisticsDashboardInterfaceGetOpts - Optional Parameters:
      * @param "Interval" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardInterfaceGetOpts struct {
+type EdgesApiEdgesEdgeIdStatisticsDashboardInterfaceGetOpts struct {
 	Interval optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsDashboardInterfaceGet(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardInterfaceGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatisticsDashboardInterfaceGet(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdStatisticsDashboardInterfaceGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13388,20 +13388,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsDashboardInterfaceGet
 }
 
 /*
-Class40EdgesApiService ipsecTrafficStatsRead
+EdgesApiService ipsecTrafficStatsRead
 Retrieve tunnel traffic statistics for specified time interval.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardIpsecGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdStatisticsDashboardIpsecGetOpts - Optional Parameters:
      * @param "Interval" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardIpsecGetOpts struct {
+type EdgesApiEdgesEdgeIdStatisticsDashboardIpsecGetOpts struct {
 	Interval optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsDashboardIpsecGet(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardIpsecGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatisticsDashboardIpsecGet(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdStatisticsDashboardIpsecGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13465,20 +13465,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsDashboardIpsecGet(ctx
 }
 
 /*
-Class40EdgesApiService sslVPNStatsRead
+EdgesApiService sslVPNStatsRead
 Retrieve SSL VPN statistics on the specified NSX Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardSslvpnGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdStatisticsDashboardSslvpnGetOpts - Optional Parameters:
      * @param "Interval" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardSslvpnGetOpts struct {
+type EdgesApiEdgesEdgeIdStatisticsDashboardSslvpnGetOpts struct {
 	Interval optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsDashboardSslvpnGet(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdStatisticsDashboardSslvpnGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatisticsDashboardSslvpnGet(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdStatisticsDashboardSslvpnGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13542,13 +13542,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsDashboardSslvpnGet(ct
 }
 
 /*
-Class40EdgesApiService vnicStatsRead
+EdgesApiService vnicStatsRead
 Retrieve interface statistics.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsInterfacesGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatisticsInterfacesGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13609,13 +13609,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsInterfacesGet(ctx con
 }
 
 /*
-Class40EdgesApiService internalVNICStatsRead
+EdgesApiService internalVNICStatsRead
 Retrieve internal interface statistics.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsInterfacesInternalGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatisticsInterfacesInternalGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13676,13 +13676,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsInterfacesInternalGet
 }
 
 /*
-Class40EdgesApiService uplinkVNICStatsRead
+EdgesApiService uplinkVNICStatsRead
 Retrieve uplink interface statistics.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsInterfacesUplinkGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatisticsInterfacesUplinkGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13743,24 +13743,24 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatisticsInterfacesUplinkGet(c
 }
 
 /*
-Class40EdgesApiService statusRead
+EdgesApiService statusRead
 Retrieve the status of the specified Edge.  The **edgeStatus** has the following possible states: * *GREEN*: Health checks are successful, status is good. * *YELLOW*: Intermittent health check failure. If health check fails   for five consecutive times for all appliances, status will turn   *RED*. * *GREY*: unknown status. * *RED*: None of the appliances for this NSX Edge are in a serving state.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdStatusGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdStatusGetOpts - Optional Parameters:
      * @param "Getlatest" (optional.String) -
      * @param "Detailed" (optional.String) -
      * @param "PreRulesStatus" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdStatusGetOpts struct {
+type EdgesApiEdgesEdgeIdStatusGetOpts struct {
 	Getlatest      optional.String
 	Detailed       optional.String
 	PreRulesStatus optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatusGet(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdStatusGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdStatusGet(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdStatusGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13830,13 +13830,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdStatusGet(ctx context.Context, 
 }
 
 /*
-Class40EdgesApiService summaryRead
+EdgesApiService summaryRead
 Retrieve details about the specified NSX Edge.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **enableFips** parameter added to **appliancesSummary**.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSummaryGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSummaryGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -13897,13 +13897,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSummaryGet(ctx context.Context,
 }
 
 /*
-Class40EdgesApiService syslogDelete
+EdgesApiService syslogDelete
 Delete syslog servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSyslogConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSyslogConfigDelete(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -13964,13 +13964,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSyslogConfigDelete(ctx context.
 }
 
 /*
-Class40EdgesApiService syslogRead
+EdgesApiService syslogRead
 Retrieve syslog servers information.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSyslogConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSyslogConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14031,22 +14031,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSyslogConfigGet(ctx context.Con
 }
 
 /*
-Class40EdgesApiService syslogUpdate
+EdgesApiService syslogUpdate
 Configure syslog servers.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSyslogConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSyslogConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSyslogConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdSyslogConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSyslogConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSyslogConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSyslogConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSyslogConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -14116,20 +14116,20 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSyslogConfigPut(ctx context.Con
 }
 
 /*
-Class40EdgesApiService nsxEdgeSystemControlDelete
+EdgesApiService nsxEdgeSystemControlDelete
 Delete all NSX Edge system control configuration.  Deleting the system control configuration requires a reboot of the NSX Edge appliance.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSystemcontrolConfigDeleteOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSystemcontrolConfigDeleteOpts - Optional Parameters:
      * @param "RebootNow" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSystemcontrolConfigDeleteOpts struct {
+type EdgesApiEdgesEdgeIdSystemcontrolConfigDeleteOpts struct {
 	RebootNow optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSystemcontrolConfigDelete(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSystemcontrolConfigDeleteOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSystemcontrolConfigDelete(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSystemcontrolConfigDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -14193,13 +14193,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSystemcontrolConfigDelete(ctx c
 }
 
 /*
-Class40EdgesApiService nsxEdgeSystemControlRead
+EdgesApiService nsxEdgeSystemControlRead
 Retrieve all NSX Edge system control configuration.  If no system control parameters are configured, the response is empty.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSystemcontrolConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSystemcontrolConfigGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14260,22 +14260,22 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSystemcontrolConfigGet(ctx cont
 }
 
 /*
-Class40EdgesApiService nsxEdgeSystemControlUpdate
+EdgesApiService nsxEdgeSystemControlUpdate
 Update the NSX Edge system control (sysctl) configuration.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdSystemcontrolConfigPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdSystemcontrolConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdSystemcontrolConfigPutOpts struct {
+type EdgesApiEdgesEdgeIdSystemcontrolConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdSystemcontrolConfigPut(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdSystemcontrolConfigPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdSystemcontrolConfigPut(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdSystemcontrolConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -14345,13 +14345,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdSystemcontrolConfigPut(ctx cont
 }
 
 /*
-Class40EdgesApiService techSupportLogsRead
+EdgesApiService techSupportLogsRead
 Retrieve the tech support logs for Edge.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdTechsupportlogsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdTechsupportlogsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14412,13 +14412,13 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdTechsupportlogsGet(ctx context.
 }
 
 /*
-Class40EdgesApiService vnicsRead
+EdgesApiService vnicsRead
 Retrieve all interfaces for the specified Edge Services Gateway.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsGet(ctx context.Context, edgeId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdVnicsGet(ctx context.Context, edgeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14479,14 +14479,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsGet(ctx context.Context, e
 }
 
 /*
-Class40EdgesApiService vnicDelete
+EdgesApiService vnicDelete
 Delete interface  Parameters:  index: Specified interface
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param index
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsIndexDelete(ctx context.Context, edgeId string, index string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdVnicsIndexDelete(ctx context.Context, edgeId string, index string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -14548,14 +14548,14 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsIndexDelete(ctx context.Co
 }
 
 /*
-Class40EdgesApiService vnicRead
+EdgesApiService vnicRead
 Retrieve the specified interface.  Parameters:  index: Specified interface
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param index
 
 */
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsIndexGet(ctx context.Context, edgeId string, index string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdVnicsIndexGet(ctx context.Context, edgeId string, index string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14617,23 +14617,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsIndexGet(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService vnicUpdate
+EdgesApiService vnicUpdate
 Update the specified interface.  Parameters:  index: Specified interface
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
  * @param index
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdVnicsIndexPutOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdVnicsIndexPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdVnicsIndexPutOpts struct {
+type EdgesApiEdgesEdgeIdVnicsIndexPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsIndexPut(ctx context.Context, edgeId string, index string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdVnicsIndexPutOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdVnicsIndexPut(ctx context.Context, edgeId string, index string, localVarOptionals *EdgesApiEdgesEdgeIdVnicsIndexPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -14704,24 +14704,24 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsIndexPut(ctx context.Conte
 }
 
 /*
-Class40EdgesApiService vnicsCreate
+EdgesApiService vnicsCreate
 Add an interface or sub interface.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param edgeId
- * @param optional nil or *Class40EdgesApiApi40EdgesEdgeIdVnicsPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesEdgeIdVnicsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesEdgeIdVnicsPostOpts struct {
+type EdgesApiEdgesEdgeIdVnicsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsPost(ctx context.Context, edgeId string, localVarOptionals *Class40EdgesApiApi40EdgesEdgeIdVnicsPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesEdgeIdVnicsPost(ctx context.Context, edgeId string, localVarOptionals *EdgesApiEdgesEdgeIdVnicsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14794,23 +14794,23 @@ func (a *Class40EdgesApiService) Api40EdgesEdgeIdVnicsPost(ctx context.Context, 
 }
 
 /*
-Class40EdgesApiService nsxEdgesRead
+EdgesApiService nsxEdgesRead
 Retrieve a list of all NSX Edges in your inventory. You can use the query parameters to filter results.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40EdgesApiApi40EdgesGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesGetOpts - Optional Parameters:
      * @param "Datacenter" (optional.String) -
      * @param "Tenant" (optional.String) -
      * @param "Pg" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesGetOpts struct {
+type EdgesApiEdgesGetOpts struct {
 	Datacenter optional.String
 	Tenant     optional.String
 	Pg         optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesGet(ctx context.Context, localVarOptionals *Class40EdgesApiApi40EdgesGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesGet(ctx context.Context, localVarOptionals *EdgesApiEdgesGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14879,19 +14879,19 @@ func (a *Class40EdgesApiService) Api40EdgesGet(ctx context.Context, localVarOpti
 }
 
 /*
-Class40EdgesApiService nsxEdgeJobsRead
+EdgesApiService nsxEdgeJobsRead
 Retrieve NSX Edge job status.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40EdgesApiApi40EdgesJobsGetOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesJobsGetOpts - Optional Parameters:
      * @param "Status" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesJobsGetOpts struct {
+type EdgesApiEdgesJobsGetOpts struct {
 	Status optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesJobsGet(ctx context.Context, localVarOptionals *Class40EdgesApiApi40EdgesJobsGetOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesJobsGet(ctx context.Context, localVarOptionals *EdgesApiEdgesJobsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -14954,13 +14954,13 @@ func (a *Class40EdgesApiService) Api40EdgesJobsGet(ctx context.Context, localVar
 }
 
 /*
-Class40EdgesApiService nsxEdgeJobRead
+EdgesApiService nsxEdgeJobRead
 Retrieve job status for the specified job.   Parameters:  jobId: Job ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param jobId
 
 */
-func (a *Class40EdgesApiService) Api40EdgesJobsJobIdGet(ctx context.Context, jobId string) (*http.Response, error) {
+func (a *EdgesApiService) EdgesJobsJobIdGet(ctx context.Context, jobId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -15021,23 +15021,23 @@ func (a *Class40EdgesApiService) Api40EdgesJobsJobIdGet(ctx context.Context, job
 }
 
 /*
-Class40EdgesApiService nsxEdgesCreate
+EdgesApiService nsxEdgesCreate
 You can install NSX Edge as a services gateway or as a logical router.  The **type** parameter determines which type of NSX Edge is deployed: *distributedRouter* or *gatewayServices*. If no type is specified, the type is *gatewayServices*.  Other parameters for this method will differ depending on which type of NSX Edge you are deploying. See the examples and parameter tables for more information.  ### NSX Edge: Service Gateway  The NSX Edge installation API copies the NSX Edge OVF from the Edge Manager to the specified datastore and deploys an NSX Edge on the given datacenter. After the NSX Edge is installed, the virtual machine powers on and initializes according to the given network configuration. If an appliance is added, it is deployed with the specified configuration.  Installing an NSX Edge instance adds a virtual machine to the vCenter Server inventory, you must specify an IP address for the management interface, and you may name the NSX Edge instance.  The configuration you specify when you install an NSX Edge is stored in the database. If an appliance is added, the configuration is applied to it and it is deployed.  NOTE: Do not use hidden/system resource pool IDs as they are not supported on the UI.  #### Request Body to Create Edge Services Gateway      &lt;edge&gt;       &lt;datacenterMoid&gt;datacenter-2&lt;/datacenterMoid&gt;       &lt;name&gt;org1-edge&lt;/name&gt;       &lt;description&gt;Description for the edge gateway&lt;/description&gt;       &lt;tenant&gt;org1&lt;/tenant&gt;       &lt;fqdn&gt;org1edge1&lt;/fqdn&gt;       &lt;vseLogLevel&gt;info&lt;/vseLogLevel&gt;       &lt;enableAesni&gt;false&lt;/enableAesni&gt;       &lt;enableFips&gt;true&lt;/enableFips&gt;       &lt;appliances&gt;         &lt;applianceSize&gt;compact&lt;/applianceSize&gt;         &lt;enableCoreDump&gt;true&lt;/enableCoreDump&gt;         &lt;appliance&gt;           &lt;resourcePoolId&gt;resgroup-53&lt;/resourcePoolId&gt;           &lt;datastoreId&gt;datastore-29&lt;/datastoreId&gt;           &lt;hostId&gt;host-28&lt;/hostId&gt;            &lt;vmFolderId&gt;group-v38&lt;/vmFolderId&gt;            &lt;customField&gt;              &lt;key&gt;system.service.vmware.vsla.main01&lt;/key&gt;             &lt;value&gt;string&lt;/value&gt;           &lt;/customField&gt;           &lt;cpuReservation&gt;              &lt;limit&gt;2399&lt;/limit&gt;             &lt;reservation&gt;500&lt;/reservation&gt;             &lt;shares&gt;500&lt;/shares&gt;           &lt;/cpuReservation&gt;           &lt;memoryReservation&gt;              &lt;limit&gt;5000&lt;/limit&gt;             &lt;reservation&gt;500&lt;/reservation&gt;             &lt;shares&gt;20480&lt;/shares&gt;           &lt;/memoryReservation&gt;         &lt;/appliance&gt;       &lt;/appliances&gt;       &lt;vnics&gt;         &lt;vnic&gt;           &lt;index&gt;0&lt;/index&gt;           &lt;name&gt;internal0&lt;/name&gt;           &lt;type&gt;internal&lt;/type&gt;           &lt;portgroupId&gt;dvportgroup-114&lt;/portgroupId&gt;           &lt;addressGroups&gt;             &lt;addressGroup&gt;               &lt;primaryAddress&gt;192.168.3.1&lt;/primaryAddress&gt;               &lt;secondaryAddresses&gt;                 &lt;ipAddress&gt;192.168.3.2&lt;/ipAddress&gt;                 &lt;ipAddress&gt;192.168.3.3&lt;/ipAddress&gt;               &lt;/secondaryAddresses&gt;               &lt;subnetMask&gt;255.255.255.0&lt;/subnetMask&gt;             &lt;/addressGroup&gt;             &lt;addressGroup&gt;               &lt;primaryAddress&gt;192.168.4.1&lt;/primaryAddress&gt;               &lt;secondaryAddresses&gt;                 &lt;ipAddress&gt;192.168.4.2&lt;/ipAddress&gt;                 &lt;ipAddress&gt;192.168.4.3&lt;/ipAddress&gt;               &lt;/secondaryAddresses&gt;               &lt;subnetPrefixLength&gt;24&lt;/subnetPrefixLength&gt;             &lt;/addressGroup&gt;             &lt;addressGroup&gt;               &lt;primaryAddress&gt;ffff::1&lt;/primaryAddress&gt;               &lt;secondaryAddresses&gt;                 &lt;ipAddress&gt;ffff::2&lt;/ipAddress&gt;               &lt;/secondaryAddresses&gt;               &lt;subnetPrefixLength&gt;64&lt;/subnetPrefixLength&gt;             &lt;/addressGroup&gt;           &lt;/addressGroups&gt;           &lt;macAddress&gt;             &lt;edgeVmHaIndex&gt;0&lt;/edgeVmHaIndex&gt;             &lt;value&gt;00:50:56:01:03:23&lt;/value&gt;           &lt;/macAddress&gt;           &lt;fenceParameter&gt;             &lt;key&gt;ethernet0.filter1.param1&lt;/key&gt;             &lt;value&gt;1&lt;/value&gt;           &lt;/fenceParameter&gt;           &lt;mtu&gt;1500&lt;/mtu&gt;           &lt;enableProxyArp&gt;false&lt;/enableProxyArp&gt;           &lt;enableSendRedirects&gt;true&lt;/enableSendRedirects&gt;           &lt;isConnected&gt;true&lt;/isConnected&gt;           &lt;inShapingPolicy&gt;             &lt;averageBandwidth&gt;200000000&lt;/averageBandwidth&gt;             &lt;peakBandwidth&gt;200000000&lt;/peakBandwidth&gt;             &lt;burstSize&gt;0&lt;/burstSize&gt;             &lt;enabled&gt;true&lt;/enabled&gt;             &lt;inherited&gt;false&lt;/inherited&gt;           &lt;/inShapingPolicy&gt;           &lt;outShapingPolicy&gt;             &lt;averageBandwidth&gt;400000000&lt;/averageBandwidth&gt;             &lt;peakBandwidth&gt;400000000&lt;/peakBandwidth&gt;             &lt;burstSize&gt;0&lt;/burstSize&gt;             &lt;enabled&gt;true&lt;/enabled&gt;             &lt;inherited&gt;false&lt;/inherited&gt;           &lt;/outShapingPolicy&gt;         &lt;/vnic&gt;       &lt;/vnics&gt;       &lt;cliSettings&gt;         &lt;userName&gt;test&lt;/userName&gt;         &lt;password&gt;test123!&lt;/password&gt;         &lt;remoteAccess&gt;false&lt;/remoteAccess&gt;       &lt;/cliSettings&gt;       &lt;autoConfiguration&gt;         &lt;enabled&gt;true&lt;/enabled&gt;         &lt;rulePriority&gt;high&lt;/rulePriority&gt;       &lt;/autoConfiguration&gt;       &lt;dnsClient&gt;         &lt;primaryDns&gt;10.117.0.1&lt;/primaryDns&gt;         &lt;secondaryDns&gt;10.117.0.2&lt;/secondaryDns&gt;         &lt;domainName&gt;vmware.com&lt;/domainName&gt;         &lt;domainName&gt;foo.com&lt;/domainName&gt;       &lt;/dnsClient&gt;       &lt;queryDaemon&gt;         &lt;enabled&gt;true&lt;/enabled&gt;         &lt;port&gt;5666&lt;/port&gt;       &lt;/queryDaemon&gt;     &lt;/edge&gt;  ### NSX Edge: Logical (Distributed) Router  Before installing a logical router, you must prepare the hosts on the appropriate clusters.   The user specified configuration is stored in the database and Edge identifier is returned to the user. This identifier must be used for future configurations on the given Edge.  If any appliance(s) are specified and at least one connected interface/vnic is specified, then the appliance(s) are deployed and configuration is applied to them.  It is not possible to set the &lt;ecmp&gt;true&lt;/ecmp&gt; property upon creation of a distributed logicalrouter Edge and a subsequent API call is required to enable ECMP.  DHCP relay settings are not able to be used when creating a distributed logical router Edge and a subsequent API call is required to configure DHCP relay properties.  #### Request Body to Create Logical (Distributed) Router      &lt;edge&gt;       &lt;datacenterMoid&gt;datacenter-2&lt;/datacenterMoid&gt;       &lt;type&gt;distributedRouter&lt;/type&gt;       &lt;appliances&gt;         &lt;appliance&gt;         &lt;resourcePoolId&gt;resgroup-20&lt;/resourcePoolId&gt;         &lt;datastoreId&gt;datastore-23&lt;/datastoreId&gt;         &lt;/appliance&gt;       &lt;/appliances&gt;       &lt;mgmtInterface&gt;         &lt;connectedToId&gt;dvportgroup-38&lt;/connectedToId&gt;           &lt;addressGroups&gt;              &lt;addressGroup&gt;               &lt;primaryAddress&gt;10.112.196.165&lt;/primaryAddress&gt;               &lt;subnetMask&gt;255.255.252.0&lt;/subnetMask&gt;             &lt;/addressGroup&gt;            &lt;/addressGroups&gt;       &lt;/mgmtInterface&gt;       &lt;interfaces&gt;         &lt;interface&gt;           &lt;type&gt;uplink&lt;/type&gt;           &lt;mtu&gt;1500&lt;/mtu&gt;           &lt;isConnected&gt;true&lt;/isConnected&gt;           &lt;addressGroups&gt;              &lt;addressGroup&gt;               &lt;primaryAddress&gt;192.168.10.1&lt;/primaryAddress&gt;               &lt;subnetMask&gt;255.255.255.0&lt;/subnetMask&gt;             &lt;/addressGroup&gt;           &lt;/addressGroups&gt;           &lt;connectedToId&gt;dvportgroup-39&lt;/connectedToId&gt;         &lt;/interface&gt;         &lt;interface&gt;           &lt;type&gt;internal&lt;/type&gt;           &lt;mtu&gt;1500&lt;/mtu&gt;           &lt;isConnected&gt;true&lt;/isConnected&gt;           &lt;addressGroups&gt;              &lt;addressGroup&gt;               &lt;primaryAddress&gt;192.168.20.1&lt;/primaryAddress&gt;               &lt;subnetMask&gt;255.255.255.0&lt;/subnetMask&gt;             &lt;/addressGroup&gt;           &lt;/addressGroups&gt;           &lt;connectedToId&gt;dvportgroup-40&lt;/connectedToId&gt;         &lt;/interface&gt;       &lt;/interfaces&gt;     &lt;/edge&gt; ### Request and Response Body Parameters for NSX Edge  #### General Request Body Parameters: Edge Services Gateway and Logical (Distributed) Router  Parameter |  Description | Comments  ---|---|--- **datacenterMoid** |Specify vCenter Managed Object Identifier of data center on which edge has to be deployed|Required.  **type** | Specify which kind of NSX Edge to deploy. Choice of *distributedRouter* or *gatewayServices*. | Optional. Default is *gatewayServices*. **name** |Specify a name for the new NSX Edge.|Optional. Default is *NSX-&amp;lt;edgeId&amp;gt;*. Used as a VM name on vCenter appended by *-&amp;lt;haIndex&amp;gt;*.  **description** |NSX Edge description.|Optional.  **tenant** |Specify the tenant. Used for syslog messages.|Optional.  **fqdn** |Fully Qualified Domain Name for the edge.|Optional. Default is *NSX-&amp;lt;edgeId&amp;gt;* Used to set hostname on the VM. Appended by *-&amp;lt;haIndex&amp;gt;* **vseLogLevel** |Defines the log level for log messages captured in the log files.|Optional. Choice of: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *debug*. Default is *info*. **enableAesni** |Enable support for Advanced Encryption Standard New Instructions on the Edge.|Optional. True/False. Default is *true*. **enableCoreDump** |Deploys a new NSX Edge for debug/core-dump purpose.|Optional. Default is false. Enabling core-dump will deploy an extra disk for core-dump files.  #### Appliances Configuration: Edge Services Gateway and Logical (Distributed) Router  Parameter |  Description | Comments  ---|---|--- **applianceSize** |Edge form factor, it determines the NSX Edge size and capability. |Required. Choice of: *compact*, *large*, *quadlarge*, *xlarge*. Default is *compact*. **deployAppliances** | Determine whether to deploy appliances. | Default is *true*. **appliance** |Appliance configuration details.|Required. Can configure a maximum of two appliances. Until one appliance is configured and NSX Edge VM is deployed successfully, none of the configured features will serve the network. **resourcePoolId** |Details of resource pool on which to deploy NSX Edge. |Required. Can be resource pool ID, e.g. *resgroup-15* or cluster ID, e.g. *domain-c41*. **datastoreId** |Details of datastore on which to deploy NSX Edge.|Required.  **hostId** |ID of the host on which to deploy the NSX Edge.|Optional.  **vmFolderId** |The folder in which to save the NSX Edge.|Optional.  **customField** |Custom key-value attributes. |Optional. Use custom attributes to associate user-specific meta-information with VMs and managed hosts, stored on vCenter Server. **customField &gt; key** |Meta information Key.|Required if customField is specified.  **customField &gt; value** |Meta information Value.|Required if customField is specified.  **cpuReservation &gt; limit** |Maximum CPU capacity the NSX Edge can use, specified in MHz.|Optional. -1 (unlimited), any positive integer **cpuReservation &gt; reservation** |CPU capacity reserved for NSX Edge in MHz.|Optional.  **cpuReservation &gt; shares** |Higher value implies NSX Edge has priority when accessing resources.|Optional.  **memoryReservation &gt; limit** |Maximum memory the NSX Edge can use, specified in MB.|Optional. -1 (unlimited), any positive integer **memoryReservation &gt; reservation** |Memory capacity reserved for NSX Edge in MB.|Optional.  **memoryReservation &gt; shares** |Higher value implies NSX Edge has priority when accessing resources.|Optional.  **cliSettings &gt; userName** |User name.|Required. length 1-33. **cliSettings &gt; password** |Password.|Required. The password must be at least 12 characters long. Must contain at-least 1 uppercase, 1 lowercase, 1 special character and 1 digit. In addition, a character cannot be repeated 3 or more times consectively. **cliSettings &gt; remoteAccess** |Enables or disables remote access through SSH. |Required. Relevant firewall rules to allow traffic on port 22 must be opened by user/client **autoConfiguration &gt; enabled** |Enable/Disable status of autoConfiguration|Optional. True/False. Default is *true*. If autoConfiguration is enabled, firewall rules are automatically created to allow control traffic. Rules to allow data traffic are not created.  For example, if you are using IPsec VPN, and **autoConfiguration** is *true*, firewall rules will automatically be configured to allow IKE traffic. However, you will need to add additional rules to allow the data traffic for the IPsec tunnel. If HA is enabled, firewall rules are always created, even if **autoConfiguration** is *false*, otherwise both HA appliances will become active. **autoConfiguration &gt; rulePriority** |Defines the priority of system-defined rules over user-defined rules.|Optional. High, Low.  Default is *high*. **queryDaemon &gt; enabled** |Configure the communication between server load balancer and NSX Edge VM.|Default is *false*. **queryDaemon &gt; port** |Defines the port through which the communication happens.|Integer 1-65535. Default is *5666*.  #### DNS Client: Edge Services Gateway and Logical (Distributed) Router   Parameter |  Description | Comments  ---|---|--- **dnsClient** |Configures the DNS settings of the Edge Services Gateway.|Optional. If the primary/secondary are specified and the DNS service is not specified, the primary/secondary will be used as the default of the DNS service. **primaryDns** |Primary DNS IP | **secondaryDns** |Secondary DNS IP | **domainName** |Domain Name of Edge | **domainName** |Secondary Domain Name of Edge |  #### vNIC Parameters: Edge Services Gateway Only  Parameter |  Description | Comments ---|---|--- **vnic** |Configure interface (vNic).|Required. Until one connected vNic is configured, none of the configured features will serve the network. **index** |Index of vNic to be configured. Value varies from 0-9. 4094 sub-interfaces can be configured in trunk mode.|Required.  **name** |Name of the vNic.|Optional. System provides default names: vnic0...vnic9. **label** |Label for the vNic.|Optional. System provides default labels: vNic_0...vNic_9. **type** |Type of interface connected to vNic.|Optional. Choice of: *Uplink*, *Internal*, *TRUNK*. Default is *Internal*. *TRUNK* should be specified when sub-interfaces are configured. **portgroupId** |Connect NSX Edge to the network through this port group.|Required. Choice of: *portgroupId* or *virtualWireId*. *portgroupId* needs to be defined if *isConnected&#x3D;true* **addressGroup** |Address Group assigned to vNic.|Required. More than one addressGroup/subnets can be assigned to the vNic. **primaryAddress** |Primary Address of Edge Interface.|Required. IPv4 and IPv6 addresses are supported. **secondaryAddresses &gt; ipAddress** |IP assigned to interface.|Optional. One or more **ipAddress** parameters are allowed, to enable assigning multiple IP addresses to a vNic, for example, for load balancing, NAT, VPN. At least one is required if **secondaryAddresses** is specified.  **subnetMask** or **subnetPrefixLength** |Subnet mask or prefix value.  |Required. Either **subnetMask** or **subnetPrefixLength** should be provided. When both are provided then **subnetprefixLength** is ignored. **macAddress** |Option to manually specify the MAC address. |Optional.  Managed by vCenter if not provided. **macAddress &gt; edgeVmHaIndex** |HA index of the Edge VM. |Required. 0 or 1. **macAddress &gt; value** |Value of the MAC address.|Optional. Ensure that MAC addresses provided are unique within the given layer 2 domain. **vnic &gt; mtu** |The maximum transmission value for the data packets.|Optional.  Default is *1500*. **enableProxyArp** |Enables proxy ARP. Do not use this flag unless you want NSX Edge to proxy ARP for all configured subnets.  |Optional.  True/False. Default is *false*. **enableSendRedirects** |Enables ICMP redirect. |Optional. True/False.  Default is *true*. **isConnected** |Sets if the interface is connected to the port group network. |Optional. True/False. Default is *false*. **portgroupId** needs to be defined if *isConnected&#x3D;true*. **inShapingPolicy** |Configure Incoming Traffic.|Optional.  **outShapingPolicy** |Configure Outgoing Traffic.|Optional.  **averageBandwidth**&lt;br&gt;(inShapingPolicy or outShapingPolicy) |Sets average bandwidth for traffic.|Optional.  **peakBandwidth**&lt;br&gt;(inShapingPolicy or outShapingPolicy) |Sets peak bandwidth for traffic.|Required.  **burstSize**&lt;br&gt;(inShapingPolicy or outShapingPolicy) |Sets the burst size of the interface.|Required.  **enabled**&lt;br&gt;(inShapingPolicy or outShapingPolicy) |Enable/disable status of this traffic policy.|Required.  **inherited**&lt;br&gt;(inShapingPolicy or outShapingPolicy) |Determine whether properties should be inherited to the vNic from the port group.|Required.   #### HA (Management) Interfaces and Interfaces Configuration: Logical (Distributed) Router Only  Parameter |  Description | Comments  ---|---|--- **mgmtInterface** | High availability interface configuration. Interface index 0 is assigned. | Required. **interface** | Interface configuration. 1-9 are reserved for uplinks, 10-999 are used for internal interfaces. | Optional. Can be added after logical router creation. **connectedToId**&lt;br&gt;(mgmtInterface or interface) | Managed Object ID of logical switch or port group. | For example, *virtualwire-1* or *dvportgroup-50*. Logical router interfaces do not support legacy port groups.  **name**&lt;br&gt;(mgmtInterface or interface) | Name assigned to interface. | Optional. **addressGroup**&lt;br&gt;(mgmtInterface or interface) |Address Group assigned to interface. |Required. Only one **addressGroup** can be configured on each logical router **mgmtInterface** or **interface**. **primaryAddress**&lt;br&gt;(mgmtInterface or interface) |Primary Address of interface. |Required. Secondary Addresses are not supported on logical routers. Address must be IPv4. **subnetMask** or **subnetPrefixLength**&lt;br&gt;(mgmtInterface or interface) |Subnet mask or prefix value.  |Required. Either **subnetMask** or **subnetPrefixLength** should be provided. When both are provided then **subnetprefixLength** is ignored. **mtu**&lt;br&gt;(mgmtInterface or interface) |The maximum transmission value for the data packets. |Optional. Default is 1500. **type** | Type of interface. | Required. Choice of *uplink* or *internal*.    Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40EdgesApiApi40EdgesPostOpts - Optional Parameters:
+ * @param optional nil or *EdgesApiEdgesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "IsUniversal" (optional.String) -
 
 */
 
-type Class40EdgesApiApi40EdgesPostOpts struct {
+type EdgesApiEdgesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	IsUniversal optional.String
 }
 
-func (a *Class40EdgesApiService) Api40EdgesPost(ctx context.Context, localVarOptionals *Class40EdgesApiApi40EdgesPostOpts) (*http.Response, error) {
+func (a *EdgesApiService) EdgesPost(ctx context.Context, localVarOptionals *EdgesApiEdgesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

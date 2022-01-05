@@ -4,11 +4,11 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api10SamSyslogDisablePost**](SyslogApi.md#Api10SamSyslogDisablePost) | **Post** /api/1.0/sam/syslog/disable | syslogDisableSet
-[**Api10SamSyslogEnablePost**](SyslogApi.md#Api10SamSyslogEnablePost) | **Post** /api/1.0/sam/syslog/enable | syslogEnableSet
+[**SamSyslogDisablePost**](SyslogApi.md#SamSyslogDisablePost) | **Post** /api/1.0/sam/syslog/disable | syslogDisableSet
+[**SamSyslogEnablePost**](SyslogApi.md#SamSyslogEnablePost) | **Post** /api/1.0/sam/syslog/enable | syslogEnableSet
 
-# **Api10SamSyslogDisablePost**
-> Api10SamSyslogDisablePost(ctx, )
+# **SamSyslogDisablePost**
+> SamSyslogDisablePost(ctx, )
 syslogDisableSet
 
 Disable syslog support.  Parameters:  
@@ -31,8 +31,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10SamSyslogEnablePost**
-> Api10SamSyslogEnablePost(ctx, )
+# **SamSyslogEnablePost**
+> SamSyslogEnablePost(ctx, )
 syslogEnableSet
 
 Enable syslog support.  Parameters:  

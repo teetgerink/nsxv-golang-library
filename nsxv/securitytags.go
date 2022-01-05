@@ -32,7 +32,7 @@ Retrieve unique ID section criteria configuration.  **Method history:**  Release
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsSelectionCriteriaGet(ctx context.Context) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsSelectionCriteriaGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -95,18 +95,18 @@ func (a *SecuritytagsApiService) Api20ServicesSecuritytagsSelectionCriteriaGet(c
 SecuritytagsApiService securitytagsCriteriaUpdate
 Configure the unique ID section criteria configuration.  If you set the selection criteria and assign security tags to VMs, you must remove all security tags from VMs before you can change the selection criteria.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SecuritytagsApiApi20ServicesSecuritytagsSelectionCriteriaPutOpts - Optional Parameters:
+ * @param optional nil or *SecuritytagsApiServicesSecuritytagsSelectionCriteriaPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SecuritytagsApiApi20ServicesSecuritytagsSelectionCriteriaPutOpts struct {
+type SecuritytagsApiServicesSecuritytagsSelectionCriteriaPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsSelectionCriteriaPut(ctx context.Context, localVarOptionals *SecuritytagsApiApi20ServicesSecuritytagsSelectionCriteriaPutOpts) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsSelectionCriteriaPut(ctx context.Context, localVarOptionals *SecuritytagsApiServicesSecuritytagsSelectionCriteriaPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -178,16 +178,16 @@ func (a *SecuritytagsApiService) Api20ServicesSecuritytagsSelectionCriteriaPut(c
 SecuritytagsApiService securityTagRead
 Retrieve all security tags.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. Added **isUniversal** query parameter to filter universal security tags.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SecuritytagsApiApi20ServicesSecuritytagsTagGetOpts - Optional Parameters:
+ * @param optional nil or *SecuritytagsApiServicesSecuritytagsTagGetOpts - Optional Parameters:
      * @param "IsUniversal" (optional.String) -
 
 */
 
-type SecuritytagsApiApi20ServicesSecuritytagsTagGetOpts struct {
+type SecuritytagsApiServicesSecuritytagsTagGetOpts struct {
 	IsUniversal optional.String
 }
 
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagGet(ctx context.Context, localVarOptionals *SecuritytagsApiApi20ServicesSecuritytagsTagGetOpts) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagGet(ctx context.Context, localVarOptionals *SecuritytagsApiServicesSecuritytagsTagGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -253,18 +253,18 @@ func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagGet(ctx context.Con
 SecuritytagsApiService securityTagCreate
 Create a new security tag.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **isUniversal** parameter can be set to create a universal security tag.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SecuritytagsApiApi20ServicesSecuritytagsTagPostOpts - Optional Parameters:
+ * @param optional nil or *SecuritytagsApiServicesSecuritytagsTagPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SecuritytagsApiApi20ServicesSecuritytagsTagPostOpts struct {
+type SecuritytagsApiServicesSecuritytagsTagPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagPost(ctx context.Context, localVarOptionals *SecuritytagsApiApi20ServicesSecuritytagsTagPostOpts) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagPost(ctx context.Context, localVarOptionals *SecuritytagsApiServicesSecuritytagsTagPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -339,7 +339,7 @@ Delete the specified security tag.  Parameters:  tagId: Specified security tag.
  * @param tagId
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagTagIdDelete(ctx context.Context, tagId string) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagTagIdDelete(ctx context.Context, tagId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -406,7 +406,7 @@ Retrieve details about the VMs that are attached to the specified security tag. 
  * @param tagId
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagTagIdVmDetailGet(ctx context.Context, tagId string) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagTagIdVmDetailGet(ctx context.Context, tagId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -473,7 +473,7 @@ Retrieve the list of VMs that have the specified tag attached to them.   Paramet
  * @param tagId
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagTagIdVmGet(ctx context.Context, tagId string) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagTagIdVmGet(ctx context.Context, tagId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -538,20 +538,20 @@ SecuritytagsApiService securityTagVMsAction
 Attach or detach a security tag to a virtual machine.  This operation does not check that the virtual machine exists in the local inventory. This allows you to attach a universal security tag to a virtual machine that is connected to a secondary NSX Manager (and therefore is not connected to the primary NSX Manager where the call is sent).  Possible keys for the tagParameter are: * instance_uuid * bios_uuid * vmname  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param tagId
- * @param optional nil or *SecuritytagsApiApi20ServicesSecuritytagsTagTagIdVmPostOpts - Optional Parameters:
+ * @param optional nil or *SecuritytagsApiServicesSecuritytagsTagTagIdVmPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type SecuritytagsApiApi20ServicesSecuritytagsTagTagIdVmPostOpts struct {
+type SecuritytagsApiServicesSecuritytagsTagTagIdVmPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagTagIdVmPost(ctx context.Context, tagId string, localVarOptionals *SecuritytagsApiApi20ServicesSecuritytagsTagTagIdVmPostOpts) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagTagIdVmPost(ctx context.Context, tagId string, localVarOptionals *SecuritytagsApiServicesSecuritytagsTagTagIdVmPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -631,7 +631,7 @@ Detach a security tag from the specified virtual machine.   Parameters:  vmId: S
  * @param vmId
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagTagIdVmVmIdDelete(ctx context.Context, tagId string, vmId string) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagTagIdVmVmIdDelete(ctx context.Context, tagId string, vmId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -700,7 +700,7 @@ Apply a security tag to the specified virtual machine.  **Note:** this method ca
  * @param vmId
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsTagTagIdVmVmIdPut(ctx context.Context, tagId string, vmId string) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsTagTagIdVmVmIdPut(ctx context.Context, tagId string, vmId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -768,7 +768,7 @@ Retrieve all security tags associated with the specified virtual machine.   Para
  * @param vmId
 
 */
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsVmVmIdGet(ctx context.Context, vmId string) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsVmVmIdGet(ctx context.Context, vmId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -833,20 +833,20 @@ SecuritytagsApiService securitytagVmMoidAction
 Update security tags associated with the specified virtual machine.  You can assign multiple tags at a time to the specified VM, or clear all assigned tags from the specified VM.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  vmId: Specify VM using VM managed object ID or VM instance UUID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param vmId
- * @param optional nil or *SecuritytagsApiApi20ServicesSecuritytagsVmVmIdPostOpts - Optional Parameters:
+ * @param optional nil or *SecuritytagsApiServicesSecuritytagsVmVmIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type SecuritytagsApiApi20ServicesSecuritytagsVmVmIdPostOpts struct {
+type SecuritytagsApiServicesSecuritytagsVmVmIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *SecuritytagsApiService) Api20ServicesSecuritytagsVmVmIdPost(ctx context.Context, vmId string, localVarOptionals *SecuritytagsApiApi20ServicesSecuritytagsVmVmIdPostOpts) (*http.Response, error) {
+func (a *SecuritytagsApiService) ServicesSecuritytagsVmVmIdPost(ctx context.Context, vmId string, localVarOptionals *SecuritytagsApiServicesSecuritytagsVmVmIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

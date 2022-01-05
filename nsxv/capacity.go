@@ -29,7 +29,7 @@ Retrieve capacity usage information on the usage of CPUs, VMs and concurrent use
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *CapacityApiService) Api20ServicesLicensingCapacityusageGet(ctx context.Context) (*http.Response, error) {
+func (a *CapacityApiService) ServicesLicensingCapacityusageGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

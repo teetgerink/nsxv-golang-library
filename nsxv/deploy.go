@@ -31,18 +31,18 @@ DeployApiService serviceClusterDelete
 Uninstall a service. Fails if you try to remove a service that another service depends on.  In order to uninstall services in any order, set parameter ignoreDependency to true.   Parameters:  clusterID: Cluster ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param clusterID
- * @param optional nil or *DeployApiApi20SiDeployClusterClusterIDDeleteOpts - Optional Parameters:
+ * @param optional nil or *DeployApiSiDeployClusterClusterIDDeleteOpts - Optional Parameters:
      * @param "Services" (optional.String) -
      * @param "StartTime" (optional.String) -
 
 */
 
-type DeployApiApi20SiDeployClusterClusterIDDeleteOpts struct {
+type DeployApiSiDeployClusterClusterIDDeleteOpts struct {
 	Services  optional.String
 	StartTime optional.String
 }
 
-func (a *DeployApiService) Api20SiDeployClusterClusterIDDelete(ctx context.Context, clusterID string, localVarOptionals *DeployApiApi20SiDeployClusterClusterIDDeleteOpts) (*http.Response, error) {
+func (a *DeployApiService) SiDeployClusterClusterIDDelete(ctx context.Context, clusterID string, localVarOptionals *DeployApiSiDeployClusterClusterIDDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -115,7 +115,7 @@ Retrieve all services deployed along with their status.  Parameters:  clusterID:
  * @param clusterID
 
 */
-func (a *DeployApiService) Api20SiDeployClusterClusterIDGet(ctx context.Context, clusterID string) (*http.Response, error) {
+func (a *DeployApiService) SiDeployClusterClusterIDGet(ctx context.Context, clusterID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -183,7 +183,7 @@ Retrieve detailed information about the service.  Parameters:  serviceID: Servic
  * @param serviceID
 
 */
-func (a *DeployApiService) Api20SiDeployClusterClusterIDServiceServiceIDGet(ctx context.Context, clusterID string, serviceID string) (*http.Response, error) {
+func (a *DeployApiService) SiDeployClusterClusterIDServiceServiceIDGet(ctx context.Context, clusterID string, serviceID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -248,20 +248,20 @@ func (a *DeployApiService) Api20SiDeployClusterClusterIDServiceServiceIDGet(ctx 
 DeployApiService securityFabricCreate
 Deploy security fabric.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DeployApiApi20SiDeployPostOpts - Optional Parameters:
+ * @param optional nil or *DeployApiSiDeployPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "StartTime" (optional.String) -
 
 */
 
-type DeployApiApi20SiDeployPostOpts struct {
+type DeployApiSiDeployPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	StartTime   optional.String
 }
 
-func (a *DeployApiService) Api20SiDeployPost(ctx context.Context, localVarOptionals *DeployApiApi20SiDeployPostOpts) (*http.Response, error) {
+func (a *DeployApiService) SiDeployPost(ctx context.Context, localVarOptionals *DeployApiSiDeployPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -336,20 +336,20 @@ func (a *DeployApiService) Api20SiDeployPost(ctx context.Context, localVarOption
 DeployApiService serviceUpgrade
 Upgrade service to recent version.  The datastore, dvPortGroup, and ipPool variables should either not be specified or have same value as provided at time of deployment.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DeployApiApi20SiDeployPutOpts - Optional Parameters:
+ * @param optional nil or *DeployApiSiDeployPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "StartTime" (optional.String) -
 
 */
 
-type DeployApiApi20SiDeployPutOpts struct {
+type DeployApiSiDeployPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	StartTime   optional.String
 }
 
-func (a *DeployApiService) Api20SiDeployPut(ctx context.Context, localVarOptionals *DeployApiApi20SiDeployPutOpts) (*http.Response, error) {
+func (a *DeployApiService) SiDeployPut(ctx context.Context, localVarOptionals *DeployApiSiDeployPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -425,18 +425,18 @@ DeployApiService serviceDelete
 Uninstall specified service from specified clusters.  Parameters:  serviceID: Specified service.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param serviceID
- * @param optional nil or *DeployApiApi20SiDeployServiceServiceIDDeleteOpts - Optional Parameters:
+ * @param optional nil or *DeployApiSiDeployServiceServiceIDDeleteOpts - Optional Parameters:
      * @param "Clusters" (optional.String) -
      * @param "StartTime" (optional.String) -
 
 */
 
-type DeployApiApi20SiDeployServiceServiceIDDeleteOpts struct {
+type DeployApiSiDeployServiceServiceIDDeleteOpts struct {
 	Clusters  optional.String
 	StartTime optional.String
 }
 
-func (a *DeployApiService) Api20SiDeployServiceServiceIDDelete(ctx context.Context, serviceID string, localVarOptionals *DeployApiApi20SiDeployServiceServiceIDDeleteOpts) (*http.Response, error) {
+func (a *DeployApiService) SiDeployServiceServiceIDDelete(ctx context.Context, serviceID string, localVarOptionals *DeployApiSiDeployServiceServiceIDDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -509,7 +509,7 @@ Retrieve service on which the specified service depends.   Parameters:
  * @param serviceID
 
 */
-func (a *DeployApiService) Api20SiDeployServiceServiceIDDependsOnGet(ctx context.Context, serviceID string) (*http.Response, error) {
+func (a *DeployApiService) SiDeployServiceServiceIDDependsOnGet(ctx context.Context, serviceID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -576,7 +576,7 @@ Retrieve all clusters on which the service is installed.  Parameters:  serviceID
  * @param serviceID
 
 */
-func (a *DeployApiService) Api20SiDeployServiceServiceIDGet(ctx context.Context, serviceID string) (*http.Response, error) {
+func (a *DeployApiService) SiDeployServiceServiceIDGet(ctx context.Context, serviceID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

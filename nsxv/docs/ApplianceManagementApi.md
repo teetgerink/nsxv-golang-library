@@ -4,64 +4,64 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api10ApplianceManagementBackuprestoreBackupPost**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupPost) | **Post** /api/1.0/appliance-management/backuprestore/backup | applianceMgrBackupCreate
-[**Api10ApplianceManagementBackuprestoreBackupsGet**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsGet) | **Get** /api/1.0/appliance-management/backuprestore/backups | applianceMgrBackupsRead
-[**Api10ApplianceManagementBackuprestoreBackupsettingsDelete**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsDelete) | **Delete** /api/1.0/appliance-management/backuprestore/backupsettings | applianceMgrBackupSettingsDelete
-[**Api10ApplianceManagementBackuprestoreBackupsettingsExcludedataPut**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsExcludedataPut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings/excludedata | applianceMgrBackupSettingsExcludeUpdate
-[**Api10ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings/ftpsettings | applianceMgrBackupSettingsFtpUpdate
-[**Api10ApplianceManagementBackuprestoreBackupsettingsGet**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsGet) | **Get** /api/1.0/appliance-management/backuprestore/backupsettings | applianceMgrBackupSettingsRead
-[**Api10ApplianceManagementBackuprestoreBackupsettingsPut**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsPut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings | applianceMgrBackupSettingsUpdate
-[**Api10ApplianceManagementBackuprestoreBackupsettingsScheduleDelete**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsScheduleDelete) | **Delete** /api/1.0/appliance-management/backuprestore/backupsettings/schedule | applianceMgrBackupSettingsScheduleDelete
-[**Api10ApplianceManagementBackuprestoreBackupsettingsSchedulePut**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreBackupsettingsSchedulePut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings/schedule | applianceMgrBackupSettingsScheduleUpdate
-[**Api10ApplianceManagementBackuprestoreRestorePost**](ApplianceManagementApi.md#Api10ApplianceManagementBackuprestoreRestorePost) | **Post** /api/1.0/appliance-management/backuprestore/restore | applianceMgrBackupRestoreExecute
-[**Api10ApplianceManagementCertificatemanagerCertificatesNsxGet**](ApplianceManagementApi.md#Api10ApplianceManagementCertificatemanagerCertificatesNsxGet) | **Get** /api/1.0/appliance-management/certificatemanager/certificates/nsx | certificateManagerCertificatesNsxRead
-[**Api10ApplianceManagementCertificatemanagerCsrNsxGet**](ApplianceManagementApi.md#Api10ApplianceManagementCertificatemanagerCsrNsxGet) | **Get** /api/1.0/appliance-management/certificatemanager/csr/nsx | certificateCsrRead
-[**Api10ApplianceManagementCertificatemanagerCsrNsxPost**](ApplianceManagementApi.md#Api10ApplianceManagementCertificatemanagerCsrNsxPost) | **Post** /api/1.0/appliance-management/certificatemanager/csr/nsx | certificateCsrCreate
-[**Api10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost**](ApplianceManagementApi.md#Api10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost) | **Post** /api/1.0/appliance-management/certificatemanager/pkcs12keystore/nsx | certificatesKeystoreUpdate
-[**Api10ApplianceManagementCertificatemanagerUploadchainNsxPost**](ApplianceManagementApi.md#Api10ApplianceManagementCertificatemanagerUploadchainNsxPost) | **Post** /api/1.0/appliance-management/certificatemanager/uploadchain/nsx | certificateChainUpload
-[**Api10ApplianceManagementComponentsComponentAPPMGMTRestartPost**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsComponentAPPMGMTRestartPost) | **Post** /api/1.0/appliance-management/components/component/APPMGMT/restart | componentAppMgmtRestartExecute
-[**Api10ApplianceManagementComponentsComponentComponentIDDependenciesGet**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsComponentComponentIDDependenciesGet) | **Get** /api/1.0/appliance-management/components/component/{componentID}/dependencies | componentDependenciesRead
-[**Api10ApplianceManagementComponentsComponentComponentIDDependentsGet**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsComponentComponentIDDependentsGet) | **Get** /api/1.0/appliance-management/components/component/{componentID}/dependents | componentDependentsRead
-[**Api10ApplianceManagementComponentsComponentComponentIDGet**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsComponentComponentIDGet) | **Get** /api/1.0/appliance-management/components/component/{componentID} | componentManagementRead
-[**Api10ApplianceManagementComponentsComponentComponentIDStatusGet**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsComponentComponentIDStatusGet) | **Get** /api/1.0/appliance-management/components/component/{componentID}/status | componentStatusRead
-[**Api10ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost) | **Post** /api/1.0/appliance-management/components/component/{componentID}/toggleStatus/{command} | componentManagementToggleCommand
-[**Api10ApplianceManagementComponentsGet**](ApplianceManagementApi.md#Api10ApplianceManagementComponentsGet) | **Get** /api/1.0/appliance-management/components | componentsManagementRead
-[**Api10ApplianceManagementGlobalInfoGet**](ApplianceManagementApi.md#Api10ApplianceManagementGlobalInfoGet) | **Get** /api/1.0/appliance-management/global/info | globalInfoRead
-[**Api10ApplianceManagementNotificationsDelete**](ApplianceManagementApi.md#Api10ApplianceManagementNotificationsDelete) | **Delete** /api/1.0/appliance-management/notifications | notificationsDelete
-[**Api10ApplianceManagementNotificationsGet**](ApplianceManagementApi.md#Api10ApplianceManagementNotificationsGet) | **Get** /api/1.0/appliance-management/notifications | notificationsRead
-[**Api10ApplianceManagementNotificationsIDAcknowledgePost**](ApplianceManagementApi.md#Api10ApplianceManagementNotificationsIDAcknowledgePost) | **Post** /api/1.0/appliance-management/notifications/{ID}/acknowledge | notificationsAcknowledgeAck
-[**Api10ApplianceManagementSummaryComponentsGet**](ApplianceManagementApi.md#Api10ApplianceManagementSummaryComponentsGet) | **Get** /api/1.0/appliance-management/summary/components | componentInfoRead
-[**Api10ApplianceManagementSummarySystemGet**](ApplianceManagementApi.md#Api10ApplianceManagementSummarySystemGet) | **Get** /api/1.0/appliance-management/summary/system | summaryInfoRead
-[**Api10ApplianceManagementSystemCpuinfoGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemCpuinfoGet) | **Get** /api/1.0/appliance-management/system/cpuinfo | systemCPUInfoRead
-[**Api10ApplianceManagementSystemLocaleGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemLocaleGet) | **Get** /api/1.0/appliance-management/system/locale | systemLocaleRead
-[**Api10ApplianceManagementSystemLocalePut**](ApplianceManagementApi.md#Api10ApplianceManagementSystemLocalePut) | **Put** /api/1.0/appliance-management/system/locale | systemLocaleUpdate
-[**Api10ApplianceManagementSystemMeminfoGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemMeminfoGet) | **Get** /api/1.0/appliance-management/system/meminfo | systemMemoryInfoRead
-[**Api10ApplianceManagementSystemNetworkDnsDelete**](ApplianceManagementApi.md#Api10ApplianceManagementSystemNetworkDnsDelete) | **Delete** /api/1.0/appliance-management/system/network/dns | applianceDnsClientDelete
-[**Api10ApplianceManagementSystemNetworkDnsPut**](ApplianceManagementApi.md#Api10ApplianceManagementSystemNetworkDnsPut) | **Put** /api/1.0/appliance-management/system/network/dns | applianceDnsClientUpdate
-[**Api10ApplianceManagementSystemNetworkGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemNetworkGet) | **Get** /api/1.0/appliance-management/system/network | networkSettingsRead
-[**Api10ApplianceManagementSystemNetworkPut**](ApplianceManagementApi.md#Api10ApplianceManagementSystemNetworkPut) | **Put** /api/1.0/appliance-management/system/network | networkSettingsUpdate
-[**Api10ApplianceManagementSystemRestartPost**](ApplianceManagementApi.md#Api10ApplianceManagementSystemRestartPost) | **Post** /api/1.0/appliance-management/system/restart | systemRebootExecute
-[**Api10ApplianceManagementSystemSecuritysettingsGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemSecuritysettingsGet) | **Get** /api/1.0/appliance-management/system/securitysettings | systemSecSettingsRead
-[**Api10ApplianceManagementSystemSecuritysettingsPost**](ApplianceManagementApi.md#Api10ApplianceManagementSystemSecuritysettingsPost) | **Post** /api/1.0/appliance-management/system/securitysettings | systemSecSettingsUpdate
-[**Api10ApplianceManagementSystemStorageinfoGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemStorageinfoGet) | **Get** /api/1.0/appliance-management/system/storageinfo | systemStorageInfoRead
-[**Api10ApplianceManagementSystemSyslogserverDelete**](ApplianceManagementApi.md#Api10ApplianceManagementSystemSyslogserverDelete) | **Delete** /api/1.0/appliance-management/system/syslogserver | systemSyslogServerDelete
-[**Api10ApplianceManagementSystemSyslogserverGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemSyslogserverGet) | **Get** /api/1.0/appliance-management/system/syslogserver | systemSyslogServerRead
-[**Api10ApplianceManagementSystemSyslogserverPut**](ApplianceManagementApi.md#Api10ApplianceManagementSystemSyslogserverPut) | **Put** /api/1.0/appliance-management/system/syslogserver | systemSyslogServerUpdate
-[**Api10ApplianceManagementSystemTimesettingsGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemTimesettingsGet) | **Get** /api/1.0/appliance-management/system/timesettings | systemTimeRead
-[**Api10ApplianceManagementSystemTimesettingsNtpDelete**](ApplianceManagementApi.md#Api10ApplianceManagementSystemTimesettingsNtpDelete) | **Delete** /api/1.0/appliance-management/system/timesettings/ntp | ntpDelete
-[**Api10ApplianceManagementSystemTimesettingsPut**](ApplianceManagementApi.md#Api10ApplianceManagementSystemTimesettingsPut) | **Put** /api/1.0/appliance-management/system/timesettings | systemTimeUpdate
-[**Api10ApplianceManagementSystemTlssettingsGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemTlssettingsGet) | **Get** /api/1.0/appliance-management/system/tlssettings | tlsSettingsRead
-[**Api10ApplianceManagementSystemTlssettingsPost**](ApplianceManagementApi.md#Api10ApplianceManagementSystemTlssettingsPost) | **Post** /api/1.0/appliance-management/system/tlssettings | tlsSettingsUpdate
-[**Api10ApplianceManagementSystemUptimeGet**](ApplianceManagementApi.md#Api10ApplianceManagementSystemUptimeGet) | **Get** /api/1.0/appliance-management/system/uptime | systemUptimeRead
-[**Api10ApplianceManagementTechsupportlogsComponentIDPost**](ApplianceManagementApi.md#Api10ApplianceManagementTechsupportlogsComponentIDPost) | **Post** /api/1.0/appliance-management/techsupportlogs/{componentID} | techLogsCreate
-[**Api10ApplianceManagementTechsupportlogsFilenameGet**](ApplianceManagementApi.md#Api10ApplianceManagementTechsupportlogsFilenameGet) | **Get** /api/1.0/appliance-management/techsupportlogs/{filename} | techLogsDownloadRead
-[**Api10ApplianceManagementUpgradeInformationComponentIDGet**](ApplianceManagementApi.md#Api10ApplianceManagementUpgradeInformationComponentIDGet) | **Get** /api/1.0/appliance-management/upgrade/information/{componentID} | upgradeBundleDetails
-[**Api10ApplianceManagementUpgradeStartComponentIDPost**](ApplianceManagementApi.md#Api10ApplianceManagementUpgradeStartComponentIDPost) | **Post** /api/1.0/appliance-management/upgrade/start/{componentID} | upgradeStartExecute
-[**Api10ApplianceManagementUpgradeStatusComponentIDGet**](ApplianceManagementApi.md#Api10ApplianceManagementUpgradeStatusComponentIDGet) | **Get** /api/1.0/appliance-management/upgrade/status/{componentID} | upgradeStatusRead
-[**Api10ApplianceManagementUpgradeUploadbundleComponentIDPost**](ApplianceManagementApi.md#Api10ApplianceManagementUpgradeUploadbundleComponentIDPost) | **Post** /api/1.0/appliance-management/upgrade/uploadbundle/{componentID} | upgradeBundleUpload
+[**ApplianceManagementBackuprestoreBackupPost**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupPost) | **Post** /api/1.0/appliance-management/backuprestore/backup | applianceMgrBackupCreate
+[**ApplianceManagementBackuprestoreBackupsGet**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsGet) | **Get** /api/1.0/appliance-management/backuprestore/backups | applianceMgrBackupsRead
+[**ApplianceManagementBackuprestoreBackupsettingsDelete**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsDelete) | **Delete** /api/1.0/appliance-management/backuprestore/backupsettings | applianceMgrBackupSettingsDelete
+[**ApplianceManagementBackuprestoreBackupsettingsExcludedataPut**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsExcludedataPut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings/excludedata | applianceMgrBackupSettingsExcludeUpdate
+[**ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings/ftpsettings | applianceMgrBackupSettingsFtpUpdate
+[**ApplianceManagementBackuprestoreBackupsettingsGet**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsGet) | **Get** /api/1.0/appliance-management/backuprestore/backupsettings | applianceMgrBackupSettingsRead
+[**ApplianceManagementBackuprestoreBackupsettingsPut**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsPut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings | applianceMgrBackupSettingsUpdate
+[**ApplianceManagementBackuprestoreBackupsettingsScheduleDelete**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsScheduleDelete) | **Delete** /api/1.0/appliance-management/backuprestore/backupsettings/schedule | applianceMgrBackupSettingsScheduleDelete
+[**ApplianceManagementBackuprestoreBackupsettingsSchedulePut**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreBackupsettingsSchedulePut) | **Put** /api/1.0/appliance-management/backuprestore/backupsettings/schedule | applianceMgrBackupSettingsScheduleUpdate
+[**ApplianceManagementBackuprestoreRestorePost**](ApplianceManagementApi.md#ApplianceManagementBackuprestoreRestorePost) | **Post** /api/1.0/appliance-management/backuprestore/restore | applianceMgrBackupRestoreExecute
+[**ApplianceManagementCertificatemanagerCertificatesNsxGet**](ApplianceManagementApi.md#ApplianceManagementCertificatemanagerCertificatesNsxGet) | **Get** /api/1.0/appliance-management/certificatemanager/certificates/nsx | certificateManagerCertificatesNsxRead
+[**ApplianceManagementCertificatemanagerCsrNsxGet**](ApplianceManagementApi.md#ApplianceManagementCertificatemanagerCsrNsxGet) | **Get** /api/1.0/appliance-management/certificatemanager/csr/nsx | certificateCsrRead
+[**ApplianceManagementCertificatemanagerCsrNsxPost**](ApplianceManagementApi.md#ApplianceManagementCertificatemanagerCsrNsxPost) | **Post** /api/1.0/appliance-management/certificatemanager/csr/nsx | certificateCsrCreate
+[**ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost**](ApplianceManagementApi.md#ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost) | **Post** /api/1.0/appliance-management/certificatemanager/pkcs12keystore/nsx | certificatesKeystoreUpdate
+[**ApplianceManagementCertificatemanagerUploadchainNsxPost**](ApplianceManagementApi.md#ApplianceManagementCertificatemanagerUploadchainNsxPost) | **Post** /api/1.0/appliance-management/certificatemanager/uploadchain/nsx | certificateChainUpload
+[**ApplianceManagementComponentsComponentAPPMGMTRestartPost**](ApplianceManagementApi.md#ApplianceManagementComponentsComponentAPPMGMTRestartPost) | **Post** /api/1.0/appliance-management/components/component/APPMGMT/restart | componentAppMgmtRestartExecute
+[**ApplianceManagementComponentsComponentComponentIDDependenciesGet**](ApplianceManagementApi.md#ApplianceManagementComponentsComponentComponentIDDependenciesGet) | **Get** /api/1.0/appliance-management/components/component/{componentID}/dependencies | componentDependenciesRead
+[**ApplianceManagementComponentsComponentComponentIDDependentsGet**](ApplianceManagementApi.md#ApplianceManagementComponentsComponentComponentIDDependentsGet) | **Get** /api/1.0/appliance-management/components/component/{componentID}/dependents | componentDependentsRead
+[**ApplianceManagementComponentsComponentComponentIDGet**](ApplianceManagementApi.md#ApplianceManagementComponentsComponentComponentIDGet) | **Get** /api/1.0/appliance-management/components/component/{componentID} | componentManagementRead
+[**ApplianceManagementComponentsComponentComponentIDStatusGet**](ApplianceManagementApi.md#ApplianceManagementComponentsComponentComponentIDStatusGet) | **Get** /api/1.0/appliance-management/components/component/{componentID}/status | componentStatusRead
+[**ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost**](ApplianceManagementApi.md#ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost) | **Post** /api/1.0/appliance-management/components/component/{componentID}/toggleStatus/{command} | componentManagementToggleCommand
+[**ApplianceManagementComponentsGet**](ApplianceManagementApi.md#ApplianceManagementComponentsGet) | **Get** /api/1.0/appliance-management/components | componentsManagementRead
+[**ApplianceManagementGlobalInfoGet**](ApplianceManagementApi.md#ApplianceManagementGlobalInfoGet) | **Get** /api/1.0/appliance-management/global/info | globalInfoRead
+[**ApplianceManagementNotificationsDelete**](ApplianceManagementApi.md#ApplianceManagementNotificationsDelete) | **Delete** /api/1.0/appliance-management/notifications | notificationsDelete
+[**ApplianceManagementNotificationsGet**](ApplianceManagementApi.md#ApplianceManagementNotificationsGet) | **Get** /api/1.0/appliance-management/notifications | notificationsRead
+[**ApplianceManagementNotificationsIDAcknowledgePost**](ApplianceManagementApi.md#ApplianceManagementNotificationsIDAcknowledgePost) | **Post** /api/1.0/appliance-management/notifications/{ID}/acknowledge | notificationsAcknowledgeAck
+[**ApplianceManagementSummaryComponentsGet**](ApplianceManagementApi.md#ApplianceManagementSummaryComponentsGet) | **Get** /api/1.0/appliance-management/summary/components | componentInfoRead
+[**ApplianceManagementSummarySystemGet**](ApplianceManagementApi.md#ApplianceManagementSummarySystemGet) | **Get** /api/1.0/appliance-management/summary/system | summaryInfoRead
+[**ApplianceManagementSystemCpuinfoGet**](ApplianceManagementApi.md#ApplianceManagementSystemCpuinfoGet) | **Get** /api/1.0/appliance-management/system/cpuinfo | systemCPUInfoRead
+[**ApplianceManagementSystemLocaleGet**](ApplianceManagementApi.md#ApplianceManagementSystemLocaleGet) | **Get** /api/1.0/appliance-management/system/locale | systemLocaleRead
+[**ApplianceManagementSystemLocalePut**](ApplianceManagementApi.md#ApplianceManagementSystemLocalePut) | **Put** /api/1.0/appliance-management/system/locale | systemLocaleUpdate
+[**ApplianceManagementSystemMeminfoGet**](ApplianceManagementApi.md#ApplianceManagementSystemMeminfoGet) | **Get** /api/1.0/appliance-management/system/meminfo | systemMemoryInfoRead
+[**ApplianceManagementSystemNetworkDnsDelete**](ApplianceManagementApi.md#ApplianceManagementSystemNetworkDnsDelete) | **Delete** /api/1.0/appliance-management/system/network/dns | applianceDnsClientDelete
+[**ApplianceManagementSystemNetworkDnsPut**](ApplianceManagementApi.md#ApplianceManagementSystemNetworkDnsPut) | **Put** /api/1.0/appliance-management/system/network/dns | applianceDnsClientUpdate
+[**ApplianceManagementSystemNetworkGet**](ApplianceManagementApi.md#ApplianceManagementSystemNetworkGet) | **Get** /api/1.0/appliance-management/system/network | networkSettingsRead
+[**ApplianceManagementSystemNetworkPut**](ApplianceManagementApi.md#ApplianceManagementSystemNetworkPut) | **Put** /api/1.0/appliance-management/system/network | networkSettingsUpdate
+[**ApplianceManagementSystemRestartPost**](ApplianceManagementApi.md#ApplianceManagementSystemRestartPost) | **Post** /api/1.0/appliance-management/system/restart | systemRebootExecute
+[**ApplianceManagementSystemSecuritysettingsGet**](ApplianceManagementApi.md#ApplianceManagementSystemSecuritysettingsGet) | **Get** /api/1.0/appliance-management/system/securitysettings | systemSecSettingsRead
+[**ApplianceManagementSystemSecuritysettingsPost**](ApplianceManagementApi.md#ApplianceManagementSystemSecuritysettingsPost) | **Post** /api/1.0/appliance-management/system/securitysettings | systemSecSettingsUpdate
+[**ApplianceManagementSystemStorageinfoGet**](ApplianceManagementApi.md#ApplianceManagementSystemStorageinfoGet) | **Get** /api/1.0/appliance-management/system/storageinfo | systemStorageInfoRead
+[**ApplianceManagementSystemSyslogserverDelete**](ApplianceManagementApi.md#ApplianceManagementSystemSyslogserverDelete) | **Delete** /api/1.0/appliance-management/system/syslogserver | systemSyslogServerDelete
+[**ApplianceManagementSystemSyslogserverGet**](ApplianceManagementApi.md#ApplianceManagementSystemSyslogserverGet) | **Get** /api/1.0/appliance-management/system/syslogserver | systemSyslogServerRead
+[**ApplianceManagementSystemSyslogserverPut**](ApplianceManagementApi.md#ApplianceManagementSystemSyslogserverPut) | **Put** /api/1.0/appliance-management/system/syslogserver | systemSyslogServerUpdate
+[**ApplianceManagementSystemTimesettingsGet**](ApplianceManagementApi.md#ApplianceManagementSystemTimesettingsGet) | **Get** /api/1.0/appliance-management/system/timesettings | systemTimeRead
+[**ApplianceManagementSystemTimesettingsNtpDelete**](ApplianceManagementApi.md#ApplianceManagementSystemTimesettingsNtpDelete) | **Delete** /api/1.0/appliance-management/system/timesettings/ntp | ntpDelete
+[**ApplianceManagementSystemTimesettingsPut**](ApplianceManagementApi.md#ApplianceManagementSystemTimesettingsPut) | **Put** /api/1.0/appliance-management/system/timesettings | systemTimeUpdate
+[**ApplianceManagementSystemTlssettingsGet**](ApplianceManagementApi.md#ApplianceManagementSystemTlssettingsGet) | **Get** /api/1.0/appliance-management/system/tlssettings | tlsSettingsRead
+[**ApplianceManagementSystemTlssettingsPost**](ApplianceManagementApi.md#ApplianceManagementSystemTlssettingsPost) | **Post** /api/1.0/appliance-management/system/tlssettings | tlsSettingsUpdate
+[**ApplianceManagementSystemUptimeGet**](ApplianceManagementApi.md#ApplianceManagementSystemUptimeGet) | **Get** /api/1.0/appliance-management/system/uptime | systemUptimeRead
+[**ApplianceManagementTechsupportlogsComponentIDPost**](ApplianceManagementApi.md#ApplianceManagementTechsupportlogsComponentIDPost) | **Post** /api/1.0/appliance-management/techsupportlogs/{componentID} | techLogsCreate
+[**ApplianceManagementTechsupportlogsFilenameGet**](ApplianceManagementApi.md#ApplianceManagementTechsupportlogsFilenameGet) | **Get** /api/1.0/appliance-management/techsupportlogs/{filename} | techLogsDownloadRead
+[**ApplianceManagementUpgradeInformationComponentIDGet**](ApplianceManagementApi.md#ApplianceManagementUpgradeInformationComponentIDGet) | **Get** /api/1.0/appliance-management/upgrade/information/{componentID} | upgradeBundleDetails
+[**ApplianceManagementUpgradeStartComponentIDPost**](ApplianceManagementApi.md#ApplianceManagementUpgradeStartComponentIDPost) | **Post** /api/1.0/appliance-management/upgrade/start/{componentID} | upgradeStartExecute
+[**ApplianceManagementUpgradeStatusComponentIDGet**](ApplianceManagementApi.md#ApplianceManagementUpgradeStatusComponentIDGet) | **Get** /api/1.0/appliance-management/upgrade/status/{componentID} | upgradeStatusRead
+[**ApplianceManagementUpgradeUploadbundleComponentIDPost**](ApplianceManagementApi.md#ApplianceManagementUpgradeUploadbundleComponentIDPost) | **Post** /api/1.0/appliance-management/upgrade/uploadbundle/{componentID} | upgradeBundleUpload
 
-# **Api10ApplianceManagementBackuprestoreBackupPost**
-> Api10ApplianceManagementBackuprestoreBackupPost(ctx, )
+# **ApplianceManagementBackuprestoreBackupPost**
+> ApplianceManagementBackuprestoreBackupPost(ctx, )
 applianceMgrBackupCreate
 
 Start an on-demand NSX backup.  Parameters:  
@@ -84,8 +84,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsGet**
-> Api10ApplianceManagementBackuprestoreBackupsGet(ctx, )
+# **ApplianceManagementBackuprestoreBackupsGet**
+> ApplianceManagementBackuprestoreBackupsGet(ctx, )
 applianceMgrBackupsRead
 
 Retrieve list of all backups available at configured backup location.   Parameters:  
@@ -108,8 +108,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsDelete**
-> Api10ApplianceManagementBackuprestoreBackupsettingsDelete(ctx, )
+# **ApplianceManagementBackuprestoreBackupsettingsDelete**
+> ApplianceManagementBackuprestoreBackupsettingsDelete(ctx, )
 applianceMgrBackupSettingsDelete
 
 Delete appliance manager backup configuration.  Parameters:  
@@ -132,8 +132,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsExcludedataPut**
-> Api10ApplianceManagementBackuprestoreBackupsettingsExcludedataPut(ctx, )
+# **ApplianceManagementBackuprestoreBackupsettingsExcludedataPut**
+> ApplianceManagementBackuprestoreBackupsettingsExcludedataPut(ctx, )
 applianceMgrBackupSettingsExcludeUpdate
 
 Specify tables that need not be backed up.  Parameters:  
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut**
-> Api10ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut(ctx, )
+# **ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut**
+> ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut(ctx, )
 applianceMgrBackupSettingsFtpUpdate
 
 Configure FTP settings.  Parameters:  
@@ -180,8 +180,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsGet**
-> Api10ApplianceManagementBackuprestoreBackupsettingsGet(ctx, )
+# **ApplianceManagementBackuprestoreBackupsettingsGet**
+> ApplianceManagementBackuprestoreBackupsettingsGet(ctx, )
 applianceMgrBackupSettingsRead
 
 Retrieve backup settings.  Parameters:  
@@ -204,8 +204,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsPut**
-> Api10ApplianceManagementBackuprestoreBackupsettingsPut(ctx, optional)
+# **ApplianceManagementBackuprestoreBackupsettingsPut**
+> ApplianceManagementBackuprestoreBackupsettingsPut(ctx, optional)
 applianceMgrBackupSettingsUpdate
 
 Configure backups on the appliance manager.  Parameters:  
@@ -215,10 +215,10 @@ Configure backups on the appliance manager.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementBackuprestoreBackupsettingsPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementBackuprestoreBackupsettingsPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementBackuprestoreBackupsettingsPutOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementBackuprestoreBackupsettingsPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -239,8 +239,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsScheduleDelete**
-> Api10ApplianceManagementBackuprestoreBackupsettingsScheduleDelete(ctx, )
+# **ApplianceManagementBackuprestoreBackupsettingsScheduleDelete**
+> ApplianceManagementBackuprestoreBackupsettingsScheduleDelete(ctx, )
 applianceMgrBackupSettingsScheduleDelete
 
 Delete backup schedule.  Parameters:  
@@ -263,8 +263,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreBackupsettingsSchedulePut**
-> Api10ApplianceManagementBackuprestoreBackupsettingsSchedulePut(ctx, )
+# **ApplianceManagementBackuprestoreBackupsettingsSchedulePut**
+> ApplianceManagementBackuprestoreBackupsettingsSchedulePut(ctx, )
 applianceMgrBackupSettingsScheduleUpdate
 
 Set backup schedule.  Parameters:  
@@ -287,8 +287,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementBackuprestoreRestorePost**
-> Api10ApplianceManagementBackuprestoreRestorePost(ctx, optional)
+# **ApplianceManagementBackuprestoreRestorePost**
+> ApplianceManagementBackuprestoreRestorePost(ctx, optional)
 applianceMgrBackupRestoreExecute
 
 Restore data from a backup file.  Retrive a list of restore files using `GET /api/1.0/appliance-management/backuprestore/backups`.   Parameters:  
@@ -298,10 +298,10 @@ Restore data from a backup file.  Retrive a list of restore files using `GET /ap
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementBackuprestoreRestorePostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementBackuprestoreRestorePostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementBackuprestoreRestorePostOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementBackuprestoreRestorePostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restoreFile** | **optional.String**|  | 
@@ -321,8 +321,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementCertificatemanagerCertificatesNsxGet**
-> Api10ApplianceManagementCertificatemanagerCertificatesNsxGet(ctx, )
+# **ApplianceManagementCertificatemanagerCertificatesNsxGet**
+> ApplianceManagementCertificatemanagerCertificatesNsxGet(ctx, )
 certificateManagerCertificatesNsxRead
 
 Retrieve certificate information from NSX Manager.   Parameters:  
@@ -345,8 +345,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementCertificatemanagerCsrNsxGet**
-> Api10ApplianceManagementCertificatemanagerCsrNsxGet(ctx, )
+# **ApplianceManagementCertificatemanagerCsrNsxGet**
+> ApplianceManagementCertificatemanagerCsrNsxGet(ctx, )
 certificateCsrRead
 
 Retrieve generated certificate signing request (CSR).   Parameters:  
@@ -369,8 +369,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementCertificatemanagerCsrNsxPost**
-> Api10ApplianceManagementCertificatemanagerCsrNsxPost(ctx, optional)
+# **ApplianceManagementCertificatemanagerCsrNsxPost**
+> ApplianceManagementCertificatemanagerCsrNsxPost(ctx, optional)
 certificateCsrCreate
 
 Create a certificate signing request (CSR) for NSX Manager.  The response header contains the created file location.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced. Replaces `PUT /api/1.0/appliance-management/certificatemanager/csr/nsx`.   Parameters:  
@@ -380,10 +380,10 @@ Create a certificate signing request (CSR) for NSX Manager.  The response header
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementCertificatemanagerCsrNsxPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementCertificatemanagerCsrNsxPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementCertificatemanagerCsrNsxPostOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementCertificatemanagerCsrNsxPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -404,8 +404,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost**
-> Api10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost(ctx, optional)
+# **ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost**
+> ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost(ctx, optional)
 certificatesKeystoreUpdate
 
 Upload keystore file.  Input is PKCS#12 formatted NSX file along with password.   Parameters:  
@@ -415,10 +415,10 @@ Upload keystore file.  Input is PKCS#12 formatted NSX file along with password. 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **password** | **optional.String**|  | 
@@ -438,8 +438,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementCertificatemanagerUploadchainNsxPost**
-> Api10ApplianceManagementCertificatemanagerUploadchainNsxPost(ctx, )
+# **ApplianceManagementCertificatemanagerUploadchainNsxPost**
+> ApplianceManagementCertificatemanagerUploadchainNsxPost(ctx, )
 certificateChainUpload
 
 Upload certificate chain.  Input is certificate chain file which is a PEM encoded chain of certificates received from the CA after signing a CSR.   Parameters:  
@@ -462,8 +462,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsComponentAPPMGMTRestartPost**
-> Api10ApplianceManagementComponentsComponentAPPMGMTRestartPost(ctx, )
+# **ApplianceManagementComponentsComponentAPPMGMTRestartPost**
+> ApplianceManagementComponentsComponentAPPMGMTRestartPost(ctx, )
 componentAppMgmtRestartExecute
 
 Restart the appliance management web application.  Parameters:  
@@ -486,8 +486,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsComponentComponentIDDependenciesGet**
-> Api10ApplianceManagementComponentsComponentComponentIDDependenciesGet(ctx, componentID)
+# **ApplianceManagementComponentsComponentComponentIDDependenciesGet**
+> ApplianceManagementComponentsComponentComponentIDDependenciesGet(ctx, componentID)
 componentDependenciesRead
 
 Retrieve dependency details for the specified component.  Parameters:  
@@ -514,8 +514,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsComponentComponentIDDependentsGet**
-> Api10ApplianceManagementComponentsComponentComponentIDDependentsGet(ctx, componentID)
+# **ApplianceManagementComponentsComponentComponentIDDependentsGet**
+> ApplianceManagementComponentsComponentComponentIDDependentsGet(ctx, componentID)
 componentDependentsRead
 
 Retrieve dependents for the specified component.  Parameters:  
@@ -542,8 +542,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsComponentComponentIDGet**
-> Api10ApplianceManagementComponentsComponentComponentIDGet(ctx, componentID)
+# **ApplianceManagementComponentsComponentComponentIDGet**
+> ApplianceManagementComponentsComponentComponentIDGet(ctx, componentID)
 componentManagementRead
 
 Retrieve details for the specified component.  Parameters:  componentID: Specified component ID.  
@@ -570,8 +570,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsComponentComponentIDStatusGet**
-> Api10ApplianceManagementComponentsComponentComponentIDStatusGet(ctx, componentID)
+# **ApplianceManagementComponentsComponentComponentIDStatusGet**
+> ApplianceManagementComponentsComponentComponentIDStatusGet(ctx, componentID)
 componentStatusRead
 
 Retrieve current status for the specified component.  Parameters:  
@@ -598,8 +598,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost**
-> Api10ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost(ctx, componentID, command)
+# **ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost**
+> ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost(ctx, componentID, command)
 componentManagementToggleCommand
 
 Start or stop a component.  Parameters:  command: Use **command** parameter *start* or *stop*.  
@@ -627,8 +627,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementComponentsGet**
-> Api10ApplianceManagementComponentsGet(ctx, )
+# **ApplianceManagementComponentsGet**
+> ApplianceManagementComponentsGet(ctx, )
 componentsManagementRead
 
 Retrieve all appliance manager components.  Parameters:  
@@ -651,8 +651,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementGlobalInfoGet**
-> Api10ApplianceManagementGlobalInfoGet(ctx, )
+# **ApplianceManagementGlobalInfoGet**
+> ApplianceManagementGlobalInfoGet(ctx, )
 globalInfoRead
 
 Retrieve global information containing version information as well as current logged in user.   Parameters:  
@@ -675,8 +675,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementNotificationsDelete**
-> Api10ApplianceManagementNotificationsDelete(ctx, )
+# **ApplianceManagementNotificationsDelete**
+> ApplianceManagementNotificationsDelete(ctx, )
 notificationsDelete
 
 Delete all notifications.  Parameters:  
@@ -699,8 +699,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementNotificationsGet**
-> Api10ApplianceManagementNotificationsGet(ctx, )
+# **ApplianceManagementNotificationsGet**
+> ApplianceManagementNotificationsGet(ctx, )
 notificationsRead
 
 Retrieve all system generated notifications.  Parameters:  
@@ -723,8 +723,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementNotificationsIDAcknowledgePost**
-> Api10ApplianceManagementNotificationsIDAcknowledgePost(ctx, iD)
+# **ApplianceManagementNotificationsIDAcknowledgePost**
+> ApplianceManagementNotificationsIDAcknowledgePost(ctx, iD)
 notificationsAcknowledgeAck
 
 Acknowledge a notification. The notification is then deleted from the system.   Parameters:  ID: Notification ID.  
@@ -751,8 +751,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSummaryComponentsGet**
-> Api10ApplianceManagementSummaryComponentsGet(ctx, )
+# **ApplianceManagementSummaryComponentsGet**
+> ApplianceManagementSummaryComponentsGet(ctx, )
 componentInfoRead
 
 Retrieve summary of all available components and their status info.   Parameters:  
@@ -775,8 +775,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSummarySystemGet**
-> Api10ApplianceManagementSummarySystemGet(ctx, )
+# **ApplianceManagementSummarySystemGet**
+> ApplianceManagementSummarySystemGet(ctx, )
 summaryInfoRead
 
 Retrieve system summary info such as address, dns name, version, CPU, memory and storage.   Parameters:  
@@ -799,8 +799,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemCpuinfoGet**
-> Api10ApplianceManagementSystemCpuinfoGet(ctx, )
+# **ApplianceManagementSystemCpuinfoGet**
+> ApplianceManagementSystemCpuinfoGet(ctx, )
 systemCPUInfoRead
 
 Retrieve NSX Manager CPU information.  Parameters:  
@@ -823,8 +823,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemLocaleGet**
-> Api10ApplianceManagementSystemLocaleGet(ctx, )
+# **ApplianceManagementSystemLocaleGet**
+> ApplianceManagementSystemLocaleGet(ctx, )
 systemLocaleRead
 
 Retrieve locale info.  Parameters:  
@@ -847,8 +847,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemLocalePut**
-> Api10ApplianceManagementSystemLocalePut(ctx, optional)
+# **ApplianceManagementSystemLocalePut**
+> ApplianceManagementSystemLocalePut(ctx, optional)
 systemLocaleUpdate
 
 Configure locale.  Parameters:  
@@ -858,10 +858,10 @@ Configure locale.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemLocalePutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemLocalePutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemLocalePutOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemLocalePutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -882,8 +882,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemMeminfoGet**
-> Api10ApplianceManagementSystemMeminfoGet(ctx, )
+# **ApplianceManagementSystemMeminfoGet**
+> ApplianceManagementSystemMeminfoGet(ctx, )
 systemMemoryInfoRead
 
 Retrieve NSX Manager memory information.  Parameters:  
@@ -906,8 +906,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemNetworkDnsDelete**
-> Api10ApplianceManagementSystemNetworkDnsDelete(ctx, )
+# **ApplianceManagementSystemNetworkDnsDelete**
+> ApplianceManagementSystemNetworkDnsDelete(ctx, )
 applianceDnsClientDelete
 
 Delete DNS server configuration.  Parameters:  
@@ -930,8 +930,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemNetworkDnsPut**
-> Api10ApplianceManagementSystemNetworkDnsPut(ctx, optional)
+# **ApplianceManagementSystemNetworkDnsPut**
+> ApplianceManagementSystemNetworkDnsPut(ctx, optional)
 applianceDnsClientUpdate
 
 Configure DNS.  Parameters:  
@@ -941,10 +941,10 @@ Configure DNS.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemNetworkDnsPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemNetworkDnsPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemNetworkDnsPutOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemNetworkDnsPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -965,8 +965,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemNetworkGet**
-> Api10ApplianceManagementSystemNetworkGet(ctx, )
+# **ApplianceManagementSystemNetworkGet**
+> ApplianceManagementSystemNetworkGet(ctx, )
 networkSettingsRead
 
 Retrieve network information for the NSX Manager appliance. i.e. host name, IP address, DNS settings   Parameters:  
@@ -989,8 +989,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemNetworkPut**
-> Api10ApplianceManagementSystemNetworkPut(ctx, optional)
+# **ApplianceManagementSystemNetworkPut**
+> ApplianceManagementSystemNetworkPut(ctx, optional)
 networkSettingsUpdate
 
 Update network information for the NSX Manager appliance.   Parameters:  
@@ -1000,10 +1000,10 @@ Update network information for the NSX Manager appliance.   Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemNetworkPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemNetworkPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemNetworkPutOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemNetworkPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -1024,8 +1024,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemRestartPost**
-> Api10ApplianceManagementSystemRestartPost(ctx, )
+# **ApplianceManagementSystemRestartPost**
+> ApplianceManagementSystemRestartPost(ctx, )
 systemRebootExecute
 
 Reboot the NSX Manager appliance.  Parameters:  
@@ -1048,8 +1048,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemSecuritysettingsGet**
-> Api10ApplianceManagementSystemSecuritysettingsGet(ctx, )
+# **ApplianceManagementSystemSecuritysettingsGet**
+> ApplianceManagementSystemSecuritysettingsGet(ctx, )
 systemSecSettingsRead
 
 Retrieve the NSX Manager FIPS and TLS settings.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  
@@ -1072,8 +1072,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemSecuritysettingsPost**
-> Api10ApplianceManagementSystemSecuritysettingsPost(ctx, optional)
+# **ApplianceManagementSystemSecuritysettingsPost**
+> ApplianceManagementSystemSecuritysettingsPost(ctx, optional)
 systemSecSettingsUpdate
 
 Update the NSX Manager security settings, including FIPS and TLS.  Do not enable FIPS until you have upgraded all NSX components to NSX 6.3.0 or later. Enable FIPS on NSX Edges before enabling it on the NSX Manager.  Changing the FIPS mode will reboot the NSX Manager appliance.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  
@@ -1083,10 +1083,10 @@ Update the NSX Manager security settings, including FIPS and TLS.  Do not enable
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemSecuritysettingsPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemSecuritysettingsPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemSecuritysettingsPostOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemSecuritysettingsPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -1107,8 +1107,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemStorageinfoGet**
-> Api10ApplianceManagementSystemStorageinfoGet(ctx, )
+# **ApplianceManagementSystemStorageinfoGet**
+> ApplianceManagementSystemStorageinfoGet(ctx, )
 systemStorageInfoRead
 
 Retrieve NSX Manager storage information.  Parameters:  
@@ -1131,8 +1131,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemSyslogserverDelete**
-> Api10ApplianceManagementSystemSyslogserverDelete(ctx, )
+# **ApplianceManagementSystemSyslogserverDelete**
+> ApplianceManagementSystemSyslogserverDelete(ctx, )
 systemSyslogServerDelete
 
 Delete syslog servers.  Parameters:  
@@ -1155,8 +1155,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemSyslogserverGet**
-> Api10ApplianceManagementSystemSyslogserverGet(ctx, )
+# **ApplianceManagementSystemSyslogserverGet**
+> ApplianceManagementSystemSyslogserverGet(ctx, )
 systemSyslogServerRead
 
 Retrieve syslog servers.  Parameters:  
@@ -1179,8 +1179,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemSyslogserverPut**
-> Api10ApplianceManagementSystemSyslogserverPut(ctx, optional)
+# **ApplianceManagementSystemSyslogserverPut**
+> ApplianceManagementSystemSyslogserverPut(ctx, optional)
 systemSyslogServerUpdate
 
 Configure syslog servers.  Parameters:  
@@ -1190,10 +1190,10 @@ Configure syslog servers.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemSyslogserverPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemSyslogserverPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemSyslogserverPutOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemSyslogserverPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -1214,8 +1214,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemTimesettingsGet**
-> Api10ApplianceManagementSystemTimesettingsGet(ctx, )
+# **ApplianceManagementSystemTimesettingsGet**
+> ApplianceManagementSystemTimesettingsGet(ctx, )
 systemTimeRead
 
 Retrieve time settings, like timezone or current date and time with NTP server, if configured.   Parameters:  
@@ -1238,8 +1238,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemTimesettingsNtpDelete**
-> Api10ApplianceManagementSystemTimesettingsNtpDelete(ctx, )
+# **ApplianceManagementSystemTimesettingsNtpDelete**
+> ApplianceManagementSystemTimesettingsNtpDelete(ctx, )
 ntpDelete
 
 Delete NTP server.  Parameters:  
@@ -1262,8 +1262,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemTimesettingsPut**
-> Api10ApplianceManagementSystemTimesettingsPut(ctx, optional)
+# **ApplianceManagementSystemTimesettingsPut**
+> ApplianceManagementSystemTimesettingsPut(ctx, optional)
 systemTimeUpdate
 
 Configure time or specify the NTP server to use for time synchronization.   Parameters:  
@@ -1273,10 +1273,10 @@ Configure time or specify the NTP server to use for time synchronization.   Para
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemTimesettingsPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemTimesettingsPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemTimesettingsPutOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemTimesettingsPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -1297,8 +1297,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemTlssettingsGet**
-> Api10ApplianceManagementSystemTlssettingsGet(ctx, )
+# **ApplianceManagementSystemTlssettingsGet**
+> ApplianceManagementSystemTlssettingsGet(ctx, )
 tlsSettingsRead
 
 Retrieve TLS settings.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  
@@ -1321,8 +1321,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemTlssettingsPost**
-> Api10ApplianceManagementSystemTlssettingsPost(ctx, optional)
+# **ApplianceManagementSystemTlssettingsPost**
+> ApplianceManagementSystemTlssettingsPost(ctx, optional)
 tlsSettingsUpdate
 
 Update TLS settings.  Include a comma separated list of the TLS versions you want to enable, for both server and client.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  
@@ -1332,10 +1332,10 @@ Update TLS settings.  Include a comma separated list of the TLS versions you wan
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementSystemTlssettingsPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementSystemTlssettingsPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementSystemTlssettingsPostOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementSystemTlssettingsPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -1356,8 +1356,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementSystemUptimeGet**
-> Api10ApplianceManagementSystemUptimeGet(ctx, )
+# **ApplianceManagementSystemUptimeGet**
+> ApplianceManagementSystemUptimeGet(ctx, )
 systemUptimeRead
 
 Retrieve NSX Manager uptime information.  **Example response:** ``` 25 days, 22 hours, 11 minutes ```   Parameters:  
@@ -1380,8 +1380,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementTechsupportlogsComponentIDPost**
-> Api10ApplianceManagementTechsupportlogsComponentIDPost(ctx, componentID)
+# **ApplianceManagementTechsupportlogsComponentIDPost**
+> ApplianceManagementTechsupportlogsComponentIDPost(ctx, componentID)
 techLogsCreate
 
 Generate tech support logs. The location response header contains the location of the created tech support file.    Parameters:  componentID: Specified component to generate tech support logs. For example, *NSX*.   
@@ -1408,8 +1408,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementTechsupportlogsFilenameGet**
-> Api10ApplianceManagementTechsupportlogsFilenameGet(ctx, filename)
+# **ApplianceManagementTechsupportlogsFilenameGet**
+> ApplianceManagementTechsupportlogsFilenameGet(ctx, filename)
 techLogsDownloadRead
 
 Download tech support logs  Parameters:  filename: Name of log file to download.  
@@ -1436,8 +1436,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementUpgradeInformationComponentIDGet**
-> Api10ApplianceManagementUpgradeInformationComponentIDGet(ctx, componentID)
+# **ApplianceManagementUpgradeInformationComponentIDGet**
+> ApplianceManagementUpgradeInformationComponentIDGet(ctx, componentID)
 upgradeBundleDetails
 
 Once you have uploaded an upgrade bundle, you must retrieve information about the upgrade. This request contains pre-upgrade validation warnings and error messages, along with pre-upgrade questions with default answers. Review the information and edit the answers in the **preUpgradeQuestionsAnswers** section if needed before providing the section as the request body to the `POST /api/1.0/appliance-management/upgrade/start/{componentID}` method.   Parameters:  componentID:   
@@ -1464,8 +1464,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementUpgradeStartComponentIDPost**
-> Api10ApplianceManagementUpgradeStartComponentIDPost(ctx, componentID, optional)
+# **ApplianceManagementUpgradeStartComponentIDPost**
+> ApplianceManagementUpgradeStartComponentIDPost(ctx, componentID, optional)
 upgradeStartExecute
 
 Start upgrade process.  Parameters:  componentID: Component ID  
@@ -1476,10 +1476,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **componentID** | **string**|  | 
- **optional** | ***ApplianceManagementApiApi10ApplianceManagementUpgradeStartComponentIDPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ApplianceManagementApiApplianceManagementUpgradeStartComponentIDPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ApplianceManagementApiApi10ApplianceManagementUpgradeStartComponentIDPostOpts struct
+Optional parameters are passed through a pointer to a ApplianceManagementApiApplianceManagementUpgradeStartComponentIDPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -1501,8 +1501,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementUpgradeStatusComponentIDGet**
-> Api10ApplianceManagementUpgradeStatusComponentIDGet(ctx, componentID)
+# **ApplianceManagementUpgradeStatusComponentIDGet**
+> ApplianceManagementUpgradeStatusComponentIDGet(ctx, componentID)
 upgradeStatusRead
 
 Query upgrade status.  Parameters:  componentID: Component ID.  
@@ -1529,8 +1529,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10ApplianceManagementUpgradeUploadbundleComponentIDPost**
-> Api10ApplianceManagementUpgradeUploadbundleComponentIDPost(ctx, componentID)
+# **ApplianceManagementUpgradeUploadbundleComponentIDPost**
+> ApplianceManagementUpgradeUploadbundleComponentIDPost(ctx, componentID)
 upgradeBundleUpload
 
 Upload upgrade bundle.  Parameters:  componentID: Component ID.  

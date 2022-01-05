@@ -4,21 +4,21 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20ServicesSecuritytagsSelectionCriteriaGet**](SecuritytagsApi.md#Api20ServicesSecuritytagsSelectionCriteriaGet) | **Get** /api/2.0/services/securitytags/selection-criteria | securitytagsCriteriaRead
-[**Api20ServicesSecuritytagsSelectionCriteriaPut**](SecuritytagsApi.md#Api20ServicesSecuritytagsSelectionCriteriaPut) | **Put** /api/2.0/services/securitytags/selection-criteria | securitytagsCriteriaUpdate
-[**Api20ServicesSecuritytagsTagGet**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagGet) | **Get** /api/2.0/services/securitytags/tag | securityTagRead
-[**Api20ServicesSecuritytagsTagPost**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagPost) | **Post** /api/2.0/services/securitytags/tag | securityTagCreate
-[**Api20ServicesSecuritytagsTagTagIdDelete**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagTagIdDelete) | **Delete** /api/2.0/services/securitytags/tag/{tagId} | securityTagDeleteDelete
-[**Api20ServicesSecuritytagsTagTagIdVmDetailGet**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagTagIdVmDetailGet) | **Get** /api/2.0/services/securitytags/tag/{tagId}/vmDetail | securityTagVMDetailList
-[**Api20ServicesSecuritytagsTagTagIdVmGet**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagTagIdVmGet) | **Get** /api/2.0/services/securitytags/tag/{tagId}/vm | securityTagVMsListList
-[**Api20ServicesSecuritytagsTagTagIdVmPost**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagTagIdVmPost) | **Post** /api/2.0/services/securitytags/tag/{tagId}/vm | securityTagVMsAction
-[**Api20ServicesSecuritytagsTagTagIdVmVmIdDelete**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagTagIdVmVmIdDelete) | **Delete** /api/2.0/services/securitytags/tag/{tagId}/vm/{vmId} | securityTagVMDetach
-[**Api20ServicesSecuritytagsTagTagIdVmVmIdPut**](SecuritytagsApi.md#Api20ServicesSecuritytagsTagTagIdVmVmIdPut) | **Put** /api/2.0/services/securitytags/tag/{tagId}/vm/{vmId} | securityTagVMAttach
-[**Api20ServicesSecuritytagsVmVmIdGet**](SecuritytagsApi.md#Api20ServicesSecuritytagsVmVmIdGet) | **Get** /api/2.0/services/securitytags/vm/{vmId} | securitytagVmIdList
-[**Api20ServicesSecuritytagsVmVmIdPost**](SecuritytagsApi.md#Api20ServicesSecuritytagsVmVmIdPost) | **Post** /api/2.0/services/securitytags/vm/{vmId} | securitytagVmMoidAction
+[**ServicesSecuritytagsSelectionCriteriaGet**](SecuritytagsApi.md#ServicesSecuritytagsSelectionCriteriaGet) | **Get** /api/2.0/services/securitytags/selection-criteria | securitytagsCriteriaRead
+[**ServicesSecuritytagsSelectionCriteriaPut**](SecuritytagsApi.md#ServicesSecuritytagsSelectionCriteriaPut) | **Put** /api/2.0/services/securitytags/selection-criteria | securitytagsCriteriaUpdate
+[**ServicesSecuritytagsTagGet**](SecuritytagsApi.md#ServicesSecuritytagsTagGet) | **Get** /api/2.0/services/securitytags/tag | securityTagRead
+[**ServicesSecuritytagsTagPost**](SecuritytagsApi.md#ServicesSecuritytagsTagPost) | **Post** /api/2.0/services/securitytags/tag | securityTagCreate
+[**ServicesSecuritytagsTagTagIdDelete**](SecuritytagsApi.md#ServicesSecuritytagsTagTagIdDelete) | **Delete** /api/2.0/services/securitytags/tag/{tagId} | securityTagDeleteDelete
+[**ServicesSecuritytagsTagTagIdVmDetailGet**](SecuritytagsApi.md#ServicesSecuritytagsTagTagIdVmDetailGet) | **Get** /api/2.0/services/securitytags/tag/{tagId}/vmDetail | securityTagVMDetailList
+[**ServicesSecuritytagsTagTagIdVmGet**](SecuritytagsApi.md#ServicesSecuritytagsTagTagIdVmGet) | **Get** /api/2.0/services/securitytags/tag/{tagId}/vm | securityTagVMsListList
+[**ServicesSecuritytagsTagTagIdVmPost**](SecuritytagsApi.md#ServicesSecuritytagsTagTagIdVmPost) | **Post** /api/2.0/services/securitytags/tag/{tagId}/vm | securityTagVMsAction
+[**ServicesSecuritytagsTagTagIdVmVmIdDelete**](SecuritytagsApi.md#ServicesSecuritytagsTagTagIdVmVmIdDelete) | **Delete** /api/2.0/services/securitytags/tag/{tagId}/vm/{vmId} | securityTagVMDetach
+[**ServicesSecuritytagsTagTagIdVmVmIdPut**](SecuritytagsApi.md#ServicesSecuritytagsTagTagIdVmVmIdPut) | **Put** /api/2.0/services/securitytags/tag/{tagId}/vm/{vmId} | securityTagVMAttach
+[**ServicesSecuritytagsVmVmIdGet**](SecuritytagsApi.md#ServicesSecuritytagsVmVmIdGet) | **Get** /api/2.0/services/securitytags/vm/{vmId} | securitytagVmIdList
+[**ServicesSecuritytagsVmVmIdPost**](SecuritytagsApi.md#ServicesSecuritytagsVmVmIdPost) | **Post** /api/2.0/services/securitytags/vm/{vmId} | securitytagVmMoidAction
 
-# **Api20ServicesSecuritytagsSelectionCriteriaGet**
-> Api20ServicesSecuritytagsSelectionCriteriaGet(ctx, )
+# **ServicesSecuritytagsSelectionCriteriaGet**
+> ServicesSecuritytagsSelectionCriteriaGet(ctx, )
 securitytagsCriteriaRead
 
 Retrieve unique ID section criteria configuration.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  
@@ -41,8 +41,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsSelectionCriteriaPut**
-> Api20ServicesSecuritytagsSelectionCriteriaPut(ctx, optional)
+# **ServicesSecuritytagsSelectionCriteriaPut**
+> ServicesSecuritytagsSelectionCriteriaPut(ctx, optional)
 securitytagsCriteriaUpdate
 
 Configure the unique ID section criteria configuration.  If you set the selection criteria and assign security tags to VMs, you must remove all security tags from VMs before you can change the selection criteria.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  
@@ -52,10 +52,10 @@ Configure the unique ID section criteria configuration.  If you set the selectio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SecuritytagsApiApi20ServicesSecuritytagsSelectionCriteriaPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***SecuritytagsApiServicesSecuritytagsSelectionCriteriaPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SecuritytagsApiApi20ServicesSecuritytagsSelectionCriteriaPutOpts struct
+Optional parameters are passed through a pointer to a SecuritytagsApiServicesSecuritytagsSelectionCriteriaPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -76,8 +76,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagGet**
-> Api20ServicesSecuritytagsTagGet(ctx, optional)
+# **ServicesSecuritytagsTagGet**
+> ServicesSecuritytagsTagGet(ctx, optional)
 securityTagRead
 
 Retrieve all security tags.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. Added **isUniversal** query parameter to filter universal security tags.   Parameters:  
@@ -87,10 +87,10 @@ Retrieve all security tags.  **Method history:**  Release | Modification -------
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SecuritytagsApiApi20ServicesSecuritytagsTagGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SecuritytagsApiServicesSecuritytagsTagGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SecuritytagsApiApi20ServicesSecuritytagsTagGetOpts struct
+Optional parameters are passed through a pointer to a SecuritytagsApiServicesSecuritytagsTagGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **isUniversal** | **optional.String**|  | 
@@ -110,8 +110,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagPost**
-> Api20ServicesSecuritytagsTagPost(ctx, optional)
+# **ServicesSecuritytagsTagPost**
+> ServicesSecuritytagsTagPost(ctx, optional)
 securityTagCreate
 
 Create a new security tag.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. **isUniversal** parameter can be set to create a universal security tag.   Parameters:  
@@ -121,10 +121,10 @@ Create a new security tag.  **Method history:**  Release | Modification --------
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SecuritytagsApiApi20ServicesSecuritytagsTagPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***SecuritytagsApiServicesSecuritytagsTagPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SecuritytagsApiApi20ServicesSecuritytagsTagPostOpts struct
+Optional parameters are passed through a pointer to a SecuritytagsApiServicesSecuritytagsTagPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -145,8 +145,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagTagIdDelete**
-> Api20ServicesSecuritytagsTagTagIdDelete(ctx, tagId)
+# **ServicesSecuritytagsTagTagIdDelete**
+> ServicesSecuritytagsTagTagIdDelete(ctx, tagId)
 securityTagDeleteDelete
 
 Delete the specified security tag.  Parameters:  tagId: Specified security tag.  
@@ -173,8 +173,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagTagIdVmDetailGet**
-> Api20ServicesSecuritytagsTagTagIdVmDetailGet(ctx, tagId)
+# **ServicesSecuritytagsTagTagIdVmDetailGet**
+> ServicesSecuritytagsTagTagIdVmDetailGet(ctx, tagId)
 securityTagVMDetailList
 
 Retrieve details about the VMs that are attached to the specified security tag.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  
@@ -201,8 +201,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagTagIdVmGet**
-> Api20ServicesSecuritytagsTagTagIdVmGet(ctx, tagId)
+# **ServicesSecuritytagsTagTagIdVmGet**
+> ServicesSecuritytagsTagTagIdVmGet(ctx, tagId)
 securityTagVMsListList
 
 Retrieve the list of VMs that have the specified tag attached to them.   Parameters:  
@@ -229,8 +229,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagTagIdVmPost**
-> Api20ServicesSecuritytagsTagTagIdVmPost(ctx, tagId, optional)
+# **ServicesSecuritytagsTagTagIdVmPost**
+> ServicesSecuritytagsTagTagIdVmPost(ctx, tagId, optional)
 securityTagVMsAction
 
 Attach or detach a security tag to a virtual machine.  This operation does not check that the virtual machine exists in the local inventory. This allows you to attach a universal security tag to a virtual machine that is connected to a secondary NSX Manager (and therefore is not connected to the primary NSX Manager where the call is sent).  Possible keys for the tagParameter are: * instance_uuid * bios_uuid * vmname  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  
@@ -241,10 +241,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **tagId** | **string**|  | 
- **optional** | ***SecuritytagsApiApi20ServicesSecuritytagsTagTagIdVmPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***SecuritytagsApiServicesSecuritytagsTagTagIdVmPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SecuritytagsApiApi20ServicesSecuritytagsTagTagIdVmPostOpts struct
+Optional parameters are passed through a pointer to a SecuritytagsApiServicesSecuritytagsTagTagIdVmPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -267,8 +267,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagTagIdVmVmIdDelete**
-> Api20ServicesSecuritytagsTagTagIdVmVmIdDelete(ctx, tagId, vmId)
+# **ServicesSecuritytagsTagTagIdVmVmIdDelete**
+> ServicesSecuritytagsTagTagIdVmVmIdDelete(ctx, tagId, vmId)
 securityTagVMDetach
 
 Detach a security tag from the specified virtual machine.   Parameters:  vmId: Specify VM using VM managed object ID or VM instance UUID.   
@@ -296,8 +296,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsTagTagIdVmVmIdPut**
-> Api20ServicesSecuritytagsTagTagIdVmVmIdPut(ctx, tagId, vmId)
+# **ServicesSecuritytagsTagTagIdVmVmIdPut**
+> ServicesSecuritytagsTagTagIdVmVmIdPut(ctx, tagId, vmId)
 securityTagVMAttach
 
 Apply a security tag to the specified virtual machine.  **Note:** this method can attach a universal security tag to a virtual machine. However, this method checks that the VM exists on the NSX Manager to which the API call is sent. In a cross-vCenter active active environment, the VM might exist on a secondary NSX Manager, and so the call would fail.   You can instead use the `POST /api/2.0/services/securitytags/tag/{tagId}/vm?action=attach` method to attach universal security tags to a VM that is not local to the primary NSX Manager. This method does not check that the VM is local to the NSX Manager.   Parameters:  vmId: Specify VM using VM managed object ID or VM instance UUID.   
@@ -325,8 +325,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsVmVmIdGet**
-> Api20ServicesSecuritytagsVmVmIdGet(ctx, vmId)
+# **ServicesSecuritytagsVmVmIdGet**
+> ServicesSecuritytagsVmVmIdGet(ctx, vmId)
 securitytagVmIdList
 
 Retrieve all security tags associated with the specified virtual machine.   Parameters:  vmId: Specify VM using VM managed object ID or VM instance UUID.   
@@ -353,8 +353,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSecuritytagsVmVmIdPost**
-> Api20ServicesSecuritytagsVmVmIdPost(ctx, vmId, optional)
+# **ServicesSecuritytagsVmVmIdPost**
+> ServicesSecuritytagsVmVmIdPost(ctx, vmId, optional)
 securitytagVmMoidAction
 
 Update security tags associated with the specified virtual machine.  You can assign multiple tags at a time to the specified VM, or clear all assigned tags from the specified VM.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  vmId: Specify VM using VM managed object ID or VM instance UUID.   
@@ -365,10 +365,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **vmId** | **string**|  | 
- **optional** | ***SecuritytagsApiApi20ServicesSecuritytagsVmVmIdPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***SecuritytagsApiServicesSecuritytagsVmVmIdPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SecuritytagsApiApi20ServicesSecuritytagsVmVmIdPostOpts struct
+Optional parameters are passed through a pointer to a SecuritytagsApiServicesSecuritytagsVmVmIdPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 

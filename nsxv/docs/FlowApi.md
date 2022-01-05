@@ -4,14 +4,14 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api21AppFlowConfigGet**](FlowApi.md#Api21AppFlowConfigGet) | **Get** /api/2.1/app/flow/config | flowConfigRead
-[**Api21AppFlowConfigPut**](FlowApi.md#Api21AppFlowConfigPut) | **Put** /api/2.1/app/flow/config | flowsConfigCreate
-[**Api21AppFlowContextIdDelete**](FlowApi.md#Api21AppFlowContextIdDelete) | **Delete** /api/2.1/app/flow/{contextId} | flowContextDelete
-[**Api21AppFlowFlowstatsGet**](FlowApi.md#Api21AppFlowFlowstatsGet) | **Get** /api/2.1/app/flow/flowstats | flowStatsRead
-[**Api21AppFlowFlowstatsInfoGet**](FlowApi.md#Api21AppFlowFlowstatsInfoGet) | **Get** /api/2.1/app/flow/flowstats/info | flowStatsInfoRead
+[**AppFlowConfigGet**](FlowApi.md#AppFlowConfigGet) | **Get** /api/2.1/app/flow/config | flowConfigRead
+[**AppFlowConfigPut**](FlowApi.md#AppFlowConfigPut) | **Put** /api/2.1/app/flow/config | flowsConfigCreate
+[**AppFlowContextIdDelete**](FlowApi.md#AppFlowContextIdDelete) | **Delete** /api/2.1/app/flow/{contextId} | flowContextDelete
+[**AppFlowFlowstatsGet**](FlowApi.md#AppFlowFlowstatsGet) | **Get** /api/2.1/app/flow/flowstats | flowStatsRead
+[**AppFlowFlowstatsInfoGet**](FlowApi.md#AppFlowFlowstatsInfoGet) | **Get** /api/2.1/app/flow/flowstats/info | flowStatsInfoRead
 
-# **Api21AppFlowConfigGet**
-> Api21AppFlowConfigGet(ctx, )
+# **AppFlowConfigGet**
+> AppFlowConfigGet(ctx, )
 flowConfigRead
 
 Retrieve flow monitoring configuration.  Parameters:  
@@ -34,8 +34,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api21AppFlowConfigPut**
-> Api21AppFlowConfigPut(ctx, optional)
+# **AppFlowConfigPut**
+> AppFlowConfigPut(ctx, optional)
 flowsConfigCreate
 
 Update flow monitoring configuration.  Parameters:  
@@ -45,10 +45,10 @@ Update flow monitoring configuration.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FlowApiApi21AppFlowConfigPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***FlowApiAppFlowConfigPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FlowApiApi21AppFlowConfigPutOpts struct
+Optional parameters are passed through a pointer to a FlowApiAppFlowConfigPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -69,8 +69,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api21AppFlowContextIdDelete**
-> Api21AppFlowContextIdDelete(ctx, contextId)
+# **AppFlowContextIdDelete**
+> AppFlowContextIdDelete(ctx, contextId)
 flowContextDelete
 
 Delete flow records for the specified context.  Parameters:  contextId: Context ID.  
@@ -97,8 +97,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api21AppFlowFlowstatsGet**
-> Api21AppFlowFlowstatsGet(ctx, optional)
+# **AppFlowFlowstatsGet**
+> AppFlowFlowstatsGet(ctx, optional)
 flowStatsRead
 
 Retrieve flow statistics for a datacenter, port group, VM, or vNIC.  Response values for flow statistics: * **blocked** - indicates whether traffic is blocked:   * 0 - flow allowed   * 1 - flow blocked   * 2 - flow blocked by SpoofGuard * **protocol** - protocol in flow:   * 0 - TCP   * 1 - UDP   * 2 - ICMP * **direction** - direction of flow:   * 0 - to virtual machine   * 1 - from virtual machine * **controlDirection** - control direction for dynamic TCP traffic:   * 0 - source -> destination   * 1 - destination -> source   Parameters:  
@@ -108,10 +108,10 @@ Retrieve flow statistics for a datacenter, port group, VM, or vNIC.  Response va
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***FlowApiApi21AppFlowFlowstatsGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***FlowApiAppFlowFlowstatsGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a FlowApiApi21AppFlowFlowstatsGetOpts struct
+Optional parameters are passed through a pointer to a FlowApiAppFlowFlowstatsGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contextId** | **optional.String**|  | 
@@ -136,8 +136,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api21AppFlowFlowstatsInfoGet**
-> Api21AppFlowFlowstatsInfoGet(ctx, )
+# **AppFlowFlowstatsInfoGet**
+> AppFlowFlowstatsInfoGet(ctx, )
 flowStatsInfoRead
 
 Retrieve flow statistics meta-data.  This method retrieves the following information for each flow type: * minimum start time * maximum end time * total flow count   Parameters:  

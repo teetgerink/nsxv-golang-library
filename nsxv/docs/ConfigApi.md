@@ -4,24 +4,24 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20VdnConfigHostHostIdVxlanVtepsPost**](ConfigApi.md#Api20VdnConfigHostHostIdVxlanVtepsPost) | **Post** /api/2.0/vdn/config/host/{hostId}/vxlan/vteps | hostVtepResolveAction
-[**Api20VdnConfigMulticastsGet**](ConfigApi.md#Api20VdnConfigMulticastsGet) | **Get** /api/2.0/vdn/config/multicasts | vdnMulticastPoolList
-[**Api20VdnConfigMulticastsMulticastAddresssRangeIdDelete**](ConfigApi.md#Api20VdnConfigMulticastsMulticastAddresssRangeIdDelete) | **Delete** /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId} | vdnMulticastPoolDelete
-[**Api20VdnConfigMulticastsMulticastAddresssRangeIdGet**](ConfigApi.md#Api20VdnConfigMulticastsMulticastAddresssRangeIdGet) | **Get** /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId} | vdnMulticastPoolShow
-[**Api20VdnConfigMulticastsMulticastAddresssRangeIdPut**](ConfigApi.md#Api20VdnConfigMulticastsMulticastAddresssRangeIdPut) | **Put** /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId} | vdnMulticastPoolChange
-[**Api20VdnConfigMulticastsPost**](ConfigApi.md#Api20VdnConfigMulticastsPost) | **Post** /api/2.0/vdn/config/multicasts | vdnMulticastPoolAdd
-[**Api20VdnConfigResourcesAllocatedGet**](ConfigApi.md#Api20VdnConfigResourcesAllocatedGet) | **Get** /api/2.0/vdn/config/resources/allocated | allocatedResourcesRead
-[**Api20VdnConfigSegmentsGet**](ConfigApi.md#Api20VdnConfigSegmentsGet) | **Get** /api/2.0/vdn/config/segments | vdnSegmentPoolList
-[**Api20VdnConfigSegmentsPost**](ConfigApi.md#Api20VdnConfigSegmentsPost) | **Post** /api/2.0/vdn/config/segments | vdnSegmentPoolAdd
-[**Api20VdnConfigSegmentsSegmentPoolIdDelete**](ConfigApi.md#Api20VdnConfigSegmentsSegmentPoolIdDelete) | **Delete** /api/2.0/vdn/config/segments/{segmentPoolId} | vdnSegmentPoolDelete
-[**Api20VdnConfigSegmentsSegmentPoolIdGet**](ConfigApi.md#Api20VdnConfigSegmentsSegmentPoolIdGet) | **Get** /api/2.0/vdn/config/segments/{segmentPoolId} | vdnSegmentPoolShow
-[**Api20VdnConfigSegmentsSegmentPoolIdPut**](ConfigApi.md#Api20VdnConfigSegmentsSegmentPoolIdPut) | **Put** /api/2.0/vdn/config/segments/{segmentPoolId} | vdnSegmentPoolChange
-[**Api20VdnConfigVxlanUdpPortGet**](ConfigApi.md#Api20VdnConfigVxlanUdpPortGet) | **Get** /api/2.0/vdn/config/vxlan/udp/port | vdnConfigUDPShow
-[**Api20VdnConfigVxlanUdpPortPortNumberPut**](ConfigApi.md#Api20VdnConfigVxlanUdpPortPortNumberPut) | **Put** /api/2.0/vdn/config/vxlan/udp/port/{portNumber} | vdnConfigUDPUpdateUpdate
-[**Api20VdnConfigVxlanUdpPortTaskStatusGet**](ConfigApi.md#Api20VdnConfigVxlanUdpPortTaskStatusGet) | **Get** /api/2.0/vdn/config/vxlan/udp/port/taskStatus | vdnConfigUDPUpdateStatusRead
+[**VdnConfigHostHostIdVxlanVtepsPost**](ConfigApi.md#VdnConfigHostHostIdVxlanVtepsPost) | **Post** /api/2.0/vdn/config/host/{hostId}/vxlan/vteps | hostVtepResolveAction
+[**VdnConfigMulticastsGet**](ConfigApi.md#VdnConfigMulticastsGet) | **Get** /api/2.0/vdn/config/multicasts | vdnMulticastPoolList
+[**VdnConfigMulticastsMulticastAddresssRangeIdDelete**](ConfigApi.md#VdnConfigMulticastsMulticastAddresssRangeIdDelete) | **Delete** /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId} | vdnMulticastPoolDelete
+[**VdnConfigMulticastsMulticastAddresssRangeIdGet**](ConfigApi.md#VdnConfigMulticastsMulticastAddresssRangeIdGet) | **Get** /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId} | vdnMulticastPoolShow
+[**VdnConfigMulticastsMulticastAddresssRangeIdPut**](ConfigApi.md#VdnConfigMulticastsMulticastAddresssRangeIdPut) | **Put** /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId} | vdnMulticastPoolChange
+[**VdnConfigMulticastsPost**](ConfigApi.md#VdnConfigMulticastsPost) | **Post** /api/2.0/vdn/config/multicasts | vdnMulticastPoolAdd
+[**VdnConfigResourcesAllocatedGet**](ConfigApi.md#VdnConfigResourcesAllocatedGet) | **Get** /api/2.0/vdn/config/resources/allocated | allocatedResourcesRead
+[**VdnConfigSegmentsGet**](ConfigApi.md#VdnConfigSegmentsGet) | **Get** /api/2.0/vdn/config/segments | vdnSegmentPoolList
+[**VdnConfigSegmentsPost**](ConfigApi.md#VdnConfigSegmentsPost) | **Post** /api/2.0/vdn/config/segments | vdnSegmentPoolAdd
+[**VdnConfigSegmentsSegmentPoolIdDelete**](ConfigApi.md#VdnConfigSegmentsSegmentPoolIdDelete) | **Delete** /api/2.0/vdn/config/segments/{segmentPoolId} | vdnSegmentPoolDelete
+[**VdnConfigSegmentsSegmentPoolIdGet**](ConfigApi.md#VdnConfigSegmentsSegmentPoolIdGet) | **Get** /api/2.0/vdn/config/segments/{segmentPoolId} | vdnSegmentPoolShow
+[**VdnConfigSegmentsSegmentPoolIdPut**](ConfigApi.md#VdnConfigSegmentsSegmentPoolIdPut) | **Put** /api/2.0/vdn/config/segments/{segmentPoolId} | vdnSegmentPoolChange
+[**VdnConfigVxlanUdpPortGet**](ConfigApi.md#VdnConfigVxlanUdpPortGet) | **Get** /api/2.0/vdn/config/vxlan/udp/port | vdnConfigUDPShow
+[**VdnConfigVxlanUdpPortPortNumberPut**](ConfigApi.md#VdnConfigVxlanUdpPortPortNumberPut) | **Put** /api/2.0/vdn/config/vxlan/udp/port/{portNumber} | vdnConfigUDPUpdateUpdate
+[**VdnConfigVxlanUdpPortTaskStatusGet**](ConfigApi.md#VdnConfigVxlanUdpPortTaskStatusGet) | **Get** /api/2.0/vdn/config/vxlan/udp/port/taskStatus | vdnConfigUDPUpdateStatusRead
 
-# **Api20VdnConfigHostHostIdVxlanVtepsPost**
-> Api20VdnConfigHostHostIdVxlanVtepsPost(ctx, hostId, optional)
+# **VdnConfigHostHostIdVxlanVtepsPost**
+> VdnConfigHostHostIdVxlanVtepsPost(ctx, hostId, optional)
 hostVtepResolveAction
 
 Resolve missing VXLAN VMKernel adapters.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  hostId:   
@@ -32,10 +32,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **hostId** | **string**|  | 
- **optional** | ***ConfigApiApi20VdnConfigHostHostIdVxlanVtepsPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigHostHostIdVxlanVtepsPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigHostHostIdVxlanVtepsPostOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigHostHostIdVxlanVtepsPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigMulticastsGet**
-> Api20VdnConfigMulticastsGet(ctx, )
+# **VdnConfigMulticastsGet**
+> VdnConfigMulticastsGet(ctx, )
 vdnMulticastPoolList
 
 Retrieve information about all configured multicast address ranges.  Universal multicast address ranges have the property isUniversal set to *true*.   Parameters:  
@@ -80,8 +80,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigMulticastsMulticastAddresssRangeIdDelete**
-> Api20VdnConfigMulticastsMulticastAddresssRangeIdDelete(ctx, multicastAddresssRangeId)
+# **VdnConfigMulticastsMulticastAddresssRangeIdDelete**
+> VdnConfigMulticastsMulticastAddresssRangeIdDelete(ctx, multicastAddresssRangeId)
 vdnMulticastPoolDelete
 
 Delete the specified multicast address range.  If the multicast address range is universal you must send the API request to the primary NSX Manager.   Parameters:  multicastAddresssRangeId: A valid multicast address range ID  
@@ -108,8 +108,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigMulticastsMulticastAddresssRangeIdGet**
-> Api20VdnConfigMulticastsMulticastAddresssRangeIdGet(ctx, multicastAddresssRangeId)
+# **VdnConfigMulticastsMulticastAddresssRangeIdGet**
+> VdnConfigMulticastsMulticastAddresssRangeIdGet(ctx, multicastAddresssRangeId)
 vdnMulticastPoolShow
 
 Retrieve information about the specified multicast address range.   Parameters:  multicastAddresssRangeId: A valid multicast address range ID  
@@ -136,8 +136,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigMulticastsMulticastAddresssRangeIdPut**
-> Api20VdnConfigMulticastsMulticastAddresssRangeIdPut(ctx, multicastAddresssRangeId, optional)
+# **VdnConfigMulticastsMulticastAddresssRangeIdPut**
+> VdnConfigMulticastsMulticastAddresssRangeIdPut(ctx, multicastAddresssRangeId, optional)
 vdnMulticastPoolChange
 
 Update the specified multicast address range.  If the multicast address range is universal you must send the API request to the primary NSX Manager.   Parameters:  multicastAddresssRangeId: A valid multicast address range ID  
@@ -148,10 +148,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **multicastAddresssRangeId** | **string**|  | 
- **optional** | ***ConfigApiApi20VdnConfigMulticastsMulticastAddresssRangeIdPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigMulticastsMulticastAddresssRangeIdPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigMulticastsMulticastAddresssRangeIdPutOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigMulticastsMulticastAddresssRangeIdPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -173,8 +173,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigMulticastsPost**
-> Api20VdnConfigMulticastsPost(ctx, optional)
+# **VdnConfigMulticastsPost**
+> VdnConfigMulticastsPost(ctx, optional)
 vdnMulticastPoolAdd
 
 Add a multicast address range for logical switches.  The address range includes the beginning and ending addresses.   Parameters:  
@@ -184,10 +184,10 @@ Add a multicast address range for logical switches.  The address range includes 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigApiApi20VdnConfigMulticastsPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigMulticastsPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigMulticastsPostOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigMulticastsPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -209,8 +209,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigResourcesAllocatedGet**
-> Api20VdnConfigResourcesAllocatedGet(ctx, optional)
+# **VdnConfigResourcesAllocatedGet**
+> VdnConfigResourcesAllocatedGet(ctx, optional)
 allocatedResourcesRead
 
 Retrieve information about allocated segment IDs or multicast addresses.   Parameters:  
@@ -220,10 +220,10 @@ Retrieve information about allocated segment IDs or multicast addresses.   Param
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigApiApi20VdnConfigResourcesAllocatedGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigResourcesAllocatedGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigResourcesAllocatedGetOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigResourcesAllocatedGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type_** | **optional.String**|  | 
@@ -245,8 +245,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigSegmentsGet**
-> Api20VdnConfigSegmentsGet(ctx, )
+# **VdnConfigSegmentsGet**
+> VdnConfigSegmentsGet(ctx, )
 vdnSegmentPoolList
 
 Retrieve information about all segment ID pools.   Parameters:  
@@ -269,8 +269,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigSegmentsPost**
-> Api20VdnConfigSegmentsPost(ctx, optional)
+# **VdnConfigSegmentsPost**
+> VdnConfigSegmentsPost(ctx, optional)
 vdnSegmentPoolAdd
 
 Add a segment ID pool.  * **name** - Required property. * **desc** - Optional property. * **begin** - Required property. Minimum value is *5000* * **end** - Required property. Maximum value is *16777216*   Parameters:  
@@ -280,10 +280,10 @@ Add a segment ID pool.  * **name** - Required property. * **desc** - Optional pr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***ConfigApiApi20VdnConfigSegmentsPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigSegmentsPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigSegmentsPostOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigSegmentsPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -305,8 +305,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigSegmentsSegmentPoolIdDelete**
-> Api20VdnConfigSegmentsSegmentPoolIdDelete(ctx, segmentPoolId)
+# **VdnConfigSegmentsSegmentPoolIdDelete**
+> VdnConfigSegmentsSegmentPoolIdDelete(ctx, segmentPoolId)
 vdnSegmentPoolDelete
 
 Delete the specified segment ID pool.  If the segment ID pool is universal you must send the API request to the primary NSX Manager.   Parameters:  segmentPoolId: A valid *segmentPoolId*  
@@ -333,8 +333,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigSegmentsSegmentPoolIdGet**
-> Api20VdnConfigSegmentsSegmentPoolIdGet(ctx, segmentPoolId)
+# **VdnConfigSegmentsSegmentPoolIdGet**
+> VdnConfigSegmentsSegmentPoolIdGet(ctx, segmentPoolId)
 vdnSegmentPoolShow
 
 Retrieve information about the specified segment ID pool.   Parameters:  segmentPoolId: A valid *segmentPoolId*  
@@ -361,8 +361,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigSegmentsSegmentPoolIdPut**
-> Api20VdnConfigSegmentsSegmentPoolIdPut(ctx, segmentPoolId, optional)
+# **VdnConfigSegmentsSegmentPoolIdPut**
+> VdnConfigSegmentsSegmentPoolIdPut(ctx, segmentPoolId, optional)
 vdnSegmentPoolChange
 
 Update the specified segment ID pool.  If the segment ID pool is universal you must send the API request to the primary NSX Manager.   Parameters:  segmentPoolId: A valid *segmentPoolId*  
@@ -373,10 +373,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **segmentPoolId** | **string**|  | 
- **optional** | ***ConfigApiApi20VdnConfigSegmentsSegmentPoolIdPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigSegmentsSegmentPoolIdPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigSegmentsSegmentPoolIdPutOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigSegmentsSegmentPoolIdPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -398,8 +398,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigVxlanUdpPortGet**
-> Api20VdnConfigVxlanUdpPortGet(ctx, )
+# **VdnConfigVxlanUdpPortGet**
+> VdnConfigVxlanUdpPortGet(ctx, )
 vdnConfigUDPShow
 
 Retrieve the UDP port configured for VXLAN traffic.   Parameters:  
@@ -422,8 +422,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigVxlanUdpPortPortNumberPut**
-> Api20VdnConfigVxlanUdpPortPortNumberPut(ctx, portNumber, optional)
+# **VdnConfigVxlanUdpPortPortNumberPut**
+> VdnConfigVxlanUdpPortPortNumberPut(ctx, portNumber, optional)
 vdnConfigUDPUpdateUpdate
 
 Update the VXLAN port configuration to use port *portNumber*.  This method changes the VXLAN port in a three phrase process, avoiding disruption of VXLAN traffic. In a cross-vCenter NSX environment, change the VXLAN port on the primary NSX Manager to propagate this change on all NSX Managers and hosts in the cross-vCenter NSX environment.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. Port change is now non-disruptive, and propagates to secondary NSX Managers if performed on the primary NSX Manager. Force parameter added.   Parameters:  portNumber: A valid UDP port for VXLAN  
@@ -434,10 +434,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **portNumber** | **string**|  | 
- **optional** | ***ConfigApiApi20VdnConfigVxlanUdpPortPortNumberPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***ConfigApiVdnConfigVxlanUdpPortPortNumberPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a ConfigApiApi20VdnConfigVxlanUdpPortPortNumberPutOpts struct
+Optional parameters are passed through a pointer to a ConfigApiVdnConfigVxlanUdpPortPortNumberPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -458,8 +458,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20VdnConfigVxlanUdpPortTaskStatusGet**
-> Api20VdnConfigVxlanUdpPortTaskStatusGet(ctx, )
+# **VdnConfigVxlanUdpPortTaskStatusGet**
+> VdnConfigVxlanUdpPortTaskStatusGet(ctx, )
 vdnConfigUDPUpdateStatusRead
 
 Retrieve the status of the VXLAN port configuration update.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  

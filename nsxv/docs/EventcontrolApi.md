@@ -4,12 +4,12 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api10EventcontrolConfigVmVmIDGet**](EventcontrolApi.md#Api10EventcontrolConfigVmVmIDGet) | **Get** /api/1.0/eventcontrol/config/vm/{vmID} | dataCollectionVMInfoRead
-[**Api10EventcontrolEventcontrolRootRequestPost**](EventcontrolApi.md#Api10EventcontrolEventcontrolRootRequestPost) | **Post** /api/1.0/eventcontrol/eventcontrol-root/request | dataCollectionKillSwitchToggle
-[**Api10EventcontrolVmVmIDRequestPost**](EventcontrolApi.md#Api10EventcontrolVmVmIDRequestPost) | **Post** /api/1.0/eventcontrol/vm/{vmID}/request | dataCollectionVMCreate
+[**EventcontrolConfigVmVmIDGet**](EventcontrolApi.md#EventcontrolConfigVmVmIDGet) | **Get** /api/1.0/eventcontrol/config/vm/{vmID} | dataCollectionVMInfoRead
+[**EventcontrolEventcontrolRootRequestPost**](EventcontrolApi.md#EventcontrolEventcontrolRootRequestPost) | **Post** /api/1.0/eventcontrol/eventcontrol-root/request | dataCollectionKillSwitchToggle
+[**EventcontrolVmVmIDRequestPost**](EventcontrolApi.md#EventcontrolVmVmIDRequestPost) | **Post** /api/1.0/eventcontrol/vm/{vmID}/request | dataCollectionVMCreate
 
-# **Api10EventcontrolConfigVmVmIDGet**
-> Api10EventcontrolConfigVmVmIDGet(ctx, vmID)
+# **EventcontrolConfigVmVmIDGet**
+> EventcontrolConfigVmVmIDGet(ctx, vmID)
 dataCollectionVMInfoRead
 
 Retrieve per VM configuration for data collection.   Parameters:  vmID: MOID of the guest vm  
@@ -36,8 +36,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10EventcontrolEventcontrolRootRequestPost**
-> Api10EventcontrolEventcontrolRootRequestPost(ctx, optional)
+# **EventcontrolEventcontrolRootRequestPost**
+> EventcontrolEventcontrolRootRequestPost(ctx, optional)
 dataCollectionKillSwitchToggle
 
 Turn data collection on or off at the global level.  In case of an emergency such as a network overload, you can turn off data collection at a global level (kill switch). This overrides all other data collection settings.  Set **value** to *enabled* or *disabled*.   Parameters:  
@@ -47,10 +47,10 @@ Turn data collection on or off at the global level.  In case of an emergency suc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***EventcontrolApiApi10EventcontrolEventcontrolRootRequestPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***EventcontrolApiEventcontrolEventcontrolRootRequestPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EventcontrolApiApi10EventcontrolEventcontrolRootRequestPostOpts struct
+Optional parameters are passed through a pointer to a EventcontrolApiEventcontrolEventcontrolRootRequestPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -71,8 +71,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10EventcontrolVmVmIDRequestPost**
-> Api10EventcontrolVmVmIDRequestPost(ctx, vmID, optional)
+# **EventcontrolVmVmIDRequestPost**
+> EventcontrolVmVmIDRequestPost(ctx, vmID, optional)
 dataCollectionVMCreate
 
 Enable or disable data collection on a virtual machine  Set **value** to *enabled* or *disabled*.   Parameters:  vmID: MOID of the guest vm  
@@ -83,10 +83,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **vmID** | **string**|  | 
- **optional** | ***EventcontrolApiApi10EventcontrolVmVmIDRequestPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***EventcontrolApiEventcontrolVmVmIDRequestPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a EventcontrolApiApi10EventcontrolVmVmIDRequestPostOpts struct
+Optional parameters are passed through a pointer to a EventcontrolApiEventcontrolVmVmIDRequestPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 

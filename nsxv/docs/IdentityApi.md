@@ -4,19 +4,19 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api10IdentityDirectoryGroupsForUserGet**](IdentityApi.md#Api10IdentityDirectoryGroupsForUserGet) | **Get** /api/1.0/identity/directoryGroupsForUser | userDirGroupsRead
-[**Api10IdentityHostIpMappingGet**](IdentityApi.md#Api10IdentityHostIpMappingGet) | **Get** /api/1.0/identity/hostIpMapping | hostIpMappingRead
-[**Api10IdentityIpToUserMappingGet**](IdentityApi.md#Api10IdentityIpToUserMappingGet) | **Get** /api/1.0/identity/ipToUserMapping | ipToUserMappingRead
-[**Api10IdentityStaticUserMappingUserIDIPPost**](IdentityApi.md#Api10IdentityStaticUserMappingUserIDIPPost) | **Post** /api/1.0/identity/staticUserMapping/{userID}/{IP} | staticUserMappingCreate
-[**Api10IdentityStaticUserMappingsGet**](IdentityApi.md#Api10IdentityStaticUserMappingsGet) | **Get** /api/1.0/identity/staticUserMappings | staticUserMappingsRead
-[**Api10IdentityStaticUserMappingsbyIPIPDelete**](IdentityApi.md#Api10IdentityStaticUserMappingsbyIPIPDelete) | **Delete** /api/1.0/identity/staticUserMappingsbyIP/{IP} | staticUserMappingsbyIPDelete
-[**Api10IdentityStaticUserMappingsbyIPIPGet**](IdentityApi.md#Api10IdentityStaticUserMappingsbyIPIPGet) | **Get** /api/1.0/identity/staticUserMappingsbyIP/{IP} | staticUserMappingsbyIPRead
-[**Api10IdentityStaticUserMappingsbyUserUserIDDelete**](IdentityApi.md#Api10IdentityStaticUserMappingsbyUserUserIDDelete) | **Delete** /api/1.0/identity/staticUserMappingsbyUser/{userID} | staticUserMappingsbyUserDelete
-[**Api10IdentityStaticUserMappingsbyUserUserIDGet**](IdentityApi.md#Api10IdentityStaticUserMappingsbyUserUserIDGet) | **Get** /api/1.0/identity/staticUserMappingsbyUser/{userID} | staticUserMappingsbyUserRead
-[**Api10IdentityUserIpMappingGet**](IdentityApi.md#Api10IdentityUserIpMappingGet) | **Get** /api/1.0/identity/userIpMapping | userIpMappingRead
+[**IdentityDirectoryGroupsForUserGet**](IdentityApi.md#IdentityDirectoryGroupsForUserGet) | **Get** /api/1.0/identity/directoryGroupsForUser | userDirGroupsRead
+[**IdentityHostIpMappingGet**](IdentityApi.md#IdentityHostIpMappingGet) | **Get** /api/1.0/identity/hostIpMapping | hostIpMappingRead
+[**IdentityIpToUserMappingGet**](IdentityApi.md#IdentityIpToUserMappingGet) | **Get** /api/1.0/identity/ipToUserMapping | ipToUserMappingRead
+[**IdentityStaticUserMappingUserIDIPPost**](IdentityApi.md#IdentityStaticUserMappingUserIDIPPost) | **Post** /api/1.0/identity/staticUserMapping/{userID}/{IP} | staticUserMappingCreate
+[**IdentityStaticUserMappingsGet**](IdentityApi.md#IdentityStaticUserMappingsGet) | **Get** /api/1.0/identity/staticUserMappings | staticUserMappingsRead
+[**IdentityStaticUserMappingsbyIPIPDelete**](IdentityApi.md#IdentityStaticUserMappingsbyIPIPDelete) | **Delete** /api/1.0/identity/staticUserMappingsbyIP/{IP} | staticUserMappingsbyIPDelete
+[**IdentityStaticUserMappingsbyIPIPGet**](IdentityApi.md#IdentityStaticUserMappingsbyIPIPGet) | **Get** /api/1.0/identity/staticUserMappingsbyIP/{IP} | staticUserMappingsbyIPRead
+[**IdentityStaticUserMappingsbyUserUserIDDelete**](IdentityApi.md#IdentityStaticUserMappingsbyUserUserIDDelete) | **Delete** /api/1.0/identity/staticUserMappingsbyUser/{userID} | staticUserMappingsbyUserDelete
+[**IdentityStaticUserMappingsbyUserUserIDGet**](IdentityApi.md#IdentityStaticUserMappingsbyUserUserIDGet) | **Get** /api/1.0/identity/staticUserMappingsbyUser/{userID} | staticUserMappingsbyUserRead
+[**IdentityUserIpMappingGet**](IdentityApi.md#IdentityUserIpMappingGet) | **Get** /api/1.0/identity/userIpMapping | userIpMappingRead
 
-# **Api10IdentityDirectoryGroupsForUserGet**
-> Api10IdentityDirectoryGroupsForUserGet(ctx, )
+# **IdentityDirectoryGroupsForUserGet**
+> IdentityDirectoryGroupsForUserGet(ctx, )
 userDirGroupsRead
 
 Query set of Windows Domain Groups (AD Groups) to which the specified user belongs.   Parameters:  
@@ -39,8 +39,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityHostIpMappingGet**
-> Api10IdentityHostIpMappingGet(ctx, )
+# **IdentityHostIpMappingGet**
+> IdentityHostIpMappingGet(ctx, )
 hostIpMappingRead
 
 Query host-to-ip mapping list from database.  Parameters:  
@@ -63,8 +63,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityIpToUserMappingGet**
-> Api10IdentityIpToUserMappingGet(ctx, )
+# **IdentityIpToUserMappingGet**
+> IdentityIpToUserMappingGet(ctx, )
 ipToUserMappingRead
 
 Retrieve set of users associated with a given set of IP addresses during a specified time period. Since more than one user can be associated with a single IP address during the specified time period, each IP address can be associated with zero or more (i.e a SET of) users.   Parameters:  
@@ -87,8 +87,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityStaticUserMappingUserIDIPPost**
-> Api10IdentityStaticUserMappingUserIDIPPost(ctx, userID, iP)
+# **IdentityStaticUserMappingUserIDIPPost**
+> IdentityStaticUserMappingUserIDIPPost(ctx, userID, iP)
 staticUserMappingCreate
 
 Create static user IP mapping.  Parameters:  userID: User ID  IP: IP address  
@@ -116,8 +116,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityStaticUserMappingsGet**
-> Api10IdentityStaticUserMappingsGet(ctx, )
+# **IdentityStaticUserMappingsGet**
+> IdentityStaticUserMappingsGet(ctx, )
 staticUserMappingsRead
 
 Query static user IP mapping list.  Parameters:  
@@ -140,8 +140,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityStaticUserMappingsbyIPIPDelete**
-> Api10IdentityStaticUserMappingsbyIPIPDelete(ctx, iP)
+# **IdentityStaticUserMappingsbyIPIPDelete**
+> IdentityStaticUserMappingsbyIPIPDelete(ctx, iP)
 staticUserMappingsbyIPDelete
 
 Delete static user IP mapping for specified IP.  Parameters:  IP: IP address  
@@ -168,8 +168,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityStaticUserMappingsbyIPIPGet**
-> Api10IdentityStaticUserMappingsbyIPIPGet(ctx, iP)
+# **IdentityStaticUserMappingsbyIPIPGet**
+> IdentityStaticUserMappingsbyIPIPGet(ctx, iP)
 staticUserMappingsbyIPRead
 
 Query static user IP mapping for specified IP.  Parameters:  IP: IP address  
@@ -196,8 +196,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityStaticUserMappingsbyUserUserIDDelete**
-> Api10IdentityStaticUserMappingsbyUserUserIDDelete(ctx, userID)
+# **IdentityStaticUserMappingsbyUserUserIDDelete**
+> IdentityStaticUserMappingsbyUserUserIDDelete(ctx, userID)
 staticUserMappingsbyUserDelete
 
 Delete static user IP mapping for specified user.  Parameters:  userID: User ID  
@@ -224,8 +224,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityStaticUserMappingsbyUserUserIDGet**
-> Api10IdentityStaticUserMappingsbyUserUserIDGet(ctx, userID)
+# **IdentityStaticUserMappingsbyUserUserIDGet**
+> IdentityStaticUserMappingsbyUserUserIDGet(ctx, userID)
 staticUserMappingsbyUserRead
 
 Query static user IP mapping for specified user.  Parameters:  userID: User ID  
@@ -252,8 +252,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10IdentityUserIpMappingGet**
-> Api10IdentityUserIpMappingGet(ctx, )
+# **IdentityUserIpMappingGet**
+> IdentityUserIpMappingGet(ctx, )
 userIpMappingRead
 
 Query user-to-ip mapping list from database.  Parameters:  

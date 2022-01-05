@@ -33,7 +33,7 @@ Enable or disable a user account.  Parameters:  value: value can be 0 to disable
  * @param value
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtEnablestateValuePut(ctx context.Context, value string) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtEnablestateValuePut(ctx context.Context, value string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -100,7 +100,7 @@ Delete the role assignment for specified vCenter user. Once this role is deleted
  * @param userId
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtRoleUserIdDelete(ctx context.Context, userId string) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtRoleUserIdDelete(ctx context.Context, userId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -167,7 +167,7 @@ Retrieve a user&#x27;s role (possible roles are super_user, vshield_admin, enter
  * @param userId
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtRoleUserIdGet(ctx context.Context, userId string) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtRoleUserIdGet(ctx context.Context, userId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -232,20 +232,20 @@ UsermgmtApiService userMgmtRoleCreate
 Add role and resources for a user.  Parameters:  userId: User to retrieve role information from.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId
- * @param optional nil or *UsermgmtApiApi20ServicesUsermgmtRoleUserIdPostOpts - Optional Parameters:
+ * @param optional nil or *UsermgmtApiServicesUsermgmtRoleUserIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "IsGroup" (optional.String) -
 
 */
 
-type UsermgmtApiApi20ServicesUsermgmtRoleUserIdPostOpts struct {
+type UsermgmtApiServicesUsermgmtRoleUserIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	IsGroup     optional.String
 }
 
-func (a *UsermgmtApiService) Api20ServicesUsermgmtRoleUserIdPost(ctx context.Context, userId string, localVarOptionals *UsermgmtApiApi20ServicesUsermgmtRoleUserIdPostOpts) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtRoleUserIdPost(ctx context.Context, userId string, localVarOptionals *UsermgmtApiServicesUsermgmtRoleUserIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -322,18 +322,18 @@ UsermgmtApiService userMgmtRoleUpdate
 Change a user&#x27;s role.  Parameters:  userId: User to retrieve role information from.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId
- * @param optional nil or *UsermgmtApiApi20ServicesUsermgmtRoleUserIdPutOpts - Optional Parameters:
+ * @param optional nil or *UsermgmtApiServicesUsermgmtRoleUserIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type UsermgmtApiApi20ServicesUsermgmtRoleUserIdPutOpts struct {
+type UsermgmtApiServicesUsermgmtRoleUserIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *UsermgmtApiService) Api20ServicesUsermgmtRoleUserIdPut(ctx context.Context, userId string, localVarOptionals *UsermgmtApiApi20ServicesUsermgmtRoleUserIdPutOpts) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtRoleUserIdPut(ctx context.Context, userId string, localVarOptionals *UsermgmtApiServicesUsermgmtRoleUserIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -408,7 +408,7 @@ Read all possible roles in NSX Manager  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtRolesGet(ctx context.Context) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtRolesGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -473,7 +473,7 @@ Retrieve a list of objects that can be used to define a user&#x27;s access scope
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtScopingobjectsGet(ctx context.Context) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtScopingobjectsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -539,7 +539,7 @@ Remove the NSX role for a vCenter user.  Parameters:  userId: user ID
  * @param userId
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtUserUserIdDelete(ctx context.Context, userId string) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtUserUserIdDelete(ctx context.Context, userId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -606,7 +606,7 @@ Get information about a user.  Parameters:  userId: user ID
  * @param userId
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtUserUserIdGet(ctx context.Context, userId string) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtUserUserIdGet(ctx context.Context, userId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -672,7 +672,7 @@ Get information about users who have been assigned a NSX Manager role (local use
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UsermgmtApiService) Api20ServicesUsermgmtUsersVsmGet(ctx context.Context) (*http.Response, error) {
+func (a *UsermgmtApiService) ServicesUsermgmtUsersVsmGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -32,7 +32,7 @@ Retrieve information about all transport zones (also known as network scopes).  
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ScopesApiService) Api20VdnScopesGet(ctx context.Context) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -95,20 +95,20 @@ func (a *ScopesApiService) Api20VdnScopesGet(ctx context.Context) (*http.Respons
 ScopesApiService vdnScopeCreate
 Create a transport zone.  Request body parameters:    * **name** - Required. The name of the transport zone.   * **description** - Optional. Description of the transport zone.   * **objectId** - Required. The cluster object ID from vSphere. One or more are     required.   * **controlPlaneMode** - Optional. The control plane mode. It can be     one of the following:       * *UNICAST_MODE*       * *HYBRID_MODE*       * *MULTICAST_MODE*   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ScopesApiApi20VdnScopesPostOpts - Optional Parameters:
+ * @param optional nil or *ScopesApiVdnScopesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "IsUniversal" (optional.String) -
 
 */
 
-type ScopesApiApi20VdnScopesPostOpts struct {
+type ScopesApiVdnScopesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	IsUniversal optional.String
 }
 
-func (a *ScopesApiService) Api20VdnScopesPost(ctx context.Context, localVarOptionals *ScopesApiApi20VdnScopesPostOpts) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesPost(ctx context.Context, localVarOptionals *ScopesApiVdnScopesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -184,18 +184,18 @@ ScopesApiService vdnScopeAttribUpdateUpdate
 Update the attributes of a transport zone.  For example, you can update the name, description, or control plane mode. You must include the cluster object IDs for the transport zone in the request body.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *ScopesApiApi20VdnScopesScopeIdAttributesPutOpts - Optional Parameters:
+ * @param optional nil or *ScopesApiVdnScopesScopeIdAttributesPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ScopesApiApi20VdnScopesScopeIdAttributesPutOpts struct {
+type ScopesApiVdnScopesScopeIdAttributesPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ScopesApiService) Api20VdnScopesScopeIdAttributesPut(ctx context.Context, scopeId string, localVarOptionals *ScopesApiApi20VdnScopesScopeIdAttributesPutOpts) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesScopeIdAttributesPut(ctx context.Context, scopeId string, localVarOptionals *ScopesApiVdnScopesScopeIdAttributesPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -269,18 +269,18 @@ ScopesApiService vdnScopeConnCheckExecute
 Test multicast group connectivity.  Test multicast group connectivity between two hosts connected to the specified transport zone.  Parameter **packetSizeMode** has one of the following values: * *0* - VXLAN standard packet size * *1* - minimum packet size * *2* - customized packet size. If you set **packetSizeMode** to *2*, you must specify the size using the **packetSize** parameter.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *ScopesApiApi20VdnScopesScopeIdConnCheckMulticastPostOpts - Optional Parameters:
+ * @param optional nil or *ScopesApiVdnScopesScopeIdConnCheckMulticastPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ScopesApiApi20VdnScopesScopeIdConnCheckMulticastPostOpts struct {
+type ScopesApiVdnScopesScopeIdConnCheckMulticastPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ScopesApiService) Api20VdnScopesScopeIdConnCheckMulticastPost(ctx context.Context, scopeId string, localVarOptionals *ScopesApiApi20VdnScopesScopeIdConnCheckMulticastPostOpts) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesScopeIdConnCheckMulticastPost(ctx context.Context, scopeId string, localVarOptionals *ScopesApiVdnScopesScopeIdConnCheckMulticastPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -356,7 +356,7 @@ Delete the specified transport zone.   Parameters:  scopeId: A valid transport z
  * @param scopeId
 
 */
-func (a *ScopesApiService) Api20VdnScopesScopeIdDelete(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesScopeIdDelete(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -423,7 +423,7 @@ Retrieve information about the specified transport zone.   Parameters:  scopeId:
  * @param scopeId
 
 */
-func (a *ScopesApiService) Api20VdnScopesScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -488,20 +488,20 @@ ScopesApiService vdnScopeChange
 Update the specified transport zone.  You can add a cluster to or delete a cluster from a transport zone.  You can also repair missing portgroups. For every logical switch created, NSX creates a corresponding portgroup in vCenter. If the portgroup is lost for any reason, the logical switch will stop functioning. The repair action recreates any missing portgroups.   Parameters:  scopeId: A valid transport zone ID (vdnScope objectId)
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *ScopesApiApi20VdnScopesScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *ScopesApiVdnScopesScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type ScopesApiApi20VdnScopesScopeIdPostOpts struct {
+type ScopesApiVdnScopesScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *ScopesApiService) Api20VdnScopesScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *ScopesApiApi20VdnScopesScopeIdPostOpts) (*http.Response, error) {
+func (a *ScopesApiService) VdnScopesScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *ScopesApiVdnScopesScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

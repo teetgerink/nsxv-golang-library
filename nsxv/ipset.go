@@ -31,16 +31,16 @@ IpsetApiService ipsetDelete
 Delete an IP set.  Parameters:  ipsetId: The IP set to be queried or changed.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param ipsetId
- * @param optional nil or *IpsetApiApi20ServicesIpsetIpsetIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *IpsetApiServicesIpsetIpsetIdDeleteOpts - Optional Parameters:
      * @param "Force" (optional.String) -
 
 */
 
-type IpsetApiApi20ServicesIpsetIpsetIdDeleteOpts struct {
+type IpsetApiServicesIpsetIpsetIdDeleteOpts struct {
 	Force optional.String
 }
 
-func (a *IpsetApiService) Api20ServicesIpsetIpsetIdDelete(ctx context.Context, ipsetId string, localVarOptionals *IpsetApiApi20ServicesIpsetIpsetIdDeleteOpts) (*http.Response, error) {
+func (a *IpsetApiService) ServicesIpsetIpsetIdDelete(ctx context.Context, ipsetId string, localVarOptionals *IpsetApiServicesIpsetIpsetIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -110,7 +110,7 @@ Retrieve an individual IP set.  Parameters:  ipsetId: The IP set to be queried o
  * @param ipsetId
 
 */
-func (a *IpsetApiService) Api20ServicesIpsetIpsetIdGet(ctx context.Context, ipsetId string) (*http.Response, error) {
+func (a *IpsetApiService) ServicesIpsetIpsetIdGet(ctx context.Context, ipsetId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -175,18 +175,18 @@ IpsetApiService ipsetUpdate
 Modify an existing IP set.  Parameters:  ipsetId: The IP set to be queried or changed.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param ipsetId
- * @param optional nil or *IpsetApiApi20ServicesIpsetIpsetIdPutOpts - Optional Parameters:
+ * @param optional nil or *IpsetApiServicesIpsetIpsetIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type IpsetApiApi20ServicesIpsetIpsetIdPutOpts struct {
+type IpsetApiServicesIpsetIpsetIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *IpsetApiService) Api20ServicesIpsetIpsetIdPut(ctx context.Context, ipsetId string, localVarOptionals *IpsetApiApi20ServicesIpsetIpsetIdPutOpts) (*http.Response, error) {
+func (a *IpsetApiService) ServicesIpsetIpsetIdPut(ctx context.Context, ipsetId string, localVarOptionals *IpsetApiServicesIpsetIpsetIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -260,18 +260,18 @@ IpsetApiService ipsetCreateCreate
 Create a new IP set.  Parameters:  scopeMoref: For scopeMoref use \&quot;globalroot-0\&quot; for non-universal IP sets and use \&quot;universalroot-0\&quot; for universal IP sets.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeMoref
- * @param optional nil or *IpsetApiApi20ServicesIpsetScopeMorefPostOpts - Optional Parameters:
+ * @param optional nil or *IpsetApiServicesIpsetScopeMorefPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type IpsetApiApi20ServicesIpsetScopeMorefPostOpts struct {
+type IpsetApiServicesIpsetScopeMorefPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *IpsetApiService) Api20ServicesIpsetScopeMorefPost(ctx context.Context, scopeMoref string, localVarOptionals *IpsetApiApi20ServicesIpsetScopeMorefPostOpts) (*http.Response, error) {
+func (a *IpsetApiService) ServicesIpsetScopeMorefPost(ctx context.Context, scopeMoref string, localVarOptionals *IpsetApiServicesIpsetScopeMorefPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -347,7 +347,7 @@ Retrieve all configured IPSets  Parameters:  scopeMoref: For scopeMoref use \&qu
  * @param scopeMoref
 
 */
-func (a *IpsetApiService) Api20ServicesIpsetScopeScopeMorefGet(ctx context.Context, scopeMoref string) (*http.Response, error) {
+func (a *IpsetApiService) ServicesIpsetScopeScopeMorefGet(ctx context.Context, scopeMoref string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

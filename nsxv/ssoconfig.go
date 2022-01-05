@@ -31,7 +31,7 @@ Deletes the NSX Manager SSO Configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SsoconfigApiService) Api20ServicesSsoconfigDelete(ctx context.Context) (*http.Response, error) {
+func (a *SsoconfigApiService) ServicesSsoconfigDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -96,7 +96,7 @@ Retrieve SSO Configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SsoconfigApiService) Api20ServicesSsoconfigGet(ctx context.Context) (*http.Response, error) {
+func (a *SsoconfigApiService) ServicesSsoconfigGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -159,18 +159,18 @@ func (a *SsoconfigApiService) Api20ServicesSsoconfigGet(ctx context.Context) (*h
 SsoconfigApiService ssoConfigSet
 Register NSX Manager to SSO Services.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SsoconfigApiApi20ServicesSsoconfigPostOpts - Optional Parameters:
+ * @param optional nil or *SsoconfigApiServicesSsoconfigPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SsoconfigApiApi20ServicesSsoconfigPostOpts struct {
+type SsoconfigApiServicesSsoconfigPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SsoconfigApiService) Api20ServicesSsoconfigPost(ctx context.Context, localVarOptionals *SsoconfigApiApi20ServicesSsoconfigPostOpts) (*http.Response, error) {
+func (a *SsoconfigApiService) ServicesSsoconfigPost(ctx context.Context, localVarOptionals *SsoconfigApiServicesSsoconfigPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -244,7 +244,7 @@ Retrieve the SSO configuration status of NSX Manager.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SsoconfigApiService) Api20ServicesSsoconfigStatusGet(ctx context.Context) (*http.Response, error) {
+func (a *SsoconfigApiService) ServicesSsoconfigStatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

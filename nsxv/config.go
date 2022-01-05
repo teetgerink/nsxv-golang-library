@@ -31,16 +31,16 @@ ConfigApiService hostVtepResolveAction
 Resolve missing VXLAN VMKernel adapters.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  hostId:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param hostId
- * @param optional nil or *ConfigApiApi20VdnConfigHostHostIdVxlanVtepsPostOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigHostHostIdVxlanVtepsPostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigHostHostIdVxlanVtepsPostOpts struct {
+type ConfigApiVdnConfigHostHostIdVxlanVtepsPostOpts struct {
 	Action optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigHostHostIdVxlanVtepsPost(ctx context.Context, hostId string, localVarOptionals *ConfigApiApi20VdnConfigHostHostIdVxlanVtepsPostOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigHostHostIdVxlanVtepsPost(ctx context.Context, hostId string, localVarOptionals *ConfigApiVdnConfigHostHostIdVxlanVtepsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -109,7 +109,7 @@ Retrieve information about all configured multicast address ranges.  Universal m
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ConfigApiService) Api20VdnConfigMulticastsGet(ctx context.Context) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigMulticastsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -175,7 +175,7 @@ Delete the specified multicast address range.  If the multicast address range is
  * @param multicastAddresssRangeId
 
 */
-func (a *ConfigApiService) Api20VdnConfigMulticastsMulticastAddresssRangeIdDelete(ctx context.Context, multicastAddresssRangeId string) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigMulticastsMulticastAddresssRangeIdDelete(ctx context.Context, multicastAddresssRangeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -242,7 +242,7 @@ Retrieve information about the specified multicast address range.   Parameters: 
  * @param multicastAddresssRangeId
 
 */
-func (a *ConfigApiService) Api20VdnConfigMulticastsMulticastAddresssRangeIdGet(ctx context.Context, multicastAddresssRangeId string) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigMulticastsMulticastAddresssRangeIdGet(ctx context.Context, multicastAddresssRangeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -307,18 +307,18 @@ ConfigApiService vdnMulticastPoolChange
 Update the specified multicast address range.  If the multicast address range is universal you must send the API request to the primary NSX Manager.   Parameters:  multicastAddresssRangeId: A valid multicast address range ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param multicastAddresssRangeId
- * @param optional nil or *ConfigApiApi20VdnConfigMulticastsMulticastAddresssRangeIdPutOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigMulticastsMulticastAddresssRangeIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigMulticastsMulticastAddresssRangeIdPutOpts struct {
+type ConfigApiVdnConfigMulticastsMulticastAddresssRangeIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigMulticastsMulticastAddresssRangeIdPut(ctx context.Context, multicastAddresssRangeId string, localVarOptionals *ConfigApiApi20VdnConfigMulticastsMulticastAddresssRangeIdPutOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigMulticastsMulticastAddresssRangeIdPut(ctx context.Context, multicastAddresssRangeId string, localVarOptionals *ConfigApiVdnConfigMulticastsMulticastAddresssRangeIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -391,20 +391,20 @@ func (a *ConfigApiService) Api20VdnConfigMulticastsMulticastAddresssRangeIdPut(c
 ConfigApiService vdnMulticastPoolAdd
 Add a multicast address range for logical switches.  The address range includes the beginning and ending addresses.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigApiApi20VdnConfigMulticastsPostOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigMulticastsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "IsUniversal" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigMulticastsPostOpts struct {
+type ConfigApiVdnConfigMulticastsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	IsUniversal optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigMulticastsPost(ctx context.Context, localVarOptionals *ConfigApiApi20VdnConfigMulticastsPostOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigMulticastsPost(ctx context.Context, localVarOptionals *ConfigApiVdnConfigMulticastsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -479,20 +479,20 @@ func (a *ConfigApiService) Api20VdnConfigMulticastsPost(ctx context.Context, loc
 ConfigApiService allocatedResourcesRead
 Retrieve information about allocated segment IDs or multicast addresses.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigApiApi20VdnConfigResourcesAllocatedGetOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigResourcesAllocatedGetOpts - Optional Parameters:
      * @param "Type_" (optional.String) -
      * @param "Pagesize" (optional.String) -
      * @param "Startindex" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigResourcesAllocatedGetOpts struct {
+type ConfigApiVdnConfigResourcesAllocatedGetOpts struct {
 	Type_      optional.String
 	Pagesize   optional.String
 	Startindex optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigResourcesAllocatedGet(ctx context.Context, localVarOptionals *ConfigApiApi20VdnConfigResourcesAllocatedGetOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigResourcesAllocatedGet(ctx context.Context, localVarOptionals *ConfigApiVdnConfigResourcesAllocatedGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -566,7 +566,7 @@ Retrieve information about all segment ID pools.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ConfigApiService) Api20VdnConfigSegmentsGet(ctx context.Context) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigSegmentsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -629,20 +629,20 @@ func (a *ConfigApiService) Api20VdnConfigSegmentsGet(ctx context.Context) (*http
 ConfigApiService vdnSegmentPoolAdd
 Add a segment ID pool.  * **name** - Required property. * **desc** - Optional property. * **begin** - Required property. Minimum value is *5000* * **end** - Required property. Maximum value is *16777216*   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ConfigApiApi20VdnConfigSegmentsPostOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigSegmentsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "IsUniversal" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigSegmentsPostOpts struct {
+type ConfigApiVdnConfigSegmentsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	IsUniversal optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigSegmentsPost(ctx context.Context, localVarOptionals *ConfigApiApi20VdnConfigSegmentsPostOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigSegmentsPost(ctx context.Context, localVarOptionals *ConfigApiVdnConfigSegmentsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -720,7 +720,7 @@ Delete the specified segment ID pool.  If the segment ID pool is universal you m
  * @param segmentPoolId
 
 */
-func (a *ConfigApiService) Api20VdnConfigSegmentsSegmentPoolIdDelete(ctx context.Context, segmentPoolId string) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigSegmentsSegmentPoolIdDelete(ctx context.Context, segmentPoolId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -787,7 +787,7 @@ Retrieve information about the specified segment ID pool.   Parameters:  segment
  * @param segmentPoolId
 
 */
-func (a *ConfigApiService) Api20VdnConfigSegmentsSegmentPoolIdGet(ctx context.Context, segmentPoolId string) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigSegmentsSegmentPoolIdGet(ctx context.Context, segmentPoolId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -852,18 +852,18 @@ ConfigApiService vdnSegmentPoolChange
 Update the specified segment ID pool.  If the segment ID pool is universal you must send the API request to the primary NSX Manager.   Parameters:  segmentPoolId: A valid *segmentPoolId*
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param segmentPoolId
- * @param optional nil or *ConfigApiApi20VdnConfigSegmentsSegmentPoolIdPutOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigSegmentsSegmentPoolIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigSegmentsSegmentPoolIdPutOpts struct {
+type ConfigApiVdnConfigSegmentsSegmentPoolIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigSegmentsSegmentPoolIdPut(ctx context.Context, segmentPoolId string, localVarOptionals *ConfigApiApi20VdnConfigSegmentsSegmentPoolIdPutOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigSegmentsSegmentPoolIdPut(ctx context.Context, segmentPoolId string, localVarOptionals *ConfigApiVdnConfigSegmentsSegmentPoolIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -938,7 +938,7 @@ Retrieve the UDP port configured for VXLAN traffic.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ConfigApiService) Api20VdnConfigVxlanUdpPortGet(ctx context.Context) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigVxlanUdpPortGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1002,16 +1002,16 @@ ConfigApiService vdnConfigUDPUpdateUpdate
 Update the VXLAN port configuration to use port *portNumber*.  This method changes the VXLAN port in a three phrase process, avoiding disruption of VXLAN traffic. In a cross-vCenter NSX environment, change the VXLAN port on the primary NSX Manager to propagate this change on all NSX Managers and hosts in the cross-vCenter NSX environment.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. Port change is now non-disruptive, and propagates to secondary NSX Managers if performed on the primary NSX Manager. Force parameter added.   Parameters:  portNumber: A valid UDP port for VXLAN
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param portNumber
- * @param optional nil or *ConfigApiApi20VdnConfigVxlanUdpPortPortNumberPutOpts - Optional Parameters:
+ * @param optional nil or *ConfigApiVdnConfigVxlanUdpPortPortNumberPutOpts - Optional Parameters:
      * @param "Force" (optional.String) -
 
 */
 
-type ConfigApiApi20VdnConfigVxlanUdpPortPortNumberPutOpts struct {
+type ConfigApiVdnConfigVxlanUdpPortPortNumberPutOpts struct {
 	Force optional.String
 }
 
-func (a *ConfigApiService) Api20VdnConfigVxlanUdpPortPortNumberPut(ctx context.Context, portNumber string, localVarOptionals *ConfigApiApi20VdnConfigVxlanUdpPortPortNumberPutOpts) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigVxlanUdpPortPortNumberPut(ctx context.Context, portNumber string, localVarOptionals *ConfigApiVdnConfigVxlanUdpPortPortNumberPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1080,7 +1080,7 @@ Retrieve the status of the VXLAN port configuration update.  **Method history:**
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ConfigApiService) Api20VdnConfigVxlanUdpPortTaskStatusGet(ctx context.Context) (*http.Response, error) {
+func (a *ConfigApiService) VdnConfigVxlanUdpPortTaskStatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
