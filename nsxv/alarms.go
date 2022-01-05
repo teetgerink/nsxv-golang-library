@@ -33,7 +33,7 @@ Retrive all alarms from the specified source.   Parameters:  sourceId: ID of the
  * @param sourceId
 
 */
-func (a *AlarmsApiService) Api20ServicesAlarmsSourceIdGet(ctx context.Context, sourceId string) (*http.Response, error) {
+func (a *AlarmsApiService) ServicesAlarmsSourceIdGet(ctx context.Context, sourceId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -98,20 +98,20 @@ AlarmsApiService servicesAlarmsSourceUpdate
 Resolve all alarms for the specified source.  Alarms will resolve automatically when the cause of the alarm is resolved.  For example, if an NSX Edge appliance is powered off, this will trigger an alarm. If you power the NSX Edge appliance back on, the alarm will resolve. If however, you delete the NSX Edge appliance, the alarm will persist, because the alarm cause was never resolved. In this case, you may want to manually resolve the alarm. Resolving the alarms will clear them from the NSX dashboard.  Use &#x60;GET /api/2.0/services/alarms/{sourceId}&#x60; to retrieve the list of alarms for the source. Use this response as the request body for the &#x60;POST&#x60; call.   Parameters:  sourceId: ID of the object for which you want to manage alarms. *sourceId* can be the ID of a cluster, host, resource pool, security group, or edge.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sourceId
- * @param optional nil or *AlarmsApiApi20ServicesAlarmsSourceIdPostOpts - Optional Parameters:
+ * @param optional nil or *AlarmsApiServicesAlarmsSourceIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type AlarmsApiApi20ServicesAlarmsSourceIdPostOpts struct {
+type AlarmsApiServicesAlarmsSourceIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *AlarmsApiService) Api20ServicesAlarmsSourceIdPost(ctx context.Context, sourceId string, localVarOptionals *AlarmsApiApi20ServicesAlarmsSourceIdPostOpts) (*http.Response, error) {
+func (a *AlarmsApiService) ServicesAlarmsSourceIdPost(ctx context.Context, sourceId string, localVarOptionals *AlarmsApiServicesAlarmsSourceIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

@@ -4,13 +4,13 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20ServicesSsoconfigDelete**](SsoconfigApi.md#Api20ServicesSsoconfigDelete) | **Delete** /api/2.0/services/ssoconfig | ssoConfigDelete
-[**Api20ServicesSsoconfigGet**](SsoconfigApi.md#Api20ServicesSsoconfigGet) | **Get** /api/2.0/services/ssoconfig | ssoConfigRead
-[**Api20ServicesSsoconfigPost**](SsoconfigApi.md#Api20ServicesSsoconfigPost) | **Post** /api/2.0/services/ssoconfig | ssoConfigSet
-[**Api20ServicesSsoconfigStatusGet**](SsoconfigApi.md#Api20ServicesSsoconfigStatusGet) | **Get** /api/2.0/services/ssoconfig/status | ssoStatusRead
+[**ServicesSsoconfigDelete**](SsoconfigApi.md#ServicesSsoconfigDelete) | **Delete** /api/2.0/services/ssoconfig | ssoConfigDelete
+[**ServicesSsoconfigGet**](SsoconfigApi.md#ServicesSsoconfigGet) | **Get** /api/2.0/services/ssoconfig | ssoConfigRead
+[**ServicesSsoconfigPost**](SsoconfigApi.md#ServicesSsoconfigPost) | **Post** /api/2.0/services/ssoconfig | ssoConfigSet
+[**ServicesSsoconfigStatusGet**](SsoconfigApi.md#ServicesSsoconfigStatusGet) | **Get** /api/2.0/services/ssoconfig/status | ssoStatusRead
 
-# **Api20ServicesSsoconfigDelete**
-> Api20ServicesSsoconfigDelete(ctx, )
+# **ServicesSsoconfigDelete**
+> ServicesSsoconfigDelete(ctx, )
 ssoConfigDelete
 
 Deletes the NSX Manager SSO Configuration.  Parameters:  
@@ -33,8 +33,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSsoconfigGet**
-> Api20ServicesSsoconfigGet(ctx, )
+# **ServicesSsoconfigGet**
+> ServicesSsoconfigGet(ctx, )
 ssoConfigRead
 
 Retrieve SSO Configuration.  Parameters:  
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSsoconfigPost**
-> Api20ServicesSsoconfigPost(ctx, optional)
+# **ServicesSsoconfigPost**
+> ServicesSsoconfigPost(ctx, optional)
 ssoConfigSet
 
 Register NSX Manager to SSO Services.  Parameters:  
@@ -68,10 +68,10 @@ Register NSX Manager to SSO Services.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SsoconfigApiApi20ServicesSsoconfigPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***SsoconfigApiServicesSsoconfigPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SsoconfigApiApi20ServicesSsoconfigPostOpts struct
+Optional parameters are passed through a pointer to a SsoconfigApiServicesSsoconfigPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -92,8 +92,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesSsoconfigStatusGet**
-> Api20ServicesSsoconfigStatusGet(ctx, )
+# **ServicesSsoconfigStatusGet**
+> ServicesSsoconfigStatusGet(ctx, )
 ssoStatusRead
 
 Retrieve the SSO configuration status of NSX Manager.  Parameters:  

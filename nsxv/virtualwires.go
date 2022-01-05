@@ -31,18 +31,18 @@ VirtualwiresApiService logicalSwitchList
 Retrieve information about all logical switches in the specified transport zone (network scope).   Parameters:  scopeId: A valid transport zone ID (vdnScope objectId).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *VirtualwiresApiApi20VdnScopesScopeIdVirtualwiresGetOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnScopesScopeIdVirtualwiresGetOpts - Optional Parameters:
      * @param "Startindex" (optional.String) -
      * @param "Pagesize" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnScopesScopeIdVirtualwiresGetOpts struct {
+type VirtualwiresApiVdnScopesScopeIdVirtualwiresGetOpts struct {
 	Startindex optional.String
 	Pagesize   optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnScopesScopeIdVirtualwiresGet(ctx context.Context, scopeId string, localVarOptionals *VirtualwiresApiApi20VdnScopesScopeIdVirtualwiresGetOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnScopesScopeIdVirtualwiresGet(ctx context.Context, scopeId string, localVarOptionals *VirtualwiresApiVdnScopesScopeIdVirtualwiresGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -113,18 +113,18 @@ VirtualwiresApiService logicalSwitchCreate
 Create a logical switch.  To create a universal logical switch use *universalvdnscope* as the scopeId in the URI and send the request to the primary NSX Manager. Request body parameters:   * **name** - Optional. The name of the logical switch.   * **description** - Optional. Description of the logical switch.   * **tenantId** - Required.   * **controlPlaneMode** - Optional. The control plane mode. If not     specified, the **controlPlaneMode** of the transport zone is used. It     can be one of the following:       * *UNICAST_MODE*       * *HYBRID_MODE*       * *MULTICAST_MODE*   * **guestVlanAllowed** - Optional. Default is *false*.   Parameters:  scopeId: A valid transport zone ID (vdnScope objectId).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *VirtualwiresApiApi20VdnScopesScopeIdVirtualwiresPostOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnScopesScopeIdVirtualwiresPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnScopesScopeIdVirtualwiresPostOpts struct {
+type VirtualwiresApiVdnScopesScopeIdVirtualwiresPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnScopesScopeIdVirtualwiresPost(ctx context.Context, scopeId string, localVarOptionals *VirtualwiresApiApi20VdnScopesScopeIdVirtualwiresPostOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnScopesScopeIdVirtualwiresPost(ctx context.Context, scopeId string, localVarOptionals *VirtualwiresApiVdnScopesScopeIdVirtualwiresPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -197,18 +197,18 @@ func (a *VirtualwiresApiService) Api20VdnScopesScopeIdVirtualwiresPost(ctx conte
 VirtualwiresApiService logicalSwitchesRead
 Retrieve information about all logical switches in all transport zones.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresGetOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresGetOpts - Optional Parameters:
      * @param "Startindex" (optional.String) -
      * @param "Pagesize" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresGetOpts struct {
+type VirtualwiresApiVdnVirtualwiresGetOpts struct {
 	Startindex optional.String
 	Pagesize   optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresGet(ctx context.Context, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresGetOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresGet(ctx context.Context, localVarOptionals *VirtualwiresApiVdnVirtualwiresGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -278,16 +278,16 @@ VirtualwiresApiService logicalSwitchPortGroupFixAction
 For every logical switch created, NSX creates a corresponding port group in vCenter. If the port group is missing, the logical switch will stop functioning.  If the port group backing a logical switch is deleted, you can recreate a new backing port group for the logical switch.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param virtualWireID
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDBackingPostOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresVirtualWireIDBackingPostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDBackingPostOpts struct {
+type VirtualwiresApiVdnVirtualwiresVirtualWireIDBackingPostOpts struct {
 	Action optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDBackingPost(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDBackingPostOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDBackingPost(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiVdnVirtualwiresVirtualWireIDBackingPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -355,18 +355,18 @@ VirtualwiresApiService logicalSwitchConnCheckExecute
 Test multicast group connectivity.  Test multicast group connectivity between two hosts connected to the specified logical switch.  Parameter **packetSizeMode** has one of the following values: * *0* - VXLAN standard packet size * *1* - minimum packet size * *2* - customized packet size. If you set **packetSizeMode** to *2*, you must specify the size using the **packetSize** parameter.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param virtualWireID
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDConnCheckMulticastPostOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresVirtualWireIDConnCheckMulticastPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDConnCheckMulticastPostOpts struct {
+type VirtualwiresApiVdnVirtualwiresVirtualWireIDConnCheckMulticastPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDConnCheckMulticastPost(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDConnCheckMulticastPostOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDConnCheckMulticastPost(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiVdnVirtualwiresVirtualWireIDConnCheckMulticastPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -440,18 +440,18 @@ VirtualwiresApiService logicalSwitchPingExecute
 Test point-to-point connectivity.  Test point-to-point connectivity between two hosts connected to the specified logical switch.  Parameter **packetSizeMode** has one of the following values: * *0* - VXLAN standard packet size * *1* - minimum packet size * *2* - customized packet size. If you set **packetSizeMode** to *2*, you must specify the size using the **packetSize** parameter.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param virtualWireID
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDConnCheckP2pPostOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresVirtualWireIDConnCheckP2pPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDConnCheckP2pPostOpts struct {
+type VirtualwiresApiVdnVirtualwiresVirtualWireIDConnCheckP2pPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDConnCheckP2pPost(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDConnCheckP2pPostOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDConnCheckP2pPost(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiVdnVirtualwiresVirtualWireIDConnCheckP2pPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -527,7 +527,7 @@ Delete the specified logical switch.  Parameters:  virtualWireID: A logical swit
  * @param virtualWireID
 
 */
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDDelete(ctx context.Context, virtualWireID string) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDDelete(ctx context.Context, virtualWireID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -594,7 +594,7 @@ Retrieve information about the specified logical switch.  If the switch is a uni
  * @param virtualWireID
 
 */
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDGet(ctx context.Context, virtualWireID string) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDGet(ctx context.Context, virtualWireID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -661,7 +661,7 @@ Retrieve hardware gateway bindings for the specified logical switch.  **Method h
  * @param virtualWireID
 
 */
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDHardwaregatewaysGet(ctx context.Context, virtualWireID string) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDHardwaregatewaysGet(ctx context.Context, virtualWireID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -727,20 +727,20 @@ Manage the connection between a hardware gateway and a logical switch.  ### Atta
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param virtualWireID
  * @param hardwareGatewayBindingId
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPostOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Action" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPostOpts struct {
+type VirtualwiresApiVdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPost(ctx context.Context, virtualWireID string, hardwareGatewayBindingId string, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPostOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPost(ctx context.Context, virtualWireID string, hardwareGatewayBindingId string, localVarOptionals *VirtualwiresApiVdnVirtualwiresVirtualWireIDHardwaregatewaysHardwareGatewayBindingIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -818,18 +818,18 @@ VirtualwiresApiService logicalSwitchUpdate
 Update the specified logical switch.  For example, you can update the name, description, or control plane mode.   Parameters:  virtualWireID: A logical switch id, e.g. virtualwire-1002
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param virtualWireID
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDPutOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresVirtualWireIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDPutOpts struct {
+type VirtualwiresApiVdnVirtualwiresVirtualWireIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDPut(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresVirtualWireIDPutOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVirtualWireIDPut(ctx context.Context, virtualWireID string, localVarOptionals *VirtualwiresApiVdnVirtualwiresVirtualWireIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -902,18 +902,18 @@ func (a *VirtualwiresApiService) Api20VdnVirtualwiresVirtualWireIDPut(ctx contex
 VirtualwiresApiService logicalSwitchVmAttachCreate
 Attach a VM vNIC to, or detach a VM vNIC from a logical switch.  Specify the logical switch ID in the **portgroupId** parameter. To detach a VM vNIC from a logical switch, leave the **portgroupId** parameter empty.  To find the ID of a VM vNIC, do the following: 1. In the vSphere MOB, navigate to the VM you want to connect or disconnect. 2. Click **config** and take note of the **instanceUuid**. 3. Click **hardware** and take note of the last three digits of the appropriate network interface device.  Use these two values to form the VM vNIC ID.  For example, if the **instanceUuid** is *502e71fa-1a00-759b-e40f-ce778e915f16* and the appropriate **device** value is *device[4000]*, the **objectId** and **vnicUuid** are both *502e71fa-1a00-759b-e40f-ce778e915f16.000*.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *VirtualwiresApiApi20VdnVirtualwiresVmVnicPostOpts - Optional Parameters:
+ * @param optional nil or *VirtualwiresApiVdnVirtualwiresVmVnicPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type VirtualwiresApiApi20VdnVirtualwiresVmVnicPostOpts struct {
+type VirtualwiresApiVdnVirtualwiresVmVnicPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *VirtualwiresApiService) Api20VdnVirtualwiresVmVnicPost(ctx context.Context, localVarOptionals *VirtualwiresApiApi20VdnVirtualwiresVmVnicPostOpts) (*http.Response, error) {
+func (a *VirtualwiresApiService) VdnVirtualwiresVmVnicPost(ctx context.Context, localVarOptionals *VirtualwiresApiVdnVirtualwiresVmVnicPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

@@ -29,7 +29,7 @@ type CliApiService service
 CliApiService nsxCliExecute
 The central command-line interface (central CLI) commands are run from the NSX Manager command line, and retrieve information from the NSX Manager and other devices. These commands can also be executed in the API.  You can insert any valid Central CLI command as the **command** parameter. For a complete list of the Central CLI commands executable through the API, please see the Central CLI chapter of the *NSX Command Line Interface Reference*.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *CliApiApi10NsxCliPostOpts - Optional Parameters:
+ * @param optional nil or *CliApiNsxCliPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "Accept" (optional.String) -
      * @param "ContentType" (optional.String) -
@@ -37,14 +37,14 @@ The central command-line interface (central CLI) commands are run from the NSX M
 
 */
 
-type CliApiApi10NsxCliPostOpts struct {
+type CliApiNsxCliPostOpts struct {
 	Body        optional.Interface
 	Accept      optional.String
 	ContentType optional.String
 	Action      optional.String
 }
 
-func (a *CliApiService) Api10NsxCliPost(ctx context.Context, localVarOptionals *CliApiApi10NsxCliPostOpts) (*http.Response, error) {
+func (a *CliApiService) NsxCliPost(ctx context.Context, localVarOptionals *CliApiNsxCliPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

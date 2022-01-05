@@ -33,7 +33,7 @@ Delete the specified certificate.  Parameters:  certificateId: Certificate ID
  * @param certificateId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCertificateCertificateIdDelete(ctx context.Context, certificateId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCertificateCertificateIdDelete(ctx context.Context, certificateId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -100,7 +100,7 @@ Retrieve the certificate object specified by ID. If the ID specifies a chain, mu
  * @param certificateId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCertificateCertificateIdGet(ctx context.Context, certificateId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCertificateCertificateIdGet(ctx context.Context, certificateId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -164,20 +164,20 @@ func (a *TruststoreApiService) Api20ServicesTruststoreCertificateCertificateIdGe
 TruststoreApiService certificateCreate
 Import a certificate or a certificate chain against a certificate signing request.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *TruststoreApiApi20ServicesTruststoreCertificatePostOpts - Optional Parameters:
+ * @param optional nil or *TruststoreApiServicesTruststoreCertificatePostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "CsrId" (optional.String) -
 
 */
 
-type TruststoreApiApi20ServicesTruststoreCertificatePostOpts struct {
+type TruststoreApiServicesTruststoreCertificatePostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	CsrId       optional.String
 }
 
-func (a *TruststoreApiService) Api20ServicesTruststoreCertificatePost(ctx context.Context, localVarOptionals *TruststoreApiApi20ServicesTruststoreCertificatePostOpts) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCertificatePost(ctx context.Context, localVarOptionals *TruststoreApiServicesTruststoreCertificatePostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -253,18 +253,18 @@ TruststoreApiService certificateSelfSignedCreate
 Create a single certificate  You can create a certificate for a specific NSX Edge, or if you specify a scope of *globalroot-0* you can create a global certificate in NSX Manager which is available to all NSX Edges.   Parameters:  scopeId: Scope ID. Specify the ID of an NSX Edge, e.g. *edge-5*, or *globalroot-0*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *TruststoreApiApi20ServicesTruststoreCertificateScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *TruststoreApiServicesTruststoreCertificateScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type TruststoreApiApi20ServicesTruststoreCertificateScopeIdPostOpts struct {
+type TruststoreApiServicesTruststoreCertificateScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *TruststoreApiService) Api20ServicesTruststoreCertificateScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *TruststoreApiApi20ServicesTruststoreCertificateScopeIdPostOpts) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCertificateScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *TruststoreApiServicesTruststoreCertificateScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -340,7 +340,7 @@ Retrieve all certificates on the specified scope.  Parameters:  scopeId: Scope I
  * @param scopeId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCertificateScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCertificateScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -407,7 +407,7 @@ Delete the specified certificate revocation list (CRL).  Parameters:  crlId: CRL
  * @param crlId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCrlCrlIdDelete(ctx context.Context, crlId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCrlCrlIdDelete(ctx context.Context, crlId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -474,7 +474,7 @@ Retrieve certificate object for the specified certificate revocation list (CRL).
  * @param crlId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCrlCrlIdGet(ctx context.Context, crlId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCrlCrlIdGet(ctx context.Context, crlId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -539,18 +539,18 @@ TruststoreApiService crlCreate
 Create a certificate revocation list (CRL) on the specified scope.   Parameters:  scopeId: Specified scope.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *TruststoreApiApi20ServicesTruststoreCrlScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *TruststoreApiServicesTruststoreCrlScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type TruststoreApiApi20ServicesTruststoreCrlScopeIdPostOpts struct {
+type TruststoreApiServicesTruststoreCrlScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *TruststoreApiService) Api20ServicesTruststoreCrlScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *TruststoreApiApi20ServicesTruststoreCrlScopeIdPostOpts) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCrlScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *TruststoreApiServicesTruststoreCrlScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -626,7 +626,7 @@ Retrieve all certificates for the specified scope.  Parameters:  scopeId: Specif
  * @param scopeId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCrlScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCrlScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -693,7 +693,7 @@ Retrieve the specified certificate signing request (CSR).   Parameters:  csrId: 
  * @param csrId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCsrCsrIdGet(ctx context.Context, csrId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCsrCsrIdGet(ctx context.Context, csrId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -758,16 +758,16 @@ TruststoreApiService csrSelfSignedUpdate
 Create a self-signed certificate for CSR.   Parameters:  csrId: CSR ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param csrId
- * @param optional nil or *TruststoreApiApi20ServicesTruststoreCsrCsrIdPutOpts - Optional Parameters:
+ * @param optional nil or *TruststoreApiServicesTruststoreCsrCsrIdPutOpts - Optional Parameters:
      * @param "NoOfDays" (optional.String) -
 
 */
 
-type TruststoreApiApi20ServicesTruststoreCsrCsrIdPutOpts struct {
+type TruststoreApiServicesTruststoreCsrCsrIdPutOpts struct {
 	NoOfDays optional.String
 }
 
-func (a *TruststoreApiService) Api20ServicesTruststoreCsrCsrIdPut(ctx context.Context, csrId string, localVarOptionals *TruststoreApiApi20ServicesTruststoreCsrCsrIdPutOpts) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCsrCsrIdPut(ctx context.Context, csrId string, localVarOptionals *TruststoreApiServicesTruststoreCsrCsrIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -835,18 +835,18 @@ TruststoreApiService csrCreate
 Create a certificate signing request (CSR).  Parameters:  scopeId: Specified scope ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *TruststoreApiApi20ServicesTruststoreCsrScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *TruststoreApiServicesTruststoreCsrScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type TruststoreApiApi20ServicesTruststoreCsrScopeIdPostOpts struct {
+type TruststoreApiServicesTruststoreCsrScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *TruststoreApiService) Api20ServicesTruststoreCsrScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *TruststoreApiApi20ServicesTruststoreCsrScopeIdPostOpts) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCsrScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *TruststoreApiServicesTruststoreCsrScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -922,7 +922,7 @@ Retrieve certificate signing requests (CSR) on the specified scope.  Parameters:
  * @param scopeId
 
 */
-func (a *TruststoreApiService) Api20ServicesTruststoreCsrScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *TruststoreApiService) ServicesTruststoreCsrScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

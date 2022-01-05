@@ -33,7 +33,7 @@ Retrieve information about the specified alarm.  **Method history:**  Release | 
  * @param alarmId
 
 */
-func (a *SystemalarmsApiService) Api20ServicesSystemalarmsAlarmIdGet(ctx context.Context, alarmId string) (*http.Response, error) {
+func (a *SystemalarmsApiService) ServicesSystemalarmsAlarmIdGet(ctx context.Context, alarmId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -98,16 +98,16 @@ SystemalarmsApiService servicesSystemAlarmsIdAction
 Resolve the specified alarm.  Alarms will resolve automatically when the cause of the alarm is resolved.  For example, if an NSX Edge appliance is powered off, this will trigger an alarm. If you power the NSX Edge appliance back on, the alarm will resolve. If however, you delete the NSX Edge appliance, the alarm will persist, because the alarm cause was never resolved. In this case, you may want to manually resolve the alarm. Resolving the alarm  will clear it from the NSX dashboard.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  alarmId: The alarm ID you want to manage. Find the alarm ID using the &#x60;GET /api/2.0/services/alarms/{source-Id}&#x60; method.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param alarmId
- * @param optional nil or *SystemalarmsApiApi20ServicesSystemalarmsAlarmIdPostOpts - Optional Parameters:
+ * @param optional nil or *SystemalarmsApiServicesSystemalarmsAlarmIdPostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type SystemalarmsApiApi20ServicesSystemalarmsAlarmIdPostOpts struct {
+type SystemalarmsApiServicesSystemalarmsAlarmIdPostOpts struct {
 	Action optional.String
 }
 
-func (a *SystemalarmsApiService) Api20ServicesSystemalarmsAlarmIdPost(ctx context.Context, alarmId string, localVarOptionals *SystemalarmsApiApi20ServicesSystemalarmsAlarmIdPostOpts) (*http.Response, error) {
+func (a *SystemalarmsApiService) ServicesSystemalarmsAlarmIdPost(ctx context.Context, alarmId string, localVarOptionals *SystemalarmsApiServicesSystemalarmsAlarmIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

@@ -32,7 +32,7 @@ Retrieve global hardware gateway BFD configuration.  **Method history:**  Releas
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBfdConfigGet(ctx context.Context) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBfdConfigGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -95,18 +95,18 @@ func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBfdConfigGet(ctx co
 HardwaregatewaysApiService hardwareGatewayBfdConfigUpdate
 Update global hardware gateway BFD configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysBfdConfigPutOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysBfdConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysBfdConfigPutOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysBfdConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBfdConfigPut(ctx context.Context, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysBfdConfigPutOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBfdConfigPut(ctx context.Context, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysBfdConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -180,7 +180,7 @@ Retrieve hardware gateway BFD tunnel status for all tunnel endpoints, including 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBfdStatusGet(ctx context.Context) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBfdStatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -246,7 +246,7 @@ Delete the specified hardware gateway binding.  **Method history:**  Release | M
  * @param bindingId
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsBindingIdDelete(ctx context.Context, bindingId string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsBindingIdDelete(ctx context.Context, bindingId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -313,7 +313,7 @@ Retrieve information about the specified hardware gateway binding.  **Method his
  * @param bindingId
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsBindingIdGet(ctx context.Context, bindingId string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsBindingIdGet(ctx context.Context, bindingId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -378,18 +378,18 @@ HardwaregatewaysApiService hardwareGatewayBindingUpdate
 Update the specified hardware gateway binding.  You can update the binding parameters. This API will fail if: * the specified *hardwareGatewayId* does not exist. * the specified logical switch (*virtualWire*) is not present or there is a software   gateway on the binding. * the new binding value is a duplicate of an existing binding.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  bindingId: hardware gateway binding ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param bindingId
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsBindingIdPutOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysBindingsBindingIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsBindingIdPutOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysBindingsBindingIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsBindingIdPut(ctx context.Context, bindingId string, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsBindingIdPutOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsBindingIdPut(ctx context.Context, bindingId string, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysBindingsBindingIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -465,7 +465,7 @@ Retrieve statistics for the specified hardware gateway binding.  **Method histor
  * @param bindingId
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsBindingIdStatisticGet(ctx context.Context, bindingId string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsBindingIdStatisticGet(ctx context.Context, bindingId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -529,18 +529,18 @@ func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsBindingIdSt
 HardwaregatewaysApiService hardwareGatewayBindingsList
 Retrieve information about hardware gateway bindings.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsGetOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysBindingsGetOpts - Optional Parameters:
      * @param "HardwareGatewayId" (optional.String) -
      * @param "Vni" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsGetOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysBindingsGetOpts struct {
 	HardwareGatewayId optional.String
 	Vni               optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsGet(ctx context.Context, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsGetOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsGet(ctx context.Context, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysBindingsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -609,18 +609,18 @@ func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsGet(ctx con
 HardwaregatewaysApiService hardwareGatewayBindingsManageOperations
 Manage hardware gateway binding objects.  Use this API to attach, detach, and update multiple bindings in a single API call.  This API accepts three lists for add, update, and delete. Each list accepts a hardwareGatewayManageBindingsItem with a full description of the new binding with its objectID. This API handles a maximum of 100 HardwareGatewayManageBindingsItem objects for each of the Add/Update/Delete lists.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsManagePostOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysBindingsManagePostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsManagePostOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysBindingsManagePostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsManagePost(ctx context.Context, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsManagePostOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsManagePost(ctx context.Context, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysBindingsManagePostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -692,18 +692,18 @@ func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsManagePost(
 HardwaregatewaysApiService hardwareGatewayBindingCreate
 Create a hardware gateway binding.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsPostOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysBindingsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsPostOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysBindingsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysBindingsPost(ctx context.Context, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysBindingsPostOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysBindingsPost(ctx context.Context, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysBindingsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -777,7 +777,7 @@ Retrieve information about all hardware gateways.  **Method history:**  Release 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysGet(ctx context.Context) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -843,7 +843,7 @@ Delete the specified hardware gateway.  **Method history:**  Release | Modificat
  * @param hardwareGatewayId
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysHardwareGatewayIdDelete(ctx context.Context, hardwareGatewayId string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysHardwareGatewayIdDelete(ctx context.Context, hardwareGatewayId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -910,7 +910,7 @@ Retrieve information about the specified hardware gateway.  **Method history:** 
  * @param hardwareGatewayId
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysHardwareGatewayIdGet(ctx context.Context, hardwareGatewayId string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysHardwareGatewayIdGet(ctx context.Context, hardwareGatewayId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -975,18 +975,18 @@ HardwaregatewaysApiService hardwareGatewayUpdate
 Update the specified hardware gateway.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  hardwareGatewayId: Object ID of the hardware gateway.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param hardwareGatewayId
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysHardwareGatewayIdPutOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysHardwareGatewayIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysHardwareGatewayIdPutOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysHardwareGatewayIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysHardwareGatewayIdPut(ctx context.Context, hardwareGatewayId string, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysHardwareGatewayIdPutOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysHardwareGatewayIdPut(ctx context.Context, hardwareGatewayId string, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysHardwareGatewayIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1062,7 +1062,7 @@ Retrieve information about switches on the specified hardware gateway.  **Method
  * @param hardwareGatewayId
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysHardwareGatewayIdSwitchesGet(ctx context.Context, hardwareGatewayId string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysHardwareGatewayIdSwitchesGet(ctx context.Context, hardwareGatewayId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1130,7 +1130,7 @@ Retrive information about the hardware gateway switch ports for the specified sw
  * @param switchName
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysHardwareGatewayIdSwitchesSwitchNameSwitchportsGet(ctx context.Context, hardwareGatewayId string, switchName string) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysHardwareGatewayIdSwitchesSwitchNameSwitchportsGet(ctx context.Context, hardwareGatewayId string, switchName string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1195,18 +1195,18 @@ func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysHardwareGatewayIdSw
 HardwaregatewaysApiService hardwareGatewayCreate
 Install a hardware gateway.  **bfdEnabled** is true by default.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysPostOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysPostOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysPost(ctx context.Context, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysPostOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysPost(ctx context.Context, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1280,7 +1280,7 @@ Retrieve information about the hardware gateway replication cluster.  **Method h
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysReplicationclusterGet(ctx context.Context) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysReplicationclusterGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1343,18 +1343,18 @@ func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysReplicationclusterG
 HardwaregatewaysApiService hardwareGatewayReplicationClusterUpdate
 Update the hardware gateway replication cluster.  Add or remove hosts on a replication cluster.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *HardwaregatewaysApiApi20VdnHardwaregatewaysReplicationclusterPutOpts - Optional Parameters:
+ * @param optional nil or *HardwaregatewaysApiVdnHardwaregatewaysReplicationclusterPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type HardwaregatewaysApiApi20VdnHardwaregatewaysReplicationclusterPutOpts struct {
+type HardwaregatewaysApiVdnHardwaregatewaysReplicationclusterPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *HardwaregatewaysApiService) Api20VdnHardwaregatewaysReplicationclusterPut(ctx context.Context, localVarOptionals *HardwaregatewaysApiApi20VdnHardwaregatewaysReplicationclusterPutOpts) (*http.Response, error) {
+func (a *HardwaregatewaysApiService) VdnHardwaregatewaysReplicationclusterPut(ctx context.Context, localVarOptionals *HardwaregatewaysApiVdnHardwaregatewaysReplicationclusterPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

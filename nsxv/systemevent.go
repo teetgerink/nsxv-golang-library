@@ -29,18 +29,18 @@ type SystemeventApiService service
 SystemeventApiService systemEventsRead
 Get NSX Manager system events  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SystemeventApiApi20SystemeventGetOpts - Optional Parameters:
+ * @param optional nil or *SystemeventApiSystemeventGetOpts - Optional Parameters:
      * @param "StartIndex" (optional.String) -
      * @param "PageSize" (optional.String) -
 
 */
 
-type SystemeventApiApi20SystemeventGetOpts struct {
+type SystemeventApiSystemeventGetOpts struct {
 	StartIndex optional.String
 	PageSize   optional.String
 }
 
-func (a *SystemeventApiService) Api20SystemeventGet(ctx context.Context, localVarOptionals *SystemeventApiApi20SystemeventGetOpts) (*http.Response, error) {
+func (a *SystemeventApiService) SystemeventGet(ctx context.Context, localVarOptionals *SystemeventApiSystemeventGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

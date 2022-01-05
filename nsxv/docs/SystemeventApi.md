@@ -4,10 +4,10 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20SystemeventGet**](SystemeventApi.md#Api20SystemeventGet) | **Get** /api/2.0/systemevent | systemEventsRead
+[**SystemeventGet**](SystemeventApi.md#SystemeventGet) | **Get** /api/2.0/systemevent | systemEventsRead
 
-# **Api20SystemeventGet**
-> Api20SystemeventGet(ctx, optional)
+# **SystemeventGet**
+> SystemeventGet(ctx, optional)
 systemEventsRead
 
 Get NSX Manager system events  Parameters:  
@@ -17,10 +17,10 @@ Get NSX Manager system events  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***SystemeventApiApi20SystemeventGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SystemeventApiSystemeventGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a SystemeventApiApi20SystemeventGetOpts struct
+Optional parameters are passed through a pointer to a SystemeventApiSystemeventGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startIndex** | **optional.String**|  | 

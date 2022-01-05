@@ -24,15 +24,15 @@ var (
 	_ context.Context
 )
 
-type Class40SpoofguardApiService service
+type SpoofguardApiService service
 
 /*
-Class40SpoofguardApiService spoofGuardPoliciesList
+SpoofguardApiService spoofGuardPoliciesList
 Retrieve information about all SpoofGuard policies.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesGet(ctx context.Context) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPoliciesGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -92,13 +92,13 @@ func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesGet(ctx con
 }
 
 /*
-Class40SpoofguardApiService spoofGuardPolicyDelete
+SpoofguardApiService spoofGuardPolicyDelete
 Delete the specified SpoofGuard policy.  Parameters:  policyID: SpoofGuard policy ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param policyID
 
 */
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPolicyIDDelete(ctx context.Context, policyID string) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPoliciesPolicyIDDelete(ctx context.Context, policyID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -159,13 +159,13 @@ func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPolicyIDDel
 }
 
 /*
-Class40SpoofguardApiService spoofGuardPolicyRead
+SpoofguardApiService spoofGuardPolicyRead
 Retrieve information about the specified SpoofGuard policy.   Parameters:  policyID: SpoofGuard policy ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param policyID
 
 */
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPolicyIDGet(ctx context.Context, policyID string) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPoliciesPolicyIDGet(ctx context.Context, policyID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -226,22 +226,22 @@ func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPolicyIDGet
 }
 
 /*
-Class40SpoofguardApiService spoofGuardPolicyUpdate
+SpoofguardApiService spoofGuardPolicyUpdate
 Modify the specified SpoofGuard policy.  Parameters:  policyID: SpoofGuard policy ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param policyID
- * @param optional nil or *Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPolicyIDPutOpts - Optional Parameters:
+ * @param optional nil or *SpoofguardApiServicesSpoofguardPoliciesPolicyIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPolicyIDPutOpts struct {
+type SpoofguardApiServicesSpoofguardPoliciesPolicyIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPolicyIDPut(ctx context.Context, policyID string, localVarOptionals *Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPolicyIDPutOpts) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPoliciesPolicyIDPut(ctx context.Context, policyID string, localVarOptionals *SpoofguardApiServicesSpoofguardPoliciesPolicyIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -311,21 +311,21 @@ func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPolicyIDPut
 }
 
 /*
-Class40SpoofguardApiService spoofGuardPoliciesCreate
+SpoofguardApiService spoofGuardPoliciesCreate
 Create a SpoofGuard policy to specify the operation mode for networks.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPostOpts - Optional Parameters:
+ * @param optional nil or *SpoofguardApiServicesSpoofguardPoliciesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPostOpts struct {
+type SpoofguardApiServicesSpoofguardPoliciesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPost(ctx context.Context, localVarOptionals *Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPostOpts) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPoliciesPost(ctx context.Context, localVarOptionals *SpoofguardApiServicesSpoofguardPoliciesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -394,20 +394,20 @@ func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPoliciesPost(ctx co
 }
 
 /*
-Class40SpoofguardApiService spoofGuardPolicyIPRead
+SpoofguardApiService spoofGuardPolicyIPRead
 Retrieve IP addresses for the specified state.   Parameters:  policyID: SpoofGuard policy ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param policyID
- * @param optional nil or *Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDGetOpts - Optional Parameters:
+ * @param optional nil or *SpoofguardApiServicesSpoofguardPolicyIDGetOpts - Optional Parameters:
      * @param "List" (optional.String) -
 
 */
 
-type Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDGetOpts struct {
+type SpoofguardApiServicesSpoofguardPolicyIDGetOpts struct {
 	List optional.String
 }
 
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPolicyIDGet(ctx context.Context, policyID string, localVarOptionals *Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDGetOpts) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPolicyIDGet(ctx context.Context, policyID string, localVarOptionals *SpoofguardApiServicesSpoofguardPolicyIDGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -471,11 +471,11 @@ func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPolicyIDGet(ctx con
 }
 
 /*
-Class40SpoofguardApiService spoofGuardPolicyIPAction
+SpoofguardApiService spoofGuardPolicyIPAction
 Approve or publish IP addresses.  Parameters:  policyID: SpoofGuard policy ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param policyID
- * @param optional nil or *Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDPostOpts - Optional Parameters:
+ * @param optional nil or *SpoofguardApiServicesSpoofguardPolicyIDPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "VnicId" (optional.String) -
@@ -483,14 +483,14 @@ Approve or publish IP addresses.  Parameters:  policyID: SpoofGuard policy ID.
 
 */
 
-type Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDPostOpts struct {
+type SpoofguardApiServicesSpoofguardPolicyIDPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	VnicId      optional.String
 	Action      optional.String
 }
 
-func (a *Class40SpoofguardApiService) Api40ServicesSpoofguardPolicyIDPost(ctx context.Context, policyID string, localVarOptionals *Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDPostOpts) (*http.Response, error) {
+func (a *SpoofguardApiService) ServicesSpoofguardPolicyIDPost(ctx context.Context, policyID string, localVarOptionals *SpoofguardApiServicesSpoofguardPolicyIDPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

@@ -30,7 +30,7 @@ type JobApiService service
 JobApiService taskFrameworkCriteria
 Query job instances by criterion.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *JobApiApi20ServicesTaskserviceJobGetOpts - Optional Parameters:
+ * @param optional nil or *JobApiServicesTaskserviceJobGetOpts - Optional Parameters:
      * @param "StartIndex" (optional.String) -
      * @param "PageSize" (optional.String) -
      * @param "SortBy" (optional.String) -
@@ -38,14 +38,14 @@ Query job instances by criterion.  Parameters:
 
 */
 
-type JobApiApi20ServicesTaskserviceJobGetOpts struct {
+type JobApiServicesTaskserviceJobGetOpts struct {
 	StartIndex         optional.String
 	PageSize           optional.String
 	SortBy             optional.String
 	SortOrderAscending optional.String
 }
 
-func (a *JobApiService) Api20ServicesTaskserviceJobGet(ctx context.Context, localVarOptionals *JobApiApi20ServicesTaskserviceJobGetOpts) (*http.Response, error) {
+func (a *JobApiService) ServicesTaskserviceJobGet(ctx context.Context, localVarOptionals *JobApiServicesTaskserviceJobGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -123,7 +123,7 @@ Retrieve all job instances for the specified job ID.  Parameters:  jobId: Specif
  * @param jobId
 
 */
-func (a *JobApiService) Api20ServicesTaskserviceJobJobIdGet(ctx context.Context, jobId string) (*http.Response, error) {
+func (a *JobApiService) ServicesTaskserviceJobJobIdGet(ctx context.Context, jobId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

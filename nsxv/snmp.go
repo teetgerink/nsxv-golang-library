@@ -32,7 +32,7 @@ Retrieve information about SNMP managers.  **Method history:**  Release | Modifi
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SnmpApiService) Api20ServicesSnmpManagerGet(ctx context.Context) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpManagerGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -98,7 +98,7 @@ Delete an SNMP manager configuration.  **Method history:**  Release | Modificati
  * @param managerId
 
 */
-func (a *SnmpApiService) Api20ServicesSnmpManagerManagerIdDelete(ctx context.Context, managerId string) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpManagerManagerIdDelete(ctx context.Context, managerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -165,7 +165,7 @@ Retrieve information about the specified SNMP manager.  **Method history:**  Rel
  * @param managerId
 
 */
-func (a *SnmpApiService) Api20ServicesSnmpManagerManagerIdGet(ctx context.Context, managerId string) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpManagerManagerIdGet(ctx context.Context, managerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -230,18 +230,18 @@ SnmpApiService snmpManagerUpdate
 Update an SNMP manager configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  managerId: ID of the SNMP manager.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param managerId
- * @param optional nil or *SnmpApiApi20ServicesSnmpManagerManagerIdPutOpts - Optional Parameters:
+ * @param optional nil or *SnmpApiServicesSnmpManagerManagerIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SnmpApiApi20ServicesSnmpManagerManagerIdPutOpts struct {
+type SnmpApiServicesSnmpManagerManagerIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SnmpApiService) Api20ServicesSnmpManagerManagerIdPut(ctx context.Context, managerId string, localVarOptionals *SnmpApiApi20ServicesSnmpManagerManagerIdPutOpts) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpManagerManagerIdPut(ctx context.Context, managerId string, localVarOptionals *SnmpApiServicesSnmpManagerManagerIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -314,18 +314,18 @@ func (a *SnmpApiService) Api20ServicesSnmpManagerManagerIdPut(ctx context.Contex
 SnmpApiService snmpManagerCreate
 Add an SNMP manager.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SnmpApiApi20ServicesSnmpManagerPostOpts - Optional Parameters:
+ * @param optional nil or *SnmpApiServicesSnmpManagerPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SnmpApiApi20ServicesSnmpManagerPostOpts struct {
+type SnmpApiServicesSnmpManagerPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SnmpApiService) Api20ServicesSnmpManagerPost(ctx context.Context, localVarOptionals *SnmpApiApi20ServicesSnmpManagerPostOpts) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpManagerPost(ctx context.Context, localVarOptionals *SnmpApiServicesSnmpManagerPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -399,7 +399,7 @@ Retrieve SNMP status settings.  **Method history:**  Release | Modification ----
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SnmpApiService) Api20ServicesSnmpStatusGet(ctx context.Context) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpStatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -462,18 +462,18 @@ func (a *SnmpApiService) Api20ServicesSnmpStatusGet(ctx context.Context) (*http.
 SnmpApiService snmpStatusUpdate
 Update SNMP status settings.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SnmpApiApi20ServicesSnmpStatusPutOpts - Optional Parameters:
+ * @param optional nil or *SnmpApiServicesSnmpStatusPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SnmpApiApi20ServicesSnmpStatusPutOpts struct {
+type SnmpApiServicesSnmpStatusPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SnmpApiService) Api20ServicesSnmpStatusPut(ctx context.Context, localVarOptionals *SnmpApiApi20ServicesSnmpStatusPutOpts) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpStatusPut(ctx context.Context, localVarOptionals *SnmpApiServicesSnmpStatusPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -547,7 +547,7 @@ Retrieve information about SNMP traps.  **Method history:**  Release | Modificat
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SnmpApiService) Api20ServicesSnmpTrapGet(ctx context.Context) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpTrapGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -613,7 +613,7 @@ Retrieve information about the specified SNMP trap.  **Method history:**  Releas
  * @param oid
 
 */
-func (a *SnmpApiService) Api20ServicesSnmpTrapOidGet(ctx context.Context, oid string) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpTrapOidGet(ctx context.Context, oid string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -678,18 +678,18 @@ SnmpApiService snmpTrapUpdate
 Update the specified SNMP trap.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  oid: SNMP object identifier.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param oid
- * @param optional nil or *SnmpApiApi20ServicesSnmpTrapOidPutOpts - Optional Parameters:
+ * @param optional nil or *SnmpApiServicesSnmpTrapOidPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SnmpApiApi20ServicesSnmpTrapOidPutOpts struct {
+type SnmpApiServicesSnmpTrapOidPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SnmpApiService) Api20ServicesSnmpTrapOidPut(ctx context.Context, oid string, localVarOptionals *SnmpApiApi20ServicesSnmpTrapOidPutOpts) (*http.Response, error) {
+func (a *SnmpApiService) ServicesSnmpTrapOidPut(ctx context.Context, oid string, localVarOptionals *SnmpApiServicesSnmpTrapOidPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

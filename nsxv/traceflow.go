@@ -30,18 +30,18 @@ type TraceflowApiService service
 TraceflowApiService traceflowCreate
 Create a traceflow.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *TraceflowApiApiApi20VdnTraceflowPostOpts - Optional Parameters:
+ * @param optional nil or *TraceflowApiApiVdnTraceflowPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type TraceflowApiApiApi20VdnTraceflowPostOpts struct {
+type TraceflowApiApiVdnTraceflowPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *TraceflowApiService) ApiApi20VdnTraceflowPost(ctx context.Context, localVarOptionals *TraceflowApiApiApi20VdnTraceflowPostOpts) (*http.Response, error) {
+func (a *TraceflowApiService) ApiVdnTraceflowPost(ctx context.Context, localVarOptionals *TraceflowApiApiVdnTraceflowPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -116,7 +116,7 @@ Query a specific traceflow by *tracflowId* which is the value returned after exe
  * @param traceflowId
 
 */
-func (a *TraceflowApiService) ApiApi20VdnTraceflowTraceflowIdGet(ctx context.Context, traceflowId string) (*http.Response, error) {
+func (a *TraceflowApiService) ApiVdnTraceflowTraceflowIdGet(ctx context.Context, traceflowId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -183,7 +183,7 @@ Retrieve traceflow observations.  Parameters:
  * @param traceflowId
 
 */
-func (a *TraceflowApiService) ApiApi20VdnTraceflowTraceflowIdObservationsGet(ctx context.Context, traceflowId string) (*http.Response, error) {
+func (a *TraceflowApiService) ApiVdnTraceflowTraceflowIdObservationsGet(ctx context.Context, traceflowId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

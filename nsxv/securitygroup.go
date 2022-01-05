@@ -31,18 +31,18 @@ SecuritygroupApiService secGroupBulkObjectUpdate
 Update configuration for the specified security group, including membership information.   Parameters:  objectId: Security group ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param objectId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupBulkObjectIdPutOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupBulkObjectIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupBulkObjectIdPutOpts struct {
+type SecuritygroupApiServicesSecuritygroupBulkObjectIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupBulkObjectIdPut(ctx context.Context, objectId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupBulkObjectIdPutOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupBulkObjectIdPut(ctx context.Context, objectId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupBulkObjectIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -116,18 +116,18 @@ SecuritygroupApiService secGroupBulkCreate
 Create a new security group on a global scope or universal scope with membership information.  Universal security groups are read-only when querying a secondary NSX manager.  When you create a universal security group (on scope *universalroot-0*) by default **localMembersOnly** is set to *false* which indicates that the universal security group will contain members across the cross-vCenter NSX environment.  This is the case in an active active environment. You can add the following objects to a universal security group with *localMembersOnly&#x3D;false* (active active): * IP Address Set * MAC Address Set * Universal Security Groups with *localMembersOnly&#x3D;false*  When you create a universal security group (on scope *universalroot-0*) you can set the extendedAttribute **localMembersOnly** to *true* to indicate that the universal security group will contain members local to that NSX Manager only.  This is the case in an active standby environment, because only one NSX environment is active at a time, and the same VMs are present in each NSX environment. You can add the following objects to a universal security group with *localMembersOnly&#x3D;true* (active standby): * Universal Security Tag * IP Address Set * MAC Address Set * Universal Security Groups with *localMembersOnly&#x3D;true* * Dynamic criteria using VM name  You can set the **localMembersOnly** attribute only when the universal security group is created, it cannot be modified afterwards.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Extended attribute **localMembersOnly** introduced.   Parameters:  scopeId: For the scopeId use *globalroot-0* for non-universal security groups and *universalroot-0* for universal security groups.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupBulkScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupBulkScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupBulkScopeIdPostOpts struct {
+type SecuritygroupApiServicesSecuritygroupBulkScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupBulkScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupBulkScopeIdPostOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupBulkScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupBulkScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -203,7 +203,7 @@ Retrieve all internal security groups on the NSX Manager. These are used  intern
  * @param scopeId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupInternalScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupInternalScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -270,7 +270,7 @@ Retrieve list of security groups that the specified virtual machine belongs to. 
  * @param virtualMachineId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupLookupVirtualmachineVirtualMachineIdGet(ctx context.Context, virtualMachineId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupLookupVirtualmachineVirtualMachineIdGet(ctx context.Context, virtualMachineId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -335,16 +335,16 @@ SecuritygroupApiService secGroupObjectDelete
 Delete an existing security group.  If *force&#x3D;true* is specified, the object is deleted even if used in other configurations, such as firewall rules. If *force&#x3D;true* is not specified, the object is deleted only if it is not used by other configuration; otherwise the delete fails.   Parameters:  objectId: Security group ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param objectId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupObjectIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupObjectIdDeleteOpts - Optional Parameters:
      * @param "Force" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupObjectIdDeleteOpts struct {
+type SecuritygroupApiServicesSecuritygroupObjectIdDeleteOpts struct {
 	Force optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdDelete(ctx context.Context, objectId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupObjectIdDeleteOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdDelete(ctx context.Context, objectId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupObjectIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -414,7 +414,7 @@ Retrieve all members of the specified security group.  Parameters:  objectId: Se
  * @param objectId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdGet(ctx context.Context, objectId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdGet(ctx context.Context, objectId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -480,16 +480,16 @@ Delete member from the specified security group.  Parameters:  memberId: Securit
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param objectId
  * @param memberId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupObjectIdMembersMemberIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupObjectIdMembersMemberIdDeleteOpts - Optional Parameters:
      * @param "FailIfAbsent" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupObjectIdMembersMemberIdDeleteOpts struct {
+type SecuritygroupApiServicesSecuritygroupObjectIdMembersMemberIdDeleteOpts struct {
 	FailIfAbsent optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdMembersMemberIdDelete(ctx context.Context, objectId string, memberId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupObjectIdMembersMemberIdDeleteOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdMembersMemberIdDelete(ctx context.Context, objectId string, memberId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupObjectIdMembersMemberIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -559,16 +559,16 @@ Add a new member to the specified security group.   Parameters:  memberId: Secur
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param objectId
  * @param memberId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupObjectIdMembersMemberIdPutOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupObjectIdMembersMemberIdPutOpts - Optional Parameters:
      * @param "FailIfExists" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupObjectIdMembersMemberIdPutOpts struct {
+type SecuritygroupApiServicesSecuritygroupObjectIdMembersMemberIdPutOpts struct {
 	FailIfExists optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdMembersMemberIdPut(ctx context.Context, objectId string, memberId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupObjectIdMembersMemberIdPutOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdMembersMemberIdPut(ctx context.Context, objectId string, memberId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupObjectIdMembersMemberIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -637,18 +637,18 @@ SecuritygroupApiService secGroupObjectUpdate
 Update configuration for the specified security group. Members are not updated. You must use &#x60;PUT /2.0/services/securitygroup/bulk/{objectId}&#x60; to update a security group membership.   Parameters:  objectId: Security group ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param objectId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupObjectIdPutOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupObjectIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupObjectIdPutOpts struct {
+type SecuritygroupApiServicesSecuritygroupObjectIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdPut(ctx context.Context, objectId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupObjectIdPutOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdPut(ctx context.Context, objectId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupObjectIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -724,7 +724,7 @@ Retrieve list of IP addresses that belong to a specific security group.   Parame
  * @param objectId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdTranslationIpaddressesGet(ctx context.Context, objectId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdTranslationIpaddressesGet(ctx context.Context, objectId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -791,7 +791,7 @@ Retrieve list of MAC addresses that belong to a specific security group.   Param
  * @param objectId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdTranslationMacaddressesGet(ctx context.Context, objectId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdTranslationMacaddressesGet(ctx context.Context, objectId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -858,7 +858,7 @@ Retrieve list of virtual machine entities that belong to a specific security gro
  * @param objectId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdTranslationVirtualmachinesGet(ctx context.Context, objectId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdTranslationVirtualmachinesGet(ctx context.Context, objectId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -925,7 +925,7 @@ Retrieve list of vNICs that belong to a specific security group.   Parameters:
  * @param objectId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupObjectIdTranslationVnicsGet(ctx context.Context, objectId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupObjectIdTranslationVnicsGet(ctx context.Context, objectId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -990,18 +990,18 @@ SecuritygroupApiService secGroupScopeIdCreate
 Create a new security group, with no membership information specified. You can add members later with &#x60;PUT /2.0/services/securitygroup/bulk/{objectId}&#x60;  When you create a universal security group (on scope *universalroot-0*) by default **localMembersOnly** is set to *false* which indicates that the universal security group will contain members across the cross-vCenter NSX environment.  This is the case in an active active environment. You can add the following objects to a universal security group with *localMembersOnly&#x3D;false* (active active): * IP Address Set * MAC Address Set * Universal Security Groups with *localMembersOnly&#x3D;false*  When you create a universal security group (on scope *universalroot-0*) you can set the extendedAttribute **localMembersOnly** to *true* to indicate that the universal security group will contain members local to that NSX Manager only.  This is the case in an active standby environment, because only one NSX environment is active at a time, and the same VMs are present in each NSX environment. You can add the following objects to a universal security group with *localMembersOnly&#x3D;true* (active standby): * Universal Security Tag * IP Address Set * MAC Address Set * Universal Security Groups with *localMembersOnly&#x3D;true* * Dynamic criteria using VM name  You can set the **localMembersOnly** attribute only when the universal security group is created, it cannot be modified afterwards.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Extended attribute **localMembersOnly** introduced.   Parameters:  scopeId: For the scopeId use *globalroot-0* for non-universal security groups and *universalroot-0* for universal security groups.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *SecuritygroupApiApi20ServicesSecuritygroupScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *SecuritygroupApiServicesSecuritygroupScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SecuritygroupApiApi20ServicesSecuritygroupScopeIdPostOpts struct {
+type SecuritygroupApiServicesSecuritygroupScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *SecuritygroupApiApi20ServicesSecuritygroupScopeIdPostOpts) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *SecuritygroupApiServicesSecuritygroupScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1077,7 +1077,7 @@ List all the security groups created on a specific scope.  Parameters:  scopeId:
  * @param scopeId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1144,7 +1144,7 @@ Retrieve a list of valid elements that can be added to a security group.   Param
  * @param scopeId
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupScopeScopeIdMemberTypesGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupScopeScopeIdMemberTypesGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1212,7 +1212,7 @@ Retrieve members of a specific type in the specified scope.  Parameters:  member
  * @param memberType
 
 */
-func (a *SecuritygroupApiService) Api20ServicesSecuritygroupScopeScopeIdMembersMemberTypeGet(ctx context.Context, scopeId string, memberType string) (*http.Response, error) {
+func (a *SecuritygroupApiService) ServicesSecuritygroupScopeScopeIdMembersMemberTypeGet(ctx context.Context, scopeId string, memberType string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

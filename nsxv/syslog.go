@@ -29,7 +29,7 @@ Disable syslog support.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SyslogApiService) Api10SamSyslogDisablePost(ctx context.Context) (*http.Response, error) {
+func (a *SyslogApiService) SamSyslogDisablePost(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -94,7 +94,7 @@ Enable syslog support.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SyslogApiService) Api10SamSyslogEnablePost(ctx context.Context) (*http.Response, error) {
+func (a *SyslogApiService) SamSyslogEnablePost(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

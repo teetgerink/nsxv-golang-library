@@ -4,10 +4,10 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20AuditlogGet**](AuditlogApi.md#Api20AuditlogGet) | **Get** /api/2.0/auditlog | auditLogsRead
+[**AuditlogGet**](AuditlogApi.md#AuditlogGet) | **Get** /api/2.0/auditlog | auditLogsRead
 
-# **Api20AuditlogGet**
-> Api20AuditlogGet(ctx, optional)
+# **AuditlogGet**
+> AuditlogGet(ctx, optional)
 auditLogsRead
 
 Get NSX Manager audit logs  Parameters:  
@@ -17,10 +17,10 @@ Get NSX Manager audit logs  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***AuditlogApiApi20AuditlogGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***AuditlogApiAuditlogGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a AuditlogApiApi20AuditlogGetOpts struct
+Optional parameters are passed through a pointer to a AuditlogApiAuditlogGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startIndex** | **optional.String**|  | 

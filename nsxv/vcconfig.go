@@ -31,7 +31,7 @@ Get vCenter Server configuration details on NSX Manager.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *VcconfigApiService) Api20ServicesVcconfigGet(ctx context.Context) (*http.Response, error) {
+func (a *VcconfigApiService) ServicesVcconfigGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -94,18 +94,18 @@ func (a *VcconfigApiService) Api20ServicesVcconfigGet(ctx context.Context) (*htt
 VcconfigApiService vCenterConfigUpdate
 Synchronize NSX Manager with vCenter server.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *VcconfigApiApi20ServicesVcconfigPutOpts - Optional Parameters:
+ * @param optional nil or *VcconfigApiServicesVcconfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type VcconfigApiApi20ServicesVcconfigPutOpts struct {
+type VcconfigApiServicesVcconfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *VcconfigApiService) Api20ServicesVcconfigPut(ctx context.Context, localVarOptionals *VcconfigApiApi20ServicesVcconfigPutOpts) (*http.Response, error) {
+func (a *VcconfigApiService) ServicesVcconfigPut(ctx context.Context, localVarOptionals *VcconfigApiServicesVcconfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -179,7 +179,7 @@ Get default vCenter Server connection status.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *VcconfigApiService) Api20ServicesVcconfigStatusGet(ctx context.Context) (*http.Response, error) {
+func (a *VcconfigApiService) ServicesVcconfigStatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

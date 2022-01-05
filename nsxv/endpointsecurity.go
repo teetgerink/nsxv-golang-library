@@ -30,16 +30,16 @@ type EndpointsecurityApiService service
 EndpointsecurityApiService guestIntrospectionSolutionActivationRead
 Retrieve activation information for all activated security VMs on the specified host.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EndpointsecurityApiApi20EndpointsecurityActivationGetOpts - Optional Parameters:
+ * @param optional nil or *EndpointsecurityApiEndpointsecurityActivationGetOpts - Optional Parameters:
      * @param "HostId" (optional.String) -
 
 */
 
-type EndpointsecurityApiApi20EndpointsecurityActivationGetOpts struct {
+type EndpointsecurityApiEndpointsecurityActivationGetOpts struct {
 	HostId optional.String
 }
 
-func (a *EndpointsecurityApiService) Api20EndpointsecurityActivationGet(ctx context.Context, localVarOptionals *EndpointsecurityApiApi20EndpointsecurityActivationGetOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationGet(ctx context.Context, localVarOptionals *EndpointsecurityApiEndpointsecurityActivationGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -110,7 +110,7 @@ Deactivate an endpoint protection solution on a host.  Parameters:  moid: Manage
  * @param moid
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityActivationVendorIDAltitudeMoidDelete(ctx context.Context, vendorID string, altitude string, moid string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudeMoidDelete(ctx context.Context, vendorID string, altitude string, moid string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -181,7 +181,7 @@ Retrieve the endpoint protection solution activation status, either true (activa
  * @param moid
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityActivationVendorIDAltitudeMoidGet(ctx context.Context, vendorID string, altitude string, moid string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudeMoidGet(ctx context.Context, vendorID string, altitude string, moid string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -249,18 +249,18 @@ Activate an endpoint protection solution that has been registered and located. S
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param vendorID
  * @param altitude
- * @param optional nil or *EndpointsecurityApiApi20EndpointsecurityActivationVendorIDAltitudePostOpts - Optional Parameters:
+ * @param optional nil or *EndpointsecurityApiEndpointsecurityActivationVendorIDAltitudePostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type EndpointsecurityApiApi20EndpointsecurityActivationVendorIDAltitudePostOpts struct {
+type EndpointsecurityApiEndpointsecurityActivationVendorIDAltitudePostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) Api20EndpointsecurityActivationVendorIDAltitudePost(ctx context.Context, vendorID string, altitude string, localVarOptionals *EndpointsecurityApiApi20EndpointsecurityActivationVendorIDAltitudePostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudePost(ctx context.Context, vendorID string, altitude string, localVarOptionals *EndpointsecurityApiEndpointsecurityActivationVendorIDAltitudePostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -338,7 +338,7 @@ Retrieve a list of activated security VMs for an endpoint protection solution.  
  * @param solutionID
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityActivationVendorIDSolutionIDGet(ctx context.Context, vendorID string, solutionID string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDSolutionIDGet(ctx context.Context, vendorID string, solutionID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -403,18 +403,18 @@ func (a *EndpointsecurityApiService) Api20EndpointsecurityActivationVendorIDSolu
 EndpointsecurityApiService guestIntrospectionVendorCreate
 Register the vendor of an endpoint protection solution. Specify the following parameters in the request.  | Name            | Comments | |-----------------|------------| |**vendorId**     | VMware-assigned ID for the vendor. | |**vendorTitle**  | Vendor-specified title. | |**vendorDescription** | Vendor-specified description. |   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EndpointsecurityApiApi20EndpointsecurityRegistrationPostOpts - Optional Parameters:
+ * @param optional nil or *EndpointsecurityApiEndpointsecurityRegistrationPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type EndpointsecurityApiApi20EndpointsecurityRegistrationPostOpts struct {
+type EndpointsecurityApiEndpointsecurityRegistrationPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationPost(ctx context.Context, localVarOptionals *EndpointsecurityApiApi20EndpointsecurityRegistrationPostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationPost(ctx context.Context, localVarOptionals *EndpointsecurityApiEndpointsecurityRegistrationPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -490,7 +490,7 @@ Unregister an endpoint protection solution.  Parameters:  altitude: VMware-assig
  * @param altitude
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDAltitudeDelete(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeDelete(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -559,7 +559,7 @@ Get registration information for an endpoint protection solution.  Parameters:  
  * @param altitude
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDAltitudeGet(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeGet(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -628,7 +628,7 @@ Unset the IP address and port for an endpoint protection solution.   Parameters:
  * @param altitude
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDAltitudeLocationDelete(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationDelete(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -697,7 +697,7 @@ Get the IP address and port on the vNIC host for an endpoint protection solution
  * @param altitude
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDAltitudeLocationGet(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationGet(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -764,18 +764,18 @@ Set the IP address and port on the vNIC host for an endpoint protection solution
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param vendorID
  * @param altitude
- * @param optional nil or *EndpointsecurityApiApi20EndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts - Optional Parameters:
+ * @param optional nil or *EndpointsecurityApiEndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type EndpointsecurityApiApi20EndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts struct {
+type EndpointsecurityApiEndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDAltitudeLocationPost(ctx context.Context, vendorID string, altitude string, localVarOptionals *EndpointsecurityApiApi20EndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationPost(ctx context.Context, vendorID string, altitude string, localVarOptionals *EndpointsecurityApiEndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -852,7 +852,7 @@ Unregister a Guest Introspection vendor.  Parameters:  vendorID: VMware-assigned
  * @param vendorID
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDDelete(ctx context.Context, vendorID string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDDelete(ctx context.Context, vendorID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -919,7 +919,7 @@ Retrieve registration information for a Guest Introspection vendor.  Parameters:
  * @param vendorID
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDGet(ctx context.Context, vendorID string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDGet(ctx context.Context, vendorID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -984,18 +984,18 @@ EndpointsecurityApiService guestIntrospectionSolutionCreate
 Register an endpoint protection solution. Specify the following parameters in the request.  | Name            | Comments | |-----------------|------------| |**solutionAltitude**     | VMware-assigned altitude for the solution. *Altitude* is a number that VMware assigns to uniquely identify the solution. The altitude describes the type of solution and the order in which the solution receives events relative to other solutions on the same host. | |**solutionTitle**  | Vendor-specified title for the solution. | |**solutionDescription** | Vendor-specified description of the solution. |   Parameters:  vendorID: VMware-assigned ID for the vendor.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param vendorID
- * @param optional nil or *EndpointsecurityApiApi20EndpointsecurityRegistrationVendorIDPostOpts - Optional Parameters:
+ * @param optional nil or *EndpointsecurityApiEndpointsecurityRegistrationVendorIDPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type EndpointsecurityApiApi20EndpointsecurityRegistrationVendorIDPostOpts struct {
+type EndpointsecurityApiEndpointsecurityRegistrationVendorIDPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDPost(ctx context.Context, vendorID string, localVarOptionals *EndpointsecurityApiApi20EndpointsecurityRegistrationVendorIDPostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDPost(ctx context.Context, vendorID string, localVarOptionals *EndpointsecurityApiEndpointsecurityRegistrationVendorIDPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1071,7 +1071,7 @@ Get registration information for all endpoint protection solutions for a Guest I
  * @param vendorID
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorIDSolutionsGet(ctx context.Context, vendorID string) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDSolutionsGet(ctx context.Context, vendorID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1137,7 +1137,7 @@ Retrieve the list of all registered Guest Introspection vendors.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *EndpointsecurityApiService) Api20EndpointsecurityRegistrationVendorsGet(ctx context.Context) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

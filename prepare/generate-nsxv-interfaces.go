@@ -1,33 +1,50 @@
-package main
+package prepare
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 	"strings"
 
 	"github.com/teetgerink/nsxv-golang-library.git/nsxv"
 )
 
-// This script generates the contents of the `interfaces.go` for you to copy-paste
-// It's kept here in case we ever need it again.
-func main() {
+// This script generates the contents of the `interfaces.go`
+//err := os.WriteFile("/tmp/dat1", d1, 0644)
 
+func main() {
 	item := reflect.TypeOf(nsxv.APIClient{})
+	iFile, err := os.Create("../nsxv/interfaces.go")
+
+	if err != nil {
+		panic(err)
+	}
+	defer iFile.Close()
 
 	// Generate interface methods
 	for index := 0; index < item.NumField(); index++ {
 		prop := item.Field(index)
+		methodName := fmt.Sprintf("Get%v() I%v\n", prop.Name, prop.Name)
+		_, err := fmt.Fprintln(iFile, methodName)
+		if err != nil {
+			fmt.Printf("error occured %v", err)
+		}
 
-		fmt.Printf("Get%v() I%v\n", prop.Name, prop.Name)
 	}
 
 	// Generate return methods of the api client
 	for index := 0; index < item.NumField(); index++ {
 		prop := item.Field(index)
 
-		fmt.Printf("func (a *ApiClient) Get%v() I%v {\n"+
+		funcName := fmt.Sprintf("func (a *ApiClient) Get%v() I%v {\n"+
 			"   return a.%v\n"+
 			"}\n\n", prop.Name, prop.Name, prop.Name)
+
+		_, err := fmt.Fprintln(iFile, funcName)
+		if err != nil {
+			fmt.Printf("error occured %v", err)
+		}
+
 	}
 
 	// Generate the interfaces

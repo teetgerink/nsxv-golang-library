@@ -33,7 +33,7 @@ Delete an IP pool.  Parameters:  poolId: Specifiy the pool ID as *poolId* in the
  * @param poolId
 
 */
-func (a *PoolsApiService) Api20ServicesIpamPoolsPoolIdDelete(ctx context.Context, poolId string) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsPoolIdDelete(ctx context.Context, poolId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -100,7 +100,7 @@ Retrieve details about a specific IP pool.  Parameters:  poolId: Specifiy the po
  * @param poolId
 
 */
-func (a *PoolsApiService) Api20ServicesIpamPoolsPoolIdGet(ctx context.Context, poolId string) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsPoolIdGet(ctx context.Context, poolId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -167,7 +167,7 @@ Retrieves all allocated IP addresses from the specified pool.   Parameters:
  * @param poolId
 
 */
-func (a *PoolsApiService) Api20ServicesIpamPoolsPoolIdIpaddressesGet(ctx context.Context, poolId string) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsPoolIdIpaddressesGet(ctx context.Context, poolId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -235,7 +235,7 @@ Release an IP address allocation in the pool.  Parameters:  ipAddress: The IP ad
  * @param ipAddress
 
 */
-func (a *PoolsApiService) Api20ServicesIpamPoolsPoolIdIpaddressesIpAddressDelete(ctx context.Context, poolId string, ipAddress string) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsPoolIdIpaddressesIpAddressDelete(ctx context.Context, poolId string, ipAddress string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -301,18 +301,18 @@ PoolsApiService ipPoolAllocateIp
 Allocate an IP Address from the pool. Use *ALLOCATE* in the **allocationMode** field in the body to allocate the next available IP. To allocate a specific one use *RESERVE* and pass the IP to reserve in the **ipAddress** fields in the body.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param poolId
- * @param optional nil or *PoolsApiApi20ServicesIpamPoolsPoolIdIpaddressesPostOpts - Optional Parameters:
+ * @param optional nil or *PoolsApiServicesIpamPoolsPoolIdIpaddressesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type PoolsApiApi20ServicesIpamPoolsPoolIdIpaddressesPostOpts struct {
+type PoolsApiServicesIpamPoolsPoolIdIpaddressesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *PoolsApiService) Api20ServicesIpamPoolsPoolIdIpaddressesPost(ctx context.Context, poolId string, localVarOptionals *PoolsApiApi20ServicesIpamPoolsPoolIdIpaddressesPostOpts) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsPoolIdIpaddressesPost(ctx context.Context, poolId string, localVarOptionals *PoolsApiServicesIpamPoolsPoolIdIpaddressesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -386,18 +386,18 @@ PoolsApiService ipPoolUpdate
 To modify an IP pool, query the IP pool first. Then modify the output and send it back as the request body.   Parameters:  poolId: Specifiy the pool ID as *poolId* in the URI.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param poolId
- * @param optional nil or *PoolsApiApi20ServicesIpamPoolsPoolIdPutOpts - Optional Parameters:
+ * @param optional nil or *PoolsApiServicesIpamPoolsPoolIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type PoolsApiApi20ServicesIpamPoolsPoolIdPutOpts struct {
+type PoolsApiServicesIpamPoolsPoolIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *PoolsApiService) Api20ServicesIpamPoolsPoolIdPut(ctx context.Context, poolId string, localVarOptionals *PoolsApiApi20ServicesIpamPoolsPoolIdPutOpts) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsPoolIdPut(ctx context.Context, poolId string, localVarOptionals *PoolsApiServicesIpamPoolsPoolIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -473,7 +473,7 @@ Retrieves all IP pools on the specified scope where the *scopeID* is the referen
  * @param scopeId
 
 */
-func (a *PoolsApiService) Api20ServicesIpamPoolsScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -538,18 +538,18 @@ PoolsApiService ipPoolCreate
 Create a pool of IP addresses. For *scopeId* use globalroot-0 or the *datacenterId* in upgrade use cases.   Parameters:  scopeId: For *scopeID* use globalroot-0 or *datacenterId* in upgrade use cases.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *PoolsApiApi20ServicesIpamPoolsScopeScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *PoolsApiServicesIpamPoolsScopeScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type PoolsApiApi20ServicesIpamPoolsScopeScopeIdPostOpts struct {
+type PoolsApiServicesIpamPoolsScopeScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *PoolsApiService) Api20ServicesIpamPoolsScopeScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *PoolsApiApi20ServicesIpamPoolsScopeScopeIdPostOpts) (*http.Response, error) {
+func (a *PoolsApiService) ServicesIpamPoolsScopeScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *PoolsApiServicesIpamPoolsScopeScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

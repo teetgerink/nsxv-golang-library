@@ -31,16 +31,16 @@ MacsetApiService macsetDelete
 Delete a MAC address set.  Parameters:  macsetId: Specified MAC address set ID (can be retrieved by listing the MAC address set on a scope).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param macsetId
- * @param optional nil or *MacsetApiApi20ServicesMacsetMacsetIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *MacsetApiServicesMacsetMacsetIdDeleteOpts - Optional Parameters:
      * @param "Force" (optional.String) -
 
 */
 
-type MacsetApiApi20ServicesMacsetMacsetIdDeleteOpts struct {
+type MacsetApiServicesMacsetMacsetIdDeleteOpts struct {
 	Force optional.String
 }
 
-func (a *MacsetApiService) Api20ServicesMacsetMacsetIdDelete(ctx context.Context, macsetId string, localVarOptionals *MacsetApiApi20ServicesMacsetMacsetIdDeleteOpts) (*http.Response, error) {
+func (a *MacsetApiService) ServicesMacsetMacsetIdDelete(ctx context.Context, macsetId string, localVarOptionals *MacsetApiServicesMacsetMacsetIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -110,7 +110,7 @@ Retrieve details about a MAC address set.  Parameters:  macsetId: Specified MAC 
  * @param macsetId
 
 */
-func (a *MacsetApiService) Api20ServicesMacsetMacsetIdGet(ctx context.Context, macsetId string) (*http.Response, error) {
+func (a *MacsetApiService) ServicesMacsetMacsetIdGet(ctx context.Context, macsetId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -175,18 +175,18 @@ MacsetApiService macsetUpdate
 Modify an existing MAC address set.  Parameters:  macsetId: Specified MAC address set ID (can be retrieved by listing the MAC address set on a scope).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param macsetId
- * @param optional nil or *MacsetApiApi20ServicesMacsetMacsetIdPutOpts - Optional Parameters:
+ * @param optional nil or *MacsetApiServicesMacsetMacsetIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type MacsetApiApi20ServicesMacsetMacsetIdPutOpts struct {
+type MacsetApiServicesMacsetMacsetIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *MacsetApiService) Api20ServicesMacsetMacsetIdPut(ctx context.Context, macsetId string, localVarOptionals *MacsetApiApi20ServicesMacsetMacsetIdPutOpts) (*http.Response, error) {
+func (a *MacsetApiService) ServicesMacsetMacsetIdPut(ctx context.Context, macsetId string, localVarOptionals *MacsetApiServicesMacsetMacsetIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -262,7 +262,7 @@ List MAC address sets on the specified scope.  Parameters:  scopeId: Can be \&qu
  * @param scopeId
 
 */
-func (a *MacsetApiService) Api20ServicesMacsetScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *MacsetApiService) ServicesMacsetScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -327,18 +327,18 @@ MacsetApiService macsetScopesCreate
 Create a MAC address set on the specified scope.  Parameters:  scopeId: Can be \&quot;globalroot-0\&quot;, \&quot;universalroot-0\&quot; or datacenterId in upgrade use cases. Universal MAC address sets are read-only from secondary managers.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *MacsetApiApi20ServicesMacsetScopeScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *MacsetApiServicesMacsetScopeScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type MacsetApiApi20ServicesMacsetScopeScopeIdPostOpts struct {
+type MacsetApiServicesMacsetScopeScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *MacsetApiService) Api20ServicesMacsetScopeScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *MacsetApiApi20ServicesMacsetScopeScopeIdPostOpts) (*http.Response, error) {
+func (a *MacsetApiService) ServicesMacsetScopeScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *MacsetApiServicesMacsetScopeScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

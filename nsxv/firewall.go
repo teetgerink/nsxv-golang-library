@@ -24,15 +24,15 @@ var (
 	_ context.Context
 )
 
-type Class40FirewallApiService service
+type FirewallApiService service
 
 /*
-Class40FirewallApiService dfwPerformanceRead
+FirewallApiService dfwPerformanceRead
 Retrieve performance configuration for distributed firewall.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallConfigGlobalconfigurationGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallConfigGlobalconfigurationGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -92,21 +92,21 @@ func (a *Class40FirewallApiService) Api40FirewallConfigGlobalconfigurationGet(ct
 }
 
 /*
-Class40FirewallApiService dfwPerformanceUpdate
+FirewallApiService dfwPerformanceUpdate
 Update the distributed firewall performance configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. **autoDraftDisabled** parameter added.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallConfigGlobalconfigurationPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallConfigGlobalconfigurationPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallConfigGlobalconfigurationPutOpts struct {
+type FirewallApiFirewallConfigGlobalconfigurationPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallConfigGlobalconfigurationPut(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallConfigGlobalconfigurationPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallConfigGlobalconfigurationPut(ctx context.Context, localVarOptionals *FirewallApiFirewallConfigGlobalconfigurationPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -175,13 +175,13 @@ func (a *Class40FirewallApiService) Api40FirewallConfigGlobalconfigurationPut(ct
 }
 
 /*
-Class40FirewallApiService dfwIPFixDelete
+FirewallApiService dfwIPFixDelete
 Deleting IPFIX configuration resets the config to default values   Parameters:  contextId: Specified context
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param contextId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallContextIdConfigIpfixDelete(ctx context.Context, contextId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallContextIdConfigIpfixDelete(ctx context.Context, contextId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -242,13 +242,13 @@ func (a *Class40FirewallApiService) Api40FirewallContextIdConfigIpfixDelete(ctx 
 }
 
 /*
-Class40FirewallApiService dfwIPFixRead
+FirewallApiService dfwIPFixRead
 Query IPFIX configuration.  Parameters:  contextId: Specified context
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param contextId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallContextIdConfigIpfixGet(ctx context.Context, contextId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallContextIdConfigIpfixGet(ctx context.Context, contextId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -309,22 +309,22 @@ func (a *Class40FirewallApiService) Api40FirewallContextIdConfigIpfixGet(ctx con
 }
 
 /*
-Class40FirewallApiService dfwIPFixUpdate
+FirewallApiService dfwIPFixUpdate
 Configure IPFIX.  Parameters:  contextId: Specified context
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param contextId
- * @param optional nil or *Class40FirewallApiApi40FirewallContextIdConfigIpfixPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallContextIdConfigIpfixPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallContextIdConfigIpfixPutOpts struct {
+type FirewallApiFirewallContextIdConfigIpfixPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallContextIdConfigIpfixPut(ctx context.Context, contextId string, localVarOptionals *Class40FirewallApiApi40FirewallContextIdConfigIpfixPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallContextIdConfigIpfixPut(ctx context.Context, contextId string, localVarOptionals *FirewallApiFirewallContextIdConfigIpfixPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -394,14 +394,14 @@ func (a *Class40FirewallApiService) Api40FirewallContextIdConfigIpfixPut(ctx con
 }
 
 /*
-Class40FirewallApiService dfwEnableDisableToggle
+FirewallApiService dfwEnableDisableToggle
 Enable or disable firewall components on a cluster  Parameters:  domainID: Specified cluster  truefalse: Set parameter to true/false to enable/disable
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param domainID
  * @param truefalse
 
 */
-func (a *Class40FirewallApiService) Api40FirewallDomainIDEnableTruefalsePost(ctx context.Context, domainID string, truefalse string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallDomainIDEnableTruefalsePost(ctx context.Context, domainID string, truefalse string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -463,13 +463,13 @@ func (a *Class40FirewallApiService) Api40FirewallDomainIDEnableTruefalsePost(ctx
 }
 
 /*
-Class40FirewallApiService dfwSyncExecute
+FirewallApiService dfwSyncExecute
 Force sync host or cluster.  Parameters:  ID: Specified host or cluster to synchronize
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param iD
 
 */
-func (a *Class40FirewallApiService) Api40FirewallForceSyncIDPost(ctx context.Context, iD string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallForceSyncIDPost(ctx context.Context, iD string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -530,12 +530,12 @@ func (a *Class40FirewallApiService) Api40FirewallForceSyncIDPost(ctx context.Con
 }
 
 /*
-Class40FirewallApiService dfwConfigDelete
+FirewallApiService dfwConfigDelete
 Restores default configuration, which means one defaultLayer3 section with three default allow rules and one defaultLayer2Section with one default allow rule.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigDelete(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -595,10 +595,10 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigDelete(ctx con
 }
 
 /*
-Class40FirewallApiService dfwConfigShow
+FirewallApiService dfwConfigShow
 Retrieve distributed firewall rule configuration.  If no query parameters are used, all rule configuration is retrieved. Use the query parameters to filter the rule configuration information.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigGetOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigGetOpts - Optional Parameters:
      * @param "RuleType" (optional.String) -
      * @param "Source" (optional.String) -
      * @param "Destination" (optional.String) -
@@ -611,7 +611,7 @@ Retrieve distributed firewall rule configuration.  If no query parameters are us
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigGetOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigGetOpts struct {
 	RuleType    optional.String
 	Source      optional.String
 	Destination optional.String
@@ -623,7 +623,7 @@ type Class40FirewallApiApi40FirewallGlobalroot0ConfigGetOpts struct {
 	Action      optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigGet(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigGetOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigGet(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -710,19 +710,19 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigGet(ctx contex
 }
 
 /*
-Class40FirewallApiService dfwL2SectionRead
+FirewallApiService dfwL2SectionRead
 Retrieve rules from the layer 2 section specified by section **name**.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsGetOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsGetOpts - Optional Parameters:
      * @param "Name" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsGetOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsGetOpts struct {
 	Name optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsGet(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsGetOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsGet(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -785,10 +785,10 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2SectionCreate
+FirewallApiService dfwL2SectionCreate
 Create a layer 2 distributed firewall section.  By default, the section is created at the top of the firewall table. You can specify a location for the section with the **operation** and **anchorId** query parameters.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Operation" (optional.String) -
@@ -796,14 +796,14 @@ Create a layer 2 distributed firewall section.  By default, the section is creat
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Operation   optional.String
 	AnchorId    optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsPost(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsPost(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -878,13 +878,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2SectionIdDelete
+FirewallApiService dfwL2SectionIdDelete
 Delete the specified layer 2 section and its contents.  If the default layer 2 firewall section is selected, the request is rejected. See &#x60;GET /api/4.0/firewall/globalroot-0/defaultconfig&#x60; for information on resetting the default firewall section.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. When deleting the default firewall rule section, the method previously removed all rules except for the default rule. The method now returns status 400 and the message &#x60;Cannot delete default section &lt;sectionId&gt;&#x60;.   Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdDelete(ctx context.Context, sectionId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdDelete(ctx context.Context, sectionId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -945,13 +945,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2SectionIdRead
+FirewallApiService dfwL2SectionIdRead
 Retrieve information about the specified layer 2 section.  Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdGet(ctx context.Context, sectionId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdGet(ctx context.Context, sectionId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1012,11 +1012,11 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2SectionIdAction
+FirewallApiService dfwL2SectionIdAction
 Move the specified layer 2 section.  Use the **action**, **operation**, and optionally **achorId** query parameters to specify the destination for the section.  &#x60;POST /api/4.0/firewall/globalroot-0/config/layer2sections/1009 ?action&#x3D;revise&amp;operation&#x3D;insert_before&amp;anchorId&#x3D;1008&#x60;  &#x60;If-Match: 1478307787160&#x60;  &#x60;&#x60;&#x60; &lt;section id&#x3D;\&quot;1009\&quot; name&#x3D;\&quot;Test Section\&quot; generationNumber&#x3D;\&quot;1478307787160\&quot; timestamp&#x3D;\&quot;1478307787160\&quot; type&#x3D;\&quot;LAYER2\&quot;&gt;   ... &lt;/section&gt; &#x60;&#x60;&#x60;   Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
@@ -1026,7 +1026,7 @@ Move the specified layer 2 section.  Use the **action**, **operation**, and opti
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdPostOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
@@ -1035,7 +1035,7 @@ type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPost
 	AnchorId    optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPost(ctx context.Context, sectionId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdPost(ctx context.Context, sectionId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1117,24 +1117,24 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2SectionIdUpdate
+FirewallApiService dfwL2SectionIdUpdate
 Update the specified layer 2 section in distributed firewall.  * Retrieve the configuration for the specified section. * Retrieve the Etag value from the response headers. * Extract and modify the configuration from the response body as needed. * Set the If-Match header to the Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.  When updating the firewall configuration: * IDs for new objects (rule/section) should be removed or set to zero. * If new entities (sections/rules) have been sent in the request, the response   will contain the system-generated IDs, which are assigned to these new   entities. * **appliedTo** can be any valid firewall rule element. * **action** can be *ALLOW*, *BLOCK*, or *REJECT*. REJECT sends reject message for   unaccepted packets; RST packets are sent for TCP connections and ICMP   unreachable code packets are sent for UDP, ICMP, and other IP connections * source and destination can have an exclude flag. For example, if you add an   exclude tag for 1.1.1.1 in the source parameter, the rule looks for traffic   originating from all IPs other than 1.1.1.1.  When Distributed Firewall is used with Service Composer, firewall sections created by Service Composer contain an additional attribute in the XML called managedBy. You should not modify Service Composer firewall sections using Distributed Firewall REST APIs. If you do, you must synchronize firewall rules from Service Composer using the &#x60;GET /api/2.0/services/policy/serviceprovider/firewall&#x60; API.   Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPut(ctx context.Context, sectionId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdPut(ctx context.Context, sectionId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1207,24 +1207,24 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2RulesAdd
+FirewallApiService dfwL2RulesAdd
 Add rules to the specified layer 2 section in distributed firewall.  You add firewall rules at the global scope. You can then narrow down the scope (datacenter, cluster, distributed virtual port group, network, virtual machine, vNIC, or logical switch) at which you want to apply the rule. Firewall allows you to add multiple objects at the source and destination levels for each rule, which helps reduce the total number of firewall rules to be added.  To add a identity based firewall rule, first create a security group based on Directory Group objects. Then create a firewall rule with the security group as the source or destination.  Rules that direct traffic to a third part service are referred to as layer3 redirect rules, and are displayed in the layer3 redirect tab.  When Distributed Firewall is used with Service Composer, firewall rules created by Service Composer contain an additional attribute in the XML called managedBy.  Follow this procedure to add a rule:  * Retrieve the configuration for the specified section. * Retrieve the Etag value from the response headers.   **Note**: Each section contains its own Etag, generationNumber, and   timestamp. When adding a new rule, you must use the Etag value of the   firewall section to which you wish to add the rule. * Extract and modify the configuration from the response body as needed. * Set the If-Match header to the section Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.  When updating the firewall configuration:  * IDs for new rules should be removed or set to zero. * If new rules have been sent in the request, the response   will contain the system-generated IDs, which are assigned to these new   entities. * **appliedTo** can be any valid firewall rule element. * **action** can be *ALLOW*, *BLOCK*, or *REJECT*. REJECT sends reject message for   unaccepted packets; RST packets are sent for TCP connections and ICMP   unreachable code packets are sent for UDP, ICMP, and other IP connections * source and destination can have an exclude flag. For example, if you add an   exclude tag for 1.1.1.1 in the source parameter, the rule looks for traffic   originating from all IPs other than 1.1.1.1.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPostOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPost(ctx context.Context, sectionId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPost(ctx context.Context, sectionId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1297,21 +1297,21 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2RuleDelete
+FirewallApiService dfwL2RuleDelete
 Delete the specified distributed firewall rule.  Parameters:  ruleId: The ID of the rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
  * @param ruleId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDeleteOpts - Optional Parameters:
      * @param "IfMatch" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDeleteOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDeleteOpts struct {
 	IfMatch optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDelete(ctx context.Context, sectionId string, ruleId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDeleteOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDelete(ctx context.Context, sectionId string, ruleId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1376,14 +1376,14 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2RuleRead
+FirewallApiService dfwL2RuleRead
 Retrieve the configuration of the specified rule.   Parameters:  ruleId: The ID of the rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
  * @param ruleId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdGet(ctx context.Context, sectionId string, ruleId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdGet(ctx context.Context, sectionId string, ruleId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1445,25 +1445,25 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService dfwL2RuleUpdate
+FirewallApiService dfwL2RuleUpdate
 Update a distributed firewall rule in a layer 2 section.  * Retrieve the configuration for the section that contains the rule you want   to modify. * Retrieve the Etag value from the response headers.   **Note**: This is the Etag value of the firewall section to which you want   to add the rule. If you are keeping this rule in the same section, you must   keep the same Etag number. * Extract and modify the rule configuration from the response body as needed. * Set the If-Match header to the section Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.   Parameters:  ruleId: The ID of the rule.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
  * @param ruleId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPut(ctx context.Context, sectionId string, ruleId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPut(ctx context.Context, sectionId string, ruleId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer2sectionsSectionIdRulesRuleIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1537,12 +1537,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer2sections
 }
 
 /*
-Class40FirewallApiService serviceInsertionProfilesRead
+FirewallApiService serviceInsertionProfilesRead
 Retrieve the Service Insertion profiles that can be applied to layer3 redirect rules.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectProfilesGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectProfilesGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1602,21 +1602,21 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService layer3RedirectSectionsCreate
+FirewallApiService layer3RedirectSectionsCreate
 Add L3 redirect section  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsPost(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsPost(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1685,13 +1685,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService sectionDelete
+FirewallApiService sectionDelete
 Delete specified L3 redirect section  Parameters:  section: Specify section by ID or name
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionDelete(ctx context.Context, section string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionDelete(ctx context.Context, section string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1752,13 +1752,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService sectionRead
+FirewallApiService sectionRead
 Get L3 redirect section configuration  Parameters:  section: Specify section by ID or name
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionGet(ctx context.Context, section string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionGet(ctx context.Context, section string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1819,24 +1819,24 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService sectionUpdate
+FirewallApiService sectionUpdate
 Modify layer 3 redirect section. You will need to get the Etag value out of the GET first. Then pass the modified version of the whole redirect section configuration in the GET body.   Parameters:  section: Specify section by ID or name
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionPut(ctx context.Context, section string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionPut(ctx context.Context, section string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1909,22 +1909,22 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService rulesCreate
+FirewallApiService rulesCreate
 Add L3 redirect rule  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPost(ctx context.Context, section string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPost(ctx context.Context, section string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1994,14 +1994,14 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService ruleDelete
+FirewallApiService ruleDelete
 Delete specified L3 redirect rule  Parameters:  ruleID: Specified redirect rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
  * @param ruleID
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDDelete(ctx context.Context, section string, ruleID string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDDelete(ctx context.Context, section string, ruleID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2063,14 +2063,14 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService ruleRead
+FirewallApiService ruleRead
 Get L3 redirect rule  Parameters:  ruleID: Specified redirect rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
  * @param ruleID
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDGet(ctx context.Context, section string, ruleID string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDGet(ctx context.Context, section string, ruleID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2132,25 +2132,25 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService ruleUpdate
+FirewallApiService ruleUpdate
 Modify L3 redirect rule. You will need Etag value from the response header of GET call. Then, pass Etag value as the if-match header in PUT call   Parameters:  ruleID: Specified redirect rule
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param section
  * @param ruleID
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPut(ctx context.Context, section string, ruleID string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPut(ctx context.Context, section string, ruleID string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3redirectsectionsSectionRulesRuleIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2224,19 +2224,19 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3redirect
 }
 
 /*
-Class40FirewallApiService dfwL3SectionRead
+FirewallApiService dfwL3SectionRead
 Retrieve rules from the layer 3 section specified by section **name**.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsGetOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsGetOpts - Optional Parameters:
      * @param "Name" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsGetOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsGetOpts struct {
 	Name optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsGet(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsGetOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsGet(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2299,10 +2299,10 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3SectionCreate
+FirewallApiService dfwL3SectionCreate
 Create a layer 3 distributed firewall section.  By default, the section is created at the top of the firewall table. You can specify a location for the section with the **operation** and **anchorId** query parameters.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
      * @param "Operation" (optional.String) -
@@ -2310,14 +2310,14 @@ Create a layer 3 distributed firewall section.  By default, the section is creat
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 	Operation   optional.String
 	AnchorId    optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsPost(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsPost(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2392,13 +2392,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3SectionIdDelete
+FirewallApiService dfwL3SectionIdDelete
 Delete the specified layer 3 distributed firewall section.  If the default layer 3 firewall section is selected, the request is rejected. See &#x60;GET /api/4.0/firewall/globalroot-0/defaultconfig&#x60; for information on resetting the default firewall section.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method updated. When deleting the default firewall rule section, the method previously removed all rules except for the default rule. The method now returns status 400 and the message &#x60;Cannot delete default section &lt;sectionId&gt;&#x60;.   Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdDelete(ctx context.Context, sectionId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdDelete(ctx context.Context, sectionId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2459,13 +2459,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3SectionIdRead
+FirewallApiService dfwL3SectionIdRead
 Retrieve information about the specified layer 3 section.  Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdGet(ctx context.Context, sectionId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdGet(ctx context.Context, sectionId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2526,11 +2526,11 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3SectionIdAction
+FirewallApiService dfwL3SectionIdAction
 Move the specified layer 3 section.  Use the **action**, **operation**, and optionally **achorId** query parameters to specify the destination for the section.  &#x60;POST /api/4.0/firewall/globalroot-0/config/layer3sections/1007 ?action&#x3D;revise&amp;operation&#x3D;insert_before&amp;anchorId&#x3D;1006&#x60;  &#x60;If-Match: 1477989118875&#x60;   &#x60;&#x60;&#x60; &lt;section id&#x3D;\&quot;1007\&quot; name&#x3D;\&quot;Web Section\&quot; generationNumber&#x3D;\&quot;1477989118875\&quot; timestamp&#x3D;\&quot;1477989118875\&quot; type&#x3D;\&quot;LAYER3\&quot;&gt;   ... &lt;/section&gt; &#x60;&#x60;&#x60;   Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
@@ -2540,7 +2540,7 @@ Move the specified layer 3 section.  Use the **action**, **operation**, and opti
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdPostOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
@@ -2549,7 +2549,7 @@ type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPost
 	AnchorId    optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPost(ctx context.Context, sectionId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdPost(ctx context.Context, sectionId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2631,24 +2631,24 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3SectionIdUpdate
+FirewallApiService dfwL3SectionIdUpdate
 Update the specified layer 3 section in distributed firewall.  * Retrieve the configuration for the specified section. * Retrieve the Etag value from the response headers. * Extract and modify the configuration from the response body as needed. * Set the If-Match header to the Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.  When updating the firewall configuration: * IDs for new objects (rule/section) should be removed or set to zero. * If new entities (sections/rules) have been sent in the request, the response   will contain the system-generated IDs, which are assigned to these new   entities. * **appliedTo** can be any valid firewall rule element. * **action** can be *ALLOW*, *BLOCK*, or *REJECT*. REJECT sends reject message for   unaccepted packets; RST packets are sent for TCP connections and ICMP   unreachable code packets are sent for UDP, ICMP, and other IP connections * source and destination can have an exclude flag. For example, if you add an   exclude tag for 1.1.1.1 in the source parameter, the rule looks for traffic   originating from all IPs other than 1.1.1.1.  When Distributed Firewall is used with Service Composer, firewall sections created by Service Composer contain an additional attribute in the XML called managedBy. You should not modify Service Composer firewall sections using Distributed Firewall REST APIs. If you do, you must synchronize firewall rules from Service Composer using the &#x60;GET /api/2.0/services/policy/serviceprovider/firewall&#x60; API.   Parameters:  sectionId: The ID of the section to modify.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPut(ctx context.Context, sectionId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdPut(ctx context.Context, sectionId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2721,24 +2721,24 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3RulesAdd
+FirewallApiService dfwL3RulesAdd
 Add rules to the specified layer 2 section in distributed firewall.  You add firewall rules at the global scope. You can then narrow down the scope (datacenter, cluster, distributed virtual port group, network, virtual machine, vNIC, or logical switch) at which you want to apply the rule. Firewall allows you to add multiple objects at the source and destination levels for each rule, which helps reduce the total number of firewall rules to be added.  To add a identity based firewall rule, first create a security group based on Directory Group objects. Then create a firewall rule with the security group as the source or destination.  Rules that direct traffic to a third part service are referred to as layer3 redirect rules, and are displayed in the layer3 redirect tab.  When Distributed Firewall is used with Service Composer, firewall rules created by Service Composer contain an additional attribute in the XML called managedBy.  Follow this procedure to add a rule:  * Retrieve the configuration for the specified section. * Retrieve the Etag value from the response headers.   **Note**: Each section contains its own Etag, generationNumber, and   timestamp. When adding a new rule, you must use the Etag value of the   firewall section to which you wish to add the rule. * Extract and modify the configuration from the response body as needed. * Set the If-Match header to the section Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.  When updating the firewall configuration:  * IDs for new rules should be removed or set to zero. * If new rules have been sent in the request, the response   will contain the system-generated IDs, which are assigned to these new   entities. * **appliedTo** can be any valid firewall rule element. * **action** can be *ALLOW*, *BLOCK*, or *REJECT*. REJECT sends reject message for   unaccepted packets; RST packets are sent for TCP connections and ICMP   unreachable code packets are sent for UDP, ICMP, and other IP connections * source and destination can have an exclude flag. For example, if you add an   exclude tag for 1.1.1.1 in the source parameter, the rule looks for traffic   originating from all IPs other than 1.1.1.1.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPostOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPostOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPost(ctx context.Context, sectionId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPost(ctx context.Context, sectionId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2811,21 +2811,21 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3RuleDelete
+FirewallApiService dfwL3RuleDelete
 Delete the specified distributed firewall rule.  Parameters:  ruleId: The ID of the rule beeing read, updated or deleted
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
  * @param ruleId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDeleteOpts - Optional Parameters:
      * @param "IfMatch" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDeleteOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDeleteOpts struct {
 	IfMatch optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDelete(ctx context.Context, sectionId string, ruleId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDeleteOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDelete(ctx context.Context, sectionId string, ruleId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2890,14 +2890,14 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3RuleRead
+FirewallApiService dfwL3RuleRead
 Retrieve information about the specified distributed firewall rule.   Parameters:  ruleId: The ID of the rule beeing read, updated or deleted
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
  * @param ruleId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdGet(ctx context.Context, sectionId string, ruleId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdGet(ctx context.Context, sectionId string, ruleId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2959,25 +2959,25 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwL3RuleUpdate
+FirewallApiService dfwL3RuleUpdate
 Update a distributed firewall rule in a layer 3 section.  * Retrieve the configuration for the section that contains the rule you want   to modify. * Retrieve the Etag value from the response headers.   **Note**: This is the Etag value of the firewall section to which you want   to add the rule. If you are keeping this rule in the same section, you must   keep the same Etag number. * Extract and modify the rule configuration from the response body as needed. * Set the If-Match header to the section Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.   Parameters:  ruleId: The ID of the rule beeing read, updated or deleted
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionId
  * @param ruleId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPut(ctx context.Context, sectionId string, ruleId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPut(ctx context.Context, sectionId string, ruleId string, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigLayer3sectionsSectionIdRulesRuleIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3051,23 +3051,23 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwConfigUpdate
+FirewallApiService dfwConfigUpdate
 Update the complete firewall configuration in all sections.  * Retrieve the configuration with &#x60;GET /api/4.0/firewall/globalroot-0/config&#x60;. * Retrieve the Etag value from the response headers. * Extract and modify the configuration from the response body as needed. * Set the If-Match header to the Etag value, and submit the request.  Not all fields are required while sending the request. All the optional fields are safe to be ignored while sending the configuration to server. For example, if an IP set is referenced in the rule only IPSet and Type is needed in the Source/Destination objects and not Name and isValid tags.  When updating the firewall configuration: * IDs for new objects (rule/section) should be removed or set to zero. * If new entities (sections/rules) have been sent in the request, the response   will contain the system-generated IDs, which are assigned to these new   entities. * **appliedTo** can be any valid firewall rule element. * **action** can be *ALLOW*, *BLOCK*, or *REJECT*. REJECT sends reject message for   unaccepted packets; RST packets are sent for TCP connections and ICMP   unreachable code packets are sent for UDP, ICMP, and other IP connections * source and destination can have an exclude flag. For example, if you add an   exclude tag for 1.1.1.1 in the source parameter, the rule looks for traffic   originating from all IPs other than 1.1.1.1.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0ConfigPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0ConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "IfMatch" (optional.String) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0ConfigPutOpts struct {
+type FirewallApiFirewallGlobalroot0ConfigPutOpts struct {
 	Body        optional.Interface
 	IfMatch     optional.String
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigPut(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0ConfigPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0ConfigPut(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0ConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3139,12 +3139,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0ConfigPut(ctx contex
 }
 
 /*
-Class40FirewallApiService dfwConfigDefaultRead
+FirewallApiService dfwConfigDefaultRead
 Retrieve the default firewall configuration.  The output of this method can be used to restore the firewall config back to default. For example, to replace the layer 2 or layer 3 default section, use the relevant default section from the &#x60;GET /api/4.0/firewall/globalroot-0/defaultconfig&#x60; response body to create the request body of &#x60;PUT /api/4.0/firewall/globalroot-0/config/layer2sections|layer3sections/{sectionId}&#x60;.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DefaultconfigGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DefaultconfigGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3204,20 +3204,20 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DefaultconfigGet(ctx
 }
 
 /*
-Class40FirewallApiService dfwConfigExportRead
+FirewallApiService dfwConfigExportRead
 Export a configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param draftID
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDActionExportGetOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0DraftsDraftIDActionExportGetOpts - Optional Parameters:
      * @param "GetLatestForUniversal" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDActionExportGetOpts struct {
+type FirewallApiFirewallGlobalroot0DraftsDraftIDActionExportGetOpts struct {
 	GetLatestForUniversal optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDActionExportGet(ctx context.Context, draftID string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDActionExportGetOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsDraftIDActionExportGet(ctx context.Context, draftID string, localVarOptionals *FirewallApiFirewallGlobalroot0DraftsDraftIDActionExportGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3281,22 +3281,22 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDActionE
 }
 
 /*
-Class40FirewallApiService dfwConfigImportCreate
+FirewallApiService dfwConfigImportCreate
 Import a configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param draftID
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDActionImportPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0DraftsDraftIDActionImportPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDActionImportPostOpts struct {
+type FirewallApiFirewallGlobalroot0DraftsDraftIDActionImportPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDActionImportPost(ctx context.Context, draftID string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDActionImportPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsDraftIDActionImportPost(ctx context.Context, draftID string, localVarOptionals *FirewallApiFirewallGlobalroot0DraftsDraftIDActionImportPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3366,13 +3366,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDActionI
 }
 
 /*
-Class40FirewallApiService dfwDraftDelete
+FirewallApiService dfwDraftDelete
 Delete a configuration.  Parameters:  draftID: Specified draft ID. Use &#x60;GET /4.0/firewall/globalroot-0/drafts&#x60; to retrieve all drafts.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param draftID
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDDelete(ctx context.Context, draftID string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsDraftIDDelete(ctx context.Context, draftID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -3433,13 +3433,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDDelete(
 }
 
 /*
-Class40FirewallApiService dfwDraftRead
+FirewallApiService dfwDraftRead
 Get a saved firewall configuration.  Parameters:  draftID: Specified draft ID. Use &#x60;GET /4.0/firewall/globalroot-0/drafts&#x60; to retrieve all drafts.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param draftID
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDGet(ctx context.Context, draftID string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsDraftIDGet(ctx context.Context, draftID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3500,22 +3500,22 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDGet(ctx
 }
 
 /*
-Class40FirewallApiService dfwDraftUpdate
+FirewallApiService dfwDraftUpdate
 Update a saved firewall configuration.  Parameters:  draftID: Specified draft ID. Use &#x60;GET /4.0/firewall/globalroot-0/drafts&#x60; to retrieve all drafts.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param draftID
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0DraftsDraftIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDPutOpts struct {
+type FirewallApiFirewallGlobalroot0DraftsDraftIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDPut(ctx context.Context, draftID string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0DraftsDraftIDPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsDraftIDPut(ctx context.Context, draftID string, localVarOptionals *FirewallApiFirewallGlobalroot0DraftsDraftIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3585,12 +3585,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsDraftIDPut(ctx
 }
 
 /*
-Class40FirewallApiService dfwSaveConfigRead
+FirewallApiService dfwSaveConfigRead
 Displays the draft IDs of all saved configurations.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3650,21 +3650,21 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsGet(ctx contex
 }
 
 /*
-Class40FirewallApiService dfwDraftsCreate
+FirewallApiService dfwDraftsCreate
 Save a firewall configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0DraftsPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0DraftsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0DraftsPostOpts struct {
+type FirewallApiFirewallGlobalroot0DraftsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsPost(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0DraftsPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0DraftsPost(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0DraftsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3733,12 +3733,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0DraftsPost(ctx conte
 }
 
 /*
-Class40FirewallApiService dfwUpgradeRead
+FirewallApiService dfwUpgradeRead
 Retrieve current state of firewall functioning after NSX upgrade.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StateGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0StateGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3798,12 +3798,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StateGet(ctx context
 }
 
 /*
-Class40FirewallApiService dfwUpgradeEnable
+FirewallApiService dfwUpgradeEnable
 Enable distributed firewall.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatePut(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0StatePut(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3863,12 +3863,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatePut(ctx context
 }
 
 /*
-Class40FirewallApiService dfwStatusRead
+FirewallApiService dfwStatusRead
 Get firewall configuration status  **Method history:**  Release | Modification --------|------------- 6.2.4 | Method updated. Parameter **generationNumberObjects** added. Clusters not configured for firewall are excluded from the status output.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatusGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0StatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3928,13 +3928,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatusGet(ctx contex
 }
 
 /*
-Class40FirewallApiService L2SectionStatusRead
+FirewallApiService L2SectionStatusRead
 Retrieve status of the last publish action for the specified layer 2 section.  **Method history:**  Release | Modification --------|------------- 6.2.4 | Method updated. Parameter **generationNumberObjects** added. Clusters not configured for firewall are excluded from the status output.   Parameters:  sectionID: Section ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionID
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatusLayer2sectionsSectionIDGet(ctx context.Context, sectionID string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0StatusLayer2sectionsSectionIDGet(ctx context.Context, sectionID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3995,13 +3995,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatusLayer2sections
 }
 
 /*
-Class40FirewallApiService L3SectionStatusRead
+FirewallApiService L3SectionStatusRead
 Retrieve status of the last publish action for the specified layer 3 section.  **Method history:**  Release | Modification --------|------------- 6.2.4 | Method updated. Parameter **generationNumberObjects** added. Clusters not configured for firewall are excluded from the status output.   Parameters:  sectionID: Section ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sectionID
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatusLayer3sectionsSectionIDGet(ctx context.Context, sectionID string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0StatusLayer3sectionsSectionIDGet(ctx context.Context, sectionID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4062,13 +4062,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0StatusLayer3sections
 }
 
 /*
-Class40FirewallApiService dfwTimeoutConfigIdDelete
+FirewallApiService dfwTimeoutConfigIdDelete
 Delete the specified Distributed Firewall session timer configuration.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  configId: Session timer configuration ID (**firewallTimeoutConfiguration** id). For example, *1004*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param configId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsConfigIdDelete(ctx context.Context, configId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0TimeoutsConfigIdDelete(ctx context.Context, configId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -4129,13 +4129,13 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsConfigIdDele
 }
 
 /*
-Class40FirewallApiService dfwTimeoutConfigIdRead
+FirewallApiService dfwTimeoutConfigIdRead
 Retrieve the specified Distributed Firewall session timer configuration.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  configId: Session timer configuration ID (**firewallTimeoutConfiguration** id). For example, *1004*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param configId
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsConfigIdGet(ctx context.Context, configId string) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0TimeoutsConfigIdGet(ctx context.Context, configId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4196,22 +4196,22 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsConfigIdGet(
 }
 
 /*
-Class40FirewallApiService dfwTimeoutConfigIdUpdate
+FirewallApiService dfwTimeoutConfigIdUpdate
 Update the specified Distributed Firewall session timer configuration.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:  configId: Session timer configuration ID (**firewallTimeoutConfiguration** id). For example, *1004*.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param configId
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0TimeoutsConfigIdPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0TimeoutsConfigIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0TimeoutsConfigIdPutOpts struct {
+type FirewallApiFirewallGlobalroot0TimeoutsConfigIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsConfigIdPut(ctx context.Context, configId string, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0TimeoutsConfigIdPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0TimeoutsConfigIdPut(ctx context.Context, configId string, localVarOptionals *FirewallApiFirewallGlobalroot0TimeoutsConfigIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -4281,12 +4281,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsConfigIdPut(
 }
 
 /*
-Class40FirewallApiService dfwTimeoutsList
+FirewallApiService dfwTimeoutsList
 Retrieve Distributed Firewall session timer configuration.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0TimeoutsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4346,21 +4346,21 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsGet(ctx cont
 }
 
 /*
-Class40FirewallApiService dfwTimeoutCreate
+FirewallApiService dfwTimeoutCreate
 Create a Distributed Firewall session timer configuration.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallGlobalroot0TimeoutsPostOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallGlobalroot0TimeoutsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallGlobalroot0TimeoutsPostOpts struct {
+type FirewallApiFirewallGlobalroot0TimeoutsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsPost(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallGlobalroot0TimeoutsPostOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallGlobalroot0TimeoutsPost(ctx context.Context, localVarOptionals *FirewallApiFirewallGlobalroot0TimeoutsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4429,12 +4429,12 @@ func (a *Class40FirewallApiService) Api40FirewallGlobalroot0TimeoutsPost(ctx con
 }
 
 /*
-Class40FirewallApiService dfwThresholdsRead
+FirewallApiService dfwThresholdsRead
 Retrieve threshold configuration for distributed firewall.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40FirewallApiService) Api40FirewallStatsEventthresholdsGet(ctx context.Context) (*http.Response, error) {
+func (a *FirewallApiService) FirewallStatsEventthresholdsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -4494,21 +4494,21 @@ func (a *Class40FirewallApiService) Api40FirewallStatsEventthresholdsGet(ctx con
 }
 
 /*
-Class40FirewallApiService dfwThresholdsUpdate
+FirewallApiService dfwThresholdsUpdate
 Update threshold configuration for distributed firewall.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40FirewallApiApi40FirewallStatsEventthresholdsPutOpts - Optional Parameters:
+ * @param optional nil or *FirewallApiFirewallStatsEventthresholdsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40FirewallApiApi40FirewallStatsEventthresholdsPutOpts struct {
+type FirewallApiFirewallStatsEventthresholdsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40FirewallApiService) Api40FirewallStatsEventthresholdsPut(ctx context.Context, localVarOptionals *Class40FirewallApiApi40FirewallStatsEventthresholdsPutOpts) (*http.Response, error) {
+func (a *FirewallApiService) FirewallStatsEventthresholdsPut(ctx context.Context, localVarOptionals *FirewallApiFirewallStatsEventthresholdsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

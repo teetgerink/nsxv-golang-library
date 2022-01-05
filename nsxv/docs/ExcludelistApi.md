@@ -4,12 +4,12 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api21AppExcludelistGet**](ExcludelistApi.md#Api21AppExcludelistGet) | **Get** /api/2.1/app/excludelist | dfwExclusionRead
-[**Api21AppExcludelistMemberIDDelete**](ExcludelistApi.md#Api21AppExcludelistMemberIDDelete) | **Delete** /api/2.1/app/excludelist/{memberID} | dfwExclusionDelete
-[**Api21AppExcludelistMemberIDPut**](ExcludelistApi.md#Api21AppExcludelistMemberIDPut) | **Put** /api/2.1/app/excludelist/{memberID} | dfwExclusionUpdate
+[**AppExcludelistGet**](ExcludelistApi.md#AppExcludelistGet) | **Get** /api/2.1/app/excludelist | dfwExclusionRead
+[**AppExcludelistMemberIDDelete**](ExcludelistApi.md#AppExcludelistMemberIDDelete) | **Delete** /api/2.1/app/excludelist/{memberID} | dfwExclusionDelete
+[**AppExcludelistMemberIDPut**](ExcludelistApi.md#AppExcludelistMemberIDPut) | **Put** /api/2.1/app/excludelist/{memberID} | dfwExclusionUpdate
 
-# **Api21AppExcludelistGet**
-> Api21AppExcludelistGet(ctx, )
+# **AppExcludelistGet**
+> AppExcludelistGet(ctx, )
 dfwExclusionRead
 
 Retrieve the set of VMs in the exclusion list.  Parameters:  
@@ -32,8 +32,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api21AppExcludelistMemberIDDelete**
-> Api21AppExcludelistMemberIDDelete(ctx, memberID)
+# **AppExcludelistMemberIDDelete**
+> AppExcludelistMemberIDDelete(ctx, memberID)
 dfwExclusionDelete
 
 Delete a vm from exclusion list.  Parameters:  memberID: vc-moref-id of a virtual machine.  
@@ -60,8 +60,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api21AppExcludelistMemberIDPut**
-> Api21AppExcludelistMemberIDPut(ctx, memberID)
+# **AppExcludelistMemberIDPut**
+> AppExcludelistMemberIDPut(ctx, memberID)
 dfwExclusionUpdate
 
 Add a vm to the exclusion list.  Parameters:  memberID: vc-moref-id of a virtual machine.  

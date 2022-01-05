@@ -31,16 +31,16 @@ ApplicationApiService serviceAppDelete
 Delete the specified service.  Parameters:  applicationId: Application ID. You can get a list of application IDs from &#x60;GET /api/2.0/services/application/scope/{scopeId}&#x60;.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param applicationId
- * @param optional nil or *ApplicationApiApi20ServicesApplicationApplicationIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *ApplicationApiServicesApplicationApplicationIdDeleteOpts - Optional Parameters:
      * @param "Force" (optional.String) -
 
 */
 
-type ApplicationApiApi20ServicesApplicationApplicationIdDeleteOpts struct {
+type ApplicationApiServicesApplicationApplicationIdDeleteOpts struct {
 	Force optional.String
 }
 
-func (a *ApplicationApiService) Api20ServicesApplicationApplicationIdDelete(ctx context.Context, applicationId string, localVarOptionals *ApplicationApiApi20ServicesApplicationApplicationIdDeleteOpts) (*http.Response, error) {
+func (a *ApplicationApiService) ServicesApplicationApplicationIdDelete(ctx context.Context, applicationId string, localVarOptionals *ApplicationApiServicesApplicationApplicationIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -110,7 +110,7 @@ Retrieve details about the specified service.  Parameters:  applicationId: Appli
  * @param applicationId
 
 */
-func (a *ApplicationApiService) Api20ServicesApplicationApplicationIdGet(ctx context.Context, applicationId string) (*http.Response, error) {
+func (a *ApplicationApiService) ServicesApplicationApplicationIdGet(ctx context.Context, applicationId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -175,18 +175,18 @@ ApplicationApiService serviceAppUpdate
 Modify the name, description, applicationProtocol, or port value of a service.   Parameters:  applicationId: Application ID. You can get a list of application IDs from &#x60;GET /api/2.0/services/application/scope/{scopeId}&#x60;.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param applicationId
- * @param optional nil or *ApplicationApiApi20ServicesApplicationApplicationIdPutOpts - Optional Parameters:
+ * @param optional nil or *ApplicationApiServicesApplicationApplicationIdPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplicationApiApi20ServicesApplicationApplicationIdPutOpts struct {
+type ApplicationApiServicesApplicationApplicationIdPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplicationApiService) Api20ServicesApplicationApplicationIdPut(ctx context.Context, applicationId string, localVarOptionals *ApplicationApiApi20ServicesApplicationApplicationIdPutOpts) (*http.Response, error) {
+func (a *ApplicationApiService) ServicesApplicationApplicationIdPut(ctx context.Context, applicationId string, localVarOptionals *ApplicationApiServicesApplicationApplicationIdPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -260,18 +260,18 @@ ApplicationApiService servicesAppsScopeCreate
 Create a new service on the specified scope.   Parameters:  scopeId:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param scopeId
- * @param optional nil or *ApplicationApiApi20ServicesApplicationScopeIdPostOpts - Optional Parameters:
+ * @param optional nil or *ApplicationApiServicesApplicationScopeIdPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplicationApiApi20ServicesApplicationScopeIdPostOpts struct {
+type ApplicationApiServicesApplicationScopeIdPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplicationApiService) Api20ServicesApplicationScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *ApplicationApiApi20ServicesApplicationScopeIdPostOpts) (*http.Response, error) {
+func (a *ApplicationApiService) ServicesApplicationScopeIdPost(ctx context.Context, scopeId string, localVarOptionals *ApplicationApiServicesApplicationScopeIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -347,7 +347,7 @@ Retrieve services that have been created on the specified scope.  Parameters:  s
  * @param scopeId
 
 */
-func (a *ApplicationApiService) Api20ServicesApplicationScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
+func (a *ApplicationApiService) ServicesApplicationScopeScopeIdGet(ctx context.Context, scopeId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

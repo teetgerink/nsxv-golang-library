@@ -33,7 +33,7 @@ Retrieve details for specific app.  Parameters:  appID: Specified app ID.
  * @param appID
 
 */
-func (a *AiApiService) Api30AiAppAppIDGet(ctx context.Context, appID string) (*http.Response, error) {
+func (a *AiApiService) AiAppAppIDGet(ctx context.Context, appID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -99,7 +99,7 @@ Retrieve app details.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *AiApiService) Api30AiAppGet(ctx context.Context) (*http.Response, error) {
+func (a *AiApiService) AiAppGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -165,7 +165,7 @@ Retrieve specific desktop pool details.  Parameters:  desktoppoolID: Specified d
  * @param desktoppoolID
 
 */
-func (a *AiApiService) Api30AiDesktoppoolDesktoppoolIDGet(ctx context.Context, desktoppoolID string) (*http.Response, error) {
+func (a *AiApiService) AiDesktoppoolDesktoppoolIDGet(ctx context.Context, desktoppoolID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -231,7 +231,7 @@ Retrieve list of all discovered desktop pools by agent introspection.   Paramete
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *AiApiService) Api30AiDesktoppoolGet(ctx context.Context) (*http.Response, error) {
+func (a *AiApiService) AiDesktoppoolGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -297,7 +297,7 @@ Retrieve details about a specific directory group.  Parameters:  directorygroupI
  * @param directorygroupID
 
 */
-func (a *AiApiService) Api30AiDirectorygroupDirectorygroupIDGet(ctx context.Context, directorygroupID string) (*http.Response, error) {
+func (a *AiApiService) AiDirectorygroupDirectorygroupIDGet(ctx context.Context, directorygroupID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -363,7 +363,7 @@ Retrieve list of all discovered (and configured) LDAP directory groups.   Parame
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *AiApiService) Api30AiDirectorygroupGet(ctx context.Context) (*http.Response, error) {
+func (a *AiApiService) AiDirectorygroupGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -429,7 +429,7 @@ Retrieve Active Directory groups that user belongs to.  Parameters:  userID: Use
  * @param userID
 
 */
-func (a *AiApiService) Api30AiDirectorygroupUserUserIDGet(ctx context.Context, userID string) (*http.Response, error) {
+func (a *AiApiService) AiDirectorygroupUserUserIDGet(ctx context.Context, userID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -495,7 +495,7 @@ Retrieve list of all discovered hosts (both by agent introspection and LDAP Sync
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *AiApiService) Api30AiHostGet(ctx context.Context) (*http.Response, error) {
+func (a *AiApiService) AiHostGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -561,7 +561,7 @@ Get host details.  Parameters:  hostID: Specified host ID.
  * @param hostID
 
 */
-func (a *AiApiService) Api30AiHostHostIDGet(ctx context.Context, hostID string) (*http.Response, error) {
+func (a *AiApiService) AiHostHostIDGet(ctx context.Context, hostID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -625,7 +625,7 @@ func (a *AiApiService) Api30AiHostHostIDGet(ctx context.Context, hostID string) 
 AiApiService userActivityRead
 ### View Outbound Activity  You can view what applications are being run by a security group or desktop pool and then drill down into the report to find out which client applications are making outbound connections by a particular group of users. You can also discover all user groups and users who are accessing a particular application, which can help you determine if you need to adjust identity firewall in your environment.  * query&#x3D;*resource* * param&#x3D;&amp;lt;param-name&amp;gt;:&amp;lt;param-type&amp;gt;:&amp;lt;comma-separated-values&amp;gt;:&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *dest* (required)     * *app*   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DIRECTORY_GROUP*, *DESKTOP_POOL*     * for dest: *VIRTUAL_MACHINE*     * for app: *SRC_APP*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE* (default is *INCLUDE*).  **Example:** View user activities to VM ID 1 originating from application ID 1   &#x60;GET /api/3.0/ai/records?query&#x3D;resource&amp;interval&#x3D;60m&amp;param&#x3D;src:DIRECTORY_GROUP&#x60;   &#x60;&amp;param&#x3D;dest:VIRTUAL_MACHINE:1&amp;param&#x3D;app:SRC_APP:1&#x60;  ### View Inbound Activity  You can view all inbound activity to a server by desktop pool, security group, or AD group.  * query&#x3D;*sam* * param&#x3D;&amp;lt;param-name&amp;gt;:&amp;lt;param-type&amp;gt;:&amp;lt;comma-separated-values&amp;gt;:&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *dest* (required)     * *app*   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DIRECTORY_GROUP*, *DESKTOP_POOL*     * for dest: *VIRTUAL_MACHINE*     * for app: *DEST_APP*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE*, *NOT* (default is *INCLUDE*).  **Example:** View user activities to VM ID 1 originating from application ID 1   &#x60;GET /api/3.0/ai/records?query&#x3D;containers&amp;interval&#x3D;60m&amp;param&#x3D;dest:SECURITY_GROUP:1:EXCLUDE&#x60;   &#x60;&amp;param&#x3D;src:SECURITY_GROUP:1&#x60;  ### View Interaction between Inventory Containers You can view the traffic passing between defined containers such as AD groups, security groups and/or desktop pools. This can help you identify and configure access to shared services and to resolve misconfigured relationships between Inventory container definitions, desktop pools and AD groups.  * query&#x3D;*containers* * param&#x3D;&amp;lt;param-name&amp;gt;:&amp;lt;param-type&amp;gt;:&amp;lt;comma-separated-values&amp;gt;:&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *dest* (required)   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DIRECTORY_GROUP*, *DESKTOP_POOL*     * for dest: *SECURITY_GROUP*, * *DESKTOP_POOL*    * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE*, or *NOT* (default * is *INCLUDE*).  **Example:** View interaction between inventory containers   &#x60;GET /api/3.0/ai/records?query&#x3D;containers&amp;interval&#x3D;60m&amp;param&#x3D;dest:SECURITY_GROUP:1:EXCLUDE&#x60;   &#x60;&amp;param&#x3D;src:SECURITY_GROUP:1&#x60;  ### View Outbound AD Group Activity  You can view the traffic between members of defined Active Directory groups and can use this data to fine tune your firewall rules.  * query&#x3D;*adg* * param&#x3D;&amp;lt;param-name&amp;gt;:&amp;lt;param-type&amp;gt;:&amp;lt;comma-separated-values&amp;gt;:&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *adg*   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DESKTOP_POOL*     * for adg: *USER*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE* (default * is *INCLUDE*).  **Example:** View outbound AD group activity     &#x60;GET https://NSX-Manager-IP-Address/api/3.0/ai/records?query&#x3D;adg&amp;interval&#x3D;24h&amp;param&#x3D;adg:USER:1:INCLUDE&#x60;   &#x60;&amp;param&#x3D;src:SECURITY_GROUP:1:EXCLUDE&#x60;   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *AiApiApi30AiRecordsGetOpts - Optional Parameters:
+ * @param optional nil or *AiApiAiRecordsGetOpts - Optional Parameters:
      * @param "Query" (optional.String) -
      * @param "Interval" (optional.String) -
      * @param "Stime" (optional.String) -
@@ -636,7 +636,7 @@ AiApiService userActivityRead
 
 */
 
-type AiApiApi30AiRecordsGetOpts struct {
+type AiApiAiRecordsGetOpts struct {
 	Query      optional.String
 	Interval   optional.String
 	Stime      optional.String
@@ -646,7 +646,7 @@ type AiApiApi30AiRecordsGetOpts struct {
 	Startindex optional.String
 }
 
-func (a *AiApiService) Api30AiRecordsGet(ctx context.Context, localVarOptionals *AiApiApi30AiRecordsGetOpts) (*http.Response, error) {
+func (a *AiApiService) AiRecordsGet(ctx context.Context, localVarOptionals *AiApiAiRecordsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -732,7 +732,7 @@ Retrieve list of all observed security groups.  Observed entities are the ones t
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *AiApiService) Api30AiSecuritygroupGet(ctx context.Context) (*http.Response, error) {
+func (a *AiApiService) AiSecuritygroupGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -798,7 +798,7 @@ Retrieve details about specific security group.  Parameters:  secgroupID: Specif
  * @param secgroupID
 
 */
-func (a *AiApiService) Api30AiSecuritygroupSecgroupIDGet(ctx context.Context, secgroupID string) (*http.Response, error) {
+func (a *AiApiService) AiSecuritygroupSecgroupIDGet(ctx context.Context, secgroupID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -865,7 +865,7 @@ Retrieve details for a specific user.  Parameters:  userID: User ID
  * @param userID
 
 */
-func (a *AiApiService) Api30AiUserUserIDGet(ctx context.Context, userID string) (*http.Response, error) {
+func (a *AiApiService) AiUserUserIDGet(ctx context.Context, userID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -929,7 +929,7 @@ func (a *AiApiService) Api30AiUserUserIDGet(ctx context.Context, userID string) 
 AiApiService userDetailsRead
 ### View Outbound Activity You can view what applications are being run by a security group or desktop pool and then drill down into the report to find out which client applications are making outbound connections by a particular group of users. You can also discover all user groups and users who are accessing a particular application, which can help you determine if you need to adjust identity firewall in your environment.  * query&#x3D;*resource* * param&#x3D;&amp;lt;param-name&amp;gt;&amp;lt;param-type&amp;gt;&amp;lt;comma-separated-values&amp;gt;&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *dest* (required)     * *app*   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DIRECTORY_GROUP*, *DESKTOP_POOL*     * for dest: *IP* - a valid IP address in dot notation, xx.xx.xx.xx     * for app: *SRC_APP*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE* (default is *INCLUDE*).  **Example:** View user activities to VM ID 1 originating from application ID 1   &#x60;GET /api/3.0/ai/userdetails?query&#x3D;resource&amp;stime&#x3D;2012-10-15T00:00:00&amp;etime&#x3D;2012-10-20T00:00:00&#x60;   &#x60;&amp;param&#x3D;src:DIRECTORY_GROUP:2&amp;param&#x3D;app:SRC_APP:16&amp;param&#x3D;dest:IP:172.16.4.52&#x60;  ### View Inbound Activity  You can view all inbound activity to a server by desktop pool, security group, or AD group.  * query&#x3D;*sam* * param&#x3D;&amp;lt;param-name&amp;gt;&amp;lt;param-type&amp;gt;&amp;lt;comma-separated-values&amp;gt;&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *dest* (required)     * *app* (required)   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DIRECTORY_GROUP*, *DESKTOP_POOL*     * for dest: *VIRTUAL_MACHINE*     * for app: *DEST_APP*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE*, *NOT* (default is *INCLUDE*).  **Example:** View user activities to VM ID 1 originating from application ID 1   &#x60;GET /api/3.0/userdetails?query&#x3D;sam&amp;interval&#x3D;60m&amp;param&#x3D;app:DEST_APP:1:EXCLUDE&#x60;   &#x60;&amp;param&#x3D;dest:IP:1:EXCLUDE&amp;param&#x3D;src:SECURITY_GROUP:1:EXCLUDE&#x60;  ### View Interaction between Inventory Containers You can view the traffic passing between defined containers such as AD groups, security groups and/or desktop pools. This can help you identify and configure access to shared services and to resolve misconfigured relationships between Inventory container definitions, desktop pools and AD groups.  * query&#x3D;*containers* * param&#x3D;&amp;lt;param-name&amp;gt;&amp;lt;param-type&amp;gt;&amp;lt;comma-separated-values&amp;gt;&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *dest* (required)   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DIRECTORY_GROUP*, *DESKTOP_POOL*     * for dest: *SECURITY_GROUP*, * *DESKTOP_POOL*    * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE*, or *NOT* (default * is *INCLUDE*).  **Example:** View interaction between inventory containers   &#x60;GET /api/3.0/ai/userdetails?query&#x3D;containers&amp;interval&#x3D;60m&amp;param&#x3D;dest:SECURITY_GROUP:1:EXCLUDE&#x60;   &#x60;&amp;param&#x3D;src:SECURITY_GROUP:1&#x60;  ### View Outbound AD Group Activity  You can view the traffic between members of defined Active Directory groups and can use this data to fine tune your firewall rules.  * query&#x3D;*adg* * param&#x3D;&amp;lt;param-name&amp;gt;&amp;lt;param-type&amp;gt;&amp;lt;comma-separated-values&amp;gt;&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src* (required)     * *adg*   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DESKTOP_POOL*     * for adg: *USER*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE* (default is *INCLUDE*).  **Example:** View outbound AD group activity     &#x60;GET /api/3.0/ai/userdetails?query&#x3D;adg&amp;interval&#x3D;24h&amp;param&#x3D;adg:USER:1:INCLUDE&#x60;   &#x60;&amp;param&#x3D;src:SECURITY_GROUP:1:EXCLUDE&#x60;  ### View Virtual Machine Activity Report  * query&#x3D;*vma* * param&#x3D;&amp;lt;param-name&amp;gt;&amp;lt;param-type&amp;gt;&amp;lt;comma-separated-values&amp;gt;&amp;lt;operator&amp;gt;, where:   * &amp;lt;param-name&amp;gt; is one of:     * *src*     * *dst*     * *app*     * If no parameters are passed, then this would show all SAM     activities   * &amp;lt;param-type&amp;gt; is one of:     * for src: *SECURITY_GROUP*, *DESKTOP_POOL*     * for dst: *VIRTUAL_MACHINE*, *VM_UUID*     * for app - *SRC_APP* or *DEST_APP*   * &amp;lt;comma-separated-values&amp;gt; is a comma-separated numbers (optional). If none specified then no filter is applied.   * &amp;lt;operator&amp;gt; is one of *INCLUDE*, *EXCLUDE* (default is *INCLUDE*).  **Example:** View outbound AD group activity     &#x60;GET /api/3.0/ai/userdetails?query&#x3D;vma&amp;interval&#x3D;60m&amp;param&#x3D;dest:VIRTUAL_MACHINE:1 &amp;param&#x3D;app:DEST_APP:16&#x60;   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *AiApiApi30AiUserdetailsGetOpts - Optional Parameters:
+ * @param optional nil or *AiApiAiUserdetailsGetOpts - Optional Parameters:
      * @param "Query" (optional.String) -
      * @param "Interval" (optional.String) -
      * @param "Stime" (optional.String) -
@@ -940,7 +940,7 @@ AiApiService userDetailsRead
 
 */
 
-type AiApiApi30AiUserdetailsGetOpts struct {
+type AiApiAiUserdetailsGetOpts struct {
 	Query      optional.String
 	Interval   optional.String
 	Stime      optional.String
@@ -950,7 +950,7 @@ type AiApiApi30AiUserdetailsGetOpts struct {
 	Startindex optional.String
 }
 
-func (a *AiApiService) Api30AiUserdetailsGet(ctx context.Context, localVarOptionals *AiApiApi30AiUserdetailsGetOpts) (*http.Response, error) {
+func (a *AiApiService) AiUserdetailsGet(ctx context.Context, localVarOptionals *AiApiAiUserdetailsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1036,7 +1036,7 @@ Retrieve list of all discovered VMs.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *AiApiService) Api30AiVmGet(ctx context.Context) (*http.Response, error) {
+func (a *AiApiService) AiVmGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1102,7 +1102,7 @@ Retrieve details about a specific virtual machine.  Parameters:  vmID: VM ID
  * @param vmID
 
 */
-func (a *AiApiService) Api30AiVmVmIDGet(ctx context.Context, vmID string) (*http.Response, error) {
+func (a *AiApiService) AiVmVmIDGet(ctx context.Context, vmID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

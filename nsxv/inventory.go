@@ -33,7 +33,7 @@ Retrieve the status of the specified host.  History:  Release | Modification ---
  * @param hostId
 
 */
-func (a *InventoryApiService) Api20VdnInventoryHostHostIdConnectionStatusGet(ctx context.Context, hostId string) (*http.Response, error) {
+func (a *InventoryApiService) VdnInventoryHostHostIdConnectionStatusGet(ctx context.Context, hostId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -97,16 +97,16 @@ func (a *InventoryApiService) Api20VdnInventoryHostHostIdConnectionStatusGet(ctx
 InventoryApiService inventoryStatusHostsList
 Retrieve the status of a list of hosts.  Release | Modification --------|------------- 6.2.3 | Method updated. Introduced **hostToControllerConnectionErrors** array.&lt;br&gt;Deprecated **fullSyncCount** parameter. Parameter is still present, but always has value of -1.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *InventoryApiApi20VdnInventoryHostsConnectionStatusGetOpts - Optional Parameters:
+ * @param optional nil or *InventoryApiVdnInventoryHostsConnectionStatusGetOpts - Optional Parameters:
      * @param "HostId" (optional.String) -
 
 */
 
-type InventoryApiApi20VdnInventoryHostsConnectionStatusGetOpts struct {
+type InventoryApiVdnInventoryHostsConnectionStatusGetOpts struct {
 	HostId optional.String
 }
 
-func (a *InventoryApiService) Api20VdnInventoryHostsConnectionStatusGet(ctx context.Context, localVarOptionals *InventoryApiApi20VdnInventoryHostsConnectionStatusGetOpts) (*http.Response, error) {
+func (a *InventoryApiService) VdnInventoryHostsConnectionStatusGet(ctx context.Context, localVarOptionals *InventoryApiVdnInventoryHostsConnectionStatusGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

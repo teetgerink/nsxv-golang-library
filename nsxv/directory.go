@@ -33,7 +33,7 @@ Delete domain.  Parameters:  ID: Domain ID.
  * @param iD
 
 */
-func (a *DirectoryApiService) Api10DirectoryDeleteDomainIDDelete(ctx context.Context, iD string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryDeleteDomainIDDelete(ctx context.Context, iD string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -100,7 +100,7 @@ Delete EventLog server.  Parameters:  serverID: Specified EventLog server ID.
  * @param serverID
 
 */
-func (a *DirectoryApiService) Api10DirectoryDeleteEventLogServerServerIDDelete(ctx context.Context, serverID string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryDeleteEventLogServerServerIDDelete(ctx context.Context, serverID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -167,7 +167,7 @@ Delete LDAP server.  Parameters:  serverID: Specified LDAP server.
  * @param serverID
 
 */
-func (a *DirectoryApiService) Api10DirectoryDeleteLdapServerServerIDDelete(ctx context.Context, serverID string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryDeleteLdapServerServerIDDelete(ctx context.Context, serverID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -234,7 +234,7 @@ Start LDAP delta sync.  Parameters:  domainID: Specified domain.
  * @param domainID
 
 */
-func (a *DirectoryApiService) Api10DirectoryDeltaSyncDomainIDPut(ctx context.Context, domainID string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryDeltaSyncDomainIDPut(ctx context.Context, domainID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -301,7 +301,7 @@ Start LDAP full sync.  Parameters:  domainID: Specified domain.
  * @param domainID
 
 */
-func (a *DirectoryApiService) Api10DirectoryFullSyncDomainIDPut(ctx context.Context, domainID string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryFullSyncDomainIDPut(ctx context.Context, domainID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -367,7 +367,7 @@ Retrieve all agent discovered (or configured) LDAP domains.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *DirectoryApiService) Api10DirectoryListDomainsGet(ctx context.Context) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryListDomainsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -433,7 +433,7 @@ Query EventLog servers for a domain.  Parameters:  domainID: Specified domain.
  * @param domainID
 
 */
-func (a *DirectoryApiService) Api10DirectoryListEventLogServersForDomainDomainIDGet(ctx context.Context, domainID string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryListEventLogServersForDomainDomainIDGet(ctx context.Context, domainID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -500,7 +500,7 @@ Query LDAP servers for a domain.  Parameters:  domainID: Specified domain.
  * @param domainID
 
 */
-func (a *DirectoryApiService) Api10DirectoryListLdapServersForDomainDomainIDGet(ctx context.Context, domainID string) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryListLdapServersForDomainDomainIDGet(ctx context.Context, domainID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -564,18 +564,18 @@ func (a *DirectoryApiService) Api10DirectoryListLdapServersForDomainDomainIDGet(
 DirectoryApiService domainCreate
 Register or update a domain with NSX Manager  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DirectoryApiApi10DirectoryUpdateDomainPostOpts - Optional Parameters:
+ * @param optional nil or *DirectoryApiDirectoryUpdateDomainPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type DirectoryApiApi10DirectoryUpdateDomainPostOpts struct {
+type DirectoryApiDirectoryUpdateDomainPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *DirectoryApiService) Api10DirectoryUpdateDomainPost(ctx context.Context, localVarOptionals *DirectoryApiApi10DirectoryUpdateDomainPostOpts) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryUpdateDomainPost(ctx context.Context, localVarOptionals *DirectoryApiDirectoryUpdateDomainPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -647,18 +647,18 @@ func (a *DirectoryApiService) Api10DirectoryUpdateDomainPost(ctx context.Context
 DirectoryApiService eLogServerCreateCreate
 Create EventLog server.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DirectoryApiApi10DirectoryUpdateEventLogServerPostOpts - Optional Parameters:
+ * @param optional nil or *DirectoryApiDirectoryUpdateEventLogServerPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type DirectoryApiApi10DirectoryUpdateEventLogServerPostOpts struct {
+type DirectoryApiDirectoryUpdateEventLogServerPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *DirectoryApiService) Api10DirectoryUpdateEventLogServerPost(ctx context.Context, localVarOptionals *DirectoryApiApi10DirectoryUpdateEventLogServerPostOpts) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryUpdateEventLogServerPost(ctx context.Context, localVarOptionals *DirectoryApiDirectoryUpdateEventLogServerPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -730,18 +730,18 @@ func (a *DirectoryApiService) Api10DirectoryUpdateEventLogServerPost(ctx context
 DirectoryApiService ldapServerCreateCreate
 Create LDAP server.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DirectoryApiApi10DirectoryUpdateLdapServerPostOpts - Optional Parameters:
+ * @param optional nil or *DirectoryApiDirectoryUpdateLdapServerPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type DirectoryApiApi10DirectoryUpdateLdapServerPostOpts struct {
+type DirectoryApiDirectoryUpdateLdapServerPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *DirectoryApiService) Api10DirectoryUpdateLdapServerPost(ctx context.Context, localVarOptionals *DirectoryApiApi10DirectoryUpdateLdapServerPostOpts) (*http.Response, error) {
+func (a *DirectoryApiService) DirectoryUpdateLdapServerPost(ctx context.Context, localVarOptionals *DirectoryApiDirectoryUpdateLdapServerPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

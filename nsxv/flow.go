@@ -32,7 +32,7 @@ Retrieve flow monitoring configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *FlowApiService) Api21AppFlowConfigGet(ctx context.Context) (*http.Response, error) {
+func (a *FlowApiService) AppFlowConfigGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -95,18 +95,18 @@ func (a *FlowApiService) Api21AppFlowConfigGet(ctx context.Context) (*http.Respo
 FlowApiService flowsConfigCreate
 Update flow monitoring configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FlowApiApi21AppFlowConfigPutOpts - Optional Parameters:
+ * @param optional nil or *FlowApiAppFlowConfigPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type FlowApiApi21AppFlowConfigPutOpts struct {
+type FlowApiAppFlowConfigPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *FlowApiService) Api21AppFlowConfigPut(ctx context.Context, localVarOptionals *FlowApiApi21AppFlowConfigPutOpts) (*http.Response, error) {
+func (a *FlowApiService) AppFlowConfigPut(ctx context.Context, localVarOptionals *FlowApiAppFlowConfigPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -181,7 +181,7 @@ Delete flow records for the specified context.  Parameters:  contextId: Context 
  * @param contextId
 
 */
-func (a *FlowApiService) Api21AppFlowContextIdDelete(ctx context.Context, contextId string) (*http.Response, error) {
+func (a *FlowApiService) AppFlowContextIdDelete(ctx context.Context, contextId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -245,7 +245,7 @@ func (a *FlowApiService) Api21AppFlowContextIdDelete(ctx context.Context, contex
 FlowApiService flowStatsRead
 Retrieve flow statistics for a datacenter, port group, VM, or vNIC.  Response values for flow statistics: * **blocked** - indicates whether traffic is blocked:   * 0 - flow allowed   * 1 - flow blocked   * 2 - flow blocked by SpoofGuard * **protocol** - protocol in flow:   * 0 - TCP   * 1 - UDP   * 2 - ICMP * **direction** - direction of flow:   * 0 - to virtual machine   * 1 - from virtual machine * **controlDirection** - control direction for dynamic TCP traffic:   * 0 - source -&gt; destination   * 1 - destination -&gt; source   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FlowApiApi21AppFlowFlowstatsGetOpts - Optional Parameters:
+ * @param optional nil or *FlowApiAppFlowFlowstatsGetOpts - Optional Parameters:
      * @param "ContextId" (optional.String) -
      * @param "FlowType" (optional.String) -
      * @param "StartTime" (optional.String) -
@@ -255,7 +255,7 @@ Retrieve flow statistics for a datacenter, port group, VM, or vNIC.  Response va
 
 */
 
-type FlowApiApi21AppFlowFlowstatsGetOpts struct {
+type FlowApiAppFlowFlowstatsGetOpts struct {
 	ContextId  optional.String
 	FlowType   optional.String
 	StartTime  optional.String
@@ -264,7 +264,7 @@ type FlowApiApi21AppFlowFlowstatsGetOpts struct {
 	PageSize   optional.String
 }
 
-func (a *FlowApiService) Api21AppFlowFlowstatsGet(ctx context.Context, localVarOptionals *FlowApiApi21AppFlowFlowstatsGetOpts) (*http.Response, error) {
+func (a *FlowApiService) AppFlowFlowstatsGet(ctx context.Context, localVarOptionals *FlowApiAppFlowFlowstatsGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -347,7 +347,7 @@ Retrieve flow statistics meta-data.  This method retrieves the following informa
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *FlowApiService) Api21AppFlowFlowstatsInfoGet(ctx context.Context) (*http.Response, error) {
+func (a *FlowApiService) AppFlowFlowstatsInfoGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

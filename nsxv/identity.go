@@ -30,7 +30,7 @@ Query set of Windows Domain Groups (AD Groups) to which the specified user belon
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *IdentityApiService) Api10IdentityDirectoryGroupsForUserGet(ctx context.Context) (*http.Response, error) {
+func (a *IdentityApiService) IdentityDirectoryGroupsForUserGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -95,7 +95,7 @@ Query host-to-ip mapping list from database.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *IdentityApiService) Api10IdentityHostIpMappingGet(ctx context.Context) (*http.Response, error) {
+func (a *IdentityApiService) IdentityHostIpMappingGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -160,7 +160,7 @@ Retrieve set of users associated with a given set of IP addresses during a speci
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *IdentityApiService) Api10IdentityIpToUserMappingGet(ctx context.Context) (*http.Response, error) {
+func (a *IdentityApiService) IdentityIpToUserMappingGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -227,7 +227,7 @@ Create static user IP mapping.  Parameters:  userID: User ID  IP: IP address
  * @param iP
 
 */
-func (a *IdentityApiService) Api10IdentityStaticUserMappingUserIDIPPost(ctx context.Context, userID string, iP string) (*http.Response, error) {
+func (a *IdentityApiService) IdentityStaticUserMappingUserIDIPPost(ctx context.Context, userID string, iP string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -294,7 +294,7 @@ Query static user IP mapping list.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *IdentityApiService) Api10IdentityStaticUserMappingsGet(ctx context.Context) (*http.Response, error) {
+func (a *IdentityApiService) IdentityStaticUserMappingsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -360,7 +360,7 @@ Delete static user IP mapping for specified IP.  Parameters:  IP: IP address
  * @param iP
 
 */
-func (a *IdentityApiService) Api10IdentityStaticUserMappingsbyIPIPDelete(ctx context.Context, iP string) (*http.Response, error) {
+func (a *IdentityApiService) IdentityStaticUserMappingsbyIPIPDelete(ctx context.Context, iP string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -427,7 +427,7 @@ Query static user IP mapping for specified IP.  Parameters:  IP: IP address
  * @param iP
 
 */
-func (a *IdentityApiService) Api10IdentityStaticUserMappingsbyIPIPGet(ctx context.Context, iP string) (*http.Response, error) {
+func (a *IdentityApiService) IdentityStaticUserMappingsbyIPIPGet(ctx context.Context, iP string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -494,7 +494,7 @@ Delete static user IP mapping for specified user.  Parameters:  userID: User ID
  * @param userID
 
 */
-func (a *IdentityApiService) Api10IdentityStaticUserMappingsbyUserUserIDDelete(ctx context.Context, userID string) (*http.Response, error) {
+func (a *IdentityApiService) IdentityStaticUserMappingsbyUserUserIDDelete(ctx context.Context, userID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -561,7 +561,7 @@ Query static user IP mapping for specified user.  Parameters:  userID: User ID
  * @param userID
 
 */
-func (a *IdentityApiService) Api10IdentityStaticUserMappingsbyUserUserIDGet(ctx context.Context, userID string) (*http.Response, error) {
+func (a *IdentityApiService) IdentityStaticUserMappingsbyUserUserIDGet(ctx context.Context, userID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -627,7 +627,7 @@ Query user-to-ip mapping list from database.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *IdentityApiService) Api10IdentityUserIpMappingGet(ctx context.Context) (*http.Response, error) {
+func (a *IdentityApiService) IdentityUserIpMappingGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

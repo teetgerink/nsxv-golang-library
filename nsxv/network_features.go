@@ -33,7 +33,7 @@ Retrieve IP discovery and MAC learning information.  Parameters:  ID: dvPortGrou
  * @param iD
 
 */
-func (a *NetworkFeaturesApiService) Api20XvsNetworksIDFeaturesGet(ctx context.Context, iD string) (*http.Response, error) {
+func (a *NetworkFeaturesApiService) XvsNetworksIDFeaturesGet(ctx context.Context, iD string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -98,18 +98,18 @@ NetworkFeaturesApiService arpMACUpdate
 Enable or disable IP discovery and MAC learning.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method updated. IP discovery can be disabled on secondary NSX Managers.   Parameters:  ID: dvPortGroup MOID or logical switch (virtual wire) ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param iD
- * @param optional nil or *NetworkFeaturesApiApi20XvsNetworksIDFeaturesPutOpts - Optional Parameters:
+ * @param optional nil or *NetworkFeaturesApiXvsNetworksIDFeaturesPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type NetworkFeaturesApiApi20XvsNetworksIDFeaturesPutOpts struct {
+type NetworkFeaturesApiXvsNetworksIDFeaturesPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *NetworkFeaturesApiService) Api20XvsNetworksIDFeaturesPut(ctx context.Context, iD string, localVarOptionals *NetworkFeaturesApiApi20XvsNetworksIDFeaturesPutOpts) (*http.Response, error) {
+func (a *NetworkFeaturesApiService) XvsNetworksIDFeaturesPut(ctx context.Context, iD string, localVarOptionals *NetworkFeaturesApiXvsNetworksIDFeaturesPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

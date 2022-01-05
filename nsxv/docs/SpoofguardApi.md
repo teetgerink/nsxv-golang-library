@@ -4,16 +4,16 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api40ServicesSpoofguardPoliciesGet**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPoliciesGet) | **Get** /api/4.0/services/spoofguard/policies | spoofGuardPoliciesList
-[**Api40ServicesSpoofguardPoliciesPolicyIDDelete**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPoliciesPolicyIDDelete) | **Delete** /api/4.0/services/spoofguard/policies/{policyID} | spoofGuardPolicyDelete
-[**Api40ServicesSpoofguardPoliciesPolicyIDGet**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPoliciesPolicyIDGet) | **Get** /api/4.0/services/spoofguard/policies/{policyID} | spoofGuardPolicyRead
-[**Api40ServicesSpoofguardPoliciesPolicyIDPut**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPoliciesPolicyIDPut) | **Put** /api/4.0/services/spoofguard/policies/{policyID} | spoofGuardPolicyUpdate
-[**Api40ServicesSpoofguardPoliciesPost**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPoliciesPost) | **Post** /api/4.0/services/spoofguard/policies | spoofGuardPoliciesCreate
-[**Api40ServicesSpoofguardPolicyIDGet**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPolicyIDGet) | **Get** /api/4.0/services/spoofguard/{policyID} | spoofGuardPolicyIPRead
-[**Api40ServicesSpoofguardPolicyIDPost**](Class40SpoofguardApi.md#Api40ServicesSpoofguardPolicyIDPost) | **Post** /api/4.0/services/spoofguard/{policyID} | spoofGuardPolicyIPAction
+[**ServicesSpoofguardPoliciesGet**](SpoofguardApi.md#ServicesSpoofguardPoliciesGet) | **Get** /api/4.0/services/spoofguard/policies | spoofGuardPoliciesList
+[**ServicesSpoofguardPoliciesPolicyIDDelete**](SpoofguardApi.md#ServicesSpoofguardPoliciesPolicyIDDelete) | **Delete** /api/4.0/services/spoofguard/policies/{policyID} | spoofGuardPolicyDelete
+[**ServicesSpoofguardPoliciesPolicyIDGet**](SpoofguardApi.md#ServicesSpoofguardPoliciesPolicyIDGet) | **Get** /api/4.0/services/spoofguard/policies/{policyID} | spoofGuardPolicyRead
+[**ServicesSpoofguardPoliciesPolicyIDPut**](SpoofguardApi.md#ServicesSpoofguardPoliciesPolicyIDPut) | **Put** /api/4.0/services/spoofguard/policies/{policyID} | spoofGuardPolicyUpdate
+[**ServicesSpoofguardPoliciesPost**](SpoofguardApi.md#ServicesSpoofguardPoliciesPost) | **Post** /api/4.0/services/spoofguard/policies | spoofGuardPoliciesCreate
+[**ServicesSpoofguardPolicyIDGet**](SpoofguardApi.md#ServicesSpoofguardPolicyIDGet) | **Get** /api/4.0/services/spoofguard/{policyID} | spoofGuardPolicyIPRead
+[**ServicesSpoofguardPolicyIDPost**](SpoofguardApi.md#ServicesSpoofguardPolicyIDPost) | **Post** /api/4.0/services/spoofguard/{policyID} | spoofGuardPolicyIPAction
 
-# **Api40ServicesSpoofguardPoliciesGet**
-> Api40ServicesSpoofguardPoliciesGet(ctx, )
+# **ServicesSpoofguardPoliciesGet**
+> ServicesSpoofguardPoliciesGet(ctx, )
 spoofGuardPoliciesList
 
 Retrieve information about all SpoofGuard policies.  Parameters:  
@@ -36,8 +36,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api40ServicesSpoofguardPoliciesPolicyIDDelete**
-> Api40ServicesSpoofguardPoliciesPolicyIDDelete(ctx, policyID)
+# **ServicesSpoofguardPoliciesPolicyIDDelete**
+> ServicesSpoofguardPoliciesPolicyIDDelete(ctx, policyID)
 spoofGuardPolicyDelete
 
 Delete the specified SpoofGuard policy.  Parameters:  policyID: SpoofGuard policy ID.  
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api40ServicesSpoofguardPoliciesPolicyIDGet**
-> Api40ServicesSpoofguardPoliciesPolicyIDGet(ctx, policyID)
+# **ServicesSpoofguardPoliciesPolicyIDGet**
+> ServicesSpoofguardPoliciesPolicyIDGet(ctx, policyID)
 spoofGuardPolicyRead
 
 Retrieve information about the specified SpoofGuard policy.   Parameters:  policyID: SpoofGuard policy ID.  
@@ -92,8 +92,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api40ServicesSpoofguardPoliciesPolicyIDPut**
-> Api40ServicesSpoofguardPoliciesPolicyIDPut(ctx, policyID, optional)
+# **ServicesSpoofguardPoliciesPolicyIDPut**
+> ServicesSpoofguardPoliciesPolicyIDPut(ctx, policyID, optional)
 spoofGuardPolicyUpdate
 
 Modify the specified SpoofGuard policy.  Parameters:  policyID: SpoofGuard policy ID.  
@@ -104,10 +104,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **policyID** | **string**|  | 
- **optional** | ***Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPolicyIDPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***SpoofguardApiServicesSpoofguardPoliciesPolicyIDPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPolicyIDPutOpts struct
+Optional parameters are passed through a pointer to a SpoofguardApiServicesSpoofguardPoliciesPolicyIDPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -129,8 +129,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api40ServicesSpoofguardPoliciesPost**
-> Api40ServicesSpoofguardPoliciesPost(ctx, optional)
+# **ServicesSpoofguardPoliciesPost**
+> ServicesSpoofguardPoliciesPost(ctx, optional)
 spoofGuardPoliciesCreate
 
 Create a SpoofGuard policy to specify the operation mode for networks.   Parameters:  
@@ -140,10 +140,10 @@ Create a SpoofGuard policy to specify the operation mode for networks.   Paramet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***SpoofguardApiServicesSpoofguardPoliciesPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a Class40SpoofguardApiApi40ServicesSpoofguardPoliciesPostOpts struct
+Optional parameters are passed through a pointer to a SpoofguardApiServicesSpoofguardPoliciesPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -164,8 +164,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api40ServicesSpoofguardPolicyIDGet**
-> Api40ServicesSpoofguardPolicyIDGet(ctx, policyID, optional)
+# **ServicesSpoofguardPolicyIDGet**
+> ServicesSpoofguardPolicyIDGet(ctx, policyID, optional)
 spoofGuardPolicyIPRead
 
 Retrieve IP addresses for the specified state.   Parameters:  policyID: SpoofGuard policy ID.  
@@ -176,10 +176,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **policyID** | **string**|  | 
- **optional** | ***Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***SpoofguardApiServicesSpoofguardPolicyIDGetOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDGetOpts struct
+Optional parameters are passed through a pointer to a SpoofguardApiServicesSpoofguardPolicyIDGetOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -200,8 +200,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api40ServicesSpoofguardPolicyIDPost**
-> Api40ServicesSpoofguardPolicyIDPost(ctx, policyID, optional)
+# **ServicesSpoofguardPolicyIDPost**
+> ServicesSpoofguardPolicyIDPost(ctx, policyID, optional)
 spoofGuardPolicyIPAction
 
 Approve or publish IP addresses.  Parameters:  policyID: SpoofGuard policy ID.  
@@ -212,10 +212,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **policyID** | **string**|  | 
- **optional** | ***Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***SpoofguardApiServicesSpoofguardPolicyIDPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a Class40SpoofguardApiApi40ServicesSpoofguardPolicyIDPostOpts struct
+Optional parameters are passed through a pointer to a SpoofguardApiServicesSpoofguardPolicyIDPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 

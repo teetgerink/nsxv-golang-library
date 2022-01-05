@@ -4,19 +4,19 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api20ServicesUsermgmtEnablestateValuePut**](UsermgmtApi.md#Api20ServicesUsermgmtEnablestateValuePut) | **Put** /api/2.0/services/usermgmt/enablestate/{value} | userMgmtStateUpdate
-[**Api20ServicesUsermgmtRoleUserIdDelete**](UsermgmtApi.md#Api20ServicesUsermgmtRoleUserIdDelete) | **Delete** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleDelete
-[**Api20ServicesUsermgmtRoleUserIdGet**](UsermgmtApi.md#Api20ServicesUsermgmtRoleUserIdGet) | **Get** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleRead
-[**Api20ServicesUsermgmtRoleUserIdPost**](UsermgmtApi.md#Api20ServicesUsermgmtRoleUserIdPost) | **Post** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleCreate
-[**Api20ServicesUsermgmtRoleUserIdPut**](UsermgmtApi.md#Api20ServicesUsermgmtRoleUserIdPut) | **Put** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleUpdate
-[**Api20ServicesUsermgmtRolesGet**](UsermgmtApi.md#Api20ServicesUsermgmtRolesGet) | **Get** /api/2.0/services/usermgmt/roles | userMgmtRolesRead
-[**Api20ServicesUsermgmtScopingobjectsGet**](UsermgmtApi.md#Api20ServicesUsermgmtScopingobjectsGet) | **Get** /api/2.0/services/usermgmt/scopingobjects | userScopingObjectsRead
-[**Api20ServicesUsermgmtUserUserIdDelete**](UsermgmtApi.md#Api20ServicesUsermgmtUserUserIdDelete) | **Delete** /api/2.0/services/usermgmt/user/{userId} | userMgmtUserDelete
-[**Api20ServicesUsermgmtUserUserIdGet**](UsermgmtApi.md#Api20ServicesUsermgmtUserUserIdGet) | **Get** /api/2.0/services/usermgmt/user/{userId} | userMgmtUserRead
-[**Api20ServicesUsermgmtUsersVsmGet**](UsermgmtApi.md#Api20ServicesUsermgmtUsersVsmGet) | **Get** /api/2.0/services/usermgmt/users/vsm | userNSXManagerInfoRead
+[**ServicesUsermgmtEnablestateValuePut**](UsermgmtApi.md#ServicesUsermgmtEnablestateValuePut) | **Put** /api/2.0/services/usermgmt/enablestate/{value} | userMgmtStateUpdate
+[**ServicesUsermgmtRoleUserIdDelete**](UsermgmtApi.md#ServicesUsermgmtRoleUserIdDelete) | **Delete** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleDelete
+[**ServicesUsermgmtRoleUserIdGet**](UsermgmtApi.md#ServicesUsermgmtRoleUserIdGet) | **Get** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleRead
+[**ServicesUsermgmtRoleUserIdPost**](UsermgmtApi.md#ServicesUsermgmtRoleUserIdPost) | **Post** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleCreate
+[**ServicesUsermgmtRoleUserIdPut**](UsermgmtApi.md#ServicesUsermgmtRoleUserIdPut) | **Put** /api/2.0/services/usermgmt/role/{userId} | userMgmtRoleUpdate
+[**ServicesUsermgmtRolesGet**](UsermgmtApi.md#ServicesUsermgmtRolesGet) | **Get** /api/2.0/services/usermgmt/roles | userMgmtRolesRead
+[**ServicesUsermgmtScopingobjectsGet**](UsermgmtApi.md#ServicesUsermgmtScopingobjectsGet) | **Get** /api/2.0/services/usermgmt/scopingobjects | userScopingObjectsRead
+[**ServicesUsermgmtUserUserIdDelete**](UsermgmtApi.md#ServicesUsermgmtUserUserIdDelete) | **Delete** /api/2.0/services/usermgmt/user/{userId} | userMgmtUserDelete
+[**ServicesUsermgmtUserUserIdGet**](UsermgmtApi.md#ServicesUsermgmtUserUserIdGet) | **Get** /api/2.0/services/usermgmt/user/{userId} | userMgmtUserRead
+[**ServicesUsermgmtUsersVsmGet**](UsermgmtApi.md#ServicesUsermgmtUsersVsmGet) | **Get** /api/2.0/services/usermgmt/users/vsm | userNSXManagerInfoRead
 
-# **Api20ServicesUsermgmtEnablestateValuePut**
-> Api20ServicesUsermgmtEnablestateValuePut(ctx, value)
+# **ServicesUsermgmtEnablestateValuePut**
+> ServicesUsermgmtEnablestateValuePut(ctx, value)
 userMgmtStateUpdate
 
 Enable or disable a user account.  Parameters:  value: value can be 0 to disable, or 1 to enable.  
@@ -43,8 +43,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtRoleUserIdDelete**
-> Api20ServicesUsermgmtRoleUserIdDelete(ctx, userId)
+# **ServicesUsermgmtRoleUserIdDelete**
+> ServicesUsermgmtRoleUserIdDelete(ctx, userId)
 userMgmtRoleDelete
 
 Delete the role assignment for specified vCenter user. Once this role is deleted, the user is removed from NSX Manager. You cannot delete the role for a local user.   Parameters:  userId: User to retrieve role information from.  
@@ -71,8 +71,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtRoleUserIdGet**
-> Api20ServicesUsermgmtRoleUserIdGet(ctx, userId)
+# **ServicesUsermgmtRoleUserIdGet**
+> ServicesUsermgmtRoleUserIdGet(ctx, userId)
 userMgmtRoleRead
 
 Retrieve a user's role (possible roles are super_user, vshield_admin, enterprise_admin, security_admin, and audit).   Parameters:  userId: User to retrieve role information from.  
@@ -99,8 +99,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtRoleUserIdPost**
-> Api20ServicesUsermgmtRoleUserIdPost(ctx, userId, optional)
+# **ServicesUsermgmtRoleUserIdPost**
+> ServicesUsermgmtRoleUserIdPost(ctx, userId, optional)
 userMgmtRoleCreate
 
 Add role and resources for a user.  Parameters:  userId: User to retrieve role information from.  
@@ -111,10 +111,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **userId** | **string**|  | 
- **optional** | ***UsermgmtApiApi20ServicesUsermgmtRoleUserIdPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***UsermgmtApiServicesUsermgmtRoleUserIdPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a UsermgmtApiApi20ServicesUsermgmtRoleUserIdPostOpts struct
+Optional parameters are passed through a pointer to a UsermgmtApiServicesUsermgmtRoleUserIdPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -137,8 +137,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtRoleUserIdPut**
-> Api20ServicesUsermgmtRoleUserIdPut(ctx, userId, optional)
+# **ServicesUsermgmtRoleUserIdPut**
+> ServicesUsermgmtRoleUserIdPut(ctx, userId, optional)
 userMgmtRoleUpdate
 
 Change a user's role.  Parameters:  userId: User to retrieve role information from.  
@@ -149,10 +149,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **userId** | **string**|  | 
- **optional** | ***UsermgmtApiApi20ServicesUsermgmtRoleUserIdPutOpts** | optional parameters | nil if no parameters
+ **optional** | ***UsermgmtApiServicesUsermgmtRoleUserIdPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a UsermgmtApiApi20ServicesUsermgmtRoleUserIdPutOpts struct
+Optional parameters are passed through a pointer to a UsermgmtApiServicesUsermgmtRoleUserIdPutOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
@@ -174,8 +174,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtRolesGet**
-> Api20ServicesUsermgmtRolesGet(ctx, )
+# **ServicesUsermgmtRolesGet**
+> ServicesUsermgmtRolesGet(ctx, )
 userMgmtRolesRead
 
 Read all possible roles in NSX Manager  Parameters:  
@@ -198,8 +198,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtScopingobjectsGet**
-> Api20ServicesUsermgmtScopingobjectsGet(ctx, )
+# **ServicesUsermgmtScopingobjectsGet**
+> ServicesUsermgmtScopingobjectsGet(ctx, )
 userScopingObjectsRead
 
 Retrieve a list of objects that can be used to define a user's access scope.   Parameters:  
@@ -222,8 +222,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtUserUserIdDelete**
-> Api20ServicesUsermgmtUserUserIdDelete(ctx, userId)
+# **ServicesUsermgmtUserUserIdDelete**
+> ServicesUsermgmtUserUserIdDelete(ctx, userId)
 userMgmtUserDelete
 
 Remove the NSX role for a vCenter user.  Parameters:  userId: user ID  
@@ -250,8 +250,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtUserUserIdGet**
-> Api20ServicesUsermgmtUserUserIdGet(ctx, userId)
+# **ServicesUsermgmtUserUserIdGet**
+> ServicesUsermgmtUserUserIdGet(ctx, userId)
 userMgmtUserRead
 
 Get information about a user.  Parameters:  userId: user ID  
@@ -278,8 +278,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api20ServicesUsermgmtUsersVsmGet**
-> Api20ServicesUsermgmtUsersVsmGet(ctx, )
+# **ServicesUsermgmtUsersVsmGet**
+> ServicesUsermgmtUsersVsmGet(ctx, )
 userNSXManagerInfoRead
 
 Get information about users who have been assigned a NSX Manager role (local users as well as vCenter users with NSX Manager role).   Parameters:  

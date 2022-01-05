@@ -32,7 +32,7 @@ Start an on-demand NSX backup.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupPost(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupPost(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -97,7 +97,7 @@ Retrieve list of all backups available at configured backup location.   Paramete
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -162,7 +162,7 @@ Delete appliance manager backup configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsDelete(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -227,7 +227,7 @@ Specify tables that need not be backed up.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsExcludedataPut(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsExcludedataPut(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -292,7 +292,7 @@ Configure FTP settings.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsFtpsettingsPut(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -357,7 +357,7 @@ Retrieve backup settings.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -420,18 +420,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBac
 ApplianceManagementApiService applianceMgrBackupSettingsUpdate
 Configure backups on the appliance manager.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementBackuprestoreBackupsettingsPutOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementBackuprestoreBackupsettingsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementBackuprestoreBackupsettingsPutOpts struct {
+type ApplianceManagementApiApplianceManagementBackuprestoreBackupsettingsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementBackuprestoreBackupsettingsPutOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementBackuprestoreBackupsettingsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -505,7 +505,7 @@ Delete backup schedule.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsScheduleDelete(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsScheduleDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -570,7 +570,7 @@ Set backup schedule.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBackupsettingsSchedulePut(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreBackupsettingsSchedulePut(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -633,16 +633,16 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreBac
 ApplianceManagementApiService applianceMgrBackupRestoreExecute
 Restore data from a backup file.  Retrive a list of restore files using &#x60;GET /api/1.0/appliance-management/backuprestore/backups&#x60;.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementBackuprestoreRestorePostOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementBackuprestoreRestorePostOpts - Optional Parameters:
      * @param "RestoreFile" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementBackuprestoreRestorePostOpts struct {
+type ApplianceManagementApiApplianceManagementBackuprestoreRestorePostOpts struct {
 	RestoreFile optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementBackuprestoreRestorePost(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementBackuprestoreRestorePostOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementBackuprestoreRestorePost(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementBackuprestoreRestorePostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -710,7 +710,7 @@ Retrieve certificate information from NSX Manager.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanagerCertificatesNsxGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementCertificatemanagerCertificatesNsxGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -775,7 +775,7 @@ Retrieve generated certificate signing request (CSR).   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanagerCsrNsxGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementCertificatemanagerCsrNsxGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -838,18 +838,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanag
 ApplianceManagementApiService certificateCsrCreate
 Create a certificate signing request (CSR) for NSX Manager.  The response header contains the created file location.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced. Replaces &#x60;PUT /api/1.0/appliance-management/certificatemanager/csr/nsx&#x60;.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementCertificatemanagerCsrNsxPostOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementCertificatemanagerCsrNsxPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementCertificatemanagerCsrNsxPostOpts struct {
+type ApplianceManagementApiApplianceManagementCertificatemanagerCsrNsxPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanagerCsrNsxPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementCertificatemanagerCsrNsxPostOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementCertificatemanagerCsrNsxPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementCertificatemanagerCsrNsxPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -921,16 +921,16 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanag
 ApplianceManagementApiService certificatesKeystoreUpdate
 Upload keystore file.  Input is PKCS#12 formatted NSX file along with password.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts - Optional Parameters:
      * @param "Password" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts struct {
+type ApplianceManagementApiApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts struct {
 	Password optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementCertificatemanagerPkcs12keystoreNsxPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementCertificatemanagerPkcs12keystoreNsxPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -998,7 +998,7 @@ Upload certificate chain.  Input is certificate chain file which is a PEM encode
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementCertificatemanagerUploadchainNsxPost(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementCertificatemanagerUploadchainNsxPost(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1063,7 +1063,7 @@ Restart the appliance management web application.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsComponentAPPMGMTRestartPost(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsComponentAPPMGMTRestartPost(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1129,7 +1129,7 @@ Retrieve dependency details for the specified component.  Parameters:
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsComponentComponentIDDependenciesGet(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsComponentComponentIDDependenciesGet(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1196,7 +1196,7 @@ Retrieve dependents for the specified component.  Parameters:
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsComponentComponentIDDependentsGet(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsComponentComponentIDDependentsGet(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1263,7 +1263,7 @@ Retrieve details for the specified component.  Parameters:  componentID: Specifi
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsComponentComponentIDGet(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsComponentComponentIDGet(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1330,7 +1330,7 @@ Retrieve current status for the specified component.  Parameters:
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsComponentComponentIDStatusGet(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsComponentComponentIDStatusGet(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1398,7 +1398,7 @@ Start or stop a component.  Parameters:  command: Use **command** parameter *sta
  * @param command
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost(ctx context.Context, componentID string, command string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsComponentComponentIDToggleStatusCommandPost(ctx context.Context, componentID string, command string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1465,7 +1465,7 @@ Retrieve all appliance manager components.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementComponentsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementComponentsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1530,7 +1530,7 @@ Retrieve global information containing version information as well as current lo
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementGlobalInfoGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementGlobalInfoGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1595,7 +1595,7 @@ Delete all notifications.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementNotificationsDelete(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementNotificationsDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -1660,7 +1660,7 @@ Retrieve all system generated notifications.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementNotificationsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementNotificationsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1726,7 +1726,7 @@ Acknowledge a notification. The notification is then deleted from the system.   
  * @param iD
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementNotificationsIDAcknowledgePost(ctx context.Context, iD string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementNotificationsIDAcknowledgePost(ctx context.Context, iD string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1792,7 +1792,7 @@ Retrieve summary of all available components and their status info.   Parameters
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSummaryComponentsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSummaryComponentsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1857,7 +1857,7 @@ Retrieve system summary info such as address, dns name, version, CPU, memory and
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSummarySystemGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSummarySystemGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1922,7 +1922,7 @@ Retrieve NSX Manager CPU information.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemCpuinfoGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemCpuinfoGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1987,7 +1987,7 @@ Retrieve locale info.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemLocaleGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemLocaleGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2050,18 +2050,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemLocaleGet(
 ApplianceManagementApiService systemLocaleUpdate
 Configure locale.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemLocalePutOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemLocalePutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemLocalePutOpts struct {
+type ApplianceManagementApiApplianceManagementSystemLocalePutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemLocalePut(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemLocalePutOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemLocalePut(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemLocalePutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2135,7 +2135,7 @@ Retrieve NSX Manager memory information.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemMeminfoGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemMeminfoGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2200,7 +2200,7 @@ Delete DNS server configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemNetworkDnsDelete(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemNetworkDnsDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2263,18 +2263,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemNetworkDns
 ApplianceManagementApiService applianceDnsClientUpdate
 Configure DNS.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemNetworkDnsPutOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemNetworkDnsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemNetworkDnsPutOpts struct {
+type ApplianceManagementApiApplianceManagementSystemNetworkDnsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemNetworkDnsPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemNetworkDnsPutOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemNetworkDnsPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemNetworkDnsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2348,7 +2348,7 @@ Retrieve network information for the NSX Manager appliance. i.e. host name, IP a
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemNetworkGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemNetworkGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2411,18 +2411,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemNetworkGet
 ApplianceManagementApiService networkSettingsUpdate
 Update network information for the NSX Manager appliance.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemNetworkPutOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemNetworkPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemNetworkPutOpts struct {
+type ApplianceManagementApiApplianceManagementSystemNetworkPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemNetworkPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemNetworkPutOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemNetworkPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemNetworkPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2496,7 +2496,7 @@ Reboot the NSX Manager appliance.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemRestartPost(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemRestartPost(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2561,7 +2561,7 @@ Retrieve the NSX Manager FIPS and TLS settings.  **Method history:**  Release | 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSecuritysettingsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemSecuritysettingsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2624,18 +2624,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSecurityse
 ApplianceManagementApiService systemSecSettingsUpdate
 Update the NSX Manager security settings, including FIPS and TLS.  Do not enable FIPS until you have upgraded all NSX components to NSX 6.3.0 or later. Enable FIPS on NSX Edges before enabling it on the NSX Manager.  Changing the FIPS mode will reboot the NSX Manager appliance.  **Method history:**  Release | Modification --------|------------- 6.3.0 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemSecuritysettingsPostOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemSecuritysettingsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemSecuritysettingsPostOpts struct {
+type ApplianceManagementApiApplianceManagementSystemSecuritysettingsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSecuritysettingsPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemSecuritysettingsPostOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemSecuritysettingsPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemSecuritysettingsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2709,7 +2709,7 @@ Retrieve NSX Manager storage information.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemStorageinfoGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemStorageinfoGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2774,7 +2774,7 @@ Delete syslog servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSyslogserverDelete(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemSyslogserverDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -2839,7 +2839,7 @@ Retrieve syslog servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSyslogserverGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemSyslogserverGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2902,18 +2902,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSyslogserv
 ApplianceManagementApiService systemSyslogServerUpdate
 Configure syslog servers.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemSyslogserverPutOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemSyslogserverPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemSyslogserverPutOpts struct {
+type ApplianceManagementApiApplianceManagementSystemSyslogserverPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemSyslogserverPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemSyslogserverPutOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemSyslogserverPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemSyslogserverPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -2987,7 +2987,7 @@ Retrieve time settings, like timezone or current date and time with NTP server, 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTimesettingsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemTimesettingsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3052,7 +3052,7 @@ Delete NTP server.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTimesettingsNtpDelete(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemTimesettingsNtpDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -3115,18 +3115,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTimesettin
 ApplianceManagementApiService systemTimeUpdate
 Configure time or specify the NTP server to use for time synchronization.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemTimesettingsPutOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemTimesettingsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemTimesettingsPutOpts struct {
+type ApplianceManagementApiApplianceManagementSystemTimesettingsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTimesettingsPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemTimesettingsPutOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemTimesettingsPut(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemTimesettingsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -3200,7 +3200,7 @@ Retrieve TLS settings.  **Method history:**  Release | Modification --------|---
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTlssettingsGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemTlssettingsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3263,18 +3263,18 @@ func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTlssetting
 ApplianceManagementApiService tlsSettingsUpdate
 Update TLS settings.  Include a comma separated list of the TLS versions you want to enable, for both server and client.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementSystemTlssettingsPostOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementSystemTlssettingsPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementSystemTlssettingsPostOpts struct {
+type ApplianceManagementApiApplianceManagementSystemTlssettingsPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemTlssettingsPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementSystemTlssettingsPostOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemTlssettingsPost(ctx context.Context, localVarOptionals *ApplianceManagementApiApplianceManagementSystemTlssettingsPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3348,7 +3348,7 @@ Retrieve NSX Manager uptime information.  **Example response:** &#x60;&#x60;&#x6
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementSystemUptimeGet(ctx context.Context) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementSystemUptimeGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3414,7 +3414,7 @@ Generate tech support logs. The location response header contains the location o
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementTechsupportlogsComponentIDPost(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementTechsupportlogsComponentIDPost(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3481,7 +3481,7 @@ Download tech support logs  Parameters:  filename: Name of log file to download.
  * @param filename
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementTechsupportlogsFilenameGet(ctx context.Context, filename string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementTechsupportlogsFilenameGet(ctx context.Context, filename string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3548,7 +3548,7 @@ Once you have uploaded an upgrade bundle, you must retrieve information about th
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementUpgradeInformationComponentIDGet(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementUpgradeInformationComponentIDGet(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3613,18 +3613,18 @@ ApplianceManagementApiService upgradeStartExecute
 Start upgrade process.  Parameters:  componentID: Component ID
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param componentID
- * @param optional nil or *ApplianceManagementApiApi10ApplianceManagementUpgradeStartComponentIDPostOpts - Optional Parameters:
+ * @param optional nil or *ApplianceManagementApiApplianceManagementUpgradeStartComponentIDPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ApplianceManagementApiApi10ApplianceManagementUpgradeStartComponentIDPostOpts struct {
+type ApplianceManagementApiApplianceManagementUpgradeStartComponentIDPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ApplianceManagementApiService) Api10ApplianceManagementUpgradeStartComponentIDPost(ctx context.Context, componentID string, localVarOptionals *ApplianceManagementApiApi10ApplianceManagementUpgradeStartComponentIDPostOpts) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementUpgradeStartComponentIDPost(ctx context.Context, componentID string, localVarOptionals *ApplianceManagementApiApplianceManagementUpgradeStartComponentIDPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3700,7 +3700,7 @@ Query upgrade status.  Parameters:  componentID: Component ID.
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementUpgradeStatusComponentIDGet(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementUpgradeStatusComponentIDGet(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3767,7 +3767,7 @@ Upload upgrade bundle.  Parameters:  componentID: Component ID.
  * @param componentID
 
 */
-func (a *ApplianceManagementApiService) Api10ApplianceManagementUpgradeUploadbundleComponentIDPost(ctx context.Context, componentID string) (*http.Response, error) {
+func (a *ApplianceManagementApiService) ApplianceManagementUpgradeUploadbundleComponentIDPost(ctx context.Context, componentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

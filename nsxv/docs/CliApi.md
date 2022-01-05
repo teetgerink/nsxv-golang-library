@@ -4,10 +4,10 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api10NsxCliPost**](CliApi.md#Api10NsxCliPost) | **Post** /api/1.0/nsx/cli | nsxCliExecute
+[**NsxCliPost**](CliApi.md#NsxCliPost) | **Post** /api/1.0/nsx/cli | nsxCliExecute
 
-# **Api10NsxCliPost**
-> Api10NsxCliPost(ctx, optional)
+# **NsxCliPost**
+> NsxCliPost(ctx, optional)
 nsxCliExecute
 
 The central command-line interface (central CLI) commands are run from the NSX Manager command line, and retrieve information from the NSX Manager and other devices. These commands can also be executed in the API.  You can insert any valid Central CLI command as the **command** parameter. For a complete list of the Central CLI commands executable through the API, please see the Central CLI chapter of the *NSX Command Line Interface Reference*.   Parameters:  
@@ -17,10 +17,10 @@ The central command-line interface (central CLI) commands are run from the NSX M
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***CliApiApi10NsxCliPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***CliApiNsxCliPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a CliApiApi10NsxCliPostOpts struct
+Optional parameters are passed through a pointer to a CliApiNsxCliPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 

@@ -30,7 +30,7 @@ Retrieve the set of VMs in the exclusion list.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ExcludelistApiService) Api21AppExcludelistGet(ctx context.Context) (*http.Response, error) {
+func (a *ExcludelistApiService) AppExcludelistGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -96,7 +96,7 @@ Delete a vm from exclusion list.  Parameters:  memberID: vc-moref-id of a virtua
  * @param memberID
 
 */
-func (a *ExcludelistApiService) Api21AppExcludelistMemberIDDelete(ctx context.Context, memberID string) (*http.Response, error) {
+func (a *ExcludelistApiService) AppExcludelistMemberIDDelete(ctx context.Context, memberID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -163,7 +163,7 @@ Add a vm to the exclusion list.  Parameters:  memberID: vc-moref-id of a virtual
  * @param memberID
 
 */
-func (a *ExcludelistApiService) Api21AppExcludelistMemberIDPut(ctx context.Context, memberID string) (*http.Response, error) {
+func (a *ExcludelistApiService) AppExcludelistMemberIDPut(ctx context.Context, memberID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

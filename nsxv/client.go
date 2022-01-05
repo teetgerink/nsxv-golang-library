@@ -128,13 +128,13 @@ type APIClient struct {
 
 	AiApi *AiApiService
 
-	Class40EdgePublishApi *Class40EdgePublishApiService
+	EdgePublishApi *EdgePublishApiService
 
-	Class40EdgesApi *Class40EdgesApiService
+	EdgesApi *EdgesApiService
 
-	Class40FirewallApi *Class40FirewallApiService
+	FirewallApi *FirewallApiService
 
-	Class40SpoofguardApi *Class40SpoofguardApiService
+	SpoofguardApi *SpoofguardApiService
 }
 
 type service struct {
@@ -195,10 +195,10 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.ExcludelistApi = (*ExcludelistApiService)(&c.common)
 	c.FlowApi = (*FlowApiService)(&c.common)
 	c.AiApi = (*AiApiService)(&c.common)
-	c.Class40EdgePublishApi = (*Class40EdgePublishApiService)(&c.common)
-	c.Class40EdgesApi = (*Class40EdgesApiService)(&c.common)
-	c.Class40FirewallApi = (*Class40FirewallApiService)(&c.common)
-	c.Class40SpoofguardApi = (*Class40SpoofguardApiService)(&c.common)
+	c.EdgePublishApi = (*EdgePublishApiService)(&c.common)
+	c.EdgesApi = (*EdgesApiService)(&c.common)
+	c.FirewallApi = (*FirewallApiService)(&c.common)
+	c.SpoofguardApi = (*SpoofguardApiService)(&c.common)
 
 	return c
 }

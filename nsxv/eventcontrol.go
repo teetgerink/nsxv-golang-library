@@ -33,7 +33,7 @@ Retrieve per VM configuration for data collection.   Parameters:  vmID: MOID of 
  * @param vmID
 
 */
-func (a *EventcontrolApiService) Api10EventcontrolConfigVmVmIDGet(ctx context.Context, vmID string) (*http.Response, error) {
+func (a *EventcontrolApiService) EventcontrolConfigVmVmIDGet(ctx context.Context, vmID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -97,18 +97,18 @@ func (a *EventcontrolApiService) Api10EventcontrolConfigVmVmIDGet(ctx context.Co
 EventcontrolApiService dataCollectionKillSwitchToggle
 Turn data collection on or off at the global level.  In case of an emergency such as a network overload, you can turn off data collection at a global level (kill switch). This overrides all other data collection settings.  Set **value** to *enabled* or *disabled*.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EventcontrolApiApi10EventcontrolEventcontrolRootRequestPostOpts - Optional Parameters:
+ * @param optional nil or *EventcontrolApiEventcontrolEventcontrolRootRequestPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type EventcontrolApiApi10EventcontrolEventcontrolRootRequestPostOpts struct {
+type EventcontrolApiEventcontrolEventcontrolRootRequestPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *EventcontrolApiService) Api10EventcontrolEventcontrolRootRequestPost(ctx context.Context, localVarOptionals *EventcontrolApiApi10EventcontrolEventcontrolRootRequestPostOpts) (*http.Response, error) {
+func (a *EventcontrolApiService) EventcontrolEventcontrolRootRequestPost(ctx context.Context, localVarOptionals *EventcontrolApiEventcontrolEventcontrolRootRequestPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -181,18 +181,18 @@ EventcontrolApiService dataCollectionVMCreate
 Enable or disable data collection on a virtual machine  Set **value** to *enabled* or *disabled*.   Parameters:  vmID: MOID of the guest vm
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param vmID
- * @param optional nil or *EventcontrolApiApi10EventcontrolVmVmIDRequestPostOpts - Optional Parameters:
+ * @param optional nil or *EventcontrolApiEventcontrolVmVmIDRequestPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type EventcontrolApiApi10EventcontrolVmVmIDRequestPostOpts struct {
+type EventcontrolApiEventcontrolVmVmIDRequestPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *EventcontrolApiService) Api10EventcontrolVmVmIDRequestPost(ctx context.Context, vmID string, localVarOptionals *EventcontrolApiApi10EventcontrolVmVmIDRequestPostOpts) (*http.Response, error) {
+func (a *EventcontrolApiService) EventcontrolVmVmIDRequestPost(ctx context.Context, vmID string, localVarOptionals *EventcontrolApiEventcontrolVmVmIDRequestPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

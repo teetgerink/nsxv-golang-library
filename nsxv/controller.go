@@ -32,7 +32,7 @@ Retrieve cluster wide configuration information for controller.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ControllerApiService) Api20VdnControllerClusterGet(ctx context.Context) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerClusterGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -95,18 +95,18 @@ func (a *ControllerApiService) Api20VdnControllerClusterGet(ctx context.Context)
 ControllerApiService nsxControllerClusterUpdate
 Modify cluster wide configuration information for controller.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ControllerApiApi20VdnControllerClusterPutOpts - Optional Parameters:
+ * @param optional nil or *ControllerApiVdnControllerClusterPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ControllerApiApi20VdnControllerClusterPutOpts struct {
+type ControllerApiVdnControllerClusterPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ControllerApiService) Api20VdnControllerClusterPut(ctx context.Context, localVarOptionals *ControllerApiApi20VdnControllerClusterPutOpts) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerClusterPut(ctx context.Context, localVarOptionals *ControllerApiVdnControllerClusterPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -179,16 +179,16 @@ ControllerApiService nsxControllerDelete
 Delete the NSX controller.   Parameters:  controllerId: Specified controller ID.  To retrieve the controller IDs, log in to the vSphere Web Client. Navigate to Networking &amp; Security &gt; Installation &gt; Management, and view the **NSX Controller nodes** section. The controller ID is listed in the **Controller ID** or **Controller Node** column, depending on NSX version. An example controller ID is *controller-1*.   In a cross-vCenter NSX environment, retrieve the controller IDs from rows where the NSX Manager column contains the primary NSX Manager IP address.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param controllerId
- * @param optional nil or *ControllerApiApi20VdnControllerControllerIdDeleteOpts - Optional Parameters:
+ * @param optional nil or *ControllerApiVdnControllerControllerIdDeleteOpts - Optional Parameters:
      * @param "ForceRemoval" (optional.String) -
 
 */
 
-type ControllerApiApi20VdnControllerControllerIdDeleteOpts struct {
+type ControllerApiVdnControllerControllerIdDeleteOpts struct {
 	ForceRemoval optional.String
 }
 
-func (a *ControllerApiService) Api20VdnControllerControllerIdDelete(ctx context.Context, controllerId string, localVarOptionals *ControllerApiApi20VdnControllerControllerIdDeleteOpts) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdDelete(ctx context.Context, controllerId string, localVarOptionals *ControllerApiVdnControllerControllerIdDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -256,16 +256,16 @@ ControllerApiService nsxControllerRemediateAction
 If you power off or delete a controller from vCenter, NSX Manager detects the change in controller status. You can remediate the controller, which will power on a powered off controller, or remove the controller from the NSX Manager database if the controller is deleted.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:  controllerId: Specified controller ID.  To retrieve the controller IDs, log in to the vSphere Web Client. Navigate to Networking &amp; Security &gt; Installation &gt; Management, and view the **NSX Controller nodes** section. The controller ID is listed in the **Controller ID** or **Controller Node** column, depending on NSX version. An example controller ID is *controller-1*.   In a cross-vCenter NSX environment, retrieve the controller IDs from rows where the NSX Manager column contains the primary NSX Manager IP address.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param controllerId
- * @param optional nil or *ControllerApiApi20VdnControllerControllerIdPostOpts - Optional Parameters:
+ * @param optional nil or *ControllerApiVdnControllerControllerIdPostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type ControllerApiApi20VdnControllerControllerIdPostOpts struct {
+type ControllerApiVdnControllerControllerIdPostOpts struct {
 	Action optional.String
 }
 
-func (a *ControllerApiService) Api20VdnControllerControllerIdPost(ctx context.Context, controllerId string, localVarOptionals *ControllerApiApi20VdnControllerControllerIdPostOpts) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdPost(ctx context.Context, controllerId string, localVarOptionals *ControllerApiVdnControllerControllerIdPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -335,7 +335,7 @@ Take a snapshot of the control cluster from the specified controller node.   Par
  * @param controllerId
 
 */
-func (a *ControllerApiService) Api20VdnControllerControllerIdSnapshotGet(ctx context.Context, controllerId string) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdSnapshotGet(ctx context.Context, controllerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -402,7 +402,7 @@ Deletes syslog exporter on the specified controller node.   Parameters:
  * @param controllerId
 
 */
-func (a *ControllerApiService) Api20VdnControllerControllerIdSyslogDelete(ctx context.Context, controllerId string) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdSyslogDelete(ctx context.Context, controllerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -469,7 +469,7 @@ Retrieve details about the syslog exporter on the controller.   Parameters:
  * @param controllerId
 
 */
-func (a *ControllerApiService) Api20VdnControllerControllerIdSyslogGet(ctx context.Context, controllerId string) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdSyslogGet(ctx context.Context, controllerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -534,18 +534,18 @@ ControllerApiService nsxControllerSyslogCreate
 Add controller syslog exporter on the controller.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param controllerId
- * @param optional nil or *ControllerApiApi20VdnControllerControllerIdSyslogPostOpts - Optional Parameters:
+ * @param optional nil or *ControllerApiVdnControllerControllerIdSyslogPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ControllerApiApi20VdnControllerControllerIdSyslogPostOpts struct {
+type ControllerApiVdnControllerControllerIdSyslogPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ControllerApiService) Api20VdnControllerControllerIdSyslogPost(ctx context.Context, controllerId string, localVarOptionals *ControllerApiApi20VdnControllerControllerIdSyslogPostOpts) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdSyslogPost(ctx context.Context, controllerId string, localVarOptionals *ControllerApiVdnControllerControllerIdSyslogPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -621,7 +621,7 @@ Retrieve NSX Controller system statistics.  **Method history:**  Release | Modif
  * @param controllerId
 
 */
-func (a *ControllerApiService) Api20VdnControllerControllerIdSystemStatsGet(ctx context.Context, controllerId string) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdSystemStatsGet(ctx context.Context, controllerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -688,7 +688,7 @@ Retrieve controller logs. Response content type is application/octet-stream and 
  * @param controllerId
 
 */
-func (a *ControllerApiService) Api20VdnControllerControllerIdTechsupportlogsGet(ctx context.Context, controllerId string) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerControllerIdTechsupportlogsGet(ctx context.Context, controllerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -752,18 +752,18 @@ func (a *ControllerApiService) Api20VdnControllerControllerIdTechsupportlogsGet(
 ControllerApiService nsxControllerPasswordUpdate
 Change the NSX controller password.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ControllerApiApi20VdnControllerCredentialPutOpts - Optional Parameters:
+ * @param optional nil or *ControllerApiVdnControllerCredentialPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ControllerApiApi20VdnControllerCredentialPutOpts struct {
+type ControllerApiVdnControllerCredentialPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ControllerApiService) Api20VdnControllerCredentialPut(ctx context.Context, localVarOptionals *ControllerApiApi20VdnControllerCredentialPutOpts) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerCredentialPut(ctx context.Context, localVarOptionals *ControllerApiVdnControllerCredentialPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -837,7 +837,7 @@ Retrieves details and runtime status for all controllers.  Runtime status can be
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ControllerApiService) Api20VdnControllerGet(ctx context.Context) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -900,18 +900,18 @@ func (a *ControllerApiService) Api20VdnControllerGet(ctx context.Context) (*http
 ControllerApiService nsxControllerCreate
 Adds a new NSX controller on the specified given cluster. The *hostId* parameter is optional. The *resourcePoolId* can be either the *clusterId* or *resourcePoolId*.  The IP address of the controller node will be allocated from the specified IP pool. The *deployType* property determines the controller node memory size and can be small, medium, or large. However, different controller deployment types are not currently supported because the OVF overrides it and different OVF types require changes in the manager build scripts. Despite not being supported, an arbitrary *deployType* size must still be specified or an error will be returned. Request without body to upgrade controller cluster.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ControllerApiApi20VdnControllerPostOpts - Optional Parameters:
+ * @param optional nil or *ControllerApiVdnControllerPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type ControllerApiApi20VdnControllerPostOpts struct {
+type ControllerApiVdnControllerPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *ControllerApiService) Api20VdnControllerPost(ctx context.Context, localVarOptionals *ControllerApiApi20VdnControllerPostOpts) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerPost(ctx context.Context, localVarOptionals *ControllerApiVdnControllerPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -986,7 +986,7 @@ Retrieves status of controller creation or removal. The progress gives a percent
  * @param jobId
 
 */
-func (a *ControllerApiService) Api20VdnControllerProgressJobIdGet(ctx context.Context, jobId string) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerProgressJobIdGet(ctx context.Context, jobId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1052,7 +1052,7 @@ Retrieve controller upgrade availability.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *ControllerApiService) Api20VdnControllerUpgradeAvailableGet(ctx context.Context) (*http.Response, error) {
+func (a *ControllerApiService) VdnControllerUpgradeAvailableGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

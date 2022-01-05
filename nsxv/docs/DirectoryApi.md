@@ -4,20 +4,20 @@ All URIs are relative to *https://{{nsxmanager}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Api10DirectoryDeleteDomainIDDelete**](DirectoryApi.md#Api10DirectoryDeleteDomainIDDelete) | **Delete** /api/1.0/directory/deleteDomain/{ID} | domainDeleteDelete
-[**Api10DirectoryDeleteEventLogServerServerIDDelete**](DirectoryApi.md#Api10DirectoryDeleteEventLogServerServerIDDelete) | **Delete** /api/1.0/directory/deleteEventLogServer/{serverID} | eLogServerDeleteDelete
-[**Api10DirectoryDeleteLdapServerServerIDDelete**](DirectoryApi.md#Api10DirectoryDeleteLdapServerServerIDDelete) | **Delete** /api/1.0/directory/deleteLdapServer/{serverID} | ldapServerDeleteDelete
-[**Api10DirectoryDeltaSyncDomainIDPut**](DirectoryApi.md#Api10DirectoryDeltaSyncDomainIDPut) | **Put** /api/1.0/directory/deltaSync/{domainID} | ldapServerDeltaSyncExecute
-[**Api10DirectoryFullSyncDomainIDPut**](DirectoryApi.md#Api10DirectoryFullSyncDomainIDPut) | **Put** /api/1.0/directory/fullSync/{domainID} | ldapServerSyncExecute
-[**Api10DirectoryListDomainsGet**](DirectoryApi.md#Api10DirectoryListDomainsGet) | **Get** /api/1.0/directory/listDomains | domainListRead
-[**Api10DirectoryListEventLogServersForDomainDomainIDGet**](DirectoryApi.md#Api10DirectoryListEventLogServersForDomainDomainIDGet) | **Get** /api/1.0/directory/listEventLogServersForDomain/{domainID} | eLogServerDomainReadRead
-[**Api10DirectoryListLdapServersForDomainDomainIDGet**](DirectoryApi.md#Api10DirectoryListLdapServersForDomainDomainIDGet) | **Get** /api/1.0/directory/listLdapServersForDomain/{domainID} | ldapServerDomainRead
-[**Api10DirectoryUpdateDomainPost**](DirectoryApi.md#Api10DirectoryUpdateDomainPost) | **Post** /api/1.0/directory/updateDomain | domainCreate
-[**Api10DirectoryUpdateEventLogServerPost**](DirectoryApi.md#Api10DirectoryUpdateEventLogServerPost) | **Post** /api/1.0/directory/updateEventLogServer | eLogServerCreateCreate
-[**Api10DirectoryUpdateLdapServerPost**](DirectoryApi.md#Api10DirectoryUpdateLdapServerPost) | **Post** /api/1.0/directory/updateLdapServer | ldapServerCreateCreate
+[**DirectoryDeleteDomainIDDelete**](DirectoryApi.md#DirectoryDeleteDomainIDDelete) | **Delete** /api/1.0/directory/deleteDomain/{ID} | domainDeleteDelete
+[**DirectoryDeleteEventLogServerServerIDDelete**](DirectoryApi.md#DirectoryDeleteEventLogServerServerIDDelete) | **Delete** /api/1.0/directory/deleteEventLogServer/{serverID} | eLogServerDeleteDelete
+[**DirectoryDeleteLdapServerServerIDDelete**](DirectoryApi.md#DirectoryDeleteLdapServerServerIDDelete) | **Delete** /api/1.0/directory/deleteLdapServer/{serverID} | ldapServerDeleteDelete
+[**DirectoryDeltaSyncDomainIDPut**](DirectoryApi.md#DirectoryDeltaSyncDomainIDPut) | **Put** /api/1.0/directory/deltaSync/{domainID} | ldapServerDeltaSyncExecute
+[**DirectoryFullSyncDomainIDPut**](DirectoryApi.md#DirectoryFullSyncDomainIDPut) | **Put** /api/1.0/directory/fullSync/{domainID} | ldapServerSyncExecute
+[**DirectoryListDomainsGet**](DirectoryApi.md#DirectoryListDomainsGet) | **Get** /api/1.0/directory/listDomains | domainListRead
+[**DirectoryListEventLogServersForDomainDomainIDGet**](DirectoryApi.md#DirectoryListEventLogServersForDomainDomainIDGet) | **Get** /api/1.0/directory/listEventLogServersForDomain/{domainID} | eLogServerDomainReadRead
+[**DirectoryListLdapServersForDomainDomainIDGet**](DirectoryApi.md#DirectoryListLdapServersForDomainDomainIDGet) | **Get** /api/1.0/directory/listLdapServersForDomain/{domainID} | ldapServerDomainRead
+[**DirectoryUpdateDomainPost**](DirectoryApi.md#DirectoryUpdateDomainPost) | **Post** /api/1.0/directory/updateDomain | domainCreate
+[**DirectoryUpdateEventLogServerPost**](DirectoryApi.md#DirectoryUpdateEventLogServerPost) | **Post** /api/1.0/directory/updateEventLogServer | eLogServerCreateCreate
+[**DirectoryUpdateLdapServerPost**](DirectoryApi.md#DirectoryUpdateLdapServerPost) | **Post** /api/1.0/directory/updateLdapServer | ldapServerCreateCreate
 
-# **Api10DirectoryDeleteDomainIDDelete**
-> Api10DirectoryDeleteDomainIDDelete(ctx, iD)
+# **DirectoryDeleteDomainIDDelete**
+> DirectoryDeleteDomainIDDelete(ctx, iD)
 domainDeleteDelete
 
 Delete domain.  Parameters:  ID: Domain ID.  
@@ -44,8 +44,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryDeleteEventLogServerServerIDDelete**
-> Api10DirectoryDeleteEventLogServerServerIDDelete(ctx, serverID)
+# **DirectoryDeleteEventLogServerServerIDDelete**
+> DirectoryDeleteEventLogServerServerIDDelete(ctx, serverID)
 eLogServerDeleteDelete
 
 Delete EventLog server.  Parameters:  serverID: Specified EventLog server ID.  
@@ -72,8 +72,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryDeleteLdapServerServerIDDelete**
-> Api10DirectoryDeleteLdapServerServerIDDelete(ctx, serverID)
+# **DirectoryDeleteLdapServerServerIDDelete**
+> DirectoryDeleteLdapServerServerIDDelete(ctx, serverID)
 ldapServerDeleteDelete
 
 Delete LDAP server.  Parameters:  serverID: Specified LDAP server.  
@@ -100,8 +100,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryDeltaSyncDomainIDPut**
-> Api10DirectoryDeltaSyncDomainIDPut(ctx, domainID)
+# **DirectoryDeltaSyncDomainIDPut**
+> DirectoryDeltaSyncDomainIDPut(ctx, domainID)
 ldapServerDeltaSyncExecute
 
 Start LDAP delta sync.  Parameters:  domainID: Specified domain.  
@@ -128,8 +128,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryFullSyncDomainIDPut**
-> Api10DirectoryFullSyncDomainIDPut(ctx, domainID)
+# **DirectoryFullSyncDomainIDPut**
+> DirectoryFullSyncDomainIDPut(ctx, domainID)
 ldapServerSyncExecute
 
 Start LDAP full sync.  Parameters:  domainID: Specified domain.  
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryListDomainsGet**
-> Api10DirectoryListDomainsGet(ctx, )
+# **DirectoryListDomainsGet**
+> DirectoryListDomainsGet(ctx, )
 domainListRead
 
 Retrieve all agent discovered (or configured) LDAP domains.  Parameters:  
@@ -180,8 +180,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryListEventLogServersForDomainDomainIDGet**
-> Api10DirectoryListEventLogServersForDomainDomainIDGet(ctx, domainID)
+# **DirectoryListEventLogServersForDomainDomainIDGet**
+> DirectoryListEventLogServersForDomainDomainIDGet(ctx, domainID)
 eLogServerDomainReadRead
 
 Query EventLog servers for a domain.  Parameters:  domainID: Specified domain.  
@@ -208,8 +208,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryListLdapServersForDomainDomainIDGet**
-> Api10DirectoryListLdapServersForDomainDomainIDGet(ctx, domainID)
+# **DirectoryListLdapServersForDomainDomainIDGet**
+> DirectoryListLdapServersForDomainDomainIDGet(ctx, domainID)
 ldapServerDomainRead
 
 Query LDAP servers for a domain.  Parameters:  domainID: Specified domain.  
@@ -236,8 +236,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryUpdateDomainPost**
-> Api10DirectoryUpdateDomainPost(ctx, optional)
+# **DirectoryUpdateDomainPost**
+> DirectoryUpdateDomainPost(ctx, optional)
 domainCreate
 
 Register or update a domain with NSX Manager  Parameters:  
@@ -247,10 +247,10 @@ Register or update a domain with NSX Manager  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***DirectoryApiApi10DirectoryUpdateDomainPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***DirectoryApiDirectoryUpdateDomainPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a DirectoryApiApi10DirectoryUpdateDomainPostOpts struct
+Optional parameters are passed through a pointer to a DirectoryApiDirectoryUpdateDomainPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -271,8 +271,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryUpdateEventLogServerPost**
-> Api10DirectoryUpdateEventLogServerPost(ctx, optional)
+# **DirectoryUpdateEventLogServerPost**
+> DirectoryUpdateEventLogServerPost(ctx, optional)
 eLogServerCreateCreate
 
 Create EventLog server.  Parameters:  
@@ -282,10 +282,10 @@ Create EventLog server.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***DirectoryApiApi10DirectoryUpdateEventLogServerPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***DirectoryApiDirectoryUpdateEventLogServerPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a DirectoryApiApi10DirectoryUpdateEventLogServerPostOpts struct
+Optional parameters are passed through a pointer to a DirectoryApiDirectoryUpdateEventLogServerPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 
@@ -306,8 +306,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Api10DirectoryUpdateLdapServerPost**
-> Api10DirectoryUpdateLdapServerPost(ctx, optional)
+# **DirectoryUpdateLdapServerPost**
+> DirectoryUpdateLdapServerPost(ctx, optional)
 ldapServerCreateCreate
 
 Create LDAP server.  Parameters:  
@@ -317,10 +317,10 @@ Create LDAP server.  Parameters:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***DirectoryApiApi10DirectoryUpdateLdapServerPostOpts** | optional parameters | nil if no parameters
+ **optional** | ***DirectoryApiDirectoryUpdateLdapServerPostOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
-Optional parameters are passed through a pointer to a DirectoryApiApi10DirectoryUpdateLdapServerPostOpts struct
+Optional parameters are passed through a pointer to a DirectoryApiDirectoryUpdateLdapServerPostOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**optional.Interface of interface{}**](interface{}.md)|  | 

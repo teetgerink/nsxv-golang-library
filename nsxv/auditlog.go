@@ -29,18 +29,18 @@ type AuditlogApiService service
 AuditlogApiService auditLogsRead
 Get NSX Manager audit logs  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *AuditlogApiApi20AuditlogGetOpts - Optional Parameters:
+ * @param optional nil or *AuditlogApiAuditlogGetOpts - Optional Parameters:
      * @param "StartIndex" (optional.String) -
      * @param "PageSize" (optional.String) -
 
 */
 
-type AuditlogApiApi20AuditlogGetOpts struct {
+type AuditlogApiAuditlogGetOpts struct {
 	StartIndex optional.String
 	PageSize   optional.String
 }
 
-func (a *AuditlogApiService) Api20AuditlogGet(ctx context.Context, localVarOptionals *AuditlogApiApi20AuditlogGetOpts) (*http.Response, error) {
+func (a *AuditlogApiService) AuditlogGet(ctx context.Context, localVarOptionals *AuditlogApiAuditlogGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}

@@ -32,7 +32,7 @@ Delete secondary NSX manager configuration.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersDelete(ctx context.Context) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationNsxmanagersDelete(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -97,7 +97,7 @@ If run on a primary NSX Manager, it will list secondary NSX Managers configured 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersGet(ctx context.Context) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationNsxmanagersGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -161,16 +161,16 @@ UniversalsyncApiService universalSyncConfigurationManagersDelete
 Delete the specified secondary NSX Manager.  Parameters:  nsxManagerID: NSX Manager UUID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param nsxManagerID
- * @param optional nil or *UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersNsxManagerIDDeleteOpts - Optional Parameters:
+ * @param optional nil or *UniversalsyncApiUniversalsyncConfigurationNsxmanagersNsxManagerIDDeleteOpts - Optional Parameters:
      * @param "ForceRemoval" (optional.String) -
 
 */
 
-type UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersNsxManagerIDDeleteOpts struct {
+type UniversalsyncApiUniversalsyncConfigurationNsxmanagersNsxManagerIDDeleteOpts struct {
 	ForceRemoval optional.String
 }
 
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersNsxManagerIDDelete(ctx context.Context, nsxManagerID string, localVarOptionals *UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersNsxManagerIDDeleteOpts) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationNsxmanagersNsxManagerIDDelete(ctx context.Context, nsxManagerID string, localVarOptionals *UniversalsyncApiUniversalsyncConfigurationNsxmanagersNsxManagerIDDeleteOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -240,7 +240,7 @@ Retrieve information about the specified secondary NSX Manager.   Parameters:  n
  * @param nsxManagerID
 
 */
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersNsxManagerIDGet(ctx context.Context, nsxManagerID string) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationNsxmanagersNsxManagerIDGet(ctx context.Context, nsxManagerID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -305,18 +305,18 @@ UniversalsyncApiService universalSyncConfigurationManagersUpdate
 Update the the specified secondary NSX manager IP or thumbprint in the universal sync configuration.   Parameters:  nsxManagerID: NSX Manager UUID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param nsxManagerID
- * @param optional nil or *UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersNsxManagerIDPutOpts - Optional Parameters:
+ * @param optional nil or *UniversalsyncApiUniversalsyncConfigurationNsxmanagersNsxManagerIDPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersNsxManagerIDPutOpts struct {
+type UniversalsyncApiUniversalsyncConfigurationNsxmanagersNsxManagerIDPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersNsxManagerIDPut(ctx context.Context, nsxManagerID string, localVarOptionals *UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersNsxManagerIDPutOpts) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationNsxmanagersNsxManagerIDPut(ctx context.Context, nsxManagerID string, localVarOptionals *UniversalsyncApiUniversalsyncConfigurationNsxmanagersNsxManagerIDPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -389,18 +389,18 @@ func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersNsxM
 UniversalsyncApiService universalSyncConfigurationNsxManagersCreate
 Add a secondary NSX manager.  Run this method on the primary NSX Manager, providing details of the secondary NSX Manager.  Retrieve the certificate thumbprint of the secondary NSX Manager using the &#x60;GET /api/1.0/appliance-management/certificatemanager/certificates/nsx&#x60; method. The **sha1Hash** parameter contains the thumbprint.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersPostOpts - Optional Parameters:
+ * @param optional nil or *UniversalsyncApiUniversalsyncConfigurationNsxmanagersPostOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersPostOpts struct {
+type UniversalsyncApiUniversalsyncConfigurationNsxmanagersPostOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationNsxmanagersPost(ctx context.Context, localVarOptionals *UniversalsyncApiApi20UniversalsyncConfigurationNsxmanagersPostOpts) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationNsxmanagersPost(ctx context.Context, localVarOptionals *UniversalsyncApiUniversalsyncConfigurationNsxmanagersPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -474,7 +474,7 @@ Retrieve the universal sync configuration role.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationRoleGet(ctx context.Context) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationRoleGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -537,16 +537,16 @@ func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationRoleGet(ctx con
 UniversalsyncApiService universalSyncConfigurationRoleSet
 Set the universal sync configuration role.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *UniversalsyncApiApi20UniversalsyncConfigurationRolePostOpts - Optional Parameters:
+ * @param optional nil or *UniversalsyncApiUniversalsyncConfigurationRolePostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type UniversalsyncApiApi20UniversalsyncConfigurationRolePostOpts struct {
+type UniversalsyncApiUniversalsyncConfigurationRolePostOpts struct {
 	Action optional.String
 }
 
-func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationRolePost(ctx context.Context, localVarOptionals *UniversalsyncApiApi20UniversalsyncConfigurationRolePostOpts) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncConfigurationRolePost(ctx context.Context, localVarOptionals *UniversalsyncApiUniversalsyncConfigurationRolePostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -612,18 +612,18 @@ func (a *UniversalsyncApiService) Api20UniversalsyncConfigurationRolePost(ctx co
 UniversalsyncApiService universalSyncEntityStatusRead
 Retrieve the status of a universal sync entity.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *UniversalsyncApiApi20UniversalsyncEntitystatusGetOpts - Optional Parameters:
+ * @param optional nil or *UniversalsyncApiUniversalsyncEntitystatusGetOpts - Optional Parameters:
      * @param "ObjectType" (optional.String) -
      * @param "ObjectId" (optional.String) -
 
 */
 
-type UniversalsyncApiApi20UniversalsyncEntitystatusGetOpts struct {
+type UniversalsyncApiUniversalsyncEntitystatusGetOpts struct {
 	ObjectType optional.String
 	ObjectId   optional.String
 }
 
-func (a *UniversalsyncApiService) Api20UniversalsyncEntitystatusGet(ctx context.Context, localVarOptionals *UniversalsyncApiApi20UniversalsyncEntitystatusGetOpts) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncEntitystatusGet(ctx context.Context, localVarOptionals *UniversalsyncApiUniversalsyncEntitystatusGetOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -694,7 +694,7 @@ Retrieve the universal sync status.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *UniversalsyncApiService) Api20UniversalsyncStatusGet(ctx context.Context) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncStatusGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -757,16 +757,16 @@ func (a *UniversalsyncApiService) Api20UniversalsyncStatusGet(ctx context.Contex
 UniversalsyncApiService universalSyncSyncAction
 Sync all objects on the NSX Manager.  Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *UniversalsyncApiApi20UniversalsyncSyncPostOpts - Optional Parameters:
+ * @param optional nil or *UniversalsyncApiUniversalsyncSyncPostOpts - Optional Parameters:
      * @param "Action" (optional.String) -
 
 */
 
-type UniversalsyncApiApi20UniversalsyncSyncPostOpts struct {
+type UniversalsyncApiUniversalsyncSyncPostOpts struct {
 	Action optional.String
 }
 
-func (a *UniversalsyncApiService) Api20UniversalsyncSyncPost(ctx context.Context, localVarOptionals *UniversalsyncApiApi20UniversalsyncSyncPostOpts) (*http.Response, error) {
+func (a *UniversalsyncApiService) UniversalsyncSyncPost(ctx context.Context, localVarOptionals *UniversalsyncApiUniversalsyncSyncPostOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

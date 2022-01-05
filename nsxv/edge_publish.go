@@ -23,15 +23,15 @@ var (
 	_ context.Context
 )
 
-type Class40EdgePublishApiService service
+type EdgePublishApiService service
 
 /*
-Class40EdgePublishApiService nsxEdgePublishTuningRead
+EdgePublishApiService nsxEdgePublishTuningRead
 Retrieve the NSX Edge tuning configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *Class40EdgePublishApiService) Api40EdgePublishTuningConfigurationGet(ctx context.Context) (*http.Response, error) {
+func (a *EdgePublishApiService) EdgePublishTuningConfigurationGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -91,21 +91,21 @@ func (a *Class40EdgePublishApiService) Api40EdgePublishTuningConfigurationGet(ct
 }
 
 /*
-Class40EdgePublishApiService nsxEdgePublishTuningUpdate
+EdgePublishApiService nsxEdgePublishTuningUpdate
 Update the NSX Edge tuning configuration.  **Method history:**  Release | Modification --------|------------- 6.2.3 | Method introduced.   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *Class40EdgePublishApiApi40EdgePublishTuningConfigurationPutOpts - Optional Parameters:
+ * @param optional nil or *EdgePublishApiEdgePublishTuningConfigurationPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type Class40EdgePublishApiApi40EdgePublishTuningConfigurationPutOpts struct {
+type EdgePublishApiEdgePublishTuningConfigurationPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *Class40EdgePublishApiService) Api40EdgePublishTuningConfigurationPut(ctx context.Context, localVarOptionals *Class40EdgePublishApiApi40EdgePublishTuningConfigurationPutOpts) (*http.Response, error) {
+func (a *EdgePublishApiService) EdgePublishTuningConfigurationPut(ctx context.Context, localVarOptionals *EdgePublishApiEdgePublishTuningConfigurationPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

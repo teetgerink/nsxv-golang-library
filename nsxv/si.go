@@ -33,7 +33,7 @@ Retrieve agent (host components and appliances) details.   Parameters:  agentID:
  * @param agentID
 
 */
-func (a *SiApiService) Api20SiAgentAgentIDGet(ctx context.Context, agentID string) (*http.Response, error) {
+func (a *SiApiService) SiAgentAgentIDGet(ctx context.Context, agentID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -100,7 +100,7 @@ Retrieve all agents for the specified deployment.  Parameters:  deploymentunitID
  * @param deploymentunitID
 
 */
-func (a *SiApiService) Api20SiDeploymentDeploymentunitIDAgentsGet(ctx context.Context, deploymentunitID string) (*http.Response, error) {
+func (a *SiApiService) SiDeploymentDeploymentunitIDAgentsGet(ctx context.Context, deploymentunitID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -166,7 +166,7 @@ Retrieve conflicting deployment units and EAM agencies, if any, and the allowed 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 */
-func (a *SiApiService) Api20SiFabricSyncConflictsGet(ctx context.Context) (*http.Response, error) {
+func (a *SiApiService) SiFabricSyncConflictsGet(ctx context.Context) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -229,18 +229,18 @@ func (a *SiApiService) Api20SiFabricSyncConflictsGet(ctx context.Context) (*http
 SiApiService agentConflictsUpdate
 Create deployment units for conflicting EAM Agencies, delete conflicting EAM agencies, or delete deployment units for conflicting EAM agencies.  ### Create deployment units for conflicting EAM agencies  &#x60;&#x60;&#x60; &lt;conflictResolverInfo&gt;   &lt;agencyAction&gt;RESTORE&lt;/agencyAction&gt; &lt;/conflictResolverInfo&gt; &#x60;&#x60;&#x60;  ### Delete conflicting EAM agencies  &#x60;&#x60;&#x60; &lt;conflictResolverInfo&gt;   &lt;agencyAction&gt;DELETE&lt;/agencyAction&gt; &lt;/conflictResolverInfo&gt; &#x60;&#x60;&#x60;  ### Delete deployment units for conflicting EAM agencies  &#x60;&#x60;&#x60; &lt;conflictResolverInfo&gt;   &lt;deploymentUnitAction&gt;DELETE&lt;/deploymentUnitAction&gt; &lt;/conflictResolverInfo&gt; &#x60;&#x60;&#x60;   Parameters:
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SiApiApi20SiFabricSyncConflictsPutOpts - Optional Parameters:
+ * @param optional nil or *SiApiSiFabricSyncConflictsPutOpts - Optional Parameters:
      * @param "Body" (optional.Interface of interface{}) -
      * @param "ContentType" (optional.String) -
 
 */
 
-type SiApiApi20SiFabricSyncConflictsPutOpts struct {
+type SiApiSiFabricSyncConflictsPutOpts struct {
 	Body        optional.Interface
 	ContentType optional.String
 }
 
-func (a *SiApiService) Api20SiFabricSyncConflictsPut(ctx context.Context, localVarOptionals *SiApiApi20SiFabricSyncConflictsPutOpts) (*http.Response, error) {
+func (a *SiApiService) SiFabricSyncConflictsPut(ctx context.Context, localVarOptionals *SiApiSiFabricSyncConflictsPutOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -315,7 +315,7 @@ Retrieves all agents on the specified host. The response body contains agent IDs
  * @param hostID
 
 */
-func (a *SiApiService) Api20SiHostHostIDAgentsGet(ctx context.Context, hostID string) (*http.Response, error) {
+func (a *SiApiService) SiHostHostIDAgentsGet(ctx context.Context, hostID string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
