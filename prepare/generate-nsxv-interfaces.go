@@ -12,6 +12,9 @@ import (
 //PACKAGENAME name for the package where the generated interfaces are located
 const PACKAGENAME = "nsxv"
 
+// REFERENCENAME is the name that is generated from the API Client
+const REFERENCENAME = "*" + PACKAGENAME + "."
+
 //WORKINGDIR the working directory is based on the package name
 const WORKINGDIR = "./" + PACKAGENAME
 
@@ -37,7 +40,7 @@ func main() {
 	// generate Package name
 	generateLines(iFile, fmt.Sprintf("package %v\n\n ", PACKAGENAME))
 	// generate imports
-	generateLines(iFile, fmt.Sprintf("import (\n\"context\"\n,\"net/http\"\n)\n\n"))
+	generateLines(iFile, fmt.Sprintf("import (\n   \"context\"\n   \"net/http\"\n)\n\n"))
 
 	generateLines(iFile, fmt.Sprintf("// Compile-time interface checks\n"))
 	generateLines(iFile, fmt.Sprintf("var _ IApiClient = &ApiClient{}\n\n"))
@@ -87,8 +90,8 @@ func main() {
 
 			for argIndex := 1; argIndex < method.Type.NumIn(); argIndex++ {
 				arg := method.Type.In(argIndex)
-
-				inArgs = append(inArgs, arg.String())
+				strArg := strings.Replace(arg.String(), REFERENCENAME, "*", -1)
+				inArgs = append(inArgs, strArg)
 			}
 			generateLines(iFile, fmt.Sprintf("%v)", strings.Join(inArgs, ", ")))
 
