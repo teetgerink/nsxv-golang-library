@@ -39,66 +39,66 @@ type EndpointsecurityApiEndpointsecurityActivationGetOpts struct {
 	HostId optional.String
 }
 
-func (a *EndpointsecurityApiService) EndpointsecurityActivationGet(ctx context.Context, localVarOptionals *EndpointsecurityApiEndpointsecurityActivationGetOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationGet(ctx context.Context, lOptionals *EndpointsecurityApiEndpointsecurityActivationGetOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation"
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.HostId.IsSet() {
-		localVarQueryParams.Add("hostId", parameterToString(localVarOptionals.HostId.Value(), ""))
+	if lOptionals != nil && lOptionals.HostId.IsSet() {
+		lQueryParams.Add("hostId", parameterToString(lOptionals.HostId.Value(), ""))
 	}
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -112,64 +112,64 @@ Deactivate an endpoint protection solution on a host.  Parameters:  moid: Manage
 */
 func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudeMoidDelete(ctx context.Context, vendorID string, altitude string, moid string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{altitude}/{moid}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"moid"+"}", fmt.Sprintf("%v", moid), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{altitude}/{moid}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath = strings.Replace(lPath, "{"+"moid"+"}", fmt.Sprintf("%v", moid), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -183,64 +183,64 @@ Retrieve the endpoint protection solution activation status, either true (activa
 */
 func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudeMoidGet(ctx context.Context, vendorID string, altitude string, moid string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{altitude}/{moid}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"moid"+"}", fmt.Sprintf("%v", moid), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{altitude}/{moid}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath = strings.Replace(lPath, "{"+"moid"+"}", fmt.Sprintf("%v", moid), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -260,74 +260,74 @@ type EndpointsecurityApiEndpointsecurityActivationVendorIDAltitudePostOpts struc
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudePost(ctx context.Context, vendorID string, altitude string, localVarOptionals *EndpointsecurityApiEndpointsecurityActivationVendorIDAltitudePostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDAltitudePost(ctx context.Context, vendorID string, altitude string, lOptionals *EndpointsecurityApiEndpointsecurityActivationVendorIDAltitudePostOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Post")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{altitude}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{altitude}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -340,63 +340,63 @@ Retrieve a list of activated security VMs for an endpoint protection solution.  
 */
 func (a *EndpointsecurityApiService) EndpointsecurityActivationVendorIDSolutionIDGet(ctx context.Context, vendorID string, solutionID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{solutionID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"solutionID"+"}", fmt.Sprintf("%v", solutionID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/activation/{vendorID}/{solutionID}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"solutionID"+"}", fmt.Sprintf("%v", solutionID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -414,72 +414,72 @@ type EndpointsecurityApiEndpointsecurityRegistrationPostOpts struct {
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) EndpointsecurityRegistrationPost(ctx context.Context, localVarOptionals *EndpointsecurityApiEndpointsecurityRegistrationPostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationPost(ctx context.Context, lOptionals *EndpointsecurityApiEndpointsecurityRegistrationPostOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Post")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration"
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -492,63 +492,63 @@ Unregister an endpoint protection solution.  Parameters:  altitude: VMware-assig
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeDelete(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -561,63 +561,63 @@ Get registration information for an endpoint protection solution.  Parameters:  
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeGet(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -630,63 +630,63 @@ Unset the IP address and port for an endpoint protection solution.   Parameters:
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationDelete(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -699,63 +699,63 @@ Get the IP address and port on the vNIC host for an endpoint protection solution
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationGet(ctx context.Context, vendorID string, altitude string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -775,74 +775,74 @@ type EndpointsecurityApiEndpointsecurityRegistrationVendorIDAltitudeLocationPost
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationPost(ctx context.Context, vendorID string, altitude string, localVarOptionals *EndpointsecurityApiEndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDAltitudeLocationPost(ctx context.Context, vendorID string, altitude string, lOptionals *EndpointsecurityApiEndpointsecurityRegistrationVendorIDAltitudeLocationPostOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Post")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath = strings.Replace(lPath, "{"+"altitude"+"}", fmt.Sprintf("%v", altitude), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -854,62 +854,62 @@ Unregister a Guest Introspection vendor.  Parameters:  vendorID: VMware-assigned
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDDelete(ctx context.Context, vendorID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -921,62 +921,62 @@ Retrieve registration information for a Guest Introspection vendor.  Parameters:
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDGet(ctx context.Context, vendorID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -995,73 +995,73 @@ type EndpointsecurityApiEndpointsecurityRegistrationVendorIDPostOpts struct {
 	ContentType optional.String
 }
 
-func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDPost(ctx context.Context, vendorID string, localVarOptionals *EndpointsecurityApiEndpointsecurityRegistrationVendorIDPostOpts) (*http.Response, error) {
+func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDPost(ctx context.Context, vendorID string, lOptionals *EndpointsecurityApiEndpointsecurityRegistrationVendorIDPostOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Post")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -1073,62 +1073,62 @@ Get registration information for all endpoint protection solutions for a Guest I
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorIDSolutionsGet(ctx context.Context, vendorID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/solutions"
-	localVarPath = strings.Replace(localVarPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/{vendorID}/solutions"
+	lPath = strings.Replace(lPath, "{"+"vendorID"+"}", fmt.Sprintf("%v", vendorID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -1139,59 +1139,59 @@ Retrieve the list of all registered Guest Introspection vendors.  Parameters:
 */
 func (a *EndpointsecurityApiService) EndpointsecurityRegistrationVendorsGet(ctx context.Context) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/vendors"
+	lPath := a.client.cfg.BasePath + "/api/2.0/endpointsecurity/registration/vendors"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }

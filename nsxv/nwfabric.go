@@ -35,62 +35,62 @@ Delete locale ID for the specified cluster.  Parameters:  clusterID: Cluster ID.
 */
 func (a *NwfabricApiService) NwfabricClustersClusterIDDelete(ctx context.Context, clusterID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/clusters/{clusterID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"clusterID"+"}", fmt.Sprintf("%v", clusterID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/clusters/{clusterID}"
+	lPath = strings.Replace(lPath, "{"+"clusterID"+"}", fmt.Sprintf("%v", clusterID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -102,62 +102,62 @@ Retrieve the locale ID for the specified cluster.  Parameters:  clusterID: Clust
 */
 func (a *NwfabricApiService) NwfabricClustersClusterIDGet(ctx context.Context, clusterID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/clusters/{clusterID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"clusterID"+"}", fmt.Sprintf("%v", clusterID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/clusters/{clusterID}"
+	lPath = strings.Replace(lPath, "{"+"clusterID"+"}", fmt.Sprintf("%v", clusterID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -176,73 +176,73 @@ type NwfabricApiNwfabricClustersClusterIDPutOpts struct {
 	ContentType optional.String
 }
 
-func (a *NwfabricApiService) NwfabricClustersClusterIDPut(ctx context.Context, clusterID string, localVarOptionals *NwfabricApiNwfabricClustersClusterIDPutOpts) (*http.Response, error) {
+func (a *NwfabricApiService) NwfabricClustersClusterIDPut(ctx context.Context, clusterID string, lOptionals *NwfabricApiNwfabricClustersClusterIDPutOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Put")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/clusters/{clusterID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"clusterID"+"}", fmt.Sprintf("%v", clusterID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/clusters/{clusterID}"
+	lPath = strings.Replace(lPath, "{"+"clusterID"+"}", fmt.Sprintf("%v", clusterID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -258,66 +258,66 @@ type NwfabricApiNwfabricConfigureDeleteOpts struct {
 	ContentType optional.String
 }
 
-func (a *NwfabricApiService) NwfabricConfigureDelete(ctx context.Context, localVarOptionals *NwfabricApiNwfabricConfigureDeleteOpts) (*http.Response, error) {
+func (a *NwfabricApiService) NwfabricConfigureDelete(ctx context.Context, lOptionals *NwfabricApiNwfabricConfigureDeleteOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/configure"
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/configure"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -337,75 +337,75 @@ type NwfabricApiNwfabricConfigurePostOpts struct {
 	Action      optional.String
 }
 
-func (a *NwfabricApiService) NwfabricConfigurePost(ctx context.Context, localVarOptionals *NwfabricApiNwfabricConfigurePostOpts) (*http.Response, error) {
+func (a *NwfabricApiService) NwfabricConfigurePost(ctx context.Context, lOptionals *NwfabricApiNwfabricConfigurePostOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Post")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/configure"
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/configure"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Action.IsSet() {
-		localVarQueryParams.Add("action", parameterToString(localVarOptionals.Action.Value(), ""))
+	if lOptionals != nil && lOptionals.Action.IsSet() {
+		lQueryParams.Add("action", parameterToString(lOptionals.Action.Value(), ""))
 	}
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -423,72 +423,72 @@ type NwfabricApiNwfabricConfigurePutOpts struct {
 	ContentType optional.String
 }
 
-func (a *NwfabricApiService) NwfabricConfigurePut(ctx context.Context, localVarOptionals *NwfabricApiNwfabricConfigurePutOpts) (*http.Response, error) {
+func (a *NwfabricApiService) NwfabricConfigurePut(ctx context.Context, lOptionals *NwfabricApiNwfabricConfigurePutOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Put")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/configure"
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/configure"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -499,61 +499,61 @@ Retrieves all network fabric features available on the cluster. Multiple **featu
 */
 func (a *NwfabricApiService) NwfabricFeaturesGet(ctx context.Context) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/features"
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/features"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -565,62 +565,62 @@ Delete the locale ID for the specified host.  Parameters:  hostID: Host ID.
 */
 func (a *NwfabricApiService) NwfabricHostsHostIDDelete(ctx context.Context, hostID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Delete")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/hosts/{hostID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"hostID"+"}", fmt.Sprintf("%v", hostID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/hosts/{hostID}"
+	lPath = strings.Replace(lPath, "{"+"hostID"+"}", fmt.Sprintf("%v", hostID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -632,62 +632,62 @@ Retrieve the locale ID for the specified host.  Parameters:  hostID: Host ID.
 */
 func (a *NwfabricApiService) NwfabricHostsHostIDGet(ctx context.Context, hostID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/hosts/{hostID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"hostID"+"}", fmt.Sprintf("%v", hostID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/hosts/{hostID}"
+	lPath = strings.Replace(lPath, "{"+"hostID"+"}", fmt.Sprintf("%v", hostID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -706,73 +706,73 @@ type NwfabricApiNwfabricHostsHostIDPutOpts struct {
 	ContentType optional.String
 }
 
-func (a *NwfabricApiService) NwfabricHostsHostIDPut(ctx context.Context, hostID string, localVarOptionals *NwfabricApiNwfabricHostsHostIDPutOpts) (*http.Response, error) {
+func (a *NwfabricApiService) NwfabricHostsHostIDPut(ctx context.Context, hostID string, lOptionals *NwfabricApiNwfabricHostsHostIDPutOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Put")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/hosts/{hostID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"hostID"+"}", fmt.Sprintf("%v", hostID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/hosts/{hostID}"
+	lPath = strings.Replace(lPath, "{"+"hostID"+"}", fmt.Sprintf("%v", hostID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
+	lHttpContentTypes := []string{"application/json"}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	if localVarOptionals != nil && localVarOptionals.ContentType.IsSet() {
-		localVarHeaderParams["Content-Type"] = parameterToString(localVarOptionals.ContentType.Value(), "")
+	if lOptionals != nil && lOptionals.ContentType.IsSet() {
+		lHeaderParams["Content-Type"] = parameterToString(lOptionals.ContentType.Value(), "")
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
+	if lOptionals != nil && lOptionals.Body.IsSet() {
 
-		localVarOptionalBody := localVarOptionals.Body.Value()
-		localVarPostBody = &localVarOptionalBody
+		lOptionalBody := lOptionals.Body.Value()
+		lPostBody = &lOptionalBody
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -784,62 +784,62 @@ Retrieve status of resources by criterion.   Parameters:  resourceType: Valid re
 */
 func (a *NwfabricApiService) NwfabricStatusAlleligibleResourceTypeGet(ctx context.Context, resourceType string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/status/alleligible/{resourceType}"
-	localVarPath = strings.Replace(localVarPath, "{"+"resourceType"+"}", fmt.Sprintf("%v", resourceType), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/status/alleligible/{resourceType}"
+	lPath = strings.Replace(lPath, "{"+"resourceType"+"}", fmt.Sprintf("%v", resourceType), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -851,62 +851,62 @@ Retrieve the network fabric status of child resources of the specified resource.
 */
 func (a *NwfabricApiService) NwfabricStatusChildParentResourceIDGet(ctx context.Context, parentResourceID string) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/status/child/{parentResourceID}"
-	localVarPath = strings.Replace(localVarPath, "{"+"parentResourceID"+"}", fmt.Sprintf("%v", parentResourceID), -1)
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/status/child/{parentResourceID}"
+	lPath = strings.Replace(lPath, "{"+"parentResourceID"+"}", fmt.Sprintf("%v", parentResourceID), -1)
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }
 
 /*
@@ -922,64 +922,64 @@ type NwfabricApiNwfabricStatusGetOpts struct {
 	Resource optional.String
 }
 
-func (a *NwfabricApiService) NwfabricStatusGet(ctx context.Context, localVarOptionals *NwfabricApiNwfabricStatusGetOpts) (*http.Response, error) {
+func (a *NwfabricApiService) NwfabricStatusGet(ctx context.Context, lOptionals *NwfabricApiNwfabricStatusGetOpts) (*http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		lHttpMethod = strings.ToUpper("Get")
+		lPostBody   interface{}
+		lFileName   string
+		lFileBytes  []byte
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/status"
+	lPath := a.client.cfg.BasePath + "/api/2.0/nwfabric/status"
 
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
+	lHeaderParams := make(map[string]string)
+	lQueryParams := url.Values{}
+	lFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Resource.IsSet() {
-		localVarQueryParams.Add("resource", parameterToString(localVarOptionals.Resource.Value(), ""))
+	if lOptionals != nil && lOptionals.Resource.IsSet() {
+		lQueryParams.Add("resource", parameterToString(lOptionals.Resource.Value(), ""))
 	}
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	lHttpContentTypes := []string{}
 
 	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	lHttpContentType := selectHeaderContentType(lHttpContentTypes)
+	if lHttpContentType != "" {
+		lHeaderParams["Content-Type"] = lHttpContentType
 	}
 
 	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
+	lHttpHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	lHttpHeaderAccept := selectHeaderAccept(lHttpHeaderAccepts)
+	if lHttpHeaderAccept != "" {
+		lHeaderParams["Accept"] = lHttpHeaderAccept
 	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	r, err := a.client.prepareRequest(ctx, lPath, lHttpMethod, lPostBody, lHeaderParams, lQueryParams, lFormParams, lFileName, lFileBytes)
 	if err != nil {
 		return nil, err
 	}
 
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
+	lHttpResponse, err := a.client.callAPI(r)
+	if err != nil || lHttpResponse == nil {
+		return lHttpResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
+	lBody, err := ioutil.ReadAll(lHttpResponse.Body)
+	lHttpResponse.Body.Close()
 	if err != nil {
-		return localVarHttpResponse, err
+		return lHttpResponse, err
 	}
 
-	if localVarHttpResponse.StatusCode >= 300 {
+	if lHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body:  localVarBody,
-			error: localVarHttpResponse.Status,
+			body:  lBody,
+			error: lHttpResponse.Status,
 		}
-		return localVarHttpResponse, newErr
+		return lHttpResponse, newErr
 	}
 
-	return localVarHttpResponse, nil
+	return lHttpResponse, nil
 }

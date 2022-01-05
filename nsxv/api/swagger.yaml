@@ -5,62 +5,57 @@ info:
 servers:
 - url: "https://{{nsxmanager}}"
 tags:
-- name: "1.0"
-- name: 1.0 > appliance-management
-- name: 1.0 > cli
-- name: 1.0 > directory
-- name: 1.0 > eventcontrol
-- name: 1.0 > identity
-- name: 1.0 > syslog
-- name: "2.0"
-- name: 2.0 > alarms
-- name: 2.0 > application
-- name: 2.0 > applicationgroup
-- name: 2.0 > auditlog
-- name: 2.0 > capacity
-- name: 2.0 > config
-- name: 2.0 > controller
-- name: 2.0 > deploy
-- name: 2.0 > endpointsecurity
-- name: 2.0 > hardwaregateways
-- name: 2.0 > inventory
-- name: 2.0 > ipset
-- name: 2.0 > job
-- name: 2.0 > macset
-- name: 2.0 > network-features
-- name: 2.0 > nwfabric
-- name: 2.0 > policy
-- name: 2.0 > pools
-- name: 2.0 > securitygroup
-- name: 2.0 > securitytags
-- name: 2.0 > si
-- name: 2.0 > snmp
-- name: 2.0 > scopes
-- name: 2.0 > ssoconfig
-- name: 2.0 > switches
-- name: 2.0 > systemalarms
-- name: 2.0 > systemevent
-- name: 2.0 > traceflow
-- name: 2.0 > truststore
-- name: 2.0 > universalsync
-- name: 2.0 > usermgmt
-- name: 2.0 > vcconfig
-- name: 2.0 > virtualwires
-- name: "2.1"
-- name: 2.1 > excludelist
-- name: 2.1 > flow
-- name: "3.0"
-- name: 3.0 > ai
-- name: "4.0"
-- name: 4.0 > edges
-- name: 4.0 > edgePublish
-- name: 4.0 > firewall
-- name: 4.0 > spoofguard
+- name: appliance-management
+- name: cli
+- name: directory
+- name: eventcontrol
+- name: identity
+- name: syslog
+- name: alarms
+- name: application
+- name: applicationgroup
+- name: auditlog
+- name: capacity
+- name: config
+- name: controller
+- name: deploy
+- name: endpointsecurity
+- name: hardwaregateways
+- name: inventory
+- name: ipset
+- name: job
+- name: macset
+- name: network-features
+- name: nwfabric
+- name: policy
+- name: pools
+- name: securitygroup
+- name: securitytags
+- name: si
+- name: snmp
+- name: scopes
+- name: ssoconfig
+- name: switches
+- name: systemalarms
+- name: systemevent
+- name: traceflow
+- name: truststore
+- name: universalsync
+- name: usermgmt
+- name: vcconfig
+- name: virtualwires
+- name: excludelist
+- name: flow
+- name: ai
+- name: edges
+- name: edgePublish
+- name: firewall
+- name: spoofguard
 paths:
   /api/1.0/appliance-management/global/info:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: globalInfoRead
       description: |+
         Retrieve global information containing version information as well as
@@ -77,7 +72,7 @@ paths:
   /api/1.0/appliance-management/summary/system:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: summaryInfoRead
       description: "Retrieve system summary info such as address, dns name, version,\
         \ CPU,\nmemory and storage.\n\n\nParameters:\n\n"
@@ -89,7 +84,7 @@ paths:
   /api/1.0/appliance-management/summary/components:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentInfoRead
       description: |+
         Retrieve summary of all available components and their status info.
@@ -105,7 +100,7 @@ paths:
   /api/1.0/appliance-management/system/restart:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemRebootExecute
       description: |+
         Reboot the NSX Manager appliance.
@@ -126,7 +121,7 @@ paths:
   /api/1.0/appliance-management/system/cpuinfo:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemCPUInfoRead
       description: |+
         Retrieve NSX Manager CPU information.
@@ -141,7 +136,7 @@ paths:
   /api/1.0/appliance-management/system/uptime:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemUptimeRead
       description: "Retrieve NSX Manager uptime information.\n\n**Example response:**\n\
         ```\n25 days, 22 hours, 11 minutes\n```\n\n\nParameters:\n\n"
@@ -153,7 +148,7 @@ paths:
   /api/1.0/appliance-management/system/meminfo:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemMemoryInfoRead
       description: |+
         Retrieve NSX Manager memory information.
@@ -168,7 +163,7 @@ paths:
   /api/1.0/appliance-management/system/storageinfo:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemStorageInfoRead
       description: |+
         Retrieve NSX Manager storage information.
@@ -183,7 +178,7 @@ paths:
   /api/1.0/appliance-management/system/network:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: networkSettingsRead
       description: "Retrieve network information for the NSX Manager appliance. i.e.\
         \ host name, IP address, DNS settings\n\n\nParameters:\n\n"
@@ -194,7 +189,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: networkSettingsUpdate
       description: |+
         Update network information for the NSX Manager appliance.
@@ -243,7 +238,7 @@ paths:
   /api/1.0/appliance-management/system/network/dns:
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceDnsClientUpdate
       description: |+
         Configure DNS.
@@ -277,7 +272,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceDnsClientDelete
       description: |+
         Delete DNS server configuration.
@@ -292,7 +287,7 @@ paths:
   /api/1.0/appliance-management/system/securitysettings:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemSecSettingsRead
       description: |+
         Retrieve the NSX Manager FIPS and TLS settings.
@@ -313,7 +308,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemSecSettingsUpdate
       description: "Update the NSX Manager security settings, including FIPS and TLS.\n\
         \nDo not enable FIPS until you have upgraded all NSX components to NSX\n6.3.0\
@@ -347,7 +342,7 @@ paths:
   /api/1.0/appliance-management/system/tlssettings:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: tlsSettingsRead
       description: |+
         Retrieve TLS settings.
@@ -368,7 +363,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: tlsSettingsUpdate
       description: "Update TLS settings.\n\nInclude a comma separated list of the\
         \ TLS versions you want to enable,\nfor both server and client.\n\n**Method\
@@ -399,7 +394,7 @@ paths:
   /api/1.0/appliance-management/system/timesettings:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemTimeRead
       description: "Retrieve time settings, like timezone or current date and time\
         \ with\nNTP server, if configured.\n\n\nParameters:\n\n"
@@ -410,7 +405,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemTimeUpdate
       description: |+
         Configure time or specify the NTP server to use for time
@@ -449,7 +444,7 @@ paths:
   /api/1.0/appliance-management/system/timesettings/ntp:
     delete:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: ntpDelete
       description: |+
         Delete NTP server.
@@ -464,7 +459,7 @@ paths:
   /api/1.0/appliance-management/system/locale:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemLocaleRead
       description: |+
         Retrieve locale info.
@@ -478,7 +473,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemLocaleUpdate
       description: |+
         Configure locale.
@@ -512,7 +507,7 @@ paths:
   /api/1.0/appliance-management/system/syslogserver:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemSyslogServerRead
       description: |+
         Retrieve syslog servers.
@@ -526,7 +521,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemSyslogServerUpdate
       description: |+
         Configure syslog servers.
@@ -560,7 +555,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: systemSyslogServerDelete
       description: |+
         Delete syslog servers.
@@ -575,7 +570,7 @@ paths:
   /api/1.0/appliance-management/components:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentsManagementRead
       description: |+
         Retrieve all appliance manager components.
@@ -590,7 +585,7 @@ paths:
   /api/1.0/appliance-management/components/component/{componentID}:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentManagementRead
       description: "Retrieve details for the specified component.\n\nParameters:\n\
         \ncomponentID: Specified component ID.\n\n"
@@ -610,7 +605,7 @@ paths:
   /api/1.0/appliance-management/components/component/{componentID}/dependencies:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentDependenciesRead
       description: |+
         Retrieve dependency details for the specified component.
@@ -633,7 +628,7 @@ paths:
   /api/1.0/appliance-management/components/component/{componentID}/dependents:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentDependentsRead
       description: |+
         Retrieve dependents for the specified component.
@@ -656,7 +651,7 @@ paths:
   /api/1.0/appliance-management/components/component/{componentID}/status:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentStatusRead
       description: |+
         Retrieve current status for the specified component.
@@ -679,7 +674,7 @@ paths:
   /api/1.0/appliance-management/components/component/{componentID}/toggleStatus/{command}:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentManagementToggleCommand
       description: "Start or stop a component.\n\nParameters:\n\ncommand: Use **command**\
         \ parameter *start* or *stop*.\n\n"
@@ -712,7 +707,7 @@ paths:
   /api/1.0/appliance-management/components/component/APPMGMT/restart:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: componentAppMgmtRestartExecute
       description: |+
         Restart the appliance management web application.
@@ -733,7 +728,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/backupsettings:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsRead
       description: |+
         Retrieve backup settings.
@@ -747,7 +742,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsUpdate
       description: |+
         Configure backups on the appliance manager.
@@ -800,7 +795,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsDelete
       description: |+
         Delete appliance manager backup configuration.
@@ -815,7 +810,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/backupsettings/ftpsettings:
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsFtpUpdate
       description: |+
         Configure FTP settings.
@@ -836,7 +831,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/backupsettings/excludedata:
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsExcludeUpdate
       description: |+
         Specify tables that need not be backed up.
@@ -857,7 +852,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/backupsettings/schedule:
     put:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsScheduleUpdate
       description: |+
         Set backup schedule.
@@ -877,7 +872,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupSettingsScheduleDelete
       description: |+
         Delete backup schedule.
@@ -892,7 +887,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/backup:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupCreate
       description: |+
         Start an on-demand NSX backup.
@@ -913,7 +908,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/backups:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupsRead
       description: |+
         Retrieve list of all backups available at configured backup location.
@@ -929,7 +924,7 @@ paths:
   /api/1.0/appliance-management/backuprestore/restore:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: applianceMgrBackupRestoreExecute
       description: |+
         Restore data from a backup file.
@@ -961,7 +956,7 @@ paths:
   /api/1.0/appliance-management/techsupportlogs/{componentID}:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: techLogsCreate
       description: "Generate tech support logs. The location response header contains\
         \ the\nlocation of the created tech support file. \n\n\nParameters:\n\ncomponentID:\
@@ -989,7 +984,7 @@ paths:
   /api/1.0/appliance-management/techsupportlogs/{filename}:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: techLogsDownloadRead
       description: "Download tech support logs\n\nParameters:\n\nfilename: Name of\
         \ log file to download.\n\n"
@@ -1009,7 +1004,7 @@ paths:
   /api/1.0/appliance-management/notifications:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: notificationsRead
       description: |+
         Retrieve all system generated notifications.
@@ -1023,7 +1018,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: notificationsDelete
       description: |+
         Delete all notifications.
@@ -1038,7 +1033,7 @@ paths:
   /api/1.0/appliance-management/notifications/{ID}/acknowledge:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: notificationsAcknowledgeAck
       description: "Acknowledge a notification. The notification is then deleted from\n\
         the system.\n\n\nParameters:\n\nID: Notification ID.\n\n"
@@ -1064,7 +1059,7 @@ paths:
   /api/1.0/appliance-management/upgrade/uploadbundle/{componentID}:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: upgradeBundleUpload
       description: "Upload upgrade bundle.\n\nParameters:\n\ncomponentID: Component\
         \ ID.\n\n"
@@ -1090,7 +1085,7 @@ paths:
   /api/1.0/appliance-management/upgrade/information/{componentID}:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: upgradeBundleDetails
       description: "Once you have uploaded an upgrade bundle, you must retrieve\n\
         information about the upgrade. This request contains pre-upgrade\nvalidation\
@@ -1115,7 +1110,7 @@ paths:
   /api/1.0/appliance-management/upgrade/start/{componentID}:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: upgradeStartExecute
       description: "Start upgrade process.\n\nParameters:\n\ncomponentID: Component\
         \ ID\n\n"
@@ -1167,7 +1162,7 @@ paths:
   /api/1.0/appliance-management/upgrade/status/{componentID}:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: upgradeStatusRead
       description: "Query upgrade status.\n\nParameters:\n\ncomponentID: Component\
         \ ID.\n\n"
@@ -1187,7 +1182,7 @@ paths:
   /api/1.0/appliance-management/certificatemanager/pkcs12keystore/nsx:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: certificatesKeystoreUpdate
       description: |+
         Upload keystore file.
@@ -1219,7 +1214,7 @@ paths:
   /api/1.0/appliance-management/certificatemanager/certificates/nsx:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: certificateManagerCertificatesNsxRead
       description: |+
         Retrieve certificate information from NSX Manager.
@@ -1235,7 +1230,7 @@ paths:
   /api/1.0/appliance-management/certificatemanager/csr/nsx:
     get:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: certificateCsrRead
       description: |+
         Retrieve generated certificate signing request (CSR).
@@ -1250,7 +1245,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: certificateCsrCreate
       description: |+
         Create a certificate signing request (CSR) for NSX Manager.
@@ -1301,7 +1296,7 @@ paths:
   /api/1.0/appliance-management/certificatemanager/uploadchain/nsx:
     post:
       tags:
-      - 1.0 > appliance-management
+      - appliance-management
       summary: certificateChainUpload
       description: |+
         Upload certificate chain.
@@ -1326,7 +1321,7 @@ paths:
   /api/1.0/nsx/cli:
     post:
       tags:
-      - 1.0 > cli
+      - cli
       summary: nsxCliExecute
       description: "The central command-line interface (central CLI) commands are\
         \ run from the\nNSX Manager command line, and retrieve information from the\
@@ -1375,7 +1370,7 @@ paths:
   /api/1.0/directory/updateDomain:
     post:
       tags:
-      - 1.0 > directory
+      - directory
       summary: domainCreate
       description: |+
         Register or update a domain with NSX Manager
@@ -1411,7 +1406,7 @@ paths:
   /api/1.0/directory/listDomains:
     get:
       tags:
-      - 1.0 > directory
+      - directory
       summary: domainListRead
       description: |+
         Retrieve all agent discovered (or configured) LDAP domains.
@@ -1426,7 +1421,7 @@ paths:
   /api/1.0/directory/deleteDomain/{ID}:
     delete:
       tags:
-      - 1.0 > directory
+      - directory
       summary: domainDeleteDelete
       description: "Delete domain.\n\nParameters:\n\nID: Domain ID.\n\n"
       parameters:
@@ -1445,7 +1440,7 @@ paths:
   /api/1.0/directory/updateLdapServer:
     post:
       tags:
-      - 1.0 > directory
+      - directory
       summary: ldapServerCreateCreate
       description: |+
         Create LDAP server.
@@ -1480,7 +1475,7 @@ paths:
   /api/1.0/directory/listLdapServersForDomain/{domainID}:
     get:
       tags:
-      - 1.0 > directory
+      - directory
       summary: ldapServerDomainRead
       description: "Query LDAP servers for a domain.\n\nParameters:\n\ndomainID: Specified\
         \ domain.\n\n"
@@ -1500,7 +1495,7 @@ paths:
   /api/1.0/directory/fullSync/{domainID}:
     put:
       tags:
-      - 1.0 > directory
+      - directory
       summary: ldapServerSyncExecute
       description: "Start LDAP full sync.\n\nParameters:\n\ndomainID: Specified domain.\n\
         \n"
@@ -1526,7 +1521,7 @@ paths:
   /api/1.0/directory/deltaSync/{domainID}:
     put:
       tags:
-      - 1.0 > directory
+      - directory
       summary: ldapServerDeltaSyncExecute
       description: "Start LDAP delta sync.\n\nParameters:\n\ndomainID: Specified domain.\n\
         \n"
@@ -1552,7 +1547,7 @@ paths:
   /api/1.0/directory/deleteLdapServer/{serverID}:
     delete:
       tags:
-      - 1.0 > directory
+      - directory
       summary: ldapServerDeleteDelete
       description: "Delete LDAP server.\n\nParameters:\n\nserverID: Specified LDAP\
         \ server.\n\n"
@@ -1572,7 +1567,7 @@ paths:
   /api/1.0/directory/updateEventLogServer:
     post:
       tags:
-      - 1.0 > directory
+      - directory
       summary: eLogServerCreateCreate
       description: |+
         Create EventLog server.
@@ -1608,7 +1603,7 @@ paths:
   /api/1.0/directory/listEventLogServersForDomain/{domainID}:
     get:
       tags:
-      - 1.0 > directory
+      - directory
       summary: eLogServerDomainReadRead
       description: "Query EventLog servers for a domain.\n\nParameters:\n\ndomainID:\
         \ Specified domain.\n\n"
@@ -1628,7 +1623,7 @@ paths:
   /api/1.0/directory/deleteEventLogServer/{serverID}:
     delete:
       tags:
-      - 1.0 > directory
+      - directory
       summary: eLogServerDeleteDelete
       description: "Delete EventLog server.\n\nParameters:\n\nserverID: Specified\
         \ EventLog server ID.\n\n"
@@ -1648,7 +1643,7 @@ paths:
   /api/1.0/eventcontrol/vm/{vmID}/request:
     post:
       tags:
-      - 1.0 > eventcontrol
+      - eventcontrol
       summary: dataCollectionVMCreate
       description: "Enable or disable data collection on a virtual machine\n\nSet\
         \ **value** to *enabled* or *disabled*.\n\n\nParameters:\n\nvmID: MOID of\
@@ -1691,7 +1686,7 @@ paths:
   /api/1.0/eventcontrol/eventcontrol-root/request:
     post:
       tags:
-      - 1.0 > eventcontrol
+      - eventcontrol
       summary: dataCollectionKillSwitchToggle
       description: "Turn data collection on or off at the global level.\n\nIn case\
         \ of an emergency such as a network overload, you can turn off\ndata collection\
@@ -1729,7 +1724,7 @@ paths:
   /api/1.0/eventcontrol/config/vm/{vmID}:
     get:
       tags:
-      - 1.0 > eventcontrol
+      - eventcontrol
       summary: dataCollectionVMInfoRead
       description: "Retrieve per VM configuration for data collection.\n\n\nParameters:\n\
         \nvmID: MOID of the guest vm\n\n"
@@ -1749,7 +1744,7 @@ paths:
   /api/1.0/identity/userIpMapping:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: userIpMappingRead
       description: |+
         Query user-to-ip mapping list from database.
@@ -1764,7 +1759,7 @@ paths:
   /api/1.0/identity/hostIpMapping:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: hostIpMappingRead
       description: |+
         Query host-to-ip mapping list from database.
@@ -1779,7 +1774,7 @@ paths:
   /api/1.0/identity/ipToUserMapping:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: ipToUserMappingRead
       description: "Retrieve set of users associated with a given set of IP addresses\
         \ during\na specified time period. Since more than one user can be associated\n\
@@ -1794,7 +1789,7 @@ paths:
   /api/1.0/identity/directoryGroupsForUser:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: userDirGroupsRead
       description: |+
         Query set of Windows Domain Groups (AD Groups) to which the specified
@@ -1811,7 +1806,7 @@ paths:
   /api/1.0/identity/staticUserMapping/{userID}/{IP}:
     post:
       tags:
-      - 1.0 > identity
+      - identity
       summary: staticUserMappingCreate
       description: "Create static user IP mapping.\n\nParameters:\n\nuserID: User\
         \ ID\n\nIP: IP address\n\n"
@@ -1844,7 +1839,7 @@ paths:
   /api/1.0/identity/staticUserMappings:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: staticUserMappingsRead
       description: |+
         Query static user IP mapping list.
@@ -1859,7 +1854,7 @@ paths:
   /api/1.0/identity/staticUserMappingsbyUser/{userID}:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: staticUserMappingsbyUserRead
       description: "Query static user IP mapping for specified user.\n\nParameters:\n\
         \nuserID: User ID\n\n"
@@ -1878,7 +1873,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > identity
+      - identity
       summary: staticUserMappingsbyUserDelete
       description: "Delete static user IP mapping for specified user.\n\nParameters:\n\
         \nuserID: User ID\n\n"
@@ -1898,7 +1893,7 @@ paths:
   /api/1.0/identity/staticUserMappingsbyIP/{IP}:
     get:
       tags:
-      - 1.0 > identity
+      - identity
       summary: staticUserMappingsbyIPRead
       description: "Query static user IP mapping for specified IP.\n\nParameters:\n\
         \nIP: IP address\n\n"
@@ -1917,7 +1912,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 1.0 > identity
+      - identity
       summary: staticUserMappingsbyIPDelete
       description: "Delete static user IP mapping for specified IP.\n\nParameters:\n\
         \nIP: IP address\n\n"
@@ -1937,7 +1932,7 @@ paths:
   /api/1.0/sam/syslog/enable:
     post:
       tags:
-      - 1.0 > syslog
+      - syslog
       summary: syslogEnableSet
       description: |+
         Enable syslog support.
@@ -1958,7 +1953,7 @@ paths:
   /api/1.0/sam/syslog/disable:
     post:
       tags:
-      - 1.0 > syslog
+      - syslog
       summary: syslogDisableSet
       description: |+
         Disable syslog support.
@@ -1979,7 +1974,7 @@ paths:
   /api/2.0/services/alarms/{sourceId}:
     get:
       tags:
-      - 2.0 > alarms
+      - alarms
       summary: servicesAlarmsSourceList
       description: "Retrive all alarms from the specified source.\n\n\nParameters:\n\
         \nsourceId: ID of the object for which you want to manage alarms. *sourceId*\n\
@@ -2000,7 +1995,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > alarms
+      - alarms
       summary: servicesAlarmsSourceUpdate
       description: "Resolve all alarms for the specified source.\n\nAlarms will resolve\
         \ automatically when the cause of the alarm is\nresolved.  For example, if\
@@ -2120,7 +2115,7 @@ paths:
   /api/2.0/services/application/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > application
+      - application
       summary: servicesAppsScopeScopeRead
       description: "Retrieve services that have been created on the specified scope.\n\
         \nParameters:\n\nscopeId: Can be \"globalroot-0\", \"universalroot-0\" or\
@@ -2141,7 +2136,7 @@ paths:
   /api/2.0/services/application/{scopeId}:
     post:
       tags:
-      - 2.0 > application
+      - application
       summary: servicesAppsScopeCreate
       description: "Create a new service on the specified scope.\n\n\nParameters:\n\
         \nscopeId: \n\n"
@@ -2189,7 +2184,7 @@ paths:
   /api/2.0/services/application/{applicationId}:
     get:
       tags:
-      - 2.0 > application
+      - application
       summary: serviceAppRead
       description: "Retrieve details about the specified service.\n\nParameters:\n\
         \napplicationId: Application ID. You can get a list of application IDs from\
@@ -2209,7 +2204,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > application
+      - application
       summary: serviceAppUpdate
       description: "Modify the name, description, applicationProtocol, or port value\
         \ of a\nservice.\n\n\nParameters:\n\napplicationId: Application ID. You can\
@@ -2258,7 +2253,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > application
+      - application
       summary: serviceAppDelete
       description: "Delete the specified service.\n\nParameters:\n\napplicationId:\
         \ Application ID. You can get a list of application IDs from `GET\n/api/2.0/services/application/scope/{scopeId}`.\n\
@@ -2286,7 +2281,7 @@ paths:
   /api/2.0/services/applicationgroup/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupsRead
       description: "Retrieve a list of service groups that have been created on the\
         \ scope.\n\n\nParameters:\n\nscopeId: The scopeId can be \"globalroot-0\"\
@@ -2306,7 +2301,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupsCreate
       description: "Create a new service group on the specified scope.\n\nParameters:\n\
         \nscopeId: The scopeId can be \"globalroot-0\", \"universalroot-0\" or datacenterId\n\
@@ -2347,7 +2342,7 @@ paths:
   /api/2.0/services/applicationgroup/{applicationgroupId}:
     get:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupRead
       description: "Retrieve details about the specified service group.\n\nParameters:\n\
         \napplicationgroupId: Application group ID\n\n"
@@ -2366,7 +2361,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupUpdate
       description: "Modify the name, description, applicationProtocol, or port value\
         \ of\nthe specified service group.\n\n\nParameters:\n\napplicationgroupId:\
@@ -2431,7 +2426,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupDelete
       description: "Delete the specified service group from a scope.\n\nParameters:\n\
         \napplicationgroupId: Application group ID\n\n"
@@ -2458,7 +2453,7 @@ paths:
   /api/2.0/services/applicationgroup/{applicationgroupId}/members/{moref}:
     put:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupMembersCreate
       description: "Add a member to the service group.\n\nParameters:\n\nmoref: Managed\
         \ object reference to the member.\n\n"
@@ -2490,7 +2485,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupMembersDelete
       description: "Delete a member from the service group.\n\nParameters:\n\nmoref:\
         \ Managed object reference to the member.\n\n"
@@ -2517,7 +2512,7 @@ paths:
   /api/2.0/services/applicationgroup/scope/{scopeId}/members:
     get:
       tags:
-      - 2.0 > applicationgroup
+      - applicationgroup
       summary: serviceGroupMembersScopeList
       description: "Get a list of member elements that can be added to the service\
         \ groups\ncreated on a particular scope.\n\nSince service group allows only\
@@ -2541,7 +2536,7 @@ paths:
   /api/2.0/auditlog:
     get:
       tags:
-      - 2.0 > auditlog
+      - auditlog
       summary: auditLogsRead
       description: |+
         Get NSX Manager audit logs
@@ -2571,7 +2566,7 @@ paths:
   /api/2.0/services/licensing/capacityusage:
     get:
       tags:
-      - 2.0 > capacity
+      - capacity
       summary: capacityUsageRead
       description: "Retrieve capacity usage information on the usage of CPUs, VMs\
         \ and concurrent\nusers for the distributed firewall and VXLAN.\n\n**Method\
@@ -2585,7 +2580,7 @@ paths:
   /api/2.0/vdn/config/segments:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnSegmentPoolList
       description: |+
         Retrieve information about all segment ID pools.
@@ -2600,7 +2595,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnSegmentPoolAdd
       description: |+
         Add a segment ID pool.
@@ -2649,7 +2644,7 @@ paths:
   /api/2.0/vdn/config/segments/{segmentPoolId}:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnSegmentPoolShow
       description: "Retrieve information about the specified segment ID pool.\n\n\n\
         Parameters:\n\nsegmentPoolId: A valid *segmentPoolId*\n\n"
@@ -2668,7 +2663,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnSegmentPoolChange
       description: "Update the specified segment ID pool.\n\nIf the segment ID pool\
         \ is universal you must send the API request to\nthe primary NSX Manager.\n\
@@ -2706,7 +2701,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnSegmentPoolDelete
       description: "Delete the specified segment ID pool.\n\nIf the segment ID pool\
         \ is universal you must send the API request to\nthe primary NSX Manager.\n\
@@ -2727,7 +2722,7 @@ paths:
   /api/2.0/vdn/config/multicasts:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnMulticastPoolList
       description: |+
         Retrieve information about all configured multicast address ranges.
@@ -2745,7 +2740,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnMulticastPoolAdd
       description: |+
         Add a multicast address range for logical switches.
@@ -2790,7 +2785,7 @@ paths:
   /api/2.0/vdn/config/multicasts/{multicastAddresssRangeId}:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnMulticastPoolShow
       description: "Retrieve information about the specified multicast address range.\n\
         \n\nParameters:\n\nmulticastAddresssRangeId: A valid multicast address range\
@@ -2810,7 +2805,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnMulticastPoolChange
       description: "Update the specified multicast address range.\n\nIf the multicast\
         \ address range is universal you must send the API\nrequest to the primary\
@@ -2850,7 +2845,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnMulticastPoolDelete
       description: "Delete the specified multicast address range.\n\nIf the multicast\
         \ address range is universal you must send the API\nrequest to the primary\
@@ -2872,7 +2867,7 @@ paths:
   /api/2.0/vdn/config/vxlan/udp/port:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnConfigUDPShow
       description: |+
         Retrieve the UDP port configured for VXLAN traffic.
@@ -2888,7 +2883,7 @@ paths:
   /api/2.0/vdn/config/vxlan/udp/port/{portNumber}:
     put:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnConfigUDPUpdateUpdate
       description: "Update the VXLAN port configuration to use port *portNumber*.\n\
         \nThis method changes the VXLAN port in a three phrase process, avoiding\n\
@@ -2928,7 +2923,7 @@ paths:
   /api/2.0/vdn/config/vxlan/udp/port/taskStatus:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: vdnConfigUDPUpdateStatusRead
       description: |+
         Retrieve the status of the VXLAN port configuration update.
@@ -2950,7 +2945,7 @@ paths:
   /api/2.0/vdn/config/resources/allocated:
     get:
       tags:
-      - 2.0 > config
+      - config
       summary: allocatedResourcesRead
       description: |+
         Retrieve information about allocated segment IDs or multicast
@@ -2989,7 +2984,7 @@ paths:
   /api/2.0/vdn/config/host/{hostId}/vxlan/vteps:
     post:
       tags:
-      - 2.0 > config
+      - config
       summary: hostVtepResolveAction
       description: "Resolve missing VXLAN VMKernel adapters.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\
@@ -3023,7 +3018,7 @@ paths:
   /api/2.0/vdn/controller:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllersRead
       description: |+
         Retrieves details and runtime status for all controllers.  Runtime status
@@ -3048,7 +3043,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerCreate
       description: "Adds a new NSX controller on the specified given cluster. The\
         \ *hostId*\nparameter is optional. The *resourcePoolId* can be either the\n\
@@ -3094,7 +3089,7 @@ paths:
   /api/2.0/vdn/controller/upgrade-available:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerUpgradeAvailabilityRead
       description: |+
         Retrieve controller upgrade availability.
@@ -3109,7 +3104,7 @@ paths:
   /api/2.0/vdn/controller/progress/{jobId}:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerJobRead
       description: "Retrieves status of controller creation or removal. The progress\
         \ gives\na percentage indication of current deploy / remove procedure.\n\n\
@@ -3130,7 +3125,7 @@ paths:
   /api/2.0/vdn/controller/{controllerId}:
     post:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerRemediateAction
       description: "If you power off or delete a controller from vCenter, NSX Manager\n\
         detects the change in controller status. You can remediate the\ncontroller,\
@@ -3173,7 +3168,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerDelete
       description: "Delete the NSX controller.\n\n\nParameters:\n\ncontrollerId: Specified\
         \ controller ID.\n\nTo retrieve the controller IDs, log in to the vSphere\
@@ -3206,7 +3201,7 @@ paths:
   /api/2.0/vdn/controller/{controllerId}/systemStats:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerStatsList
       description: |+
         Retrieve NSX Controller system statistics.
@@ -3236,7 +3231,7 @@ paths:
   /api/2.0/vdn/controller/{controllerId}/techsupportlogs:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerLogsRead
       description: |+
         Retrieve controller logs. Response content type is
@@ -3262,7 +3257,7 @@ paths:
   /api/2.0/vdn/controller/{controllerId}/syslog:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerSyslogRead
       description: |+
         Retrieve details about the syslog exporter on the controller.
@@ -3285,7 +3280,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerSyslogCreate
       description: |+
         Add controller syslog exporter on the controller.
@@ -3327,7 +3322,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerSyslogDelete
       description: |+
         Deletes syslog exporter on the specified controller node.
@@ -3351,7 +3346,7 @@ paths:
   /api/2.0/vdn/controller/{controllerId}/snapshot:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerSnapshotRead
       description: |+
         Take a snapshot of the control cluster from the specified controller
@@ -3376,7 +3371,7 @@ paths:
   /api/2.0/vdn/controller/cluster:
     get:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerClusterRead
       description: |+
         Retrieve cluster wide configuration information for controller.
@@ -3391,7 +3386,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerClusterUpdate
       description: |+
         Modify cluster wide configuration information for controller.
@@ -3425,7 +3420,7 @@ paths:
   /api/2.0/vdn/controller/credential:
     put:
       tags:
-      - 2.0 > controller
+      - controller
       summary: nsxControllerPasswordUpdate
       description: |+
         Change the NSX controller password.
@@ -3458,7 +3453,7 @@ paths:
   /api/2.0/si/deploy:
     put:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceUpgrade
       description: "Upgrade service to recent version.\n\nThe datastore, dvPortGroup,\
         \ and ipPool variables should either not be\nspecified or have same value\
@@ -3506,7 +3501,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: securityFabricCreate
       description: |+
         Deploy security fabric.
@@ -3557,7 +3552,7 @@ paths:
   /api/2.0/si/deploy/service/{serviceID}:
     get:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceRead
       description: "Retrieve all clusters on which the service is installed.\n\nParameters:\n\
         \nserviceID: Specified service.\n\n"
@@ -3576,7 +3571,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceDelete
       description: "Uninstall specified service from specified clusters.\n\nParameters:\n\
         \nserviceID: Specified service.\n\n"
@@ -3610,7 +3605,7 @@ paths:
   /api/2.0/si/deploy/service/{serviceID}/dependsOn:
     get:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceDependencyRead
       description: |+
         Retrieve service on which the specified service depends.
@@ -3634,7 +3629,7 @@ paths:
   /api/2.0/si/deploy/cluster/{clusterID}:
     get:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceClusterRead
       description: "Retrieve all services deployed along with their status.\n\nParameters:\n\
         \nclusterID: Cluster ID\n\n"
@@ -3653,7 +3648,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceClusterDelete
       description: "Uninstall a service. Fails if you try to remove a service that\
         \ another\nservice depends on.\n\nIn order to uninstall services in any order,\
@@ -3689,7 +3684,7 @@ paths:
   /api/2.0/si/deploy/cluster/{clusterID}/service/{serviceID}:
     get:
       tags:
-      - 2.0 > deploy
+      - deploy
       summary: serviceDetailsRead
       description: "Retrieve detailed information about the service.\n\nParameters:\n\
         \nserviceID: Service ID on cluster\n\n"
@@ -3716,7 +3711,7 @@ paths:
   /api/2.0/endpointsecurity/registration:
     post:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionVendorCreate
       description: |+
         Register the vendor of an endpoint protection solution. Specify the
@@ -3759,7 +3754,7 @@ paths:
   /api/2.0/endpointsecurity/registration/vendors:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionVendorsInfoList
       description: |+
         Retrieve the list of all registered Guest Introspection vendors.
@@ -3774,7 +3769,7 @@ paths:
   /api/2.0/endpointsecurity/registration/{vendorID}:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionVendorInfoRead
       description: "Retrieve registration information for a Guest Introspection vendor.\n\
         \nParameters:\n\nvendorID: VMware-assigned ID for the vendor.\n\n"
@@ -3793,7 +3788,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionCreate
       description: "Register an endpoint protection solution. Specify the following\
         \ parameters in the request.\n\n| Name            | Comments |\n|-----------------|------------|\n\
@@ -3838,7 +3833,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionVendorDelete
       description: "Unregister a Guest Introspection vendor.\n\nParameters:\n\nvendorID:\
         \ VMware-assigned ID for the vendor.\n\n"
@@ -3858,7 +3853,7 @@ paths:
   /api/2.0/endpointsecurity/registration/{vendorID}/solutions:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionsInfoRead
       description: |+
         Get registration information for all endpoint protection solutions for a Guest Introspection vendor.
@@ -3882,7 +3877,7 @@ paths:
   /api/2.0/endpointsecurity/registration/{vendorID}/{altitude}:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionInfoRead
       description: "Get registration information for an endpoint protection solution.\n\
         \nParameters:\n\naltitude: VMware-assigned number that uniquely identifies\
@@ -3910,7 +3905,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionDelete
       description: "Unregister an endpoint protection solution.\n\nParameters:\n\n\
         altitude: VMware-assigned number that uniquely identifies a solution. Describes\n\
@@ -3939,7 +3934,7 @@ paths:
   /api/2.0/endpointsecurity/registration/{vendorID}/{altitude}/location:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionIPPortRead
       description: |+
         Get the IP address and port on the vNIC host for an endpoint
@@ -3970,7 +3965,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionIPPortUpdate
       description: |+
         Set the IP address and port on the vNIC host for an endpoint
@@ -4019,7 +4014,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionIPPortDelete
       description: |+
         Unset the IP address and port for an endpoint protection
@@ -4051,7 +4046,7 @@ paths:
   /api/2.0/endpointsecurity/activation:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionActivationRead
       description: |+
         Retrieve activation information for all activated security VMs on the
@@ -4076,7 +4071,7 @@ paths:
   /api/2.0/endpointsecurity/activation/{vendorID}/{solutionID}:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionActivatedVMsRead
       description: "Retrieve a list of activated security VMs for an endpoint protection\
         \ solution.\n\n\nParameters:\n\nvendorID: VMware-assigned ID for the vendor.\n\
@@ -4104,7 +4099,7 @@ paths:
   /api/2.0/endpointsecurity/activation/{vendorID}/{altitude}:
     post:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionActivateRegistered
       description: "Activate an endpoint protection solution that has been registered\n\
         and located. Specify the following parameter in the request body.\n\n| Name\
@@ -4154,7 +4149,7 @@ paths:
   /api/2.0/endpointsecurity/activation/{vendorID}/{altitude}/{moid}:
     get:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionActivationStatusRead
       description: "Retrieve the endpoint protection solution activation status, either\
         \ true (activated) or false (not activated).\n\nParameters:\n\nmoid: Managed\
@@ -4188,7 +4183,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > endpointsecurity
+      - endpointsecurity
       summary: guestIntrospectionSolutionDeactivate
       description: "Deactivate an endpoint protection solution on a host.\n\nParameters:\n\
         \nmoid: Managed object reference of a VM.\n\n"
@@ -4222,7 +4217,7 @@ paths:
   /api/2.0/vdn/hardwaregateways:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewaysList
       description: |+
         Retrieve information about all hardware gateways.
@@ -4243,7 +4238,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayCreate
       description: |+
         Install a hardware gateway.
@@ -4288,7 +4283,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/{hardwareGatewayId}:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayRead
       description: "Retrieve information about the specified hardware gateway.\n\n\
         **Method history:**\n\nRelease | Modification\n--------|-------------\n6.2.3\
@@ -4309,7 +4304,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayUpdate
       description: "Update the specified hardware gateway.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\
@@ -4350,7 +4345,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayDelete
       description: "Delete the specified hardware gateway.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\
@@ -4372,7 +4367,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/{hardwareGatewayId}/switches:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewaySwitchesList
       description: |+
         Retrieve information about switches on the specified hardware
@@ -4403,7 +4398,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/{hardwareGatewayId}/switches/{switchName}/switchports:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewaySwitchPortsList
       description: |+
         Retrive information about the hardware gateway switch ports for
@@ -4441,7 +4436,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/replicationcluster:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayReplicationClusterRead
       description: |+
         Retrieve information about the hardware gateway replication cluster.
@@ -4462,7 +4457,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayReplicationClusterUpdate
       description: |+
         Update the hardware gateway replication cluster.
@@ -4514,7 +4509,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/bindings:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingsList
       description: |+
         Retrieve information about hardware gateway bindings.
@@ -4550,7 +4545,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingCreate
       description: |+
         Create a hardware gateway binding.
@@ -4593,7 +4588,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/bindings/{bindingId}:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingRead
       description: "Retrieve information about the specified hardware gateway binding.\n\
         \n**Method history:**\n\nRelease | Modification\n--------|-------------\n\
@@ -4614,7 +4609,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingUpdate
       description: "Update the specified hardware gateway binding.\n\nYou can update\
         \ the binding parameters. This API will fail if:\n* the specified *hardwareGatewayId*\
@@ -4659,7 +4654,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingDelete
       description: "Delete the specified hardware gateway binding.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\
@@ -4680,7 +4675,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/bindings/{bindingId}/statistic:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingStatisticRead
       description: |+
         Retrieve statistics for the specified hardware gateway binding.
@@ -4710,7 +4705,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/bindings/manage:
     post:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBindingsManageOperations
       description: "Manage hardware gateway binding objects.\n\nUse this API to attach,\
         \ detach, and update multiple bindings in a\nsingle API call.  This API accepts\
@@ -4770,7 +4765,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/bfd/config:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBfdConfigRead
       description: |+
         Retrieve global hardware gateway BFD configuration.
@@ -4791,7 +4786,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBfdConfigUpdate
       description: |+
         Update global hardware gateway BFD configuration.
@@ -4832,7 +4827,7 @@ paths:
   /api/2.0/vdn/hardwaregateways/bfd/status:
     get:
       tags:
-      - 2.0 > hardwaregateways
+      - hardwaregateways
       summary: hardwareGatewayBfdStatusRead
       description: "Retrieve hardware gateway BFD tunnel status for all tunnel\nendpoints,\
         \ including hosts and hardware gateways.\n\n**Method history:**\n\nRelease\
@@ -4846,7 +4841,7 @@ paths:
   /api/2.0/vdn/inventory/host/{hostId}/connection/status:
     get:
       tags:
-      - 2.0 > inventory
+      - inventory
       summary: inventoryStatusHostRead
       description: "Retrieve the status of the specified host.\n\nHistory:\n\nRelease\
         \ | Modification\n--------|-------------\n6.2.3 | Method updated. Introduced\
@@ -4869,7 +4864,7 @@ paths:
   /api/2.0/vdn/inventory/hosts/connection/status:
     get:
       tags:
-      - 2.0 > inventory
+      - inventory
       summary: inventoryStatusHostsList
       description: "Retrieve the status of a list of hosts.\n\nRelease | Modification\n\
         --------|-------------\n6.2.3 | Method updated. Introduced **hostToControllerConnectionErrors**\
@@ -4891,7 +4886,7 @@ paths:
   /api/2.0/services/ipset/scope/{scopeMoref}:
     get:
       tags:
-      - 2.0 > ipset
+      - ipset
       summary: ipsetListList
       description: "Retrieve all configured IPSets\n\nParameters:\n\nscopeMoref: For\
         \ scopeMoref use \"globalroot-0\" for non-universal IP sets and use\n\"universalroot-0\"\
@@ -4912,7 +4907,7 @@ paths:
   /api/2.0/services/ipset/{scopeMoref}:
     post:
       tags:
-      - 2.0 > ipset
+      - ipset
       summary: ipsetCreateCreate
       description: "Create a new IP set.\n\nParameters:\n\nscopeMoref: For scopeMoref\
         \ use \"globalroot-0\" for non-universal IP sets and use\n\"universalroot-0\"\
@@ -4959,7 +4954,7 @@ paths:
   /api/2.0/services/ipset/{ipsetId}:
     get:
       tags:
-      - 2.0 > ipset
+      - ipset
       summary: ipsetRead
       description: "Retrieve an individual IP set.\n\nParameters:\n\nipsetId: The\
         \ IP set to be queried or changed.\n\n"
@@ -4978,7 +4973,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > ipset
+      - ipset
       summary: ipsetUpdate
       description: "Modify an existing IP set.\n\nParameters:\n\nipsetId: The IP set\
         \ to be queried or changed.\n\n"
@@ -5021,7 +5016,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > ipset
+      - ipset
       summary: ipsetDelete
       description: "Delete an IP set.\n\nParameters:\n\nipsetId: The IP set to be\
         \ queried or changed.\n\n"
@@ -5048,7 +5043,7 @@ paths:
   /api/2.0/services/taskservice/job:
     get:
       tags:
-      - 2.0 > job
+      - job
       summary: taskFrameworkCriteria
       description: |+
         Query job instances by criterion.
@@ -5092,7 +5087,7 @@ paths:
   /api/2.0/services/taskservice/job/{jobId}:
     get:
       tags:
-      - 2.0 > job
+      - job
       summary: taskFrameworkJobsRead
       description: "Retrieve all job instances for the specified job ID.\n\nParameters:\n\
         \njobId: Specified job ID.\n\n"
@@ -5112,7 +5107,7 @@ paths:
   /api/2.0/services/macset/{macsetId}:
     get:
       tags:
-      - 2.0 > macset
+      - macset
       summary: macsetRead
       description: "Retrieve details about a MAC address set.\n\nParameters:\n\nmacsetId:\
         \ Specified MAC address set ID (can be retrieved by listing the MAC\naddress\
@@ -5132,7 +5127,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > macset
+      - macset
       summary: macsetUpdate
       description: "Modify an existing MAC address set.\n\nParameters:\n\nmacsetId:\
         \ Specified MAC address set ID (can be retrieved by listing the MAC\naddress\
@@ -5177,7 +5172,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > macset
+      - macset
       summary: macsetDelete
       description: "Delete a MAC address set.\n\nParameters:\n\nmacsetId: Specified\
         \ MAC address set ID (can be retrieved by listing the MAC\naddress set on\
@@ -5205,7 +5200,7 @@ paths:
   /api/2.0/services/macset/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > macset
+      - macset
       summary: macsetScopesRead
       description: "List MAC address sets on the specified scope.\n\nParameters:\n\
         \nscopeId: Can be \"globalroot-0\", \"universalroot-0\" or datacenterId in\
@@ -5226,7 +5221,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > macset
+      - macset
       summary: macsetScopesCreate
       description: "Create a MAC address set on the specified scope.\n\nParameters:\n\
         \nscopeId: Can be \"globalroot-0\", \"universalroot-0\" or datacenterId in\
@@ -5273,7 +5268,7 @@ paths:
   /api/2.0/xvs/networks/{ID}/features:
     get:
       tags:
-      - 2.0 > network-features
+      - network-features
       summary: arpMACRead
       description: "Retrieve IP discovery and MAC learning information.\n\nParameters:\n\
         \nID: dvPortGroup MOID or logical switch (virtual wire) ID.\n\n"
@@ -5292,7 +5287,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > network-features
+      - network-features
       summary: arpMACUpdate
       description: "Enable or disable IP discovery and MAC learning.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method updated.\
@@ -5336,7 +5331,7 @@ paths:
   /api/2.0/nwfabric/configure:
     put:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricConfigUpdate
       description: "Upgrade Network virtualization components.\n_\nThis API call can\
         \ be used to upgrade network virtualization components.\nAfter NSX Manager\
@@ -5369,7 +5364,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricConfigCreate
       description: "Install network fabric or VXLAN.\n\nThis method can be used to\
         \ perform the following tasks: \n* Install Network Virtualization Components\n\
@@ -5447,7 +5442,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricConfigDelete
       description: "Remove VXLAN or network virtualization components.\n\nRemoving\
         \ network virtualization components removes previously\ninstalled VIBs, tears\
@@ -5487,7 +5482,7 @@ paths:
   /api/2.0/nwfabric/features:
     get:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricFeaturesList
       description: |+
         Retrieves all network fabric features available on the cluster. Multiple
@@ -5504,7 +5499,7 @@ paths:
   /api/2.0/nwfabric/status:
     get:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricStatusRead
       description: |+
         Retrieve the network fabric status of the specified resource.
@@ -5528,7 +5523,7 @@ paths:
   /api/2.0/nwfabric/status/child/{parentResourceID}:
     get:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: childStatusRead
       description: "Retrieve the network fabric status of child resources of the specified\
         \ resource.\n\n\nParameters:\n\nparentResourceID: Parent resource ID\n\n"
@@ -5548,7 +5543,7 @@ paths:
   /api/2.0/nwfabric/status/alleligible/{resourceType}:
     get:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: statusResourceTypeRead
       description: "Retrieve status of resources by criterion.\n\n\nParameters:\n\n\
         resourceType: Valid resource type\n\n"
@@ -5568,7 +5563,7 @@ paths:
   /api/2.0/nwfabric/clusters/{clusterID}:
     get:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricClustersRead
       description: "Retrieve the locale ID for the specified cluster.\n\nParameters:\n\
         \nclusterID: Cluster ID.\n\n"
@@ -5587,7 +5582,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricClustersUpdate
       description: "Update the locale ID for the specified cluster.\n\nParameters:\n\
         \nclusterID: Cluster ID.\n\n"
@@ -5623,7 +5618,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricClustersDelete
       description: "Delete locale ID for the specified cluster.\n\nParameters:\n\n\
         clusterID: Cluster ID.\n\n"
@@ -5643,7 +5638,7 @@ paths:
   /api/2.0/nwfabric/hosts/{hostID}:
     get:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricHostsRead
       description: "Retrieve the locale ID for the specified host.\n\nParameters:\n\
         \nhostID: Host ID.\n\n"
@@ -5662,7 +5657,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricHostsUpdate
       description: "Update the locale ID for the specified host.\n\nParameters:\n\n\
         hostID: Host ID.\n\n"
@@ -5698,7 +5693,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > nwfabric
+      - nwfabric
       summary: nwfabricHostsDelete
       description: "Delete the locale ID for the specified host.\n\nParameters:\n\n\
         hostID: Host ID.\n\n"
@@ -5718,7 +5713,7 @@ paths:
   /api/2.0/services/policy/securitypolicy:
     post:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityPolicyCreate
       description: "Create a security policy.\n\nWhen creating a security policy,\
         \ a parent security policy can be\nspecified if required. The security policy\
@@ -5895,7 +5890,7 @@ paths:
   /api/2.0/services/policy/securitypolicy/status:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityPolicyStatusRead
       description: "Retrieve the consolidated status of Service Composer.\n\nThe possible\
         \ return of value for status are: *in_sync*,\n*in_progress*, *out_of_sync*,\
@@ -5909,7 +5904,7 @@ paths:
   /api/2.0/services/policy/securitypolicy/alarms/all:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityPolicyAlarmsAllList
       description: |+
         Retrieve all system alarms that are raised at Service Composer
@@ -5932,7 +5927,7 @@ paths:
   /api/2.0/services/policy/securitypolicy/serviceprovider/firewall:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: serviceComposerFirewallAppliedToRead
       description: |+
         Retrieve the Service Composer firewall applied to setting.
@@ -5947,7 +5942,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > policy
+      - policy
       summary: serviceComposerFirewallAppliedToUpdate
       description: |+
         Update the Service Composer firewall applied to setting.
@@ -5981,7 +5976,7 @@ paths:
   /api/2.0/services/policy/securitypolicy/{ID}:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityPolicyIDRead
       description: "Retrieve security policy information.\n\n\nParameters:\n\nID:\
         \ ID of desired security policy (or 'all' to for all security\npolicies).\n\
@@ -6001,7 +5996,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityPolicyIDUpdate
       description: "Edit a security policy.\n\nTo update a security policy, you must\
         \ first fetch it.\nThen edit the received XML and pass it back as the input.\
@@ -6087,7 +6082,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityPolicyIDDelete
       description: "Delete a security policy.\n\nWhen you delete a security policy,\
         \ its child security policies and\nall the actions in it are deleted as well.\n\
@@ -6116,7 +6111,7 @@ paths:
   /api/2.0/services/policy/securitypolicy/{ID}/securityactions:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityActionsRead
       description: "Retrieve all security actions applicable on a security policy.\n\
         \nThis list includes security actions from associated parent\nsecurity policies,\
@@ -6139,7 +6134,7 @@ paths:
   /api/2.0/services/policy/securitypolicy/hierarchy:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: hierarchyRead
       description: "Export a Service Composer configuration (along with the\nsecurity\
         \ groups to which the security policies are mapped).\nYou can save the response\
@@ -6172,7 +6167,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > policy
+      - policy
       summary: hierarchyCreate
       description: "Import a security policy configuration\n\nYou can create multiple\
         \ security policies and parent-child\nhierarchies using the data fetched through\
@@ -6221,7 +6216,7 @@ paths:
   /api/2.0/services/policy/securityaction/category/virtualmachines:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityActionVMRead
       description: |+
         Retrieve all VirtualMachine objects on which security action of a
@@ -6253,7 +6248,7 @@ paths:
   /api/2.0/services/policy/securitygroup/{ID}/securityactions:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: securityActionRead
       description: "Retrieve all security actions applicable on a security group.\n\
         \nRetrieve all security actions applicable on a security group for all\nExecutionOrderCategories.\
@@ -6277,7 +6272,7 @@ paths:
   /api/2.0/services/policy/virtualmachine/{ID}/securityactions:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: vmApplicableSecurityActionRead
       description: "Retrieve the security actions applicable on a virtual machine.\n\
         \n\nParameters:\n\nID: VM ID\n\n"
@@ -6297,7 +6292,7 @@ paths:
   /api/2.0/services/policy/serviceprovider/firewall:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: serviceComposerDFWRead
       description: "If Service Composer goes out of sync with Distributed Firewall,\
         \ you\nmust re-synchronize Service Composer rules with firewall rules. If\n\
@@ -6346,7 +6341,7 @@ paths:
   /api/2.0/services/policy/securitygroup/{ID}/securitypolicies:
     get:
       tags:
-      - 2.0 > policy
+      - policy
       summary: secGroupPoliciesRead
       description: "Retrieve security policies mapped to a security group.\n\nParameters:\n\
         \nID: Specified security group ID\n\n"
@@ -6366,7 +6361,7 @@ paths:
   /api/2.0/services/ipam/pools/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolsList
       description: "Retrieves all IP pools on the specified scope where the *scopeID*\
         \ is the\nreference to the desired scope. An example of the *scopeID* is\n\
@@ -6387,7 +6382,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolCreate
       description: "Create a pool of IP addresses. For *scopeId* use globalroot-0\
         \ or\nthe *datacenterId* in upgrade use cases.\n\n\nParameters:\n\nscopeId:\
@@ -6437,7 +6432,7 @@ paths:
   /api/2.0/services/ipam/pools/{poolId}:
     get:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolRead
       description: "Retrieve details about a specific IP pool.\n\nParameters:\n\n\
         poolId: Specifiy the pool ID as *poolId* in the URI.\n\n"
@@ -6456,7 +6451,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolUpdate
       description: "To modify an IP pool, query the IP pool first. Then modify the\
         \ output and\nsend it back as the request body.\n\n\nParameters:\n\npoolId:\
@@ -6513,7 +6508,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolDelete
       description: "Delete an IP pool.\n\nParameters:\n\npoolId: Specifiy the pool\
         \ ID as *poolId* in the URI.\n\n"
@@ -6533,7 +6528,7 @@ paths:
   /api/2.0/services/ipam/pools/{poolId}/ipaddresses:
     get:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolIpsRead
       description: |+
         Retrieves all allocated IP addresses from the specified pool.
@@ -6556,7 +6551,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipPoolAllocateIp
       description: |+
         Allocate an IP Address from the pool. Use *ALLOCATE* in the
@@ -6601,7 +6596,7 @@ paths:
   /api/2.0/services/ipam/pools/{poolId}/ipaddresses/{ipAddress}:
     delete:
       tags:
-      - 2.0 > pools
+      - pools
       summary: ipAddressReleaseDelete
       description: "Release an IP address allocation in the pool.\n\nParameters:\n\
         \nipAddress: The IP address to release, e.g. '192.168.10.10'\n\n\n"
@@ -6628,7 +6623,7 @@ paths:
   /api/2.0/services/securitygroup/bulk/{scopeId}:
     post:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupBulkCreate
       description: "Create a new security group on a global scope or universal scope\
         \ with\nmembership information.\n\nUniversal security groups are read-only\
@@ -6753,7 +6748,7 @@ paths:
   /api/2.0/services/securitygroup/{scopeId}:
     post:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupScopeIdCreate
       description: "Create a new security group, with no membership information specified.\n\
         You can add members later with `PUT\n/2.0/services/securitygroup/bulk/{objectId}`\n\
@@ -6817,7 +6812,7 @@ paths:
   /api/2.0/services/securitygroup/bulk/{objectId}:
     put:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupBulkObjectUpdate
       description: "Update configuration for the specified security group, including\
         \ membership information.\n\n\nParameters:\n\nobjectId: Security group ID.\n\
@@ -6916,7 +6911,7 @@ paths:
   /api/2.0/services/securitygroup/{objectId}:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupObjectRead
       description: "Retrieve all members of the specified security group.\n\nParameters:\n\
         \nobjectId: Security group ID.\n\n"
@@ -6935,7 +6930,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupObjectUpdate
       description: "Update configuration for the specified security group. Members\
         \ are not\nupdated. You must use `PUT\n/2.0/services/securitygroup/bulk/{objectId}`\
@@ -6988,7 +6983,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupObjectDelete
       description: "Delete an existing security group.\n\nIf *force=true* is specified,\
         \ the object is deleted even if used in\nother configurations, such as firewall\
@@ -7018,7 +7013,7 @@ paths:
   /api/2.0/services/securitygroup/{objectId}/members/{memberId}:
     put:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupMemberUpdate
       description: "Add a new member to the specified security group.\n\n\nParameters:\n\
         \nmemberId: Security group member, can be a vSphere managed object ID or NSX\n\
@@ -7058,7 +7053,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupMemberDelete
       description: "Delete member from the specified security group.\n\nParameters:\n\
         \nmemberId: Security group member, can be a vSphere managed object ID or NSX\n\
@@ -7093,7 +7088,7 @@ paths:
   /api/2.0/services/securitygroup/{objectId}/translation/virtualmachines:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupVMNodesRead
       description: |+
         Retrieve list of virtual machine entities that belong to a specific security
@@ -7118,7 +7113,7 @@ paths:
   /api/2.0/services/securitygroup/{objectId}/translation/ipaddresses:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupIPNodesRead
       description: |+
         Retrieve list of IP addresses that belong to a specific security
@@ -7143,7 +7138,7 @@ paths:
   /api/2.0/services/securitygroup/{objectId}/translation/macaddresses:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupMacNodesRead
       description: |+
         Retrieve list of MAC addresses that belong to a specific security
@@ -7168,7 +7163,7 @@ paths:
   /api/2.0/services/securitygroup/{objectId}/translation/vnics:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupVnicNodesRead
       description: |+
         Retrieve list of vNICs that belong to a specific security group.
@@ -7192,7 +7187,7 @@ paths:
   /api/2.0/services/securitygroup/lookup/virtualmachine/{virtualMachineId}:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupLookupVMRead
       description: "Retrieve list of security groups that the specified virtual machine\n\
         belongs to.\n\n\nParameters:\n\nvirtualMachineId: Specified virtual machine\n\
@@ -7213,7 +7208,7 @@ paths:
   /api/2.0/services/securitygroup/internal/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupInternalRead
       description: "Retrieve all internal security groups on the NSX Manager. These\
         \ are used\n internally by the system and should not be created or modified\
@@ -7235,7 +7230,7 @@ paths:
   /api/2.0/services/securitygroup/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupScopeRead
       description: "List all the security groups created on a specific scope.\n\n\
         Parameters:\n\nscopeId: scopeId can be \"globalroot-0\", \"universalroot-0\"\
@@ -7256,7 +7251,7 @@ paths:
   /api/2.0/services/securitygroup/scope/{scopeId}/memberTypes:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupScopeMembersRead
       description: |+
         Retrieve a list of valid elements that can be added to a security
@@ -7281,7 +7276,7 @@ paths:
   /api/2.0/services/securitygroup/scope/{scopeId}/members/{memberType}:
     get:
       tags:
-      - 2.0 > securitygroup
+      - securitygroup
       summary: secGroupScopeMemberTypeRead
       description: "Retrieve members of a specific type in the specified scope.\n\n\
         Parameters:\n\nmemberType: Specific member type\n\n"
@@ -7308,7 +7303,7 @@ paths:
   /api/2.0/services/securitytags/tag:
     get:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagRead
       description: |+
         Retrieve all security tags.
@@ -7337,7 +7332,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagCreate
       description: |+
         Create a new security tag.
@@ -7384,7 +7379,7 @@ paths:
   /api/2.0/services/securitytags/tag/{tagId}:
     delete:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagDeleteDelete
       description: "Delete the specified security tag.\n\nParameters:\n\ntagId: Specified\
         \ security tag.\n\n"
@@ -7404,7 +7399,7 @@ paths:
   /api/2.0/services/securitytags/tag/{tagId}/vm:
     get:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagVMsListList
       description: |+
         Retrieve the list of VMs that have the specified tag attached to
@@ -7428,7 +7423,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagVMsAction
       description: |+
         Attach or detach a security tag to a virtual machine.
@@ -7496,7 +7491,7 @@ paths:
   /api/2.0/services/securitytags/tag/{tagId}/vm/{vmId}:
     put:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagVMAttach
       description: "Apply a security tag to the specified virtual machine.\n\n**Note:**\
         \ this method can attach a universal security tag to a\nvirtual machine. However,\
@@ -7536,7 +7531,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagVMDetach
       description: "Detach a security tag from the specified virtual machine.\n\n\n\
         Parameters:\n\nvmId: Specify VM using VM managed object ID or VM instance\n\
@@ -7564,7 +7559,7 @@ paths:
   /api/2.0/services/securitytags/tag/{tagId}/vmDetail:
     get:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securityTagVMDetailList
       description: |+
         Retrieve details about the VMs that are attached to the
@@ -7595,7 +7590,7 @@ paths:
   /api/2.0/services/securitytags/vm/{vmId}:
     get:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securitytagVmIdList
       description: "Retrieve all security tags associated with the specified virtual\n\
         machine.\n\n\nParameters:\n\nvmId: Specify VM using VM managed object ID or\
@@ -7615,7 +7610,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securitytagVmMoidAction
       description: "Update security tags associated with the specified virtual machine.\n\
         \nYou can assign multiple tags at a time to the specified VM, or clear\nall\
@@ -7662,7 +7657,7 @@ paths:
   /api/2.0/services/securitytags/selection-criteria:
     get:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securitytagsCriteriaRead
       description: |+
         Retrieve unique ID section criteria configuration.
@@ -7683,7 +7678,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > securitytags
+      - securitytags
       summary: securitytagsCriteriaUpdate
       description: "Configure the unique ID section criteria configuration.\n\nIf\
         \ you set the selection criteria and assign security tags to VMs, you\nmust\
@@ -7716,7 +7711,7 @@ paths:
   /api/2.0/si/host/{hostID}/agents:
     get:
       tags:
-      - 2.0 > si
+      - si
       summary: hostAgentsRead
       description: "Retrieves all agents on the specified host. The response body\
         \ contains\nagent IDs for each agent, which you can use to retrieve details\
@@ -7737,7 +7732,7 @@ paths:
   /api/2.0/si/agent/{agentID}:
     get:
       tags:
-      - 2.0 > si
+      - si
       summary: agentInformationRead
       description: "Retrieve agent (host components and appliances) details.\n\n\n\
         Parameters:\n\nagentID: Specified agent\n\n"
@@ -7757,7 +7752,7 @@ paths:
   /api/2.0/si/deployment/{deploymentunitID}/agents:
     get:
       tags:
-      - 2.0 > si
+      - si
       summary: deploymentAgentsRead
       description: "Retrieve all agents for the specified deployment.\n\nParameters:\n\
         \ndeploymentunitID: Specified deployment.\n\n"
@@ -7777,7 +7772,7 @@ paths:
   /api/2.0/si/fabric/sync/conflicts:
     get:
       tags:
-      - 2.0 > si
+      - si
       summary: agentConflictsRead
       description: "Retrieve conflicting deployment units and EAM agencies, if any,\
         \ and the\nallowed operations on them.\n\n\nParameters:\n\n"
@@ -7788,7 +7783,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > si
+      - si
       summary: agentConflictsUpdate
       description: "Create deployment units for conflicting EAM Agencies, delete\n\
         conflicting EAM agencies, or delete deployment units for conflicting\nEAM\
@@ -7825,7 +7820,7 @@ paths:
   /api/2.0/services/snmp/status:
     get:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpStatusRead
       description: |+
         Retrieve SNMP status settings.
@@ -7846,7 +7841,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpStatusUpdate
       description: |+
         Update SNMP status settings.
@@ -7887,7 +7882,7 @@ paths:
   /api/2.0/services/snmp/manager:
     get:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpManagersList
       description: |+
         Retrieve information about SNMP managers.
@@ -7908,7 +7903,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpManagerCreate
       description: |+
         Add an SNMP manager.
@@ -7951,7 +7946,7 @@ paths:
   /api/2.0/services/snmp/manager/{managerId}:
     get:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpManagerRead
       description: "Retrieve information about the specified SNMP manager.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.2.3 | Method\
@@ -7971,7 +7966,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpManagerUpdate
       description: "Update an SNMP manager configuration.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\
@@ -8012,7 +8007,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpManagerDelete
       description: "Delete an SNMP manager configuration.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\
@@ -8033,7 +8028,7 @@ paths:
   /api/2.0/services/snmp/trap:
     get:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpTrapsList
       description: |+
         Retrieve information about SNMP traps.
@@ -8055,7 +8050,7 @@ paths:
   /api/2.0/services/snmp/trap/{oid}:
     get:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpTrapRead
       description: "Retrieve information about the specified SNMP trap.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.2.3 | Method\
@@ -8075,7 +8070,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > snmp
+      - snmp
       summary: snmpTrapUpdate
       description: "Update the specified SNMP trap.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.2.3 | Method introduced.\n\n\n\
@@ -8114,7 +8109,7 @@ paths:
   /api/2.0/vdn/scopes:
     get:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopesList
       description: |+
         Retrieve information about all transport zones (also known as network
@@ -8130,7 +8125,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopeCreate
       description: |+
         Create a transport zone.
@@ -8191,7 +8186,7 @@ paths:
   /api/2.0/vdn/scopes/{scopeId}:
     get:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopeProperties
       description: "Retrieve information about the specified transport zone.\n\n\n\
         Parameters:\n\nscopeId: A valid transport zone ID (vdnScope objectId)\n\n"
@@ -8210,7 +8205,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopeChange
       description: "Update the specified transport zone.\n\nYou can add a cluster\
         \ to or delete a cluster from a transport zone.\n\nYou can also repair missing\
@@ -8265,7 +8260,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopeDelete
       description: "Delete the specified transport zone.\n\n\nParameters:\n\nscopeId:\
         \ A valid transport zone ID (vdnScope objectId)\n\n"
@@ -8285,7 +8280,7 @@ paths:
   /api/2.0/vdn/scopes/{scopeId}/attributes:
     put:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopeAttribUpdateUpdate
       description: "Update the attributes of a transport zone.\n\nFor example, you\
         \ can update the name, description, or control plane\nmode. You must include\
@@ -8332,7 +8327,7 @@ paths:
   /api/2.0/vdn/scopes/{scopeId}/conn-check/multicast:
     post:
       tags:
-      - 2.0 > scopes
+      - scopes
       summary: vdnScopeConnCheckExecute
       description: "Test multicast group connectivity.\n\nTest multicast group connectivity\
         \ between two hosts connected to the\nspecified transport zone.\n\nParameter\
@@ -8385,7 +8380,7 @@ paths:
   /api/2.0/services/ssoconfig:
     get:
       tags:
-      - 2.0 > ssoconfig
+      - ssoconfig
       summary: ssoConfigRead
       description: |+
         Retrieve SSO Configuration.
@@ -8399,7 +8394,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > ssoconfig
+      - ssoconfig
       summary: ssoConfigSet
       description: |+
         Register NSX Manager to SSO Services.
@@ -8434,7 +8429,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > ssoconfig
+      - ssoconfig
       summary: ssoConfigDelete
       description: |+
         Deletes the NSX Manager SSO Configuration.
@@ -8449,7 +8444,7 @@ paths:
   /api/2.0/services/ssoconfig/status:
     get:
       tags:
-      - 2.0 > ssoconfig
+      - ssoconfig
       summary: ssoStatusRead
       description: |+
         Retrieve the SSO configuration status of NSX Manager.
@@ -8464,7 +8459,7 @@ paths:
   /api/2.0/vdn/switches:
     get:
       tags:
-      - 2.0 > switches
+      - switches
       summary: vdsList
       description: |+
         Retrieve information about all vSphere Distributed Switches.
@@ -8479,7 +8474,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > switches
+      - switches
       summary: vdsPrepare
       description: "Prepare a vSphere Distributed Switch.\n\nThe MTU is the maximum\
         \ amount of data that can be transmitted in one\npacket before it is divided\
@@ -8523,7 +8518,7 @@ paths:
   /api/2.0/vdn/switches/datacenter/{datacenterID}:
     get:
       tags:
-      - 2.0 > switches
+      - switches
       summary: vdsListInDc
       description: "Retrieve information about all vSphere Distributed Switches in\
         \ the specified datacenter.\n\n\nParameters:\n\ndatacenterID: A valid datacenter\
@@ -8544,7 +8539,7 @@ paths:
   /api/2.0/vdn/switches/{vdsId}:
     get:
       tags:
-      - 2.0 > switches
+      - switches
       summary: vdsShow
       description: "Retrieve information about the specified vSphere Distributed Switch.\n\
         \n\nParameters:\n\nvdsId: A valid vSphere Distributed Switch ID (e.g. dvs-35)\n\
@@ -8564,7 +8559,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > switches
+      - switches
       summary: vdsDelete
       description: "Delete the specified vSphere Distributed Switch.\n\n\nParameters:\n\
         \nvdsId: A valid vSphere Distributed Switch ID (e.g. dvs-35)\n\n\n"
@@ -8584,7 +8579,7 @@ paths:
   /api/2.0/services/systemalarms/{alarmId}:
     get:
       tags:
-      - 2.0 > systemalarms
+      - systemalarms
       summary: servicesSystemAlarmsIdRead
       description: "Retrieve information about the specified alarm.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.3.0 | Method introduced.\n\
@@ -8605,7 +8600,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > systemalarms
+      - systemalarms
       summary: servicesSystemAlarmsIdAction
       description: "Resolve the specified alarm.\n\nAlarms will resolve automatically\
         \ when the cause of the alarm is\nresolved.  For example, if an NSX Edge appliance\
@@ -8646,7 +8641,7 @@ paths:
   /api/2.0/systemevent:
     get:
       tags:
-      - 2.0 > systemevent
+      - systemevent
       summary: systemEventsRead
       description: |+
         Get NSX Manager system events
@@ -8676,7 +8671,7 @@ paths:
   /api/api/2.0/vdn/traceflow:
     post:
       tags:
-      - 2.0 > traceflow
+      - traceflow
       summary: traceflowCreate
       description: |+
         Create a traceflow.
@@ -8724,7 +8719,7 @@ paths:
   /api/api/2.0/vdn/traceflow/{traceflowId}:
     get:
       tags:
-      - 2.0 > traceflow
+      - traceflow
       summary: traceflowRead
       description: "Query a specific traceflow by *tracflowId* which is the value\
         \ returned\nafter executing the create Traceflow API call.\n\n\nParameters:\n\
@@ -8745,7 +8740,7 @@ paths:
   /api/api/2.0/vdn/traceflow/{traceflowId}/observations:
     get:
       tags:
-      - 2.0 > traceflow
+      - traceflow
       summary: traceflowObservationsList
       description: |+
         Retrieve traceflow observations.
@@ -8768,7 +8763,7 @@ paths:
   /api/2.0/services/truststore/certificate:
     post:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: certificateCreate
       description: |+
         Import a certificate or a certificate chain against a certificate
@@ -8810,7 +8805,7 @@ paths:
   /api/2.0/services/truststore/certificate/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: certificateScopeRead
       description: "Retrieve all certificates on the specified scope.\n\nParameters:\n\
         \nscopeId: Scope ID. Specify the ID of an NSX Edge, e.g. *edge-5*, or\n*globalroot-0*.\n\
@@ -8831,7 +8826,7 @@ paths:
   /api/2.0/services/truststore/certificate/{scopeId}:
     post:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: certificateSelfSignedCreate
       description: "Create a single certificate\n\nYou can create a certificate for\
         \ a specific NSX Edge, or if you\nspecify a scope of *globalroot-0* you can\
@@ -8873,7 +8868,7 @@ paths:
   /api/2.0/services/truststore/certificate/{certificateId}:
     get:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: certificateIdRead
       description: "Retrieve the certificate object specified by ID. If the ID specifies\n\
         a chain, multiple certificate objects are retrieved.\n\n\nParameters:\n\n\
@@ -8893,7 +8888,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: certificateIdDelete
       description: "Delete the specified certificate.\n\nParameters:\n\ncertificateId:\
         \ Certificate ID\n\n"
@@ -8913,7 +8908,7 @@ paths:
   /api/2.0/services/truststore/csr/{scopeId}:
     post:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: csrCreate
       description: "Create a certificate signing request (CSR).\n\nParameters:\n\n\
         scopeId: Specified scope ID\n\n"
@@ -8969,7 +8964,7 @@ paths:
   /api/2.0/services/truststore/csr/{csrId}:
     get:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: csrSelfSignedRead
       description: "Retrieve the specified certificate signing request (CSR).\n\n\n\
         Parameters:\n\ncsrId: CSR ID\n\n"
@@ -8988,7 +8983,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: csrSelfSignedUpdate
       description: "Create a self-signed certificate for CSR.\n\n\nParameters:\n\n\
         csrId: CSR ID\n\n"
@@ -9021,7 +9016,7 @@ paths:
   /api/2.0/services/truststore/csr/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: csrScopeRead
       description: "Retrieve certificate signing requests (CSR) on the specified scope.\n\
         \nParameters:\n\nscopeId: Specified scope.\n\n"
@@ -9041,7 +9036,7 @@ paths:
   /api/2.0/services/truststore/crl/{scopeId}:
     post:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: crlCreate
       description: "Create a certificate revocation list (CRL) on the specified scope.\n\
         \n\nParameters:\n\nscopeId: Specified scope.\n\n"
@@ -9078,7 +9073,7 @@ paths:
   /api/2.0/services/truststore/crl/scope/{scopeId}:
     get:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: crlScopeRead
       description: "Retrieve all certificates for the specified scope.\n\nParameters:\n\
         \nscopeId: Specified scope\n\n"
@@ -9098,7 +9093,7 @@ paths:
   /api/2.0/services/truststore/crl/{crlId}:
     get:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: crlIDRead
       description: "Retrieve certificate object for the specified certificate revocation\n\
         list (CRL).\n\n\nParameters:\n\ncrlId: CRL ID\n\n"
@@ -9117,7 +9112,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > truststore
+      - truststore
       summary: crlIDDelete
       description: "Delete the specified certificate revocation list (CRL).\n\nParameters:\n\
         \ncrlId: CRL ID\n\n"
@@ -9137,7 +9132,7 @@ paths:
   /api/2.0/universalsync/configuration/role:
     get:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationRoleRead
       description: |+
         Retrieve the universal sync configuration role.
@@ -9151,7 +9146,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationRoleSet
       description: |+
         Set the universal sync configuration role.
@@ -9180,7 +9175,7 @@ paths:
   /api/2.0/universalsync/configuration/nsxmanagers:
     get:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationNsxManagersList
       description: "If run on a primary NSX Manager, it will list secondary NSX Managers\n\
         configured on the primary NSX Manager.\n\nIf run on a secondary NSX Manager,\
@@ -9193,7 +9188,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationNsxManagersCreate
       description: "Add a secondary NSX manager.\n\nRun this method on the primary\
         \ NSX Manager, providing details of the\nsecondary NSX Manager.\n\nRetrieve\
@@ -9229,7 +9224,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationNsxManagersDelete
       description: |+
         Delete secondary NSX manager configuration.
@@ -9244,7 +9239,7 @@ paths:
   /api/2.0/universalsync/configuration/nsxmanagers/{nsxManagerID}:
     get:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationManagersRead
       description: "Retrieve information about the specified secondary NSX Manager.\n\
         \n\nParameters:\n\nnsxManagerID: NSX Manager UUID.\n\n"
@@ -9263,7 +9258,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationManagersUpdate
       description: "Update the the specified secondary NSX manager IP or thumbprint\
         \ in\nthe universal sync configuration.\n\n\nParameters:\n\nnsxManagerID:\
@@ -9302,7 +9297,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncConfigurationManagersDelete
       description: "Delete the specified secondary NSX Manager.\n\nParameters:\n\n\
         nsxManagerID: NSX Manager UUID.\n\n"
@@ -9329,7 +9324,7 @@ paths:
   /api/2.0/universalsync/sync:
     post:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncSyncAction
       description: |+
         Sync all objects on the NSX Manager.
@@ -9358,7 +9353,7 @@ paths:
   /api/2.0/universalsync/entitystatus:
     get:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncEntityStatusRead
       description: |+
         Retrieve the status of a universal sync entity.
@@ -9388,7 +9383,7 @@ paths:
   /api/2.0/universalsync/status:
     get:
       tags:
-      - 2.0 > universalsync
+      - universalsync
       summary: universalSyncStatusRead
       description: |+
         Retrieve the universal sync status.
@@ -9403,7 +9398,7 @@ paths:
   /api/2.0/services/usermgmt/user/{userId}:
     get:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtUserRead
       description: "Get information about a user.\n\nParameters:\n\nuserId: user ID\n\
         \n"
@@ -9422,7 +9417,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtUserDelete
       description: "Remove the NSX role for a vCenter user.\n\nParameters:\n\nuserId:\
         \ user ID\n\n"
@@ -9442,7 +9437,7 @@ paths:
   /api/2.0/services/usermgmt/role/{userId}:
     get:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtRoleRead
       description: "Retrieve a user's role (possible roles are super_user, vshield_admin,\n\
         enterprise_admin, security_admin, and audit).\n\n\nParameters:\n\nuserId:\
@@ -9462,7 +9457,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtRoleUpdate
       description: "Change a user's role.\n\nParameters:\n\nuserId: User to retrieve\
         \ role information from.\n\n"
@@ -9501,7 +9496,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtRoleCreate
       description: "Add role and resources for a user.\n\nParameters:\n\nuserId: User\
         \ to retrieve role information from.\n\n"
@@ -9547,7 +9542,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtRoleDelete
       description: "Delete the role assignment for specified vCenter user. Once this\
         \ role\nis deleted, the user is removed from NSX Manager. You cannot delete\
@@ -9569,7 +9564,7 @@ paths:
   /api/2.0/services/usermgmt/enablestate/{value}:
     put:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtStateUpdate
       description: "Enable or disable a user account.\n\nParameters:\n\nvalue: value\
         \ can be 0 to disable, or 1 to enable.\n\n"
@@ -9595,7 +9590,7 @@ paths:
   /api/2.0/services/usermgmt/users/vsm:
     get:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userNSXManagerInfoRead
       description: |+
         Get information about users who have been assigned a NSX Manager role
@@ -9612,7 +9607,7 @@ paths:
   /api/2.0/services/usermgmt/roles:
     get:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userMgmtRolesRead
       description: |+
         Read all possible roles in NSX Manager
@@ -9627,7 +9622,7 @@ paths:
   /api/2.0/services/usermgmt/scopingobjects:
     get:
       tags:
-      - 2.0 > usermgmt
+      - usermgmt
       summary: userScopingObjectsRead
       description: |+
         Retrieve a list of objects that can be used to define a user's access
@@ -9644,7 +9639,7 @@ paths:
   /api/2.0/services/vcconfig:
     get:
       tags:
-      - 2.0 > vcconfig
+      - vcconfig
       summary: vCenterConfigRead
       description: |+
         Get vCenter Server configuration details on NSX Manager.
@@ -9658,7 +9653,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > vcconfig
+      - vcconfig
       summary: vCenterConfigUpdate
       description: |+
         Synchronize NSX Manager with vCenter server.
@@ -9697,7 +9692,7 @@ paths:
   /api/2.0/services/vcconfig/status:
     get:
       tags:
-      - 2.0 > vcconfig
+      - vcconfig
       summary: vCenterStatusRead
       description: |+
         Get default vCenter Server connection status.
@@ -9712,7 +9707,7 @@ paths:
   /api/2.0/vdn/virtualwires:
     get:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchesRead
       description: |+
         Retrieve information about all logical switches in all transport zones.
@@ -9743,7 +9738,7 @@ paths:
   /api/2.0/vdn/virtualwires/vm/vnic:
     post:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchVmAttachCreate
       description: "Attach a VM vNIC to, or detach a VM vNIC from a logical switch.\n\
         \nSpecify the logical switch ID in the **portgroupId** parameter. To\ndetach\
@@ -9784,7 +9779,7 @@ paths:
   /api/2.0/vdn/virtualwires/{virtualWireID}:
     get:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchShow
       description: "Retrieve information about the specified logical switch.\n\nIf\
         \ the switch is a universal logical switch the **isUniversal**\nparameter\
@@ -9805,7 +9800,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchUpdate
       description: "Update the specified logical switch.\n\nFor example, you can update\
         \ the name, description, or control plane\nmode.\n\n\nParameters:\n\nvirtualWireID:\
@@ -9845,7 +9840,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchDelete
       description: "Delete the specified logical switch.\n\nParameters:\n\nvirtualWireID:\
         \ A logical switch id, e.g. virtualwire-1002\n\n"
@@ -9865,7 +9860,7 @@ paths:
   /api/2.0/vdn/virtualwires/{virtualWireID}/backing:
     post:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchPortGroupFixAction
       description: "For every logical switch created, NSX creates a corresponding\
         \ port\ngroup in vCenter. If the port group is missing, the logical switch\n\
@@ -9902,7 +9897,7 @@ paths:
   /api/2.0/vdn/virtualwires/{virtualWireID}/conn-check/multicast:
     post:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchConnCheckExecute
       description: "Test multicast group connectivity.\n\nTest multicast group connectivity\
         \ between two hosts connected to the\nspecified logical switch.\n\nParameter\
@@ -9955,7 +9950,7 @@ paths:
   /api/2.0/vdn/virtualwires/{virtualWireID}/conn-check/p2p:
     post:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchPingExecute
       description: "Test point-to-point connectivity.\n\nTest point-to-point connectivity\
         \ between two hosts connected to the\nspecified logical switch.\n\nParameter\
@@ -10008,7 +10003,7 @@ paths:
   /api/2.0/vdn/virtualwires/{virtualWireID}/hardwaregateways:
     get:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchHardwareGatewayBindingsList
       description: |+
         Retrieve hardware gateway bindings for the specified logical switch.
@@ -10038,7 +10033,7 @@ paths:
   /api/2.0/vdn/virtualwires/{virtualWireID}/hardwaregateways/{hardwareGatewayBindingId}:
     post:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchHardwareGatewayBindingCreate
       description: "Manage the connection between a hardware gateway and a logical\
         \ switch.\n\n### Attach a hardware gateway to a logical switch and create\
@@ -10100,7 +10095,7 @@ paths:
   /api/2.0/vdn/scopes/{scopeId}/virtualwires:
     get:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchList
       description: "Retrieve information about all logical switches in the specified\n\
         transport zone (network scope).\n\n\nParameters:\n\nscopeId: A valid transport\
@@ -10134,7 +10129,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 2.0 > virtualwires
+      - virtualwires
       summary: logicalSwitchCreate
       description: "Create a logical switch.\n\nTo create a universal logical switch\
         \ use *universalvdnscope* as the\nscopeId in the URI and send the request\
@@ -10183,7 +10178,7 @@ paths:
   /api/2.1/app/excludelist:
     get:
       tags:
-      - 2.1 > excludelist
+      - excludelist
       summary: dfwExclusionRead
       description: |+
         Retrieve the set of VMs in the exclusion list.
@@ -10198,7 +10193,7 @@ paths:
   /api/2.1/app/excludelist/{memberID}:
     put:
       tags:
-      - 2.1 > excludelist
+      - excludelist
       summary: dfwExclusionUpdate
       description: "Add a vm to the exclusion list.\n\nParameters:\n\nmemberID: vc-moref-id\
         \ of a virtual machine.\n\n"
@@ -10223,7 +10218,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 2.1 > excludelist
+      - excludelist
       summary: dfwExclusionDelete
       description: "Delete a vm from exclusion list.\n\nParameters:\n\nmemberID: vc-moref-id\
         \ of a virtual machine.\n\n"
@@ -10243,7 +10238,7 @@ paths:
   /api/2.1/app/flow/flowstats:
     get:
       tags:
-      - 2.1 > flow
+      - flow
       summary: flowStatsRead
       description: "Retrieve flow statistics for a datacenter, port group, VM, or\
         \ vNIC.\n\nResponse values for flow statistics:\n* **blocked** - indicates\
@@ -10304,7 +10299,7 @@ paths:
   /api/2.1/app/flow/flowstats/info:
     get:
       tags:
-      - 2.1 > flow
+      - flow
       summary: flowStatsInfoRead
       description: |+
         Retrieve flow statistics meta-data.
@@ -10325,7 +10320,7 @@ paths:
   /api/2.1/app/flow/config:
     get:
       tags:
-      - 2.1 > flow
+      - flow
       summary: flowConfigRead
       description: |+
         Retrieve flow monitoring configuration.
@@ -10339,7 +10334,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 2.1 > flow
+      - flow
       summary: flowsConfigCreate
       description: |+
         Update flow monitoring configuration.
@@ -10383,7 +10378,7 @@ paths:
   /api/2.1/app/flow/{contextId}:
     delete:
       tags:
-      - 2.1 > flow
+      - flow
       summary: flowContextDelete
       description: "Delete flow records for the specified context.\n\nParameters:\n\
         \ncontextId: Context ID.\n\n"
@@ -10403,7 +10398,7 @@ paths:
   /api/3.0/ai/records:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: userActivityRead
       description: "### View Outbound Activity\n\nYou can view what applications are\
         \ being run by a security group or\ndesktop pool and then drill down into\
@@ -10514,7 +10509,7 @@ paths:
   /api/3.0/ai/userdetails:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: userDetailsRead
       description: "### View Outbound Activity\nYou can view what applications are\
         \ being run by a security group or\ndesktop pool and then drill down into\
@@ -10635,7 +10630,7 @@ paths:
   /api/3.0/ai/user/{userID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificUserDetailsRead
       description: "Retrieve details for a specific user.\n\nParameters:\n\nuserID:\
         \ User ID\n\n"
@@ -10655,7 +10650,7 @@ paths:
   /api/3.0/ai/app:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: appDetailsRead
       description: |+
         Retrieve app details.
@@ -10670,7 +10665,7 @@ paths:
   /api/3.0/ai/app/{appID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificAppDetailsRead
       description: "Retrieve details for specific app.\n\nParameters:\n\nappID: Specified\
         \ app ID.\n\n"
@@ -10690,7 +10685,7 @@ paths:
   /api/3.0/ai/host:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: hostDetailsRead
       description: |+
         Retrieve list of all discovered hosts (both by agent introspection and
@@ -10707,7 +10702,7 @@ paths:
   /api/3.0/ai/host/{hostID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificHostDetailsRead
       description: "Get host details.\n\nParameters:\n\nhostID: Specified host ID.\n\
         \n"
@@ -10727,7 +10722,7 @@ paths:
   /api/3.0/ai/desktoppool:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: desktopPoolRead
       description: |+
         Retrieve list of all discovered desktop pools by agent introspection.
@@ -10743,7 +10738,7 @@ paths:
   /api/3.0/ai/desktoppool/{desktoppoolID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificDesktopPoolRead
       description: "Retrieve specific desktop pool details.\n\nParameters:\n\ndesktoppoolID:\
         \ Specified desktop pool.\n\n"
@@ -10763,7 +10758,7 @@ paths:
   /api/3.0/ai/vm:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: vmDetailsRead
       description: |+
         Retrieve list of all discovered VMs.
@@ -10778,7 +10773,7 @@ paths:
   /api/3.0/ai/vm/{vmID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificVMDetailsRead
       description: "Retrieve details about a specific virtual machine.\n\nParameters:\n\
         \nvmID: VM ID\n\n"
@@ -10798,7 +10793,7 @@ paths:
   /api/3.0/ai/directorygroup:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: dirGroupRead
       description: |+
         Retrieve list of all discovered (and configured) LDAP directory
@@ -10815,7 +10810,7 @@ paths:
   /api/3.0/ai/directorygroup/{directorygroupID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificDirGroupRead
       description: "Retrieve details about a specific directory group.\n\nParameters:\n\
         \ndirectorygroupID: Specified directory group.\n\n"
@@ -10835,7 +10830,7 @@ paths:
   /api/3.0/ai/directorygroup/user/{userID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: userDirGroupRead
       description: "Retrieve Active Directory groups that user belongs to.\n\nParameters:\n\
         \nuserID: User ID.\n\n"
@@ -10855,7 +10850,7 @@ paths:
   /api/3.0/ai/securitygroup:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: secgroupDetailsRead
       description: "Retrieve list of all observed security groups.\n\nObserved entities\
         \ are the ones that are reported by the agents. For\nexample, if a host activity\
@@ -10870,7 +10865,7 @@ paths:
   /api/3.0/ai/securitygroup/{secgroupID}:
     get:
       tags:
-      - 3.0 > ai
+      - ai
       summary: specificSecgroupDetailsRead
       description: "Retrieve details about specific security group.\n\nParameters:\n\
         \nsecgroupID: Specified security group.\n\n"
@@ -10890,7 +10885,7 @@ paths:
   /api/4.0/edges:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgesRead
       description: |+
         Retrieve a list of all NSX Edges in your inventory. You can use the query
@@ -10928,7 +10923,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgesCreate
       description: "You can install NSX Edge as a services gateway or as a logical\
         \ router.\n\nThe **type** parameter determines which type of NSX Edge is deployed:\n\
@@ -11237,7 +11232,7 @@ paths:
   /api/4.0/edges/{edgeId}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeRead
       description: "Retrieve information about the specified NSX Edge.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.2.3 | Method\
@@ -11266,7 +11261,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeUpdate
       description: "Update the NSX Edge configuration.\n\n**Method history:**\n\n\
         Release | Modification\n--------|-------------\n6.2.3 | Method updated. **haAdminState**\
@@ -11509,7 +11504,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeCreate
       description: "Manage NSX Edge.\n\nParameters:\n\nedgeId: Specify the ID of the\
         \ edge in *edgeId*.\n\n"
@@ -11541,7 +11536,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeDelete
       description: "Delete specified NSX Edge configuration. Associated appliances\
         \ are\nalso deleted.\n\n\nParameters:\n\nedgeId: Specify the ID of the edge\
@@ -11562,7 +11557,7 @@ paths:
   /api/4.0/edges/{edgeId}/dnsclient:
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeDnsClientUpdate
       description: |+
         Update Edge DNS settings.
@@ -11604,7 +11599,7 @@ paths:
   /api/4.0/edges/{edgeId}/aesni:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: aesniCreate
       description: |+
         Modify AESNI setting.
@@ -11640,7 +11635,7 @@ paths:
   /api/4.0/edges/{edgeId}/coredump:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: coreDumpCreate
       description: |+
         Modify core dump setting.
@@ -11669,7 +11664,7 @@ paths:
   /api/4.0/edges/{edgeId}/fips:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: fipsCreate
       description: |+
         Modify FIPS setting.
@@ -11705,7 +11700,7 @@ paths:
   /api/4.0/edges/{edgeId}/logging:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: loggingCreate
       description: |+
         Modify log setting.
@@ -11741,7 +11736,7 @@ paths:
   /api/4.0/edges/{edgeId}/summary:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: summaryRead
       description: |+
         Retrieve details about the specified NSX Edge.
@@ -11771,7 +11766,7 @@ paths:
   /api/4.0/edges/{edgeId}/status:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: statusRead
       description: "Retrieve the status of the specified Edge.\n\nThe **edgeStatus**\
         \ has the following possible states:\n* *GREEN*: Health checks are successful,\
@@ -11816,7 +11811,7 @@ paths:
   /api/4.0/edges/{edgeId}/techsupportlogs:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: techSupportLogsRead
       description: |+
         Retrieve the tech support logs for Edge.
@@ -11839,7 +11834,7 @@ paths:
   /api/4.0/edges/{edgeId}/clisettings:
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: cliSettingsUpdate
       description: |+
         Modify CLI credentials and enable/disable SSH for Edge.
@@ -11883,7 +11878,7 @@ paths:
   /api/4.0/edges/{edgeId}/cliremoteaccess:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: cliRemoteCreate
       description: |+
         Change CLI remote access
@@ -11919,7 +11914,7 @@ paths:
   /api/4.0/edges/{edgeId}/systemcontrol/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeSystemControlRead
       description: "Retrieve all NSX Edge system control configuration.\n\nIf no system\
         \ control parameters are configured, the response is empty.\n\n\nParameters:\n\
@@ -11939,7 +11934,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeSystemControlUpdate
       description: |+
         Update the NSX Edge system control (sysctl) configuration.
@@ -11979,7 +11974,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeSystemControlDelete
       description: |+
         Delete all NSX Edge system control configuration.
@@ -12013,7 +12008,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeFirewallConfigRead
       description: "Retrieve the NSX Edge firewall configuration.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method updated.\
@@ -12035,7 +12030,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeFirewallConfigUpdate
       description: "Configure NSX Edge firewall.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.2.3 | Method updated. **enableSynFloodProtection**\
@@ -12096,7 +12091,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeFirewallConfigDelete
       description: |+
         Delete NSX Edge firewall configuration.
@@ -12119,7 +12114,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/config/rules:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: firewallRulesCreate
       description: "Add one or more rules. You can add a rule above a specific rule\n\
         using the query parameter, indicating the desired ruleID.\n\n\nParameters:\n\
@@ -12191,7 +12186,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/config/rules/{ruleId}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: firewallRuleRead
       description: "Retrieve specific rule.\n\nParameters:\n\nruleId: Rule ID.\n\n"
       parameters:
@@ -12216,7 +12211,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: firewallRuleUpdate
       description: "Modify a specific firewall rule.\n\nParameters:\n\nruleId: Rule\
         \ ID.\n\n"
@@ -12284,7 +12279,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: firewallRuleDelete
       description: "Delete firewall rule\n\nParameters:\n\nruleId: Rule ID.\n\n"
       parameters:
@@ -12310,7 +12305,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/config/global:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: globalFirewallConfigRead
       description: "Retrieve the firewall default policy for an Edge.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.2.3 | Method\
@@ -12332,7 +12327,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: globalFirewallConfigUpdate
       description: "Configure firewall global config for an Edge.\n\n**Method history:**\n\
         \nRelease | Modification\n--------|-------------\n6.2.3 | Method updated.\
@@ -12387,7 +12382,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/config/defaultpolicy:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: defaultFirewallPolicyRead
       description: |+
         Retrieve default firewall policy
@@ -12409,7 +12404,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: defaultFirewallPolicyUpdate
       description: |+
         Configure default firewall policy
@@ -12450,7 +12445,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/statistics/firewall:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: firewallStatisticsRead
       description: |+
         Retrieve number of ongoing connections for the firewall
@@ -12482,7 +12477,7 @@ paths:
   /api/4.0/edges/{edgeId}/firewall/statistics/{ruleId}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: firewallRuleStatisticsRead
       description: "Retrieve stats for firewall rule.\n\nParameters:\n\nruleId: Specified\
         \ rule.\n\n"
@@ -12509,7 +12504,7 @@ paths:
   /api/4.0/edges/{edgeId}/nat/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeNatRead
       description: "Retrieve SNAT and DNAT rules for the specified NSX Edge.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.3.0 | Method\
@@ -12531,7 +12526,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeNatConfig
       description: "Configure SNAT and DNAT rules for an Edge.\n\nIf you use this\
         \ method to add new NAT rules, you must include all\nexisting rules in the\
@@ -12582,7 +12577,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeNatDelete
       description: |+
         Delete all NAT rules for the specified NSX Edge.
@@ -12605,7 +12600,7 @@ paths:
   /api/4.0/edges/{edgeId}/nat/config/rules:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeNatRulesCreate
       description: "Add a NAT rule above a specific rule in the NAT rules table (using\n\
         **aboveRuleId** query parameter) or append NAT rules to the bottom.\n\n**Method\
@@ -12664,7 +12659,7 @@ paths:
   /api/4.0/edges/{edgeId}/nat/config/rules/{ruleID}:
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeNatRuleUpdate
       description: "Update the specified NAT rule.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.3.0 | Method updated. **dnatMatchSourceAddress**,\
@@ -12722,7 +12717,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeNatRuleDelete
       description: "Delete the specified NAT rule.\n\nParameters:\n\nruleID: Specified\
         \ rule ID.\n\n"
@@ -12749,7 +12744,7 @@ paths:
   /api/4.0/edges/{edgeId}/routing/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingConfigRead
       description: "Retrieve routes.\n\n**Method history:**\n\nRelease | Modification\n\
         --------|-------------\n6.2.3 | Method updated. **isis** configuration section\
@@ -12772,7 +12767,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingConfigUpdate
       description: "Configure NSX Edge global routing configuration, static routing,\
         \ and\ndynamic routing (OSPF and BGP).\n\n**Method history:**\n\nRelease |\
@@ -12861,7 +12856,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingConfigDelete
       description: |+
         Delete the routing config stored in the NSX Manager database and the
@@ -12886,7 +12881,7 @@ paths:
   /api/4.0/edges/{edgeId}/routing/config/global:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingGlobalConfigRead
       description: "Retrieve routing info from NSX Manager database (default route\n\
         settings, static route configurations).\n\n\nParameters:\n\n"
@@ -12905,7 +12900,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingGlobalConfigUpdate
       description: |+
         Configure global route.
@@ -12956,7 +12951,7 @@ paths:
   /api/4.0/edges/{edgeId}/routing/config/static:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingConfigStaticRead
       description: |+
         Read static and default routes.
@@ -12978,7 +12973,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingConfigStaticUpdate
       description: |+
         Configure static and default routes.
@@ -13031,7 +13026,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingConfigStaticDelete
       description: |+
         Delete both static and default routing config stored in the NSX
@@ -13056,7 +13051,7 @@ paths:
   /api/4.0/edges/{edgeId}/routing/config/ospf:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingOSPFRead
       description: "Retrieve OSPF configuration.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.2.3 | Method updated. **isis**\
@@ -13078,7 +13073,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingOSPFUpdate
       description: "Configure OSPF.\n\n**Method history:**\n\nRelease | Modification\n\
         --------|-------------\n6.2.3 | Method updated. **isis** configuration section\
@@ -13153,7 +13148,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingOSPFDelete
       description: |+
         Delete OSPF routing.
@@ -13176,7 +13171,7 @@ paths:
   /api/4.0/edges/{edgeId}/routing/config/bgp:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingBGPRead
       description: "Retrieve BGP configuration.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.2.3 | Method updated. **isis**\
@@ -13198,7 +13193,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingBGPUpdate
       description: "Configure BGP.\n\n**Method history:**\n\nRelease | Modification\n\
         --------|-------------\n6.2.3 | Method updated. **isis** configuration section\
@@ -13274,7 +13269,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: routingBGPDelete
       description: |+
         Delete BGP Routing
@@ -13297,7 +13292,7 @@ paths:
   /api/4.0/edges/{edgeId}/bridging/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: bridgingRead
       description: |+
         Retrieve bridge configuration.
@@ -13319,7 +13314,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: bridingUpdate
       description: |+
         Configure a bridge.
@@ -13364,7 +13359,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: bridgingDelete
       description: |+
         Delete bridges.
@@ -13387,7 +13382,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: loadBalancerRead
       description: |+
         Get load balancer configuration.
@@ -13409,7 +13404,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: loadBalancerConfig
       description: "Configure load balancer.\n\nThe input contains five parts: application\
         \ profile, virtual server,\npool, monitor and application rule.\n\nFor the\
@@ -13518,7 +13513,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: loadBalancerDelete
       description: |+
         Delete load balancer configuration.
@@ -13541,7 +13536,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/applicationprofiles:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applicationProfilesRead
       description: |+
         Retrieve all application profiles on the specified Edge.
@@ -13563,7 +13558,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applicationProfilesCreate
       description: |+
         Add an application profile.
@@ -13609,7 +13604,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applicationProfilesDelete
       description: |+
         Delete all application profiles on the specified Edge.
@@ -13632,7 +13627,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/applicationprofiles/{appProfileID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applicationProfileRead
       description: "Retrieve an application profile.\n\nParameters:\n\nappProfileID:\
         \ Specified application profile.\n\n"
@@ -13658,7 +13653,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applicationProfileUpdate
       description: "Modify an application profile.\n\nParameters:\n\nappProfileID:\
         \ Specified application profile.\n\n"
@@ -13708,7 +13703,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applicationProfileDelete
       description: "Delete an application profile.\n\nParameters:\n\nappProfileID:\
         \ Specified application profile.\n\n"
@@ -13735,7 +13730,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/applicationrules:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appRulesRead
       description: |+
         Retrieve all application rules.
@@ -13757,7 +13752,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appRulesCreate
       description: |+
         Add an application rule.
@@ -13797,7 +13792,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appRulesDelete
       description: |+
         Delete all application rules.
@@ -13820,7 +13815,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/applicationrules/{appruleID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appRuleRead
       description: "Retrieve an application rule.\n\nParameters:\n\nappruleID: Specified\
         \ application rule.\n\n"
@@ -13846,7 +13841,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appRuleUpdate
       description: "Modify an application rule.\n\nParameters:\n\nappruleID: Specified\
         \ application rule.\n\n"
@@ -13890,7 +13885,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appRuleDelete
       description: "Delete an application rule.\n\nParameters:\n\nappruleID: Specified\
         \ application rule.\n\n"
@@ -13917,7 +13912,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/monitors:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMonitorsRead
       description: |+
         Retrieve all load balancer monitors.
@@ -13939,7 +13934,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMonitorsCreate
       description: |+
         Add a load balancer monitor.
@@ -13984,7 +13979,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMonitorsDelete
       description: |+
         Delete all load balancer monitors.
@@ -14007,7 +14002,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/monitors/{monitorID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMonitorRead
       description: "Retrieve a load balancer monitor.\n\nParameters:\n\nmonitorID:\
         \ Specified monitor.\n\n"
@@ -14033,7 +14028,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMonitorUpdate
       description: "Modify a load balancer monitor.\n\nParameters:\n\nmonitorID: Specified\
         \ monitor.\n\n"
@@ -14082,7 +14077,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMonitorDelete
       description: "Delete a load balancer monitor.\n\nParameters:\n\nmonitorID: Specified\
         \ monitor.\n\n"
@@ -14109,7 +14104,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/virtualservers:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: virtualServersRead
       description: |+
         Retrieve all virtual servers.
@@ -14131,7 +14126,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: virtualServersCreate
       description: "Add a virtual server.\n\nYou can add an NSX Edge internal or uplink\
         \ interface as a virtual\nserver.\n\nParameter |  Description | Comments\n\
@@ -14190,7 +14185,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: virtualServersDelete
       description: |+
         Delete all virtual servers.
@@ -14213,7 +14208,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/virtualservers/{virtualserverID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: virtualServerRead
       description: "Retrieve details for the specified virtual server.\n\nParameters:\n\
         \nvirtualserverID: Specified virtual server ID.\n\n"
@@ -14239,7 +14234,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: virtualServerDelete
       description: "Delete the specified virtual server.\n\nParameters:\n\nvirtualserverID:\
         \ Specified virtual server ID.\n\n"
@@ -14266,7 +14261,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/pools:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: poolsRead
       description: |+
         Get all server pools on the specified NSX Edge.
@@ -14288,7 +14283,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: poolsCreate
       description: |+
         Add a load balancer server pool to the Edge.
@@ -14347,7 +14342,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: poolsDelete
       description: |+
         Delete all server pools configured on the specified NSX Edge.
@@ -14371,7 +14366,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/pools/{poolID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: poolRead
       description: "Retrieve information about the specified server pool.\n\nParameters:\n\
         \npoolID: Specified pool ID.\n\n"
@@ -14397,7 +14392,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: poolUpdate
       description: "Update the specified server pool.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.3.0 | Method updated. Member **condition**\
@@ -14455,7 +14450,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: poolDelete
       description: "Delete the specified server pool.\n\nParameters:\n\npoolID: Specified\
         \ pool ID.\n\n"
@@ -14482,7 +14477,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/config/members/{memberID}:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbMemberCondToggle
       description: "Update enabled status of the specified member.\n\nParameters:\n\
         \nmemberID: Member ID.\n\n"
@@ -14522,7 +14517,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/statistics:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: lbStatisticsRead
       description: |+
         Retrieve load balancer statistics.
@@ -14545,7 +14540,7 @@ paths:
   /api/4.0/edges/{edgeId}/loadbalancer/acceleration:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: undefined
       description: |2+
 
@@ -14581,7 +14576,7 @@ paths:
   /api/4.0/edges/{edgeId}/dns/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeDnsRead
       description: |+
         Retrieve DNS configuration.
@@ -14603,7 +14598,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeDnsUpdate
       description: |+
         Configure DNS servers.
@@ -14667,7 +14662,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeDnsDelete
       description: |+
         Delete DNS configuration
@@ -14690,7 +14685,7 @@ paths:
   /api/4.0/edges/{edgeId}/dns/statistics:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: edgeDnsStatsRead
       description: |+
         Get DNS server statistics
@@ -14713,7 +14708,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpRead
       description: |+
         Get DHCP configuration.
@@ -14735,7 +14730,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpUpdate
       description: |+
         Configure DHCP service.
@@ -14803,7 +14798,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpDelete
       description: "Delete the DHCP configuration, restoring it to factory default.\n\
         \n\nParameters:\n\n"
@@ -14823,7 +14818,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/config/ippools:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpPoolCreate
       description: |+
         Add an IP pool to the DHCP configuration. Returns a pool ID within
@@ -14883,7 +14878,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/config/ippools/{poolID}:
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpPoolIDDelete
       description: "Delete a pool specified by pool ID\n\nParameters:\n\npoolID: Specified\
         \ DHCP IP pool\n\n"
@@ -14910,7 +14905,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/config/bindings:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpStaticBindingCreate
       description: |+
         Append a static-binding to DHCP config. A static-binding ID is
@@ -14971,7 +14966,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/config/bindings/{bindingID}:
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpStaticBindingIDDelete
       description: "Delete the static-binding by ID\n\nParameters:\n\nbindingID: Specified\
         \ static-binding ID\n\n"
@@ -14998,7 +14993,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/config/relay:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpRelayRead
       description: |+
         Query DHCP relay
@@ -15020,7 +15015,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpRelayUpdate
       description: |+
         Configure DHCP relay
@@ -15070,7 +15065,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpRelayDelete
       description: |+
         Delete DHCP relay configuration
@@ -15093,7 +15088,7 @@ paths:
   /api/4.0/edges/{edgeId}/dhcp/leaseInfo:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: dhcpLeaseRead
       description: |+
         Get DHCP lease information.
@@ -15116,7 +15111,7 @@ paths:
   /api/4.0/edges/{edgeId}/highavailability/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: highAvailabilityRead
       description: |+
         Get high availability configuration.
@@ -15138,7 +15133,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: highAvailabilityCreate
       description: |+
         Configure high availability.
@@ -15182,7 +15177,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: highAvailabilityDelete
       description: |+
         Delete high availability configuration.
@@ -15205,7 +15200,7 @@ paths:
   /api/4.0/edges/{edgeId}/syslog/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: syslogRead
       description: |+
         Retrieve syslog servers information.
@@ -15228,7 +15223,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: syslogUpdate
       description: |+
         Configure syslog servers.
@@ -15271,7 +15266,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: syslogDelete
       description: |+
         Delete syslog servers.
@@ -15294,7 +15289,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sslVPNRead
       description: |+
         Retrieve SSL VPN details.
@@ -15316,7 +15311,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sslVPNUpdate
       description: |+
         Update the entire SSL VPN configuration to the specified NSX Edge in a single call.
@@ -15345,7 +15340,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sslVPNCreate
       description: |+
         Enable or disable SSL VPN on the NSX Edge appliance.
@@ -15381,7 +15376,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sslVPNDelete
       description: |+
         Delete the SSL VPN configurations on the Edge.
@@ -15404,7 +15399,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/server:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: serverSettingsRead
       description: |+
         Retrieve server settings.
@@ -15426,7 +15421,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: serverSettingsUpdate
       description: |+
         Update server settings.
@@ -15474,7 +15469,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/privatenetworks:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworksRead
       description: |+
         Retrieve all private network profiles in the SSL VPN instance.
@@ -15497,7 +15492,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworksUpdate
       description: "Update all private network configs of NSX Edge with the given\
         \ list\nof private network configs. If the config is present, it is\nupdated;\
@@ -15524,7 +15519,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworksCreate
       description: |+
         Configure a private network.
@@ -15569,7 +15564,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworksDelete
       description: |+
         Delete all private networks from the SSL VPN instance.
@@ -15592,7 +15587,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/privatenetworks/{networkID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworkRead
       description: "Retrieve the specified private network in the SSL VPN service.\n\
         \n\nParameters:\n\nnetworkID: Specified private network\n\n"
@@ -15618,7 +15613,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworkUpdate
       description: "Update the specified private network in the SSL VPN service.\n\
         \n\nParameters:\n\nnetworkID: Specified private network\n\n"
@@ -15667,7 +15662,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: privateNetworkDelete
       description: "Delete private network\n\nParameters:\n\nnetworkID: Specified\
         \ private network\n\n"
@@ -15694,7 +15689,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/ippools:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolsRead
       description: |+
         Retrieve all IP pools configured on SSL VPN.
@@ -15716,7 +15711,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolsUpdate
       description: "Update all IP pools with the given list of pools. If the pool\
         \ is\npresent, it is updated; otherwise, a new pool is created. Existing\n\
@@ -15761,7 +15756,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolsCreate
       description: |+
         Create an IP pool.
@@ -15808,7 +15803,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolsDelete
       description: |+
         Delete all IP pools configured on SSL VPN
@@ -15831,7 +15826,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/ippools/{ippoolID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolRead
       description: "Retrieve details of specified IP pool.\n\nParameters:\n\nippoolID:\
         \ Specified IP pool ID.\n\n"
@@ -15857,7 +15852,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolUpdate
       description: "Update specified IP pool.\n\nParameters:\n\nippoolID: Specified\
         \ IP pool ID.\n\n"
@@ -15908,7 +15903,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: netExtipPoolDelete
       description: "Delete the specified IP pool.\n\nParameters:\n\nippoolID: Specified\
         \ IP pool ID.\n\n"
@@ -15935,7 +15930,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/clientconfig:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: clientConfigRead
       description: |+
         Retrieve client configuration.
@@ -15957,7 +15952,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: clientConfigUpdate
       description: "Set advanced parameters for full access client configurations,\n\
         such as whether client should auto-reconnect in case of network\nfailures\
@@ -16001,7 +15996,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/installpackages:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackagesRead
       description: |+
         Retrieve information about all installation packages.
@@ -16023,7 +16018,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackagesUpdate
       description: "Update all installation packages with the given list. If the\n\
         package is present, it is updated; otherwise a new installation\npackage is\
@@ -16050,7 +16045,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackagesCreate
       description: "Creates setup executables (installers) for full access network\n\
         clients. These setup binaries are later downloaded by remote\nclients and\
@@ -16110,7 +16105,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackagesDelete
       description: |+
         Delete all client installation packages.
@@ -16133,7 +16128,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/client/networkextension/installpackages/{packageID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackageRead
       description: "Get information about the specified installation package.\n\n\n\
         Parameters:\n\npackageID: Specified installation package ID.\n\n"
@@ -16159,7 +16154,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackageUpdate
       description: "Modify the specified installation package.\n\nParameters:\n\n\
         packageID: Specified installation package ID.\n\n"
@@ -16220,7 +16215,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: installPackageDelete
       description: "Delete the specified installation package.\n\nParameters:\n\n\
         packageID: Specified installation package ID.\n\n"
@@ -16247,7 +16242,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/layout:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: layoutRead
       description: |+
         Retrieve layout configuration.
@@ -16269,7 +16264,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: layoutUpdate
       description: |+
         Update the portal layout.
@@ -16317,7 +16312,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/layout/images/{imageType}:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: layoutIconsUpload
       description: "Upload images for use with SSL VPN portal and client.\n\nYou can\
         \ upload a logo to use in the SSL VPN portal, and a banner\nand icons to use\
@@ -16365,7 +16360,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/auth/localserver/users:
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: usersUpdate
       description: |+
         Modify the portal user specified in the request body.
@@ -16413,7 +16408,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: usersCreate
       description: |+
         Add a new portal user.
@@ -16461,7 +16456,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: usersDelete
       description: |+
         Delete all users on the specifed SSL VPN instance
@@ -16484,7 +16479,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/auth/localserver/users/{userID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: userRead
       description: "Get information about the specified user.\n\nParameters:\n\nuserID:\
         \ User ID.\n\n"
@@ -16510,7 +16505,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: userDelete
       description: "Delete the specified user.\n\nParameters:\n\nuserID: User ID.\n\
         \n"
@@ -16537,7 +16532,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/auth/settings:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: authSettingsRead
       description: |+
         Retrieve information about authentication settings.
@@ -16559,7 +16554,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: authSettingsUpdate
       description: "Update authentication settings for remote users. Specify\nusername/password\
         \ authentication, active directory, ldap, radius,\nclient certificate based\
@@ -16658,7 +16653,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/auth/settings/rsaconfigfile:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: rsaConfigCreate
       description: |+
         Upload RSA config file (See "Generate the Authentication Manager
@@ -16691,7 +16686,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/advancedconfig:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: advancedConfigRead
       description: |+
         Retrieve SSL VPN advanced configuration.
@@ -16713,7 +16708,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: advancedConfigUpdate
       description: |+
         Update SSL VPN advanced configuration.
@@ -16762,7 +16757,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/script:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptRead
       description: |+
         Retrieve all script configurations.
@@ -16784,7 +16779,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptUpdate
       description: "Update all script configurations with the given list of\nconfigurations.\
         \ If the config is present, its is updated;\notherwise, a new config is created.\
@@ -16825,7 +16820,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptCreate
       description: |+
         Configure parameters associated with the uploaded script file.
@@ -16868,7 +16863,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptDelete
       description: |+
         Delete all script configurations
@@ -16891,7 +16886,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/script/{fileID}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptFileIDRead
       description: "Retrieve parameters associated with the specified script file.\n\
         \n\nParameters:\n\nfileID: Specified script file.\n\n"
@@ -16917,7 +16912,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptFileIDUpdate
       description: "Update parameters associated with the specified script file.\n\
         \n\nParameters:\n\nfileID: Specified script file.\n\n"
@@ -16963,7 +16958,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptFileIDDelete
       description: "Delete script parameters.\n\nParameters:\n\nfileID: Specified\
         \ script file.\n\n"
@@ -16990,7 +16985,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/config/script/file/:
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: scriptFileCreate
       description: "You can add multiple login or logoff scripts. For example, you\
         \ can\nbind a login script for starting Internet Explorer with gmail.com.\n\
@@ -17028,7 +17023,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/auth/localusers/users:
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: allUsersUpdate
       description: "Update all users with the given list of users. If the user is\n\
         present, it is updated. Otherwise, and new user is created. Existing\nusers\
@@ -17077,7 +17072,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/activesessions:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sslVPNActiveClientsRead
       description: |+
         Retrieve a list of active clients for the SSL VPN session.
@@ -17100,7 +17095,7 @@ paths:
   /api/4.0/edges/{edgeId}/sslvpn/activesessions/{sessionID}:
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sessionDelete
       description: "Disconnect an active client.\n\nParameters:\n\nsessionID: Specified\
         \ client session.\n\n"
@@ -17127,7 +17122,7 @@ paths:
   /api/4.0/edges/{edgeId}/statistics/dashboard/sslvpn:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: sslVPNStatsRead
       description: |+
         Retrieve SSL VPN statistics on the specified NSX Edge.
@@ -17157,7 +17152,7 @@ paths:
   /api/4.0/edges/{edgeId}/statistics/dashboard/ipsec:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: ipsecTrafficStatsRead
       description: |+
         Retrieve tunnel traffic statistics for specified time interval.
@@ -17188,7 +17183,7 @@ paths:
   /api/4.0/edges/{edgeId}/statistics/dashboard/interface:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicDashStatsRead
       description: "Retrieves dashboard statistics between the specified start and\
         \ end\ntimes. When start and end time are not specified, all statistics\n\
@@ -17218,7 +17213,7 @@ paths:
   /api/4.0/edges/{edgeId}/statistics/interfaces:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicStatsRead
       description: |+
         Retrieve interface statistics.
@@ -17241,7 +17236,7 @@ paths:
   /api/4.0/edges/{edgeId}/statistics/interfaces/uplink:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: uplinkVNICStatsRead
       description: |+
         Retrieve uplink interface statistics.
@@ -17264,7 +17259,7 @@ paths:
   /api/4.0/edges/{edgeId}/statistics/interfaces/internal:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: internalVNICStatsRead
       description: |+
         Retrieve internal interface statistics.
@@ -17287,7 +17282,7 @@ paths:
   /api/4.0/edges/{edgeId}/l2vpn/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: l2VPNRead
       description: |+
         Retrieve the current L2VPN configuration for NSX Edge.
@@ -17309,7 +17304,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: l2VPNUpdate
       description: |+
         Configure L2VPN for server or client.
@@ -17385,7 +17380,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: l2VPNCreate
       description: |+
         Enable or disable L2 VPN service.
@@ -17421,7 +17416,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: l2VPNDelete
       description: |+
         Delete the L2 VPN configuration.
@@ -17444,7 +17439,7 @@ paths:
   /api/4.0/edges/{edgeId}/l2vpn/config/statistics:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: statisticsRead
       description: "Retrieve L2 VPN statistics, which has information such as tunnel\
         \ status,\nsent bytes, received bytes for the specified Edge.\n\n\nParameters:\n\
@@ -17465,7 +17460,7 @@ paths:
   /api/4.0/edges/{edgeId}/ipsec/config:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: ipsecConfigRead
       description: |+
         Retrieve IPsec configuration.
@@ -17487,7 +17482,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: ipsecConfigUpdate
       description: |+
         Update IPsec VPN configuration.
@@ -17560,7 +17555,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: ipsecConfigDelete
       description: |+
         Delete the IPsec configuration.
@@ -17583,7 +17578,7 @@ paths:
   /api/4.0/edges/{edgeId}/ipsec/statistics:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: ipsecStatsRead
       description: |+
         Retrieve IPsec statistics.
@@ -17606,7 +17601,7 @@ paths:
   /api/4.0/edges/{edgeId}/autoconfiguration:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: autoConfigRead
       description: |+
         Retrieve the auto configuration settings for the NSX Edge.
@@ -17629,7 +17624,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: autoConfigUpdate
       description: |+
         Update the auto configuration settings for the NSX Edge.
@@ -17671,7 +17666,7 @@ paths:
   /api/4.0/edges/{edgeId}/appliances:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appliancesRead
       description: "Retrieve appliance configuration.\n\n**Method history:**\n\nRelease\
         \ | Modification\n--------|-------------\n6.2.3 | Method updated. **haAdminState**,\
@@ -17692,7 +17687,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appliancesUpdate
       description: "You can retrieve the configuration of both appliances by using\
         \ the\nGET call and replace the size, resource pool, datastore, and custom\n\
@@ -17722,7 +17717,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: appliancesCreate
       description: |+
         Change the size of both appliances.
@@ -17759,7 +17754,7 @@ paths:
   /api/4.0/edges/{edgeId}/appliances/{haIndex}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applianceRead
       description: "Retrieve the configuration of the specified appliance.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.2.3 | Method\
@@ -17788,7 +17783,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applianceUpdate
       description: "Update the configuration of the specified appliance.\n\n**Method\
         \ history:**\n\nRelease | Modification\n--------|-------------\n6.2.3 | Method\
@@ -17846,7 +17841,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applianceExecute
       description: "Used to send CLI Commands to the Edge Gw. To use CLI commands\
         \ you also\nneed to add an additional Accept Header with type text\\plain,\
@@ -17905,7 +17900,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: applianceDelete
       description: "Delete the appliance\n\nParameters:\n\nhaIndex: Specified appliance\
         \ HA index\n\n"
@@ -17932,7 +17927,7 @@ paths:
   /api/4.0/edges/{edgeId}/vnics:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicsRead
       description: |+
         Retrieve all interfaces for the specified Edge Services Gateway.
@@ -17955,7 +17950,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicsCreate
       description: |+
         Add an interface or sub interface.
@@ -18044,7 +18039,7 @@ paths:
   /api/4.0/edges/{edgeId}/vnics/{index}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicRead
       description: "Retrieve the specified interface.\n\nParameters:\n\nindex: Specified\
         \ interface\n\n"
@@ -18070,7 +18065,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicUpdate
       description: "Update the specified interface.\n\nParameters:\n\nindex: Specified\
         \ interface\n\n"
@@ -18155,7 +18150,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: vnicDelete
       description: "Delete interface\n\nParameters:\n\nindex: Specified interface\n\
         \n"
@@ -18182,7 +18177,7 @@ paths:
   /api/4.0/edges/{edgeId}/mgmtinterface:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: mgmtInterfaceRead
       description: |+
         Retrieve the management interface configuration for the logical
@@ -18206,7 +18201,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: mgmtInterfaceUpdate
       description: |+
         Configure high availability (management) interface for logical
@@ -18256,7 +18251,7 @@ paths:
   /api/4.0/edges/{edgeId}/interfaces:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: interfacesRead
       description: |+
         Retrieve all interfaces on the logical router.
@@ -18278,7 +18273,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > edges
+      - edges
       summary: interfacesCreate
       description: "Add interfaces for a logical router. \n\n\nParameters:\n\n"
       parameters:
@@ -18332,7 +18327,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: interfacesDelete
       description: |+
         Delete all interfaces on the logical router.
@@ -18362,7 +18357,7 @@ paths:
   /api/4.0/edges/{edgeId}/interfaces/{index}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: interfaceRead
       description: "Retrieve information about the specified logical router interface.\n\
         \n\nParameters:\n\nindex: Specified router interface.\n\n"
@@ -18388,7 +18383,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edges
+      - edges
       summary: interfaceUpdate
       description: "Update interface configuration for the specified logical router\n\
         interface.\n\n\nParameters:\n\nindex: Specified router interface.\n\n"
@@ -18420,7 +18415,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > edges
+      - edges
       summary: interfaceDelete
       description: "Delete interface configuration and reset to factory default.\n\
         \n\nParameters:\n\nindex: Specified router interface.\n\n"
@@ -18447,7 +18442,7 @@ paths:
   /api/4.0/edges/jobs:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeJobsRead
       description: |+
         Retrieve NSX Edge job status.
@@ -18471,7 +18466,7 @@ paths:
   /api/4.0/edges/jobs/{jobId}:
     get:
       tags:
-      - 4.0 > edges
+      - edges
       summary: nsxEdgeJobRead
       description: "Retrieve job status for the specified job.\n\n\nParameters:\n\n\
         jobId: Job ID\n\n"
@@ -18491,7 +18486,7 @@ paths:
   /api/4.0/edgePublish/tuningConfiguration:
     get:
       tags:
-      - 4.0 > edgePublish
+      - edgePublish
       summary: nsxEdgePublishTuningRead
       description: |+
         Retrieve the NSX Edge tuning configuration.
@@ -18512,7 +18507,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > edgePublish
+      - edgePublish
       summary: nsxEdgePublishTuningUpdate
       description: |+
         Update the NSX Edge tuning configuration.
@@ -18560,7 +18555,7 @@ paths:
   /api/4.0/firewall/globalroot-0/defaultconfig:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwConfigDefaultRead
       description: "Retrieve the default firewall configuration.\n\nThe output of\
         \ this method can be used to restore the firewall config\nback to default.\
@@ -18577,7 +18572,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwConfigShow
       description: "Retrieve distributed firewall rule configuration.\n\nIf no query\
         \ parameters are used, all rule configuration is retrieved.\nUse the query\
@@ -18654,7 +18649,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwConfigUpdate
       description: "Update the complete firewall configuration in all sections.\n\n\
         * Retrieve the configuration with `GET /api/4.0/firewall/globalroot-0/config`.\n\
@@ -18780,7 +18775,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwConfigDelete
       description: "Restores default configuration, which means one defaultLayer3\
         \ section\nwith three default allow rules and one defaultLayer2Section with\
@@ -18793,7 +18788,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3sections:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3SectionRead
       description: |+
         Retrieve rules from the layer 3 section specified by section
@@ -18817,7 +18812,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3SectionCreate
       description: "Create a layer 3 distributed firewall section.\n\nBy default,\
         \ the section is created at the top of the firewall table.\nYou can specify\
@@ -18927,7 +18922,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3sections/{sectionId}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3SectionIdRead
       description: "Retrieve information about the specified layer 3 section.\n\n\
         Parameters:\n\nsectionId: The ID of the section to modify.\n\n"
@@ -18946,7 +18941,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3SectionIdUpdate
       description: "Update the specified layer 3 section in distributed firewall.\n\
         \n* Retrieve the configuration for the specified section.\n* Retrieve the\
@@ -19081,7 +19076,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3SectionIdAction
       description: "Move the specified layer 3 section.\n\nUse the **action**, **operation**,\
         \ and optionally **achorId**\nquery parameters to specify the destination\
@@ -19160,7 +19155,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3SectionIdDelete
       description: "Delete the specified layer 3 distributed firewall section.\n\n\
         If the default layer 3 firewall section is selected, the request is\nrejected.\
@@ -19187,7 +19182,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3sections/{sectionId}/rules:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3RulesAdd
       description: "Add rules to the specified layer 2 section in distributed firewall.\n\
         \nYou add firewall rules at the global scope. You can then narrow down the\
@@ -19283,7 +19278,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3sections/{sectionId}/rules/{ruleId}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3RuleRead
       description: "Retrieve information about the specified distributed firewall\
         \ rule.\n\n\nParameters:\n\nruleId: The ID of the rule beeing read, updated\
@@ -19310,7 +19305,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3RuleUpdate
       description: "Update a distributed firewall rule in a layer 3 section.\n\n*\
         \ Retrieve the configuration for the section that contains the rule you want\n\
@@ -19391,7 +19386,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL3RuleDelete
       description: "Delete the specified distributed firewall rule.\n\nParameters:\n\
         \nruleId: The ID of the rule beeing read, updated or deleted\n\n"
@@ -19425,7 +19420,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer2sections:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2SectionRead
       description: |+
         Retrieve rules from the layer 2 section specified by section
@@ -19449,7 +19444,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2SectionCreate
       description: "Create a layer 2 distributed firewall section.\n\nBy default,\
         \ the section is created at the top of the firewall table.\nYou can specify\
@@ -19529,7 +19524,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer2sections/{sectionId}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2SectionIdRead
       description: "Retrieve information about the specified layer 2 section.\n\n\
         Parameters:\n\nsectionId: The ID of the section to modify.\n\n"
@@ -19548,7 +19543,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2SectionIdUpdate
       description: "Update the specified layer 2 section in distributed firewall.\n\
         \n* Retrieve the configuration for the specified section.\n* Retrieve the\
@@ -19641,7 +19636,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2SectionIdAction
       description: "Move the specified layer 2 section.\n\nUse the **action**, **operation**,\
         \ and optionally **achorId**\nquery parameters to specify the destination\
@@ -19720,7 +19715,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2SectionIdDelete
       description: "Delete the specified layer 2 section and its contents.\n\nIf the\
         \ default layer 2 firewall section is selected, the request is\nrejected.\
@@ -19747,7 +19742,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer2sections/{sectionId}/rules:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2RulesAdd
       description: "Add rules to the specified layer 2 section in distributed firewall.\n\
         \nYou add firewall rules at the global scope. You can then narrow down the\
@@ -19852,7 +19847,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer2sections/{sectionId}/rules/{ruleId}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2RuleRead
       description: "Retrieve the configuration of the specified rule.\n\n\nParameters:\n\
         \nruleId: The ID of the rule.\n\n\n"
@@ -19878,7 +19873,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2RuleUpdate
       description: "Update a distributed firewall rule in a layer 2 section.\n\n*\
         \ Retrieve the configuration for the section that contains the rule you want\n\
@@ -19972,7 +19967,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwL2RuleDelete
       description: "Delete the specified distributed firewall rule.\n\nParameters:\n\
         \nruleId: The ID of the rule.\n\n\n"
@@ -20006,7 +20001,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3redirectsections:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: layer3RedirectSectionsCreate
       description: |+
         Add L3 redirect section
@@ -20049,7 +20044,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3redirectsections/{section}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: sectionRead
       description: "Get L3 redirect section configuration\n\nParameters:\n\nsection:\
         \ Specify section by ID or name\n\n"
@@ -20068,7 +20063,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: sectionUpdate
       description: "Modify layer 3 redirect section. You will need to get the Etag\n\
         value out of the GET first. Then pass the modified version of the\nwhole redirect\
@@ -20125,7 +20120,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: sectionDelete
       description: "Delete specified L3 redirect section\n\nParameters:\n\nsection:\
         \ Specify section by ID or name\n\n"
@@ -20145,7 +20140,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3redirectsections/{section}/rules:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: rulesCreate
       description: |+
         Add L3 redirect rule
@@ -20195,7 +20190,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3redirectsections/{section}/rules/{ruleID}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: ruleRead
       description: "Get L3 redirect rule\n\nParameters:\n\nruleID: Specified redirect\
         \ rule\n\n"
@@ -20221,7 +20216,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: ruleUpdate
       description: "Modify L3 redirect rule. You will need Etag value from the\nresponse\
         \ header of GET call. Then, pass Etag value as the\nif-match header in PUT\
@@ -20281,7 +20276,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: ruleDelete
       description: "Delete specified L3 redirect rule\n\nParameters:\n\nruleID: Specified\
         \ redirect rule\n\n"
@@ -20308,7 +20303,7 @@ paths:
   /api/4.0/firewall/globalroot-0/config/layer3redirect/profiles:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: serviceInsertionProfilesRead
       description: |+
         Retrieve the Service Insertion profiles that can be applied to
@@ -20325,7 +20320,7 @@ paths:
   /api/4.0/firewall/globalroot-0/state:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwUpgradeRead
       description: |+
         Retrieve current state of firewall functioning after NSX upgrade.
@@ -20340,7 +20335,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwUpgradeEnable
       description: |+
         Enable distributed firewall.
@@ -20361,7 +20356,7 @@ paths:
   /api/4.0/firewall/globalroot-0/status:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwStatusRead
       description: |+
         Get firewall configuration status
@@ -20383,7 +20378,7 @@ paths:
   /api/4.0/firewall/globalroot-0/status/layer3sections/{sectionID}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: L3SectionStatusRead
       description: "Retrieve status of the last publish action for the specified layer\
         \ 3 section.\n\n**Method history:**\n\nRelease | Modification\n--------|-------------\n\
@@ -20406,7 +20401,7 @@ paths:
   /api/4.0/firewall/globalroot-0/status/layer2sections/{sectionID}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: L2SectionStatusRead
       description: "Retrieve status of the last publish action for the specified layer\
         \ 2 section.\n\n**Method history:**\n\nRelease | Modification\n--------|-------------\n\
@@ -20429,7 +20424,7 @@ paths:
   /api/4.0/firewall/globalroot-0/drafts:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwSaveConfigRead
       description: |+
         Displays the draft IDs of all saved configurations.
@@ -20443,7 +20438,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwDraftsCreate
       description: |+
         Save a firewall configuration.
@@ -20499,7 +20494,7 @@ paths:
   /api/4.0/firewall/globalroot-0/drafts/{draftID}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwDraftRead
       description: "Get a saved firewall configuration.\n\nParameters:\n\ndraftID:\
         \ Specified draft ID. Use `GET /4.0/firewall/globalroot-0/drafts` to\nretrieve\
@@ -20519,7 +20514,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwDraftUpdate
       description: "Update a saved firewall configuration.\n\nParameters:\n\ndraftID:\
         \ Specified draft ID. Use `GET /4.0/firewall/globalroot-0/drafts` to\nretrieve\
@@ -20579,7 +20574,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwDraftDelete
       description: "Delete a configuration.\n\nParameters:\n\ndraftID: Specified draft\
         \ ID. Use `GET /4.0/firewall/globalroot-0/drafts` to\nretrieve all drafts.\n\
@@ -20600,7 +20595,7 @@ paths:
   /api/4.0/firewall/globalroot-0/drafts/{draftID}/action/export:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwConfigExportRead
       description: |+
         Export a configuration.
@@ -20630,7 +20625,7 @@ paths:
   /api/4.0/firewall/globalroot-0/drafts/{draftID}/action/import:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwConfigImportCreate
       description: |+
         Import a configuration.
@@ -20695,7 +20690,7 @@ paths:
   /api/4.0/firewall/globalroot-0/timeouts:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwTimeoutsList
       description: |+
         Retrieve Distributed Firewall session timer configuration.
@@ -20716,7 +20711,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwTimeoutCreate
       description: |+
         Create a Distributed Firewall session timer configuration.
@@ -20774,7 +20769,7 @@ paths:
   /api/4.0/firewall/globalroot-0/timeouts/{configId}:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwTimeoutConfigIdRead
       description: "Retrieve the specified Distributed Firewall session timer configuration.\n\
         \n**Method history:**\n\nRelease | Modification\n--------|-------------\n\
@@ -20795,7 +20790,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwTimeoutConfigIdUpdate
       description: "Update the specified Distributed Firewall session timer configuration.\n\
         \n**Method history:**\n\nRelease | Modification\n--------|-------------\n\
@@ -20858,7 +20853,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwTimeoutConfigIdDelete
       description: "Delete the specified Distributed Firewall session timer configuration.\n\
         \n**Method history:**\n\nRelease | Modification\n--------|-------------\n\
@@ -20880,7 +20875,7 @@ paths:
   /api/4.0/firewall/stats/eventthresholds:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwThresholdsRead
       description: |+
         Retrieve threshold configuration for distributed firewall.
@@ -20895,7 +20890,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwThresholdsUpdate
       description: |+
         Update threshold configuration for distributed firewall.
@@ -20937,7 +20932,7 @@ paths:
   /api/4.0/firewall/config/globalconfiguration:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwPerformanceRead
       description: |+
         Retrieve performance configuration for distributed firewall.
@@ -20951,7 +20946,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwPerformanceUpdate
       description: |+
         Update the distributed firewall performance configuration.
@@ -20994,7 +20989,7 @@ paths:
   /api/4.0/firewall/forceSync/{ID}:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwSyncExecute
       description: "Force sync host or cluster.\n\nParameters:\n\nID: Specified host\
         \ or cluster to synchronize\n\n"
@@ -21020,7 +21015,7 @@ paths:
   /api/4.0/firewall/{domainID}/enable/{truefalse}:
     post:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwEnableDisableToggle
       description: "Enable or disable firewall components on a cluster\n\nParameters:\n\
         \ndomainID: Specified cluster\n\ntruefalse: Set parameter to true/false to\
@@ -21054,7 +21049,7 @@ paths:
   /api/4.0/firewall/{contextId}/config/ipfix:
     get:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwIPFixRead
       description: "Query IPFIX configuration.\n\nParameters:\n\ncontextId: Specified\
         \ context\n\n"
@@ -21073,7 +21068,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwIPFixUpdate
       description: "Configure IPFIX.\n\nParameters:\n\ncontextId: Specified context\n\
         \n"
@@ -21116,7 +21111,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > firewall
+      - firewall
       summary: dfwIPFixDelete
       description: "Deleting IPFIX configuration resets the config to default values\n\
         \n\nParameters:\n\ncontextId: Specified context\n\n"
@@ -21136,7 +21131,7 @@ paths:
   /api/4.0/services/spoofguard/policies:
     get:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPoliciesList
       description: |+
         Retrieve information about all SpoofGuard policies.
@@ -21150,7 +21145,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPoliciesCreate
       description: |+
         Create a SpoofGuard policy to specify the operation mode for networks.
@@ -21192,7 +21187,7 @@ paths:
   /api/4.0/services/spoofguard/policies/{policyID}:
     get:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPolicyRead
       description: "Retrieve information about the specified SpoofGuard policy.\n\n\
         \nParameters:\n\npolicyID: SpoofGuard policy ID.\n\n"
@@ -21211,7 +21206,7 @@ paths:
             application/json: {}
     put:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPolicyUpdate
       description: "Modify the specified SpoofGuard policy.\n\nParameters:\n\npolicyID:\
         \ SpoofGuard policy ID.\n\n"
@@ -21256,7 +21251,7 @@ paths:
             application/json: {}
     delete:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPolicyDelete
       description: "Delete the specified SpoofGuard policy.\n\nParameters:\n\npolicyID:\
         \ SpoofGuard policy ID.\n\n"
@@ -21276,7 +21271,7 @@ paths:
   /api/4.0/services/spoofguard/{policyID}:
     get:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPolicyIPRead
       description: "Retrieve IP addresses for the specified state.\n\n\nParameters:\n\
         \npolicyID: SpoofGuard policy ID.\n\n"
@@ -21302,7 +21297,7 @@ paths:
             application/json: {}
     post:
       tags:
-      - 4.0 > spoofguard
+      - spoofguard
       summary: spoofGuardPolicyIPAction
       description: "Approve or publish IP addresses.\n\nParameters:\n\npolicyID: SpoofGuard\
         \ policy ID.\n\n"
